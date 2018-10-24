@@ -15,6 +15,8 @@ $(document).ready(() => {
 	startSlider('.welcome-s-w-slides', '.welcome-s-w-s-slide', 6, 1, '.welcome-s-w-ui-baseline');
 	// Запускаем слайдер 
 	startHardSlider('.explanation-w-slider', '.explanation-w-s-slide', 5, 1);
+	// Слайдер в отзывах
+	startSlider('.reviews-s-w-slides', '.reviews-s-w-s-slide', 6, 1, '.reviews-s-w-ui-baseline');
 
 });
 

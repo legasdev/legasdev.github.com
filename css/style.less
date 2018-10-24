@@ -18,7 +18,7 @@
 // Блоки
 @main: main;
 @welcome: welcome;
-
+@reviews: reviews;
 
 /*
 * 	Переменные
@@ -238,6 +238,139 @@ body {
 		top: -1px;
 		background-color: @orColor;
 	}
+}
+
+// Дизайн кнопки
+.style-big-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 70%;
+	margin: 30px 0;
+	padding: 10px 0;
+	cursor: pointer;
+	text-decoration: none;
+	.transition(background-color, .2s);
+	
+	p {
+		position: relative;
+		font-size: 3.5rem;
+		font-family: semibold;
+		color: @orColor;
+		.transition(color, .2s);
+	}
+	
+	&:hover {
+		background-color: @orColor;
+		
+		p {
+			color: @bgColor;
+		}
+		
+		&:after {
+			width: 100%;
+		}
+		&:before {
+			height: 125%;
+		}
+		
+		.style-big-btn-lines {
+			&:after {width: 100%;}
+			&:before {height: 125%;}
+		}
+	}
+	
+	// Линии справа черные
+	.style-big-btn-lines {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		
+		&:after {
+			content: " ";
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 60%;
+			height: @wmBorder;
+			background-color: @blackColor;
+			.transition(width, .3s);
+		}
+		&:before {
+			content: " ";
+			position: absolute;
+			right: 0;
+			bottom: -25%;
+			width: @wmBorder;
+			height: 105%;
+			background-color: @blackColor;
+			.transition(height, .3s);
+		}
+		
+		.style-big-btn-orline-l {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			
+			&:after {
+				content: " ";
+				position: absolute;
+				width: @wdBorder;
+				height: 30px;
+				background-color: @orColor;
+				top: -15px;
+				z-index: 2;
+			}
+			&:before {
+				content: " ";
+				position: absolute;
+				width: 15px;
+				height: @wdBorder;
+				background-color: @orColor;
+				top: -@wmBorder;
+				z-index: 2;
+			}
+		}
+		
+		.style-big-btn-orline-r {
+			.style-big-btn-orline-l;
+			
+			&:after {
+				right: 0;
+				top: auto;
+				bottom: -15px;
+			}
+			&:before {
+				right: 0;
+				top: auto;
+				bottom: -@wmBorder;
+			}
+		}
+	}	
+	
+	// Линии слева черные
+	&:after {
+		content: " ";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 60%;
+		height: @wmBorder;
+		background-color: @blackColor;
+		.transition(width, .3s);
+	}
+	&:before {
+		content: " ";
+		position: absolute;
+		left: 0;
+		top: -25%;
+		width: @wmBorder;
+		height: 105%;
+		background-color: @blackColor;
+		.transition(height, .3s);
+	}
+	
 }
 
 // Первый экран
@@ -1112,9 +1245,192 @@ body {
 }
 
 // Отзывы
+.reviews {
+	.blockPosition();
+	
+	padding-right: 140px;
+	margin-bottom: 100px;
+	
+	.reviews-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		width: 90%;
+	}
+}
+// Слайдер познакомимся
+.@{reviews}-slider {
+	display: relative;
+	width: 100%;
+	height: 100vh;
+	
+	// Слайды и управление
+	.@{reviews}-slider-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		
+		// Расположение слайдов
+		.@{reviews}-s-w-slides {
+			position: relative;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 90%;
+			
+			// Сам слайд
+			.reviews-s-w-s-slide {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				.transition(opacity, 1s);
+				
+				// Скрытый слайд
+				&.active {
+					opacity: 1;
+				}
+				
+				// Картинка внутри слайда
+				.reviews-s-w-s-s-img {
+					width: 100%;
+					height: 100%;
+					background-position: center bottom;
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+			}
+		}
+		
+		// Управление слайдами
+		.@{reviews}-s-w-ui {
+			@widthBlock: calc(100% - 280px);
+			
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: @widthBlock;
+			height: 10%;
+			border-left: @wmBorder solid @blackColor;
+			border-right: @wmBorder solid @blackColor;
+			z-index: 2;
+			
+			// Расположение управления
+			.@{reviews}-s-w-ui-baseline {
+				display: flex;
+				justify-content: space-around;
+				position: relative;
+				width: 40%;
+				height: 2px;
+				background-color: @blackColor;
+				
+				// Кнопки слайдов
+				.@{reviews}-s-w-ui-b-slide {
+					position: relative;
+					width: 20%;
+					height: 5px;
+					top: -3px;
+					cursor: pointer;
+					background-color: @blackColor;
+					transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+					transition: background-color .5s, transform .2s;
+					z-index: 2;
+					
+					// Активная
+					&.active {
+						background-color: @orColor;
+					}
+					
+					&:hover {
+						transform: translate3d(0, -5px, 0) scale3d(1, 3, 1);
+					}
+				}
+				
+			}
+		}
+	}
+	
+	// Дизайн слайдера
+	.@{reviews}-slider-lines {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		
+		.@{reviews}-s-l-left {
+			position: absolute;
+			width: @wmBorder;
+			height: 100%;
+			left: 140px;
+			background-color: @bgColor;
+			
+			&:after {
+				content: " ";
+				position: absolute;
+				width: @wdBorder;
+				height: 100px;
+				top: 150px;
+				background-color: @orColor;
+				z-index: 2;
+			}
+			
+			&:before {
+				content: " ";
+				position: absolute;
+				width: @wdBorder;
+				height: 100px;
+				@bottomPos: calc(10% + 150px);
+				bottom: @bottomPos;
+				background-color: @orColor;
+				z-index: 2;
+			}
+		}
+		.@{reviews}-s-l-right {
+			.reviews-s-l-left();
+			left: auto;
+			right: 140px;
+			
+			&:after, &:before {
+				transform: translate3d(-1px, 0, 0);
+			}
+		}
+		
+		.@{reviews}-s-l-block {
+			position: absolute;
+			width: 140px;
+			height: 140px;
+			background-color: @bgColor;
+		}
+		.@{reviews}-s-l-block:first-child {
+			top: 0;
+			left: 0;
+		}	
+		.@{reviews}-s-l-block:last-child {
+			bottom: 10%;
+			right: 0;
+		}
+	}
+}
 
-
-
+// Заметки
+.notes {
+	.blockPosition();
+	padding-right: 140px;
+	margin-bottom: 100px;
+	
+	.notes-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		width: 90%;
+	}
+}
 
 
 
