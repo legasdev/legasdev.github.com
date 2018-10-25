@@ -247,7 +247,7 @@ body {
 	align-items: center;
 	position: relative;
 	margin: 30px 0;
-	padding: 10px 30px;
+	padding: 10px 20px;
 	cursor: pointer;
 	text-decoration: none;
 	.transition(background-color, .2s);
@@ -374,12 +374,134 @@ body {
 
 // Дизайн маленькой кнопки
 .style-small-btn {
-    .style-big-btn();
-    
-    p {
-		font-size: 1.3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin: 15px 0;
+	padding: 10px 15px;
+	cursor: pointer;
+	text-decoration: none;
+	.transition(background-color, .2s);
+	
+	p {
+		position: relative;
+		font-size: 1.2rem;
+		font-family: semibold;
 		color: @blackColor;
+		.transition(color, .2s);
 	}
+	
+	&:hover {
+		background-color: @orColor;
+		
+		p {
+			color: @bgColor;
+		}
+		
+		&:after {
+			width: 100%;
+		}
+		&:before {
+			height: 125%;
+		}
+		
+		.style-big-btn-lines {
+			&:after {width: 100%;}
+			&:before {height: 125%;}
+		}
+	}
+	
+	// Линии справа черные
+	.style-big-btn-lines {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		
+		&:after {
+			content: " ";
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 60%;
+			height: @wmBorder;
+			background-color: @blackColor;
+			.transition(width, .3s);
+		}
+		&:before {
+			content: " ";
+			position: absolute;
+			right: 0;
+			bottom: -25%;
+			width: @wmBorder;
+			height: 105%;
+			background-color: @blackColor;
+			.transition(height, .3s);
+		}
+		
+		.style-big-btn-orline-l {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			
+			&:after {
+				content: " ";
+				position: absolute;
+				width: @wdBorder;
+				height: 30px;
+				background-color: @orColor;
+				top: -15px;
+				z-index: 2;
+			}
+			&:before {
+				content: " ";
+				position: absolute;
+				width: 15px;
+				height: @wdBorder;
+				background-color: @orColor;
+				top: -@wmBorder;
+				z-index: 2;
+			}
+		}
+		
+		.style-big-btn-orline-r {
+			.style-big-btn-orline-l;
+			
+			&:after {
+				right: 0;
+				top: auto;
+				bottom: -15px;
+			}
+			&:before {
+				right: 0;
+				top: auto;
+				bottom: -@wmBorder;
+			}
+		}
+	}	
+	
+	// Линии слева черные
+	&:after {
+		content: " ";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 60%;
+		height: @wmBorder;
+		background-color: @blackColor;
+		.transition(width, .3s);
+	}
+	&:before {
+		content: " ";
+		position: absolute;
+		left: 0;
+		top: -25%;
+		width: @wmBorder;
+		height: 105%;
+		background-color: @blackColor;
+		.transition(height, .3s);
+	}
+	
 }
 
 // Первый экран
@@ -1298,6 +1420,7 @@ body {
 						margin-bottom: 15px;
 						width: 98%;
 					}
+					
 					// Время и город
 					.reviews-w-r-w-b-ui {
 						display: flex;
@@ -1334,6 +1457,7 @@ body {
 							}
 						}
 					}
+					
 					// Текст
 					.reviews-w-r-w-b-text {
 						width: 93%;
@@ -1342,6 +1466,7 @@ body {
 							margin-bottom: 1rem;
 						}
 					}
+                    
                     // Кнопка
                     .rewiews-w-e-w-b-btn {
                         align-self: flex-end;
@@ -1514,7 +1639,7 @@ body {
 .notes {
 	.blockPosition();
 	padding-right: 140px;
-	margin-bottom: 150px;
+	margin-bottom: 100px;
 	
 	.notes-wrapper {
 		display: flex;
@@ -1523,107 +1648,13 @@ body {
 		align-items: center;
 		width: 100%;
         
-        .notes-w-rev {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            
-            .notes-w-r-wrapper {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                margin: 15px 0;
-                
-                .notes-w-r-w-block {
-                    border: 1px solid @blackColor;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					width: 45%;
-					margin: 0 15px;
-					padding: 10px;
-                    
-                    // Заголовок
-                    .notes-b-name {
-                        font-family: semibold;
-						font-size: 1.3rem;
-						margin-bottom: 15px;
-						width: 98%;
-                    }
-                    
-                    // Картинка
-                    .notes-b-img {
-                        width: 90%;
-                        height: 250px;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: contain;
-                        margin-bottom: 15px;
-                    }
-                    
-                    // Дата
-                    .notes-b-date {
-                        display: flex;
-						flex-direction: column;
-						position: relative;
-						line-height: 2.6rem;
-						padding-left: 3rem;
-						font-size: 1.4rem;
-						margin-bottom: 15px;
-						width: 90%;
-                        
-                        &:before {
-                            content: " ";
-                            position: absolute;
-                            width: 2.2rem;
-                            height: 2.2rem;
-                            left: 0;
-                            top: 0;
-                            background-image: url('/img/icons/calendar.svg');
-                            background-position: center;
-                            background-size: contain;
-                            background-repeat: no-repeat;
-                        }
-                    }
-                    
-                    // Тексты
-                    .notes-b-text {
-                        width: 93%;
-						
-						p {
-							margin-bottom: 1rem;
-						}
-                    }
-                    
-                    // Кнопка
-                    .notes-b-btn {
-                        align-self: flex-end;
-                        margin-right: 5%;
-                    }
-                }
-            }
+        .reviews-w-rev {
+            .notes-wrapper;
         }
 	}
 }
 
-// Подвал
-.footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 500px;
-    width: 100%;
-    
-    .footer-sitemap {
-        height: 50%;
-        width: 100%;
-        background-color: @orColor;
-    }
-}
+
 
 
 
