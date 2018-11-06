@@ -1,10 +1,12 @@
+'use strict'
 /*
 *	Скрипт слайдера
 *	Управление
 */
 
 let
-  startSlider;
+    startSlider,
+    startHardSlider;
   
 
 $(document).ready(() => {

@@ -1,18 +1,23 @@
+'use strict'
+
 var
-    aboutBlockInfoPos,
-    scrollDownPage;
+    AboutBlockInfoPos,
+    ScrollDownPage,
+    DetectViewPort;
 
 $(document).ready( () => {
-   scrollDownPage();
+    ScrollDownPage();
+    $('.main').removeClass('hideOn');
 });
 
 
 $(window).scroll( (e) => {
-	aboutBlockInfoPos();
+	AboutBlockInfoPos();
+    DetectViewPort();
 });
 
 // Отслеживаем положение блока about
-aboutBlockInfoPos = () => {
+AboutBlockInfoPos = () => {
     let 
 		obj = $('.about').find('.about-w-i-wrapper'),
 		checkObj = $('.about').find('.about-w-text');
@@ -37,8 +42,23 @@ aboutBlockInfoPos = () => {
 }
 
 // Скроллинг по стрелочке
-scrollDownPage = () => {
+ScrollDownPage = () => {
     $('body').on('click', '.main-c-bottom', (e) => {
        $('html, body').animate({scrollTop: $(window).innerHeight()}, 500); 
     }); 
+}
+
+// Определение видимого блока 
+DetectViewPort = () => {
+    
+    // Проходим по всем базовым блокам
+    $('body').children().filter('section').each( (i, e) => {
+        // Проверка на то, был ли виден блок
+        let 
+            screenPosY = $(window).scrollTop() + $(window).height() / 2;
+        
+        if ($(e).hasClass('hideOn') && screenPosY > $(e).offset().top) {
+            $(e).removeClass('hideOn');
+        }
+    });
 }
