@@ -31,6 +31,7 @@
 }
 
 body {
+    font-size: 16px;
     overflow-x: hidden;
 }
 
@@ -73,13 +74,27 @@ body {
             align-items: flex-start;
             
             & > .main-left {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 width: 120px;
+                height: 50vh;
+                font-size: 1.5rem;
+                color: @bgColor;
+                
+                & > .main-l-lang {
+                    font-family: mont-l;
+                    
+                    & > .chose {
+                        color: @orColor;
+                    }
+                }
             }
             
             & > .main-center {
                 position: relative;
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
                 width: calc(100% - 120px);
                 height: 100%;
@@ -87,14 +102,65 @@ body {
                 // Иформация
                 & > .main-c-info {
                     position: relative;
+                    height: 80vh;
+                    
+                    // Заголовок
+                    & > .main-c-info-h {
+                        position: absolute;
+                        bottom: 25%;
+                        left: 1.3rem;
+                        color: @bgColor;
+                        font-family: mont-l;
+                        font-weight: 100;
+                        font-size: 1.3rem;
+                        text-transform: uppercase;
+                        
+                        & > p {
+                            font-family: mont-l;
+                            font-weight: 100;
+                            font-size: 2em;
+                        }
+                        
+                        &:after {
+                            content: " ";
+                            position: absolute;
+                            left: -1.3rem;
+                            width: 90%;
+                            height: 1px;
+                            background-color: @bgColor;
+                        }
+                    }
+                    
+                    // Телефон и почта
+                    & > .main-c-i-info {
+                        position: absolute;
+                        top: 15%;
+                        left: 1.3rem;
+                        color: @bgColor;                       
+                        font-size: 1.3rem;
+                        
+                        & > p {
+                            font-family: mont-l; 
+                        }
+                    }
+                    
+                    // Границы
+                    &:after {
+                        content: " ";
+                        position: absolute;
+                        width: 1px;
+                        height: 100%;
+                        background-color: @bgColor;
+                    }
                 }
                 
                 // Компасс
                 & > .main-c-compass {
                     .flex();
                     position: relative;
-                    height: 80vh;
-                    width: 80vh;
+                    right: 50px;
+                    height: 70vh;
+                    width: 70vh;
                     
                     // кружки
                     & > .main-c-circles {
@@ -127,6 +193,7 @@ body {
                             width: 100%;
                             height: 100%;
                             border-radius: 0;
+                            opacity: 1;
                             .ccibg();
                             background-image: url('/img/compass-1.svg');
                         }
@@ -164,13 +231,77 @@ body {
                         position: absolute;
                         width: 30%;
                         height: 5%;
-                        opacity: .8;
+                        opacity: .9;
                         right: 45%;
                         .ccibg();
                         background-size: contain;
                         background-image: url('/img/arrow.svg');
                         transform-origin: 83% 50%;
-                        animation: compass-circle_arrow 5s ease-in-out infinite;
+                        transition: transform .5s ease-in-out;
+                        //animation: compass-circle_arrow 5s ease-in-out infinite;
+                    }
+                    
+                    // Надписи
+                    & > .main-c-labels {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        
+                        & > a {
+                            position: absolute;
+                            color: @bgColor;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            font-family: mont-sb;
+                            font-size: 1.7vh;
+                            overflow: hidden;
+                            
+                            &:after, &:before {
+                                content: " ";
+                                position: absolute;
+                                width: 80%;
+                                height: 1px;
+                                background-color: @bgColor;
+                                transition: transform .3s, background-color .3s;
+                                left: 0;
+                            }
+                            
+                            &:after {
+                                transform: translate3d(-101%, 0, 0);
+                                bottom: 0;
+                            }
+                            
+                            &:before {
+                                transform: translate3d(101%, 0, 0);
+                            }
+                            
+                            &:hover {
+                                &:after, &:before {
+                                    transform: translate3d(0, 0, 0);
+                                    background-color: @orColor;
+                                }
+                            }
+                        }
+                        
+                        & > a:nth-child(1) {
+                            left: -25%;
+                            top: 10%;
+                        }
+                        
+                        & > a:nth-child(2) {
+                            left: -33%;
+                            top: 48.5%;
+                        }
+                        
+                        & > a:nth-child(3) {
+                            left: -25%;
+                            bottom: 10%;
+                        }
+                        
+                        & > a:nth-child(4) {
+                            bottom: -5%;
+                            left: 30%;
+                        }
                     }
                 }
             }
