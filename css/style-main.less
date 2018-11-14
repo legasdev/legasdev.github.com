@@ -1310,6 +1310,9 @@
             height: 90%;
             .ccibg();
             background-image: url('/img/vertical-lines.svg');
+            transform: scale3d(1,1,1);
+            transform-origin: top;
+            transition: transform .5s ease .2s;
         }
     }
     
@@ -1322,8 +1325,21 @@
         height: 100%;
         
         & > .name-block {
+            position: relative;
             color: @bgColor;
             padding-left: 0;
+            overflow: hidden;
+            
+            & > span:first-child {
+                position: absolute;
+                transform: translate3d(0, 0, 0);
+                transition: transform .2s ease .2s;
+            }
+                
+            & > span:last-child {
+                position: relative;
+                color: transparent;
+            }
         }
         
         & > .notes-w {
@@ -1341,6 +1357,13 @@
                 width: 40%;
                 height: 80%;
                 background-color: @bgColor;
+                opacity: 1;
+                transform: scale3d(1, 1, 1);
+                transition: transform .2s ease .6s, opacity .2s ease .6s;
+                
+                 &:nth-child(2) {
+                     transition: transform .2s ease .8s, opacity .2s ease .8s;
+                }
                 
                 // Название
                 & > .notes-wb-name {
@@ -1442,6 +1465,8 @@
                 text-decoration: none;
                 text-transform: uppercase;
                 width: 10%;
+                opacity: 1;
+                transition: opacity .2s ease 1s;
                 
                 // Кнопки больше отзывов
                 &:last-child {
@@ -1503,6 +1528,31 @@
                         width: 87%;
                         background-color: @bgColor;
                     }
+                }
+            }
+        }
+    }
+    
+    // Скрыто
+    &.hidden {
+        & > .notes-design {
+            & > .notes-d-lines {
+                transform: scale3d(1, 0, 1);
+            }
+        }
+        & > .notes-wrapper {
+            & > .name-block {
+                & > span:first-child {
+                    transform: translate3d(0, -100%, 0);
+                }
+            }
+            & > .notes-w {
+                & > .notes-w-block {
+                    transform: scale3d(.9, .9, 1);
+                    opacity: 0;
+                }
+                & > .notes-w-btn {
+                    opacity: 0;
                 }
             }
         }
