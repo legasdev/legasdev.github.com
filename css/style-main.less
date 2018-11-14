@@ -35,10 +35,31 @@
                 width: 120px;
                 height: 50vh;
                 font-size: 1.5rem;
+                opacity: 1;
                 color: @bgColor;
                 
+                // Языки
                 & > .main-l-lang {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
                     font-family: mont-l;
+                    transition: opacity .2s;
+                    overflow-y: hidden;
+                    
+                    & > span {
+                        position: absolute;
+                        cursor: pointer;
+                        right: 60%;
+                        transform: translate3d(0, 0, 0);
+                        transition: transform .2s ease .1s;
+                        &:last-child {
+                            left: 60%;
+                            transition: transform .2s ease .3s;
+                        }
+                    }
                     
                     & > .chose {
                         color: @orColor;
@@ -62,40 +83,71 @@
                     // Заголовок
                     & > .main-c-info-h {
                         position: absolute;
+                        height: 4em;
+                        width: 500px;
                         bottom: 25%;
-                        left: 1.3rem;
                         color: @bgColor;
                         font-family: mont-l;
                         font-weight: 100;
                         font-size: 1.3rem;
                         text-transform: uppercase;
+                        overflow: hidden;
+                        opacity: 1;
+                        transition: opacity .2s ease .2s;
+                        
+                        & > span {
+                            position: absolute;
+                            left: 1rem;
+                            top: .5rem;
+                            transform: translate3d(0, 0, 0);
+                            transition: transform .2s ease .6s;
+                        }
                         
                         & > div {
+                            position: absolute;
                             font-family: mont-l;
                             font-weight: 100;
-                            font-size: 2em;
+                            left: 2rem;
+                            font-size: 3rem;
+                            bottom: 0;
+                            transform: translate3d(0, 0, 0);
+                            transition: transform .2s ease .6s;
                         }
                         
                         &:after {
                             content: " ";
                             position: absolute;
+                            bottom: 0;
                             left: -1.3rem;
-                            width: 90%;
+                            width: 70%;
                             height: 1px;
                             background-color: @bgColor;
+                            transform-origin: left;
+                            transform: scale3d(1, 1, 1);
+                            transition: transform .2s ease .4s;
                         }
                     }
                     
                     // Телефон и почта
                     & > .main-c-i-info {
                         position: absolute;
+                        width: 500px;
+                        height: 100px;
                         top: 15%;
                         left: 1.3rem;
                         color: @bgColor;                       
                         font-size: 1.3rem;
+                        overflow: hidden;
                         
                         & > p {
-                            font-family: mont-l; 
+                            position: absolute;
+                            font-family: mont-l;
+                            transform: translate3d(0, 0, 0);
+                            transition: transform .2s ease .5s;
+                            &:last-child {
+                                top: 1.5rem;
+                                transition: transform .2s ease .3s;
+                            }
                         }
                     }
                     
@@ -106,6 +158,9 @@
                         width: 1px;
                         height: 100%;
                         background-color: @bgColor;
+                        transform-origin: top;
+                        transform: scale3d(1, 1, 1);
+                        transition: transform .2s ease .1s;
                     }
                 }
                 
@@ -278,6 +333,50 @@
             height: 90%;
             .ccibg();
             background-image: url('/img/vertical-lines.svg');
+        }
+    }
+    
+    // Если все скрыто
+    &.hidden {
+        & > .main-shadow {
+            & > .main-s-info {
+                & > .main-left {
+                    // Выбор языка
+                    & > .main-l-lang {
+                        opacity: 0;
+                        & > span {
+                            transform: translate3d(0, -2rem, 0);
+                        }
+                    }
+                }
+                & > .main-center {
+                    & > .main-c-info {
+                        // Заголовок
+                        & > .main-c-info-h {
+                            opacity: 0;
+                            & > span {
+                                transform: translate3d(0, -4rem, 0);
+                            }
+                            & > div {
+                                transform: translate3d(0, 4rem, 0);
+                            }
+                            &:after {
+                                transform: scale3d(0, 1, 1);
+                            }
+                        }
+                        // Телефон и почта
+                        & > .main-c-i-info {
+                            & > p {
+                                transform: translate3d(0, -4rem, 0);
+                            }
+                        }
+                        // Левая граница
+                        &:after {
+                            transform: scale3d(1, 0, 1);
+                        }
+                    }
+                }
+            }
         }
     }
 }
