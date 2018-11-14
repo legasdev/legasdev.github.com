@@ -21,9 +21,11 @@ $(document).ready( () => {
     allBlocks = $('#body').children('.main, section, footer');
     
     // Устанавливаем текущий блок
-    setCurrentBlock();
+    setTimeout( () => {
+        setCurrentBlock();
+        $(allBlocks[currentBlock]).removeClass('hidden');
+    }, 500);
     
-    $(allBlocks[currentBlock]).removeClass('hidden');
     
     // Прокуртка мыши
     addWheelEvent();
@@ -45,7 +47,6 @@ $(window).scroll( (e) => {
     scrollSecondBlock(e);
     
 });
-
 
 
 // Направление стрелки
@@ -117,9 +118,6 @@ onWheel = (e) => {
         // Полная прокрутка
         if (currentBlock !== 1) {
             
-            //!$(allBlocks[currentBlock]).hasClass('hidden') ? 
-            //        $(allBlocks[currentBlock]).addClass('hidden') : false;
-            
             if (delta > 0 && currentBlock < allBlocks.length - 1)
                 currentBlock++;
             else if (delta < 0 && currentBlock > 0)
@@ -180,6 +178,6 @@ scrollSecondBlock = (e) => {
 // Определить текущий блок
 setCurrentBlock = () => {
     $('#body').children('.main, section, footer').each( (i, e) => {
-       $(e).offset().top <= $('html, body').scrollTop() ? currentBlock = i : false; 
+       $(e).offset().top <= $('html, body').scrollTop() ? currentBlock = i : currentBlock; 
     });
 }
