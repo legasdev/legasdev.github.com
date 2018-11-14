@@ -116,37 +116,73 @@ onWheel = (e) => {
             e.preventDefault ? e.preventDefault() : (e.returnValue = false);
         } else {
             
-            // Проверяем, ушли ли выше
-            if ( $(window).scrollTop() <= $(allBlocks[currentBlock]).offset().top &&
-                    delta < 0) {
-                
-                currentBlock--;
-                $('html, body').stop().animate({
-                    scrollTop: $(allBlocks[currentBlock]).offset().top
-                }, 500, () => {
-                    checkScroll = true;
-                });
-                
-                e.preventDefault ? e.preventDefault() : (e.returnValue = false);
-            } else if (
-                $(window).scrollTop() + $(window).height() >= 
-                    $(allBlocks[currentBlock+1]).offset().top &&
-                    delta > 0) {
-                
-                // Или ушел ниже
-                currentBlock++;
-                $('html, body').stop().animate({
-                    scrollTop: $(allBlocks[currentBlock]).offset().top
-                }, 500, () => {
-                    checkScroll = true;
-                });
-                
-                e.preventDefault ? e.preventDefault() : (e.returnValue = false);
-            }
+//            // Проверяем, ушли ли выше
+//            if ( $(window).scrollTop() <= $(allBlocks[currentBlock]).offset().top &&
+//                    delta < 0) {
+//                
+//                currentBlock--;
+//                $('html, body').stop().animate({
+//                    scrollTop: $(allBlocks[currentBlock]).offset().top
+//                }, 500, () => {
+//                    checkScroll = true;
+//                });
+//                
+//                e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+//            } else if (
+//                $(window).scrollTop() + $(window).height() >= 
+//                    $(allBlocks[currentBlock+1]).offset().top &&
+//                    delta > 0) {
+//                
+//                // Или ушел ниже
+//                currentBlock++;
+//                $('html, body').stop().animate({
+//                    scrollTop: $(allBlocks[currentBlock]).offset().top
+//                }, 500, () => {
+//                    checkScroll = true;
+//                });
+//                
+//                e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+//            }
             
         }
     } 
 }
+
+$(window).scroll( (e) => {
+    
+    if (currentBlock === 1 && checkScroll) {
+        let
+            allBlocks = $('#body').children('.main, section, footer');
+        // Проверяем, ушли ли выше
+        if ( $(window).scrollTop() < $(allBlocks[currentBlock]).offset().top) {
+            
+            checkScroll = false;
+            currentBlock--;
+            $('html, body').stop().animate({
+                scrollTop: $(allBlocks[currentBlock]).offset().top
+            }, 500, () => {
+                checkScroll = true;
+            });
+                
+            e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+        } else if (
+            $(window).scrollTop() + $(window).height() > 
+                $(allBlocks[currentBlock+1]).offset().top && checkScroll) {
+            
+            checkScroll = false;
+            // Или ушел ниже
+            currentBlock++;
+            $('html, body').stop().animate({
+                scrollTop: $(allBlocks[currentBlock]).offset().top
+            }, 500, () => {
+                checkScroll = true;
+            });
+                
+            e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+        }
+    }
+    
+});
 
 // Определить текущий блок
 setCurrentBlock = () => {
