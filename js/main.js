@@ -38,7 +38,7 @@ $(document).ready( () => {
     
     // При нажатии на меню
     $('body').on('click', '.menu-btn', (e) => {
-        
+        $('.menu').addClass('opened');
     });
     
     $('.reviews-w-more:first').css('left', -$('.reviews-w-more:first').width() / 2.5);

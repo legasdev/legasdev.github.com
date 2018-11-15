@@ -12,7 +12,7 @@
 .main {
     .flex();
     .ccibg();
-    background-image: url('/img/main-img-5.jpg');
+    background-image: url('/img/design-main/main-img-5.jpg');
     
     & > .main-shadow {
         position: relative;
@@ -95,7 +95,7 @@
                         opacity: 1;
                         transition: opacity .2s ease .2s;
                         
-                        & > span {
+                        & > span:first-child {
                             position: absolute;
                             left: 1rem;
                             top: .5rem;
@@ -103,7 +103,7 @@
                             transition: transform .2s ease .6s;
                         }
                         
-                        & > div {
+                        & > span:last-child {
                             position: absolute;
                             font-family: mont-l;
                             font-weight: 100;
@@ -209,7 +209,7 @@
                             transform: scale3d(1, 1, 1);
                             transition: transform .2s ease .8s;
                             .ccibg();
-                            background-image: url('/img/compass-1.svg');
+                            background-image: url('/img/design-main/compass-1.svg');
                         }
                         
                         & > .main-c-c-circle:nth-child(4) {
@@ -243,7 +243,7 @@
                             .ccibg();
                             opacity: 1;
                             transition: opacity .4s ease 1.2s;
-                            background-image: url('/img/compass.svg');
+                            background-image: url('/img/design-main/compass.svg');
                             animation: compass-circle_ride 60s linear infinite;
                         }
                         
@@ -255,7 +255,7 @@
                             opacity: 1;
                             transition: opacity .4s ease 1.3s;
                             .ccibg();
-                            background-image: url('/img/compass.svg');
+                            background-image: url('/img/design-main/compass.svg');
                             animation: compass-circle_ride 120s linear reverse infinite;
                         }
                     }
@@ -269,7 +269,7 @@
                         right: 45%;
                         .ccibg();
                         background-size: contain;
-                        background-image: url('/img/arrow.svg');
+                        background-image: url('/img/design-main/arrow.svg');
                         transform-origin: 83% 50%;
                         transition: transform .5s ease-in-out, opacity .2s ease 1.2s;
                     }
@@ -352,7 +352,7 @@
             width: 100%;
             height: 90%;
             .ccibg();
-            background-image: url('/img/vertical-lines.svg');
+            background-image: url('/img/design-main/vertical-lines.svg');
         }
     }
     
@@ -375,10 +375,10 @@
                         // Заголовок
                         & > .main-c-info-h {
                             opacity: 0;
-                            & > span {
+                            & > span:first-child {
                                 transform: translate3d(0, -4rem, 0);
                             }
-                            & > div {
+                            & > span:last-child {
                                 transform: translate3d(0, 4rem, 0);
                             }
                             &:after {
@@ -572,7 +572,7 @@
             top: 2.5%;
             height: 95%;
             width: 100%;
-            background-image: url('/img/vertical-lines-black.svg');
+            background-image: url('/img/design-main/vertical-lines-black.svg');
         }
     }
     
@@ -601,7 +601,7 @@
 .about {
     .flex();
     .ccibg();
-    background-image: url('/img/main-img-6.jpg');
+    background-image: url('/img/design-main/main-img-6.jpg');
     
     & > .about-design {
         position: absolute;
@@ -617,7 +617,7 @@
             width: 100%;
             height: 90%;
             .ccibg();
-            background-image: url('/img/vertical-lines.svg');
+            background-image: url('/img/design-main/vertical-lines.svg');
             transform-origin: top;
             transform: scale3d(1,1,1);
             transition: transform .5s;
@@ -668,7 +668,7 @@
                 & > .about-wiw-img {
                     position: relative;
                     .ccibg();
-                    background-image: url('/img/stepanov_nikolay_2.jpg');
+                    background-image: url('/img/design-main/stepanov_nikolay_2.jpg');
                     height: 50%;
                     width: 70%;
                     opacity: 1;
@@ -812,7 +812,7 @@
 .action {
     .flex();
     .ccibg();
-    background-image: url('/img/main-img-7.jpg');
+    background-image: url('/img/design-main/main-img-7.jpg');
     
     & > .action-design {
         position: absolute;
@@ -828,7 +828,7 @@
             width: 100%;
             height: 90%;
             .ccibg();
-            background-image: url('/img/vertical-lines.svg');
+            background-image: url('/img/design-main/vertical-lines.svg');
             transform-origin: top;
             transform: scale3d(1, 1, 1);
             transition: transform .5s ease .2s;
@@ -973,7 +973,7 @@
             top: 2.5%;
             height: 95%;
             width: 100%;
-            background-image: url('/img/vertical-lines-black.svg');
+            background-image: url('/img/design-main/vertical-lines-black.svg');
             transform-origin: top;
             transform: scale3d(1, 1, 1);
             transition: transform .5s ease .2s;
@@ -1061,7 +1061,7 @@
                     top: -1rem;
                     left: -2rem;
                     .ccibg();
-                    background-image: url('/img/vertical-lines-black-opacity.svg');
+                    background-image: url('/img/design-main/vertical-lines-black-opacity.svg');
                     opacity: .4;
                     
                     &:before, &:after {
@@ -1265,7 +1265,7 @@
                                 right: 40%;
                                 .ccibg();
                                 background-size: contain;
-                                background-image: url('/img/arrow-black.svg');
+                                background-image: url('/img/design-main/arrow-black.svg');
                                 transform-origin: 86% 50%;
                                 animation: compass-circle_arrow 15s ease-in-out infinite;
                             }
@@ -1400,7 +1400,7 @@
 .notes {
     .flex();
     .ccibg();
-    background-image: url('/img/main-img-4.jpg');
+    background-image: url('/img/design-main/main-img-4.jpg');
     
     & > .notes-design {
         position: absolute;
@@ -1640,7 +1640,7 @@
                     top: -1rem;
                     left: -2rem;
                     .ccibg();
-                    background-image: url('/img/vertical-lines-opacity.svg');
+                    background-image: url('/img/design-main/vertical-lines-opacity.svg');
                     opacity: 1;
 
                     &:before, &:after {
@@ -1705,7 +1705,7 @@
         top: -5%;
         width: 90%;
         height: 95%;
-        background-image: url('/img/cross.png');
+        background-image: url('/img/design-main/cross.png');
     }
     
     // Верхняя часть footer
@@ -1836,7 +1836,7 @@
                 top: -.5rem;
                 left: -1rem;
                 .ccibg();
-                background-image: url('/img/vertical-lines-opacity.svg');
+                background-image: url('/img/design-main/vertical-lines-opacity.svg');
                 opacity: 1;
 
                 &:before, &:after {

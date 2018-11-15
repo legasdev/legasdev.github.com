@@ -201,3 +201,23 @@ body {
         transform: translate3d(0, 0, 0);
     }
 }
+
+// Само меню
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .ccibg();
+    background-image: url('/img/design-main/menu-img.jpg');
+    z-index: 100;
+    opacity: 0;
+    transform: scale3d(.9, .9, 1);
+    transition: transform .2s, opacity .2s;
+    
+    &.opened {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
