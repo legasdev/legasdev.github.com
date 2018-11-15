@@ -24,8 +24,9 @@ $(document).ready( () => {
     setTimeout( () => {
         setCurrentBlock();
         $(allBlocks[currentBlock]).removeClass('hidden');
+        (currentBlock === 1 || currentBlock === 4) ? 
+            $('.menu-btn').addClass('black') : $('.menu-btn').removeClass('black');
     }, 500);
-    
     
     // Прокуртка мыши
     addWheelEvent();
@@ -33,6 +34,11 @@ $(document).ready( () => {
     // Для компоса при наведении
     $('body').on('mouseenter', '.compass-link', (e) => {
         hoverCompassLink(e);
+    });
+    
+    // При нажатии на меню
+    $('body').on('click', '.menu-btn', (e) => {
+        
     });
     
     $('.reviews-w-more:first').css('left', -$('.reviews-w-more:first').width() / 2.5);
@@ -131,6 +137,8 @@ onWheel = (e) => {
                 checkScroll = true;
                 $(allBlocks[currentBlock]).hasClass('hidden') ? 
                     $(allBlocks[currentBlock]).removeClass('hidden') : false;
+                (currentBlock === 1 || currentBlock === 4) ? 
+                    $('.menu-btn').addClass('black') : $('.menu-btn').removeClass('black');
             });
             e.preventDefault ? e.preventDefault() : (e.returnValue = false);
         }
@@ -152,6 +160,8 @@ scrollSecondBlock = (e) => {
                 checkScroll = true;
                 $(allBlocks[currentBlock]).hasClass('hidden') ? 
                     $(allBlocks[currentBlock]).removeClass('hidden') : false;
+                (currentBlock === 1 || currentBlock === 4) ? 
+                    $('.menu-btn').addClass('black') : $('.menu-btn').removeClass('black');
             });
                 
             e.preventDefault ? e.preventDefault() : (e.returnValue = false);
@@ -168,6 +178,8 @@ scrollSecondBlock = (e) => {
                 checkScroll = true;
                 $(allBlocks[currentBlock]).hasClass('hidden') ? 
                     $(allBlocks[currentBlock]).removeClass('hidden') : false;
+                (currentBlock === 1 || currentBlock === 4) ? 
+                    $('.menu-btn').addClass('black') : $('.menu-btn').removeClass('black');
             });
                 
             e.preventDefault ? e.preventDefault() : (e.returnValue = false);

@@ -116,7 +116,7 @@ body {
     left: 0;
     width: 119px;
     height: 119px;
-    z-index: 15;
+    z-index: 25;
     cursor: pointer;
     
     // Палочки
@@ -134,6 +134,7 @@ body {
             background-color: @bgColor;
             margin: 4px 0;
             border-radius: 100%;
+            transition: background-color .3s;
         }
     }
     
@@ -143,5 +144,60 @@ body {
         color: @bgColor;
         font-size: .8rem;
         font-family: mont-b;
+        transition: color .3s;
+    }
+    
+    &:hover {
+        & > .menu-b-wrapper {
+            & > div {
+                animation: anim-menu-left 1s ease .6s infinite;
+                
+                &:nth-child(1) {
+                    animation: anim-menu-right 1s ease .2s infinite;
+                }
+                
+                &:nth-child(2) {
+                    animation: anim-menu-right 1s ease .4s infinite;
+                }
+            }
+        }
+    }
+    
+    // Черный
+    &.black {
+        & > .menu-b-wrapper {
+            & > div {
+                background-color: @blackColor;
+            }
+        }
+        & > .menu-b-label {
+            color: @blackColor;
+        }
+    }
+}
+
+@animMenuMax: 5%;
+
+@keyframes anim-menu-left {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(-@animMenuMax, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes anim-menu-right {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(@animMenuMax, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
     }
 }
