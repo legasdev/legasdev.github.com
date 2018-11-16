@@ -1,1 +1,1 @@
-This site abouttt travelinggggg in Montenegro.
+This site about traveling in Montenegro.
