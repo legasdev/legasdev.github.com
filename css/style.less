@@ -3,37 +3,231 @@
 *   Title: Главная страница сайта
 *   Autor: Artem Stepanov
 *   E-mail: temka.do@gmail.com
+*   Date: 22.11.18
 *
 \*======================================*/
 
-@import "style-total";
+@import "main-ready.less";
 
-// Заголовки
-.name-block {
-    padding: 0 0 35px 35px;
-    margin-top: 35px;
+@font-face {
+    font-family: mont-r;
+    src: url('/fonts/Montserrat-Regular.ttf');
+}
+@font-face {
     font-family: mont-b;
-    font-size: 2.3rem;
-    text-transform: uppercase;
-    
-    & > span {
-        font-family: mont-b;
+    src: url('/fonts/Montserrat-Bold.ttf');
+}
+@font-face {
+    font-family: mont-eb;
+    src: url('/fonts/Montserrat-ExtraBold.ttf');
+}
+@font-face {
+    font-family: mont-l;
+    src: url('/fonts/Montserrat-Light.ttf');
+}
+@font-face {
+    font-family: mont-sb;
+    src: url('/fonts/Montserrat-SemiBold.ttf');
+}
+
+// Переменные
+@bgColor: #FFF9F9;
+@fontColor: #505050;
+@fbColor: #0A5A7F;
+@sbColor: #C5E2EF;
+@fpColor: #ED022D;
+@spColor: #FFDBE1;
+@whiteColor: #fff;
+@blackColor: #000;
+
+// Миксины
+
+// Флекс
+.flex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// center contain image background
+.ccibg() {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+// Анимации
+@animMenuMax: 5%;
+@keyframes anim-menu-left {
+    0% {
+        transform: translate3d(0, 0, 0);
     }
-    
-    & > span:last-child {
-        position: relative;
-        color: transparent;
+    50% {
+        transform: translate3d(-@animMenuMax, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes anim-menu-right {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(@animMenuMax, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
     }
 }
 
-// Границы для картинки
-.img-border {
-    position: absolute;
+// Адаптация
+
+// Mode: Tablet
+@tablet-area: 650px;
+.tablet(@rules) {
+  @media (max-width: @tablet-area) { @rules(); }
+}
+
+// Mode: Small-Desktop
+@desktop-area: 1190px;
+.desktop(@rules) {
+  @media (max-width: @desktop-area) { @rules(); }
+}
+
+// Mode: Big-Desktop
+@big-desktop-area: 1390px;
+.big-desktop(@rules) {
+  @media (max-width: @big-desktop-area) { @rules(); }
+}
+
+// Общие стили
+
+a:active, a:focus { outline: none; }
+
+input, textarea {outline:none;}
+input:active, textarea:active {outline:none;}
+:focus {outline:none;}
+textarea {resize:none;}
+textarea {resize:vertical;}
+textarea {resize:horizontal;}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: mont-r;
+}
+
+body {
     width: 100%;
     height: 100%;
-    top: 4%;
-    left: 5%;
-    border: 1px solid #E9E9E9;
+    background-color: @bgColor;
+    overflow-x: hidden;
+    font-size: 16px;
 }
 
+// Видео
+.video {
+    -o-object-fit: cover;
+	object-fit: cover;
+}
 
+// Блок с иконкой, фоновым цветом и заголовком
+.colorNameBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .desktop({
+        margin: 10px 0;
+    });
+    
+    // Иконка
+    & > .cnb-icon {
+        width: 70px;
+        height: 70px;
+        z-index: 2;
+        .ccibg();
+    }
+    
+    // Текст
+    & > .cnb-text {
+        padding: 10px 10px 10px 70px;
+        max-width: 510px;
+        z-index: 2;
+        font-size: 2rem; 
+        font-family: mont-sb;
+        color: @fontColor;
+        .big-desktop({
+            font-size: 1rem;
+            max-width: 310px;
+        });
+        .desktop({
+            padding: 0 0 0 70px;
+        });
+    }
+    
+    // Фон
+    & > .cnb-bg {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        width: 60%;
+        height: 60%;
+        background-color: @spColor;
+        .desktop({
+            height: 80%;
+        });
+    }
+}
+
+// Заголовок блока
+.name-block {
+    font-size: 2.7rem;
+    color: @fontColor;
+    font-family: mont-eb;    
+    align-self: flex-start;
+    padding: 35px 0 35px 50px;
+    .desktop({
+       font-size: 2rem; 
+    });
+}
+
+// Управление слайдами
+.ui-slides {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    
+    & > .uis-left, & > .uis-right {
+        width: 40px;
+        height: 40px;
+        .ccibg();
+        background-image: url('/img/icons/arrow-slider.svg');
+        margin: 0 10px;
+    }
+    
+    & > .uis-right {
+        transform: rotate3d(0,0,1,180deg);
+    }
+    
+    & > .uis-center {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        
+        & > .uis-tap {
+            width: 40px;
+            height: 40px;
+            border: 4px solid @fbColor;
+            margin: 0 10px;
+            border-radius: 100%;
+            
+            &.active {
+                border: 20px solid @fbColor;
+            }
+        }
+    }
+}

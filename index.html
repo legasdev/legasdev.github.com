@@ -1,387 +1,344 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<title>{{title}}</title>
-	<link rel="stylesheet/less" type="text/css" href="/css/style-main.less">
-	<link rel="stylesheet/less" type="text/css" href="/css/style.less">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>VIDEOSALON | Производство промороликов, видеосъемка мероприятий в МСК</title>
+    <link rel="stylesheet/less" type="text/css" href="/css/style.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.8.1/less.min.js" ></script>
+    <script src="https://vk.com/js/api/openapi.js?159" type="text/javascript"></script>
 </head>
-<body id="body">
+<body>
     
-    <div class="main hidden">
-       <div class="main-shadow">
-           
-           <div class="main-s-design"></div>
-          
-           <div class="main-s-info">
-               <div class="main-left">
-                   <div class="main-l-lang"><span class="chose">ru</span> | <span>en</span></div>
-               </div>
-
-               <div class="main-center">
-                   <div class="main-c-info">
-                       <div class="main-c-i-info">
-                           <p>+382 67277971</p>
-                           <p>gidmne@yandex.ru</p>
+    <div class="wrapper">
+        
+        <div class="main-page">
+            <div class="main-page-bluebg"></div>
+            <div class="main-page-slider">
+                <div class="main-page-slides">
+                    <div class="main-page-s-slide active">
+                        <video class="video" width="100%" height="100%" autoplay loop>
+                            <source src="/video/file.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="main-page-s-slide ready">
+                        <video class="video" width="100%" height="100%" autoplay loop>
+                            <source src="/video/file.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="main-page-s-slide">
+                        <video class="video" width="100%" height="100%" autoplay loop>
+                            <source src="/video/file.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="main-page-s-words">
+                    <div class="main-page-sw-current">01</div>
+                    <div class="main-page-sw-word">
+                       <hr noshade>
+                       <span>Счастье</span>
+                    </div>
+                    <div class="main-page-sw-all">/03</div>
+                </div>
+                <div class="main-page-ui">
+                    <span class="main-page-s">Назад</span>
+                    <div></div>
+                    <span class="main-page-s">Вперед</span>
+                </div>
+            </div>
+            <div class="main-page-soc">
+                <div class="main-page-s-btn"></div>
+                <div class="main-page-s-btn"></div>
+            </div>
+            <div class="main-page-slogan">
+                <div class="main-page-s-top">
+                    <div class="main-page-st-icon"></div>
+                    <div class="main-page-st-slogan">Мы создаем хорошее видео</div>
+                </div>
+                <div class="main-page-s-words">Уникально</div>
+            </div>
+        </div>
+        
+        <div class="services">
+            <a href="/" class="services-block">
+                <div class="services-b-shadow"></div>
+                <div class="services-b-label">
+                   <div class="services-bl-wrapper">
+                       <div class="services-blw-bg">
+                           <p class="services-blw-info">Более подробная информация</p>
                        </div>
-                       <h1 class="main-c-info-h"><span>Добро пожаловать в</span><span>Черногорию</span></h1>
+                       <div class="services-blw-bg_name">
+                          <p class="services-blw-name">Свадьбы</p>
+                       </div>
                    </div>
-                  
-                   <div class="main-c-compass">
-                       <div class="main-c-circles">
-                           <div class="main-c-c-circle"></div>
-                           <div class="main-c-c-circle"></div>
-                           <div class="main-c-c-circle"></div>
-                           <div class="main-c-c-circle"></div>
-                           <div class="main-c-c-circle"></div>
-                           <div class="main-c-c-circle"></div>
-                           <div class="main-c-c-circle_inner"></div>
-                           <div class="main-c-c-circle_inner_2"></div>
-                       </div>
-                       <div class="main-c-arrow"></div>
-                       <div class="main-c-labels">
-                           <a class="compass-link" href="#">Популярные экскурсии</a>
-                           <a class="compass-link" href="#">Специальные туры</a>
-                           <a class="compass-link" href="#">Поездки для "бывалых"</a>
-                           <a class="compass-link" href="#">Винные и адреналин-туры</a>
-                       </div>
+                </div>
+            </a>
+            <a href="/" class="services-block">
+                <div class="services-b-shadow"></div>
+                <div class="services-b-label">
+                   <div class="services-bl-wrapper">
+                      <div class="services-blw-bg">
+                          <p class="services-blw-info">Более подробная информация</p>
+                      </div>
+                      <div class="services-blw-bg_name">
+                          <p class="services-blw-name">Онлайн<br>трансляции</p>
+                      </div>
                    </div>
-               </div>
-           </div>
-                      
-       </div>
+                </div>
+            </a>
+            <a href="/" class="services-block">
+                <div class="services-b-shadow"></div>
+                <div class="services-b-label">
+                   <div class="services-bl-wrapper">
+                      <div class="services-blw-bg">
+                          <p class="services-blw-info">Более подробная информация</p>
+                      </div>
+                      <div class="services-blw-bg_name">
+                          <p class="services-blw-name">Ивенты</p>
+                      </div>
+                   </div>
+                </div>
+            </a>
+            <a href="/" class="services-block">
+                <div class="services-b-shadow"></div>
+                <div class="services-b-label">
+                   <div class="services-bl-wrapper">
+                      <div class="services-blw-bg">
+                          <p class="services-blw-info">Более подробная информация</p>
+                      </div>
+                      <div class="services-blw-bg_name">
+                          <p class="services-blw-name">Школы<br>Дет. сады</p>
+                      </div>
+                   </div>
+                </div>
+            </a>
+        </div>
+        
+        <section class="adv">
+            <div class="adv-block">
+               <div class="colorNameBlock">
+                   <div class="cnb-bg"></div>
+                   <div class="cnb-icon" style="background-image: url('/img/icons/support.svg');"></div>
+                   <div class="cnb-text">Мы команда, и для нас нет невыполнимых задач</div>
+                </div>
+            </div>
+            <div class="adv-block">
+                <div class="colorNameBlock">
+                    <div class="cnb-bg"></div>
+                    <div class="cnb-icon" style="background-image: url('/img/icons/bar-chart.svg');"></div>
+                    <div class="cnb-text">Работаем на профессиональном уровне с 2011 года</div>
+                </div>
+                <a href="/" class="adv-logo"></a>
+                <div class="colorNameBlock">
+                    <div class="cnb-bg"></div>
+                    <div class="cnb-icon" style="background-image: url('/img/icons/smile.svg');"></div>
+                    <div class="cnb-text">Высокий уровень обслуживания</div>
+                </div>
+            </div>
+            <div class="adv-block">
+                <div class="colorNameBlock">
+                    <div class="cnb-bg"></div>
+                    <div class="cnb-icon" style="background-image: url('/img/icons/tag.svg');"></div>
+                    <div class="cnb-text">Адекватные цены</div>
+                </div>
+                <div class="colorNameBlock">
+                    <div class="cnb-bg"></div>
+                    <div class="cnb-icon" style="background-image: url('/img/icons/settings.svg');"></div>
+                    <div class="cnb-text">Современное оборудование</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="step">
+            <h2 class="name-block">Этапы создания или как мы работаем</h2>
+            <div class="step-wrapper">
+                <div class="step-left">
+                    <div class="step-block">
+                        <h3 class="step-b-label">
+                            <hr noshade>
+                            <p>Этап 1</p>
+                        </h3>
+                        <p class="step-b-text">Текст</p>
+                    </div>
+                    <div class="step-block">
+                        <h3 class="step-b-label">
+                            <hr noshade>
+                            <p>Этап 2</p>
+                        </h3>
+                        <p class="step-b-text">Текст</p>
+                    </div>
+                    <div class="step-block">
+                        <h3 class="step-b-label">
+                            <hr noshade>
+                            <p>Этап 3</p>
+                        </h3>
+                        <p class="step-b-text">Текст</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="partners">
+            <h2 class="name-block">Наши клиенты</h2>
+            <div class="main-about-partner">
+                <div class="main-about-partner-left"></div>
+                <div class="main-about-partner-center-wrapper">
+                    <div class="main-about-partner-center">
+                        <div class="main-about-partner-center-logo"></div>
+                        <div class="main-about-partner-center-logo"></div>
+                        <div class="main-about-partner-center-logo"></div>
+                        <div class="main-about-partner-center-logo"></div>
+                        <div class="main-about-partner-center-logo"></div>
+                        <div class="main-about-partner-center-logo"></div>
+                        <div class="main-about-partner-center-logo"></div>
+                        <div class="main-about-partner-center-logo"></div>
+                        <div class="main-about-partner-center-logo"></div>
+                    </div>
+                </div>
+                <div class="main-about-partner-right"></div>
+            </div>
+        </section>
+        
+        <section class="reviews">
+            <h2 class="name-block">Отзывы наших клиентов</h2>
+            <div class="reviews-wrapper">
+                <div class="reviews-w-block active">
+                    <div class="reviews-wb-design"></div>
+                    <div class="reviews-wb-video">
+                        <video class="video" width="100%" height="100%" loop controls>
+                            <source src="/video/file.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="reviews-wb-text">Кто оставил отзыв</div>
+                    <div class="reviews-wb-ui">
+                        <div class="reviews-wbu-date">
+                            <span>01.01.2018</span>
+                        </div>
+                        <div class="reviews-wbu-city">
+                            <span>Москва</span>
+                        </div>
+                    </div>
+                    <div class="reviews-wb-btn"></div>
+                </div>
+                <div class="reviews-w-block left">
+                    <div class="reviews-wb-design"></div>
+                    <div class="reviews-wb-video">
+                        <video class="video" width="100%" height="100%" loop controls>
+                            <source src="/video/file.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="reviews-wb-text">Кто оставил отзыв</div>
+                    <div class="reviews-wb-ui">
+                        <div class="reviews-wbu-date">
+                            <span>01.01.2018</span>
+                        </div>
+                        <div class="reviews-wbu-city">
+                            <span>Москва</span>
+                        </div>
+                    </div>
+                    <div class="reviews-wb-btn"></div>
+                </div>
+                <div class="reviews-w-block right">
+                    <div class="reviews-wb-design"></div>
+                    <div class="reviews-wb-video">
+                        <video class="video" width="100%" height="100%" loop controls>
+                            <source src="/video/file.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="reviews-wb-text">Кто оставил отзыв</div>
+                    <div class="reviews-wb-ui">
+                        <div class="reviews-wbu-date">
+                            <span>01.01.2018</span>
+                        </div>
+                        <div class="reviews-wbu-city">
+                            <span>Москва</span>
+                        </div>
+                    </div>
+                    <div class="reviews-wb-btn"></div>
+                </div>
+            </div>
+            <div class="ui-slides">
+                <div class="uis-left"></div>
+                <div class="uis-center">
+                    <div class="uis-tap"></div>
+                    <div class="uis-tap active"></div>
+                    <div class="uis-tap"></div>
+                </div>
+                <div class="uis-right"></div>
+            </div>
+        </section>
+        
+        <section class="social">
+            <h2 class="name-block">Подписывайтесь на нас</h2>
+            <div class="social-wrapper">
+                <div class="social-w-block">
+                    <!-- VK Widget -->
+                    <div id="vk_groups"></div>
+                    <script type="text/javascript">
+                    VK.Widgets.Group("vk_groups", {mode: 4, wide: 2, height: "550"}, 61331456);
+                    </script>
+                </div>
+                <div class="social-w-block">
+                    <!-- InstaWidget -->
+                    <a href="https://instawidget.net/v/user/videosalon.info" id="link-7f8bba4b8524ba17f8c2d6a7b908d69389e511c2fc397e2278d48adfdb35c0b3">@videosalon.info</a>
+                    <script src="https://instawidget.net/js/instawidget.js?u=7f8bba4b8524ba17f8c2d6a7b908d69389e511c2fc397e2278d48adfdb35c0b3&width=400px"></script>
+                </div>
+            </div>
+        </section>
+        
+        <section class="team">
+            <h2 class="name-block">Наша команда</h2>
+<!--            <div class="team-img"></div>-->
+           <img src="/img/team/img.jpg" alt="" width="100%">
+        </section>
+        
+        <section class="contacts">
+            <h2 class="name-block">Наши контакты</h2>
+            <div class="contacts-map">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aed5c3c7e37343e77fcd3fa90edb435a8aa87287b42ca560c8daee67e74f5bdef&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+            <div class="contacts-wrapper">
+                <div class="contacts-w-design"></div>
+                <div class="contacts-w-info">
+                    <p class="contacts-wi-info">Москва<br>Просвирин переулок<br> д. 13, оф. 12</p>
+                    <p class="contacts-wi-info"><a href="tel:89851956113">+7 (985) 195-61-13</a><a href="tel:89175118633">+7 (917)-511-86-33</a></p>
+                    <p class="contacts-wi-info"><a href="mailto:video-salon@mail.ru">video-salon@mail.ru</a></p>
+                </div>
+                <div class="contacts-w-form">
+                    <div class="contacts-wf-label">
+                        <hr noshade>
+                        <p>Напишите нам</p>
+                    </div>
+                    <input type="text" class="contacts-wf-name" placeholder="Ваше имя*">
+                    <input type="text" class="contacts-wf-email" placeholder="Ваш e-mail*">
+                    <textarea class="contacts-wf-text" placeholder="Введите Ваше сообщение..."></textarea>
+                    <input type="button" class="contacts-wf-send" value="Отправить">
+                </div>
+            </div>
+        </section>
+        
     </div>
     
-    <section class="salute hidden">
-        <div class="salute-design">
-            <div class="salute-d-map"></div>
-            <div class="salute-d-lines"></div>
-        </div>
-        <div class="salute-wrapper">
-           <h2 class="name-block"><span>Давайте знакомиться!</span><span>Давайте знакомиться!</span></h2>
-            <div class="salute-w-inner">
-                <div class="salute-wi-block">
-                    <div class="salute-wib-img" style="background-image: url('/img/salute/1.jpg')">
-                        <div class="img-border"></div>
-                    </div>
-                    <div class="salute-wib-text">Я лицензированный гид и историк.<br>Вместе сравним обычаи, традиции и языки наших родственных народов.<br>Будет интересно!</div>
-                </div>
-                <div class="salute-wi-block">
-                    <div class="salute-wib-img" style="background-image: url('/img/salute/2.jpg')">
-                        <div class="img-border"></div>
-                    </div>
-                    <div class="salute-wib-text">Сфотографирую вас в самых красивых местах, фото вышлю вам на почту.</div>
-                </div>
-                <div class="salute-wi-block__double"></div>
-                <div class="salute-wi-block__double"></div>
-            </div>
-            <div class="salute-w-inner">
-                <div class="salute-wi-block">
-                    <div class="salute-wib-img" style="background-image: url('/img/salute/3.jpg')">
-                        <div class="img-border"></div>
-                    </div>
-                    <div class="salute-wib-text">Умею подстраиваться под туристов, провожу эмоциональные и яркие экскурсии в Черногории.</div>
-                </div>
-                <div class="salute-wi-block">
-                    <div class="salute-wib-img" style="background-image: url('/img/salute/4.jpg')">
-                        <div class="img-border"></div>
-                    </div>
-                    <div class="salute-wib-text">Сделаю в 3 раза больше остановок, чем на автобусных турах. Свернем в места, куда автобусы не смогут проехать.</div>
-                </div>
-                <div class="salute-wi-block__double"></div>
-                <div class="salute-wi-block__double"></div>
-            </div>
-            <div class="salute-w-inner">
-                <div class="salute-wi-block">
-                    <div class="salute-wib-img" style="background-image: url('/img/salute/5.jpg')">
-                        <div class="img-border"></div>
-                    </div>
-                    <div class="salute-wib-text">Возможно изменение маршрута, нет жесткого ограничения экскурсии по времени.</div>
-                </div>
-                <div class="salute-wi-block">
-                    <div class="salute-wib-img" style="background-image: url('/img/salute/6.jpg')">
-                        <div class="img-border"></div>
-                    </div>
-                    <div class="salute-wib-text">Заедем на вкусные обеды в немноголюдных национальных ресторанах.</div>
-                </div>
-                <div class="salute-wi-block__double"></div>
-                <div class="salute-wi-block__double"></div>
-            </div>
-            <div class="salute-w-inner">
-                <div class="salute-wi-block">
-                    <div class="salute-wib-img" style="background-image: url('/img/salute/7.jpg')">
-                        <div class="img-border"></div>
-                    </div>
-                    <div class="salute-wib-text">Предлагаю экскурсии для новичков и для тех, кто уже бывал в Черногории.</div>
-                </div>
-                <div class="salute-wi-block">
-                    <div class="salute-wib-img" style="background-image: url('/img/salute/8.jpg')">
-                        <div class="img-border"></div>
-                    </div>
-                    <div class="salute-wib-text">У вас маленькие дети? Не проблема! Имею опыт и оборудование для проведения таких экскурсий. Порекомендую маршруты.</div>
-                </div>
-                <div class="salute-wi-block__double"></div>
-                <div class="salute-wi-block__double"></div>
-            </div>
-        </div>
-    </section>
+    <footer class=""></footer>
     
-    <section class="about hidden">
-        <div class="about-design">
-            <div class="about-d-lines"></div>
-        </div>
-        <div class="about-wrapper">
-            <div class="about-w-info">
-                <h2 class="name-block"><span>Чуть-чуть о себе</span><span>Чуть-чуть о себе</span></h2>
-                <div class="about-wi-wrapp">
-                    <div class="about-wiw-img"><div class="img-border"></div></div>
-                    <div class="about-wiw-info">
-                        <div class="about-wiwf-name">
-                            <span>Николай</span><span>Степанов</span><br><br>
-                        </div>
-                        <div class="about-wiwf-soc">
-                            <a href="#" class="about-wiwfs-btn"></a>
-                            <a href="#" class="about-wiwfs-btn"></a>
-                            <a href="#" class="about-wiwfs-btn"></a>
-                        </div>
-                    </div>
-                </div>
+    <aside class="menu-line">
+        <a href="/" class="menu-l-logo"></a>
+        <div class="menu-l-menu-btn">
+            <div class="menu-lmb-wrapper">
+                <i></i>
+                <i></i>
+                <i></i>
             </div>
-            <div class="about-w-text"><p class="about-w-text_1">Уважаемые друзья, я частный гид по Черногории. На своем сайте я предлагаю вам более 30 эксклюзивных экскурсий по Черногории и прилегающим к ней странам. Если вы приехали первый раз, то можете посетить "популярные" экскурсии или православные святые места. Я разработал специальные туры для туристов с детьми. Есть предложение для гостей, прибывающих в Котор на круизных лайнерах. "Бывалым" предлагаю увидеть Черногорию углубленно, в деталях, или посетить соседние страны. Скучающим на побережье предлагаю выезд в прохладные винные погреба, в рестораны "для местных", на рыбалку или на экстремальные туры.</p><br><p>Всеми "местами силы", панорамными видами, историческими объектами и удивительными балканскими мелочами я с удовольствием поделюсь с вами на моих индивидуальных экскурсиях по Черногории. Как русский гид в Черногории, обсужу с вами языковые казусы, с которыми мы сталкиваемся, языки наши очень близкие. Даже следуя по стандартному "автобусному" маршруту, мы сможем сделать в 3 раза больше интересных остановок. Огромные автобусы не везде могут проехать, а мы попадем в удаленные красивые места, обычно остающиеся в стороне. Пообедаем мы не там, где удобно парковаться водителю, а там, где вкусно и красиво. Расскажу вам про блюда национальной кухни, покажу их в меню.</p><br><p>Скажите, разве кто-то из крупных перевозчиков будет думать, когда приехать на смотровую, чтобы солнце было за спиной и туристу было удобно фотографировать? Или рассчитать, когда очередь в монастырь Острог становится меньше, чтобы туристам не стоять 2 часа под солнцем? В моих экскурсиях даже это учтено! Многое из своих наблюдений я изложил в рубрике “Заметки о Черногории”. Кстати, все фото на сайте мои, авторские и во всех этих местах мы побывали вместе с туристами!</p><br><p>Если нужно поехать с Вами на арендованном Вами авто и провести экскурсию - не проблема!</p><br><p>Забрать я вас могу практически по всему побережью. Я работаю как частный гид в Будве, Которе, Тивате, Бечичи и Петроваце. В базовом описании указаны индивидуальные экскурсии из Будвы. Если вас меньше 6-ти, то могу попытаться найти вам попутчиков, хотя это, к сожалению, без гарантий. Выбирайте на моем сайте варианты экскурсионных маршрутов, предлагайте свои, пишите мне, спрашивайте, не стесняйтесь. Я русскоязычный гид, я вас "пойму". По цене можно договариваться! И добро пожаловать в маленькую и красивую Черногорию!<br>Добро Дошли!</p></div>
+            <p class="menu-lmb-label">Меню</p>
         </div>
-    </section>
+        <div class="menu-l-tel">
+            <a href="tel:89851956113">+7 (985) 195-61-13</a>
+            <a href="mailto:video-salon@mail.ru">video-salon@mail.ru</a>
+        </div>
+    </aside>
     
-    <section class="action hidden">
-        <div class="action-design">
-            <div class="action-d-lines"></div>
-        </div>
-        <div class="action-wrapper">
-            <div class="action-w-left">
-                <h2 class="name-block"><span>Как все происходит</span><span>Как все происходит</span></h2>
-                <div class="action-wl-design"></div>
-                <div class="action-wl-text">
-                    <p>В моей машине есть 4 основных места и два дополнительных, для детей или взрослых до 75 кг. Дополнительные места такие же комфортные, с ремнями безопасности. Туристов эти доп.сиденья всегда устраивают, обзор с них отличный. Машина просторная, оборудована для дальних поездок откидными столиками и удобными сидениями. Цена услуги указана целиком за всю машину 6 мест, при отправлении из Будвы.</p><br>
-                    <p>Этапы заказа экскурсии следующие:</p>
-                    <ol>
-                        <li>Через форму заказа на этом сайте, по телефону или эл. адресу, указанному на сайте, Вы сообщаете о своем интересе к моей экскурсии или поездке к конкретному месту в Черногории, задаете мне уточняющие вопросы или предлагаете свой маршрут.</li>
-                        <li>По переписке или устно мы определяем точный маршрут, место Вашего жительства в Черногории, из которого я вас заберу. Сверяем время начала экскурсии.</li>
-                        <li>Высылаю вам подтверждение маршрута и цены, Вы присылаете ответное согласие.</li>
-                        <li>Я приезжаю за Вами в указанное время к указанному Вами месту и мы отправляемся в “сказку”!</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="action-slider"><div class="img-border"></div></div>
-        </div>
-    </section>
-    
-    <section class="reviews hidden">
-        <div class="reviews-design">
-            <div class="reviews-d-lines"></div>
-        </div>
-        <div class="reviews-wrapper">
-            <h2 class="name-block"><span>Отзывы моих туристов</span><span>Отзывы моих туристов</span></h2>
-            <div class="reviews-w">
-                <a href="#" class="reviews-w-more">
-                    <div class="reviews-wm-design"></div>
-                    <div class="reviews-wm-border">Больше отзывов</div>
-                    <p>Больше отзывов</p>
-                </a>
-                <div class="reviews-w-rev">
-                    <div class="reviews-wr-review">
-                        <div class="reviews-wrr-name">Ирина, Егор, Татьяна и Дарья</div>
-                        <p class="reviews-wrr-text">
-                            Наша экскурсия "Север Черногории в деталях" 11-12.09 2018 года проходила в хорошем темпе, при этом была и познавательной, и вкусной, и душевной!<br><br>
-                            Боботов Кук ночами снится,<br>
-                            Цветы, и камни, и трава,<br>
-                            Загаром тронутые лица,<br>
-                            И у вершины облака.
-                        </p>
-                        <div class="reviews-wrr-wrapper">
-                            <div class="reviews-wrrb-top">
-                                <time datetime="2018-09-11" class="reviews-wrrbt-date">11.09.18</time>
-                                <div class="reviews-wrrbt-city">Москва</div>
-                            </div>
-                            <div class="reviews-wrrb-bottom">
-                                <a href="#" class="reviews-wrrbb-btn">Подробнее</a>
-                            </div>
-                            <div class="reviews-wrrb-compass">
-                                <div class="reviews-wrrbc-circle"></div>
-                                <div class="reviews-wrrbc-circle"></div>
-                                <div class="reviews-wrrbc-circle"></div>
-                                <div class="reviews-wrrbc-circle"></div>
-                                <div class="reviews-wrrbc-circle"></div>
-                                <div class="reviews-wrrbc-arrow"></div>
-                                <div class="reviews-wrrbc-word">W</div>
-                                <div class="reviews-wrrbc-word">N</div>
-                                <div class="reviews-wrrbc-word">E</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reviews-wr-review">
-                        <div class="reviews-wrr-name">Ирина, Егор, Татьяна и Дарья</div>
-                        <p class="reviews-wrr-text">
-                            Наша экскурсия "Север Черногории в деталях" 11-12.09 2018 года проходила в хорошем темпе, при этом была и познавательной, и вкусной, и душевной!<br><br>
-                            Боботов Кук ночами снится,<br>
-                            Цветы, и камни, и трава,<br>
-                            Загаром тронутые лица,<br>
-                            И у вершины облака.
-                        </p>
-                        <div class="reviews-wrr-wrapper">
-                            <div class="reviews-wrrb-top">
-                                <time datetime="2018-09-11" class="reviews-wrrbt-date">11.09.18</time>
-                                <div class="reviews-wrrbt-city">Москва</div>
-                            </div>
-                            <div class="reviews-wrrb-bottom">
-                                <a href="#" class="reviews-wrrbb-btn">Подробнее</a>
-                            </div>
-                            <div class="reviews-wrrb-compass">
-                                <div class="reviews-wrrbc-circle"></div>
-                                <div class="reviews-wrrbc-circle"></div>
-                                <div class="reviews-wrrbc-circle"></div>
-                                <div class="reviews-wrrbc-circle"></div>
-                                <div class="reviews-wrrbc-circle"></div>
-                                <div class="reviews-wrrbc-arrow"></div>
-                                <div class="reviews-wrrbc-word">W</div>
-                                <div class="reviews-wrrbc-word">N</div>
-                                <div class="reviews-wrrbc-word">E</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reviews-wr-review">
-                        <div class="reviews-wrr-name">Ирина, Егор, Татьяна и Дарья</div>
-                        <p class="reviews-wrr-text">
-                            Наша экскурсия "Север Черногории в деталях" 11-12.09 2018 года проходила в хорошем темпе, при этом была и познавательной, и вкусной, и душевной!<br><br>
-                            Боботов Кук ночами снится,<br>
-                            Цветы, и камни, и трава,<br>
-                            Загаром тронутые лица,<br>
-                            И у вершины облака.
-                        </p>
-                        <div class="reviews-wrr-wrapper">
-                            <div class="reviews-wrrb-top">
-                                <time datetime="2018-09-11" class="reviews-wrrbt-date">11.09.18</time>
-                                <div class="reviews-wrrbt-city">Москва</div>
-                            </div>
-                            <div class="reviews-wrrb-bottom">
-                                <a href="#" class="reviews-wrrbb-btn">Подробнее</a>
-                            </div>
-                            <div class="reviews-wrrb-compass">
-                                <div class="reviews-wrrbc-circle"></div>
-                                <div class="reviews-wrrbc-circle"></div>
-                                <div class="reviews-wrrbc-circle"></div>
-                                <div class="reviews-wrrbc-circle"></div>
-                                <div class="reviews-wrrbc-circle"></div>
-                                <div class="reviews-wrrbc-arrow"></div>
-                                <div class="reviews-wrrbc-word">W</div>
-                                <div class="reviews-wrrbc-word">N</div>
-                                <div class="reviews-wrrbc-word">E</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="reviews-w-more">
-                    <div class="reviews-wm-design"></div>
-                    <div class="reviews-wm-border">Больше отзывов</div>
-                    <p>Больше отзывов</p>
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <section class="notes hidden">
-        <div class="notes-design">
-            <div class="notes-d-lines"></div>
-        </div>
-        <div class="notes-wrapper">
-            <h2 class="name-block"><span>Заметки о Черногории</span><span>Заметки о Черногории</span></h2>
-            <div class="notes-w">
-                <div class="notes-w-block">
-                    <div class="notes-wb-name">Как приехать в Черногорию, билеты, пути, полезные советы</div>
-                    <div class="notes-wb-info">
-                        <div class="notes-wbi-img"><div class="img-border"></div></div>
-                        <div class="notes-wbi-date">28.06.2018</div>
-                    </div>
-                    <div class="notes-wb-text">Конечно-же, самый популярный способ - это авиаперелет. Аэропортов в Черногории два, Тиват (TIV) на побережье и Подгорица (TGR) в глубине страны, до побережья от Подгорицы 80 км.</div>
-                    <div class="notes-wb-bottom">
-                        <a href="#" class="notes-wbb-btn">Узнать больше интересного</a>
-                    </div>
-                </div>
-                <div class="notes-w-block">
-                    <div class="notes-wb-name">Как приехать в Черногорию, билеты, пути, полезные советы</div>
-                    <div class="notes-wb-info">
-                        <div class="notes-wbi-img"><div class="img-border"></div></div>
-                        <div class="notes-wbi-date">28.06.2018</div>
-                    </div>
-                    <div class="notes-wb-text">Конечно-же, самый популярный способ - это авиаперелет. Аэропортов в Черногории два, Тиват (TIV) на побережье и Подгорица (TGR) в глубине страны, до побережья от Подгорицы 80 км.</div>
-                    <div class="notes-wb-bottom">
-                        <a href="#" class="notes-wbb-btn">Узнать больше интересного</a>
-                    </div>
-                </div>
-                <div class="notes-w-btn"></div>
-                <a href="#" class="notes-w-btn">
-                    <div class="notes-wm-design"></div>
-                    <div class="notes-wm-border">Еще больше заметок</div>
-                    <p>Еще больше заметок</p>
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <footer class="footer hidden">
-        <div class="footer-design"></div>
-	    <div class="footer-sitemap">
-	        <div class="footer-sitemap-wrapper">
-                <div class="footer-sitemap-w-wrapper">
-                    <section class="footer-s-block">
-                        <h2 class="footer-s-b-name">Экскурсии</h2>
-                        <a href="/" class="footer-s-b-link">Популярные экскурсии</a>
-                        <a href="/" class="footer-s-b-link">Специальные туры</a>
-                        <a href="/" class="footer-s-b-link">Поездки для "бывалых"</a>
-                        <a href="/" class="footer-s-b-link">Винные и адренали-туры</a>
-                    </section>
-                </div>
-	            <div class="footer-sitemap-w-wrapper">
-                    <section class="footer-s-block">
-                        <h2 class="footer-s-b-name">Что-то важное</h2>
-                        <a href="/" class="footer-s-b-link">Отзывы туристов</a>
-                        <a href="/" class="footer-s-b-link">Заметки о Черногории</a>
-                    </section>
-                </div>
-	        </div>
-	        <div class="footer-togoodway">
-                <div class="footer-t-design"></div>
-                <div class="footer-t-border">В добрый путь!</div>
-                <p>В добрый путь!</p>
-            </div>
-	    </div>
-	    <div class="footer-info">
-	        <div class="footer-i-soc">
-	            <a href="#" class="footer-soc-btn" style="background-image: url('/img/social/facebook-logo-or.svg')"></a>
-				<a href="#" class="footer-soc-btn" style="background-image: url('/img/social/vkontakte-logo-or.svg')"></a>
-				<a href="#" class="footer-soc-btn" style="background-image: url('/img/social/odnoklassniki-logo-or.svg')"></a>
-            </div>
-	        <div class="footer-i-soc-info">
-	            <p>+382 6727-79-71</p>
-	            <p>gidmne@yandex.ru</p>
-	            <p>Индивидуальные экскурсии по Черногории</p>
-	        </div>
-	    </div>
-	    <div class="footer-years">2015 - 2018</div>
-	</footer>
-    
-    <div class="menu-btn">
-        <div class="menu-b-wrapper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <p class="menu-b-label">Меню</p>
-    </div>
-    
-    <div class="menu"></div>
-    
-	<script src="//code.jquery.com/jquery-3.3.1.min.js" defer></script>
-	<script src="/js/slider.js" defer></script>
-	<script src="/js/main.js" defer></script>
 </body>
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/js/miniSlider.js"></script>
+<script src="/js/main.js"></script>
 </html>
