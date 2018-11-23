@@ -231,3 +231,102 @@ body {
         }
     }
 }
+
+// Подвал
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 160px);
+    left: 160px;
+    .desktop({
+        display: none;
+    });
+    
+    & > .footer-top {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        background-color: @fbColor;
+        
+        & > .footer-t-links {
+            display: flex;
+            flex-direction: column;
+            
+            // Заголовок
+            & > .footer-tl-label {
+                position: relative;
+                color: @whiteColor;
+                font-family: mont-eb;
+                font-size: 2rem;
+                margin: 20px 0 20px 0;
+                
+                &:after {
+                    content: " ";
+                    position: absolute;
+                    width: 20%;
+                    height: 4px;
+                    background-color: @whiteColor;
+                    left: 0;
+                    bottom: -10px;
+                }
+            }
+            
+            // Ссылки
+            & > .footer-tl-link {
+                position: relative;
+                margin-bottom: 8px;
+                color: @whiteColor;
+                text-decoration: none;
+                overflow: hidden;
+                
+                &:after {
+                    content: " ";
+                    position: absolute;
+                    bottom: 0;
+                    width: 20%;
+                    height: 1px;
+                    background-color: @whiteColor;
+                    left: 0;
+                    transform: translate3d(-100%, 0, 0);
+                    transition: transform .2s;
+                }
+                
+                &:hover {
+                    &:after {
+                        transform: translate3d(0, 0, 0);
+                    }
+                }
+            }
+        }
+        
+        & > .footer-t-right {
+            display: flex;
+            flex-direction: column;
+            min-height: 200px;
+            justify-content: space-around;
+            padding: 20px 0;
+            
+            & > .footer-t-text {
+                color: @whiteColor;
+            }
+            
+            & > .footer-t-order-btn {
+                padding: 10px 30px;
+                background-color: @fpColor;
+                color: @whiteColor;
+                text-transform: uppercase;
+                text-align: center;
+                font-family: mont-eb;
+                font-size: 1.2rem;
+                user-select: none;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    & > .footer-bottom {
+        
+    }
+}
