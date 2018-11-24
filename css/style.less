@@ -253,6 +253,7 @@ body {
         & > .footer-t-links {
             display: flex;
             flex-direction: column;
+            margin-bottom: 20px;
             
             // Заголовок
             & > .footer-tl-label {
@@ -327,6 +328,64 @@ body {
     }
     
     & > .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
         
+        & > .footer-b-logo {
+            width: 40%;
+            height: 100%;
+            min-height: 40px;
+            .ccibg();
+            background-image: url('/img/main/logo-black.png');
+        }
+        
+        & > .footer-b-wrapper {
+            display: flex;
+            width: 30%;
+            
+            // Соц. сети
+            & > .footer-bw-soc {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100px;
+                width: 40px;
+                margin: 10px 30px 0 0;
+                
+                & > .footer-bws-btn {
+                    width: 100%;
+                    height: 40px;
+                    .ccibg();
+                    background-image: url('/img/icons/instagram-blue.svg');
+                    
+                    &:last-child {
+                        background-image: url('/img/icons/youtube-red.svg');  
+                    }
+                }
+            }
+            
+            // Телефон и почта
+            & > .footer-bw-contact {
+                display: flex;
+                flex-direction: column;
+                margin: 20px 0;
+                
+                & > a {
+                    color: @fontColor;
+                    text-decoration: none;
+                    
+                    &:last-child {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    & > .footer-copyright {
+        margin: 5px 0;
     }
 }
