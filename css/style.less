@@ -189,7 +189,8 @@ body {
     align-self: flex-start;
     padding: 35px 0 35px 50px;
     .desktop({
-       font-size: 2rem; 
+        font-size: 2rem; 
+        padding: 35px 0 35px 20px;
     });
 }
 
@@ -241,7 +242,10 @@ body {
     width: calc(100% - 160px);
     left: 160px;
     .desktop({
-        display: none;
+        height: auto;
+        width: 100%;
+        left: 0;
+        margin-top: 20px;
     });
     
     & > .footer-top {
@@ -249,6 +253,10 @@ body {
         justify-content: space-around;
         width: 100%;
         background-color: @fbColor;
+        .desktop({
+            flex-direction: column;
+            align-items: center;
+        });
         
         & > .footer-t-links {
             display: flex;
@@ -308,6 +316,9 @@ body {
             min-height: 200px;
             justify-content: space-around;
             padding: 20px 0;
+            .desktop({
+               width: 90%; 
+            });
             
             & > .footer-t-text {
                 color: @whiteColor;
@@ -323,6 +334,9 @@ body {
                 font-size: 1.2rem;
                 user-select: none;
                 cursor: pointer;
+                .desktop({
+                   padding: 10px;
+                });
             }
         }
     }
@@ -332,6 +346,10 @@ body {
         justify-content: space-between;
         align-items: center;
         width: 90%;
+        .desktop({
+           flex-direction: column;
+            margin-top: 20px;
+        });
         
         & > .footer-b-logo {
             width: 40%;
@@ -339,11 +357,20 @@ body {
             min-height: 40px;
             .ccibg();
             background-image: url('/img/main/logo-black.png');
+            .desktop({
+                width: 90%;
+                min-height: 50px;
+            });
         }
         
         & > .footer-b-wrapper {
             display: flex;
             width: 30%;
+            .desktop({
+                width: 90%;
+                flex-direction: column;
+                align-items: center;
+            });
             
             // Соц. сети
             & > .footer-bw-soc {
@@ -354,6 +381,12 @@ body {
                 height: 100px;
                 width: 40px;
                 margin: 10px 30px 0 0;
+                .desktop({
+                    flex-direction: row;
+                    width: 90px;
+                    height: 50px;
+                    margin: 20px 0 0 0;
+                });
                 
                 & > .footer-bws-btn {
                     width: 100%;
