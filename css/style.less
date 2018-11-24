@@ -144,10 +144,15 @@ body {
     
     // Иконка
     & > .cnb-icon {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         z-index: 2;
         .ccibg();
+        
+        .desktop({
+            width: 50px;
+            height: 50px;
+        });
     }
     
     // Текст
@@ -155,7 +160,7 @@ body {
         padding: 10px 10px 10px 70px;
         max-width: 510px;
         z-index: 2;
-        font-size: 2rem; 
+        font-size: 1.35rem; 
         font-family: mont-sb;
         color: @fontColor;
         .big-desktop({
@@ -164,6 +169,7 @@ body {
         });
         .desktop({
             padding: 0 0 0 70px;
+            font-size: .8rem;
         });
     }
     
@@ -183,13 +189,17 @@ body {
 
 // Заголовок блока
 .name-block {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     color: @fontColor;
     font-family: mont-eb;    
     align-self: flex-start;
     padding: 35px 0 35px 50px;
-    .desktop({
+    .big-desktop({
         font-size: 2rem; 
+        padding: 35px 0 35px 20px;
+    });
+    .desktop({
+        font-size: 1.3rem; 
         padding: 35px 0 35px 20px;
     });
 }
@@ -202,8 +212,8 @@ body {
     height: 40px;
     
     & > .uis-left, & > .uis-right {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         .ccibg();
         background-image: url('/img/icons/arrow-slider.svg');
         margin: 0 10px;
@@ -220,205 +230,16 @@ body {
         position: relative;
         
         & > .uis-tap {
-            width: 40px;
-            height: 40px;
+            width: 25px;
+            height: 25px;
             border: 4px solid @fbColor;
             margin: 0 10px;
             border-radius: 100%;
             
             &.active {
-                border: 20px solid @fbColor;
+                border: 12.5px solid @fbColor;
             }
         }
     }
 }
 
-// Подвал
-.footer {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: calc(100% - 160px);
-    left: 160px;
-    .desktop({
-        height: auto;
-        width: 100%;
-        left: 0;
-        margin-top: 20px;
-    });
-    
-    & > .footer-top {
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-        background-color: @fbColor;
-        .desktop({
-            flex-direction: column;
-            align-items: center;
-        });
-        
-        & > .footer-t-links {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 20px;
-            
-            // Заголовок
-            & > .footer-tl-label {
-                position: relative;
-                color: @whiteColor;
-                font-family: mont-eb;
-                font-size: 2rem;
-                margin: 20px 0 20px 0;
-                
-                &:after {
-                    content: " ";
-                    position: absolute;
-                    width: 20%;
-                    height: 4px;
-                    background-color: @whiteColor;
-                    left: 0;
-                    bottom: -10px;
-                }
-            }
-            
-            // Ссылки
-            & > .footer-tl-link {
-                position: relative;
-                margin-bottom: 8px;
-                color: @whiteColor;
-                text-decoration: none;
-                overflow: hidden;
-                
-                &:after {
-                    content: " ";
-                    position: absolute;
-                    bottom: 0;
-                    width: 20%;
-                    height: 1px;
-                    background-color: @whiteColor;
-                    left: 0;
-                    transform: translate3d(-100%, 0, 0);
-                    transition: transform .2s;
-                }
-                
-                &:hover {
-                    &:after {
-                        transform: translate3d(0, 0, 0);
-                    }
-                }
-            }
-        }
-        
-        & > .footer-t-right {
-            display: flex;
-            flex-direction: column;
-            min-height: 200px;
-            justify-content: space-around;
-            padding: 20px 0;
-            .desktop({
-               width: 90%; 
-            });
-            
-            & > .footer-t-text {
-                color: @whiteColor;
-            }
-            
-            & > .footer-t-order-btn {
-                padding: 10px 30px;
-                background-color: @fpColor;
-                color: @whiteColor;
-                text-transform: uppercase;
-                text-align: center;
-                font-family: mont-eb;
-                font-size: 1.2rem;
-                user-select: none;
-                cursor: pointer;
-                .desktop({
-                   padding: 10px;
-                });
-            }
-        }
-    }
-    
-    & > .footer-bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 90%;
-        .desktop({
-           flex-direction: column;
-            margin-top: 20px;
-        });
-        
-        & > .footer-b-logo {
-            width: 40%;
-            height: 100%;
-            min-height: 40px;
-            .ccibg();
-            background-image: url('/img/main/logo-black.png');
-            .desktop({
-                width: 90%;
-                min-height: 50px;
-            });
-        }
-        
-        & > .footer-b-wrapper {
-            display: flex;
-            width: 30%;
-            .desktop({
-                width: 90%;
-                flex-direction: column;
-                align-items: center;
-            });
-            
-            // Соц. сети
-            & > .footer-bw-soc {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                height: 100px;
-                width: 40px;
-                margin: 10px 30px 0 0;
-                .desktop({
-                    flex-direction: row;
-                    width: 90px;
-                    height: 50px;
-                    margin: 20px 0 0 0;
-                });
-                
-                & > .footer-bws-btn {
-                    width: 100%;
-                    height: 40px;
-                    .ccibg();
-                    background-image: url('/img/icons/instagram-blue.svg');
-                    
-                    &:last-child {
-                        background-image: url('/img/icons/youtube-red.svg');  
-                    }
-                }
-            }
-            
-            // Телефон и почта
-            & > .footer-bw-contact {
-                display: flex;
-                flex-direction: column;
-                margin: 20px 0;
-                
-                & > a {
-                    color: @fontColor;
-                    text-decoration: none;
-                    
-                    &:last-child {
-                        margin-top: 1rem;
-                    }
-                }
-            }
-        }
-    }
-    
-    & > .footer-copyright {
-        margin: 5px 0;
-    }
-}

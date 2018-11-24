@@ -1,3 +1,6 @@
+@widthMenu: 130px;
+@heightMenu: 60px;
+
 // Здесь блоки
 .wrapper {
     display: flex;
@@ -15,14 +18,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 160px;
+    width: @widthMenu;
     //height: 85%;
     height: 100%;
     background-color: @fbColor;
     z-index: 100;
     .desktop({
         flex-direction: row;
-        height: 80px;
+        height: @heightMenu;
         width: 100%;
     });
     
@@ -35,7 +38,7 @@
         
         .desktop({
             height: 95%;
-            width: 50%;
+            width: 40%;
             background-image: url('/img/main/logo-mini.png');
             margin-left: 10%;
         });
@@ -61,9 +64,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 40%;
+            width: 30%;
             .desktop({
-                width: 70%;
+                width: 50%;
                 margin-right: 50%;
             });
             
@@ -71,8 +74,11 @@
                 width: 100%;
                 height: 3px;
                 background-color: @whiteColor;
-                margin: 8px 0;
+                margin: 4px 0;
                 border-radius: 100vh;
+                .desktop({
+                    height: 2px;
+                });
             }
         }
         
@@ -80,7 +86,7 @@
         & > .menu-lmb-label {
             text-transform: uppercase;
             color: @whiteColor;
-            font-size: 1rem;
+            font-size: .8rem;
             font-family: mont-b;
             transition: color 0.3s;
             .desktop({
@@ -109,7 +115,7 @@
     & > .menu-l-tel {
         .flex();
         flex-direction: column;
-        margin-bottom: 10%;
+        margin-bottom: 30%;
         .desktop({
             display: none;
         });
@@ -118,7 +124,7 @@
             color: @whiteColor;
             text-align: left;
             text-decoration: none;
-            font-size: .9rem;
+            font-size: .75rem;
         }
     }
 }
@@ -127,12 +133,12 @@
 .main-page {
     position: relative;
     height: 100vh;
-    width: calc(100% - 160px);
-    left: 160px;
+    width: calc(100% - @widthMenu);
+    left: @widthMenu;
     .desktop({
         width: 100%;
-        height: calc(100vh - 80px);
-        margin-top: 80px;
+        height: calc(100vh - @heightMenu);
+        margin-top: @heightMenu;
         left: 0;
     });
     
@@ -168,8 +174,8 @@
                 overflow: hidden;
                 .desktop({
                     width: 100%;
-                    height: 85%;
-                    top: 7.5%;
+                    height: 92%;
+                    top: 4%;
                 });
                 
                 // Активный слайд
@@ -203,8 +209,9 @@
             position: absolute;
             bottom: 0;
             left: 10%;
-            width: 30%;
-            height: 11%;
+            width: 25%;
+            height: 9%;
+            max-width: 350px;
             background-color: @fbColor;
             .desktop({
                 display: none;
@@ -258,18 +265,18 @@
             align-items: center;
             top: 23%;
             left: 73.5%;
-            width: 15%;
-            height: 7%;
+            width: 14%;
+            height: 6%;
             transform: rotate3d(0, 0, 1, 90deg);
             background-color: @fbColor;
             text-transform: uppercase;
             color: @whiteColor;
             .desktop({
                 transform: rotate3d(0, 0, 1, 0);
-                top: 2%;
+                top: 1%;
                 left: 10%;
-                width: 40%;
-                height: 8%;
+                width: 27%;
+                height: 6%;
             });
             
             & > div {
@@ -290,7 +297,7 @@
                 cursor: pointer;
                 margin-bottom: 10%;
                 .desktop({
-                    font-size: .7rem;
+                    font-size: .45rem;
                 });  
                 
                 &:before, &:after {
@@ -381,8 +388,8 @@
         z-index: 2;
         
         & > .main-page-s-btn {
-            width: 80px;
-            height: 60px;
+            width: 70px;
+            height: 50px;
             background-color: @fbColor;
             .ccibg();
             background-size: 50%;
@@ -391,6 +398,10 @@
             transform: scale3d(1, 1, 1);
             transform-origin: bottom;
             transition: transform .2s;
+            .desktop({
+                width: 45px;
+                height: 30px;
+            });
             
             &:nth-child(2) {
                 background-image: url('/img/icons/instagram.svg');
@@ -405,20 +416,20 @@
     // Слова и слоган
     & > .main-page-slogan {
         position: absolute;
-        top: 25%;
-        left: 8%;
+        top: 27%;
+        left: 15%;
         display: flex;
         flex-direction: column;
         align-items: center;
         border: 2px solid @whiteColor;
-        width: 45%;
-        height: 30%;
+        width: 30%;
+        height: 20%;
         .desktop({
-            bottom: 35%;
+            bottom: 30%;
             top: auto;
-            width: 90%;
-            height: 30%;
-            left: 5%;
+            width: 70%;
+            height: 20%;
+            left: 15%;
         });
         
         & > .main-page-s-top {
@@ -445,14 +456,14 @@
                 color: @whiteColor;
                 text-transform: uppercase;
                 font-family: mont-eb;
-                font-size: 1.5rem;
+                font-size: 1rem;
                 border-left: 1px solid @whiteColor;
                 border-bottom: 2px solid @whiteColor;
                 .big-desktop({
-                    font-size: 1rem;
+                    font-size: .8rem;
                 });
                 .desktop({
-                    font-size: .8rem;
+                    font-size: .55rem;
                 });
             }
         }
@@ -464,12 +475,12 @@
             color: @whiteColor;
             text-transform: uppercase;
             font-family: mont-eb;
-            font-size: 4.125rem;
+            font-size: 3rem;
             .big-desktop({
-                font-size: 3.125rem;
+                font-size: 2.2rem;
             });
             .desktop({
-                font-size: 2.125rem;
+                font-size: 1.5rem;
             });
         }
     }
@@ -480,8 +491,8 @@
     position: relative;
     display: flex;
     height: 100vh;
-    width: calc(100% - 160px);
-    left: 160px;
+    width: calc(100% - @widthMenu);
+    left: @widthMenu;
     .desktop({
         flex-direction: column;
         height: auto;
@@ -552,6 +563,9 @@
                         width: 80%;
                         top: 0;
                         opacity: 1;
+                        .desktop({
+                           font-size: .85rem; 
+                        });
                         
                         &:before {
                             content: " ";
@@ -680,8 +694,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(100% - 160px);
-    left: 160px;
+    width: calc(100% - @widthMenu);
+    left: @widthMenu;
     .desktop({
         flex-direction: column;
         height: auto;
@@ -765,8 +779,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(100% - 160px);
-    left: 160px;
+    width: calc(100% - @widthMenu);
+    left: @widthMenu;
     .desktop({
         flex-direction: column;
         height: auto;
@@ -793,7 +807,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 60%;
+                width: 50%;
                 padding: 50px 50px 0 0;
                 &:first-child {
                     padding-top: 0;
@@ -821,7 +835,7 @@
                     position: relative;
                     display: flex;
                     align-items: center;
-                    width: 100%;
+                    width: 90%;
                     background-color: @fbColor;
                     color: @whiteColor;
                     
@@ -835,14 +849,17 @@
                     }
                     
                     & > p {
-                        padding: 12px 5%;
+                        padding: 5px 5%;
                         background-color: @fbColor;
                         z-index: 2;
-                        font-size: 1.8rem;
+                        font-size: 1.5rem;
                         text-transform: uppercase;
                         font-family: mont-b;
                         .big-desktop({
-                            font-size: 1.5rem;                            
+                            font-size: 1.1rem;                            
+                        });
+                        .desktop({
+                            font-size: .9rem;
                         });
                     }
                     
@@ -856,7 +873,10 @@
                     padding: 10px;
                     background-color: @sbColor;
                     .big-desktop({
-                        font-size: 1rem;                            
+                        font-size: .9rem;                            
+                    });
+                    .desktop({
+                        font-size: .8rem;                            
                     });
                 }
             }
@@ -870,8 +890,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(100% - 160px);
-    left: 160px;
+    width: calc(100% - @widthMenu);
+    left: @widthMenu;
     .desktop({
         flex-direction: column;
         height: auto;
@@ -971,8 +991,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(100% - 160px);
-    left: 160px;
+    width: calc(100% - @widthMenu);
+    left: @widthMenu;
     .desktop({
         flex-direction: column;
         height: auto;
@@ -1021,12 +1041,16 @@
                 width: 80%;
                 top: -10px;
                 left: 10%;
-                padding-bottom: 25px;
-                font-size: 1.7rem;
+                padding-bottom: 15px;
+                font-size: 1.5rem;
                 color: @fontColor;
                 font-family: mont-b;
+                .big-desktop({
+                    font-size: 1rem;
+                    padding-bottom: 10px;
+                });
                 .desktop({
-                    font-size: 1.3rem;
+                    font-size: .9rem;
                 });
             }
             
@@ -1038,19 +1062,23 @@
                 width: 70%;
                 left: 15%;
                 bottom: -10px;
+                .big-desktop({
+                    width: 60%;
+                    left: 20%;
+                });
                 
                 & > .reviews-wbu-date, & > .reviews-wbu-city {
                     background-color: @fbColor;
                     color: @whiteColor;
                     padding: 20px 30px;
-                    .desktop({
+                    .big-desktop({
                         padding: 10px 20px;
                     });
                     
                     & > span {
                         position: relative;
                         padding-left: 38px;
-                        .desktop({
+                        .big-desktop({
                             font-size: .8rem;
                             padding-left: 28px;
                         });
@@ -1064,7 +1092,7 @@
                             background-image: url('/img/icons/calendar.svg');
                             left: 0;
                             top: -7.5px;
-                            .desktop({
+                            .big-desktop({
                                 width: 20px;
                                 height: 20px;
                                 top: -5px;
@@ -1136,8 +1164,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(100% - 160px);
-    left: 160px;
+    width: calc(100% - @widthMenu);
+    left: @widthMenu;
     .desktop({
         flex-direction: column;
         height: auto;
@@ -1174,8 +1202,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(100% - 160px);
-    left: 160px;
+    width: calc(100% - @widthMenu);
+    left: @widthMenu;
     .desktop({
         flex-direction: column;
         height: auto;
@@ -1197,8 +1225,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(100% - 160px);
-    left: 160px;
+    width: calc(100% - @widthMenu);
+    left: @widthMenu;
     .desktop({
         display: none;
     });
@@ -1234,9 +1262,12 @@
                 position: relative;
                 margin: 30px 0 30px 15px;
                 padding-left: 58px;
-                font-size: 1.5rem;
+                font-size: 1.3rem;
                 color: @fontColor;
                 top: -15px;
+                .big-desktop({
+                    font-size: 1rem;
+                });
                 
                 & > a {
                     color: @fontColor;
@@ -1280,7 +1311,7 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            width: 50%;
+            width: 40%;
             background-color: @fbColor;
             z-index: 2;
             
@@ -1303,29 +1334,30 @@
                     background-color: @fbColor;
                     color: @whiteColor;
                     text-transform: uppercase;
-                    margin: 12px 5%;
+                    margin: 10px 5%;
                     padding: 0 10px;
                     z-index: 2;
-                    font-size: 1.5rem;
+                    font-size: 1.3rem;
                     font-family: mont-b;
                 }
             }
             
             & > input, & > textarea {
                 width: 90%;
-                height: 3rem;
+                height: 2rem;
                 padding: 15px;
                 margin: 10px 0;
+                border: none;
             }
             
             & > textarea {
-                min-height: 200px;
+                min-height: 150px;
                 resize: none;
             }
             
             & > .contacts-wf-send {
                 position: relative;
-                width: 50%;
+                width: 34%;
                 text-transform: uppercase;
                 font-family: mont-eb;
                 color: @whiteColor;
@@ -1334,8 +1366,8 @@
                 cursor: pointer;
                 bottom: -10px;
                 margin: 0;
-                font-size: 1.3rem;
-                min-height: 3.5rem;
+                font-size: .9rem;
+                min-height: 3rem;
             }
         }
         
@@ -1347,5 +1379,214 @@
             height: 100%;
             background-color: @sbColor;
         }
+    }
+}
+
+// Подвал
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - @widthMenu);
+    left: @widthMenu;
+    .desktop({
+        height: auto;
+        width: 100%;
+        left: 0;
+        margin-top: 20px;
+    });
+    
+    & > .footer-top {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        background-color: @fbColor;
+        .desktop({
+            flex-direction: column;
+            align-items: center;
+        });
+        
+        & > .footer-t-links {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            .desktop({
+               margin-bottom: 5px; 
+            });
+            
+            // Заголовок
+            & > .footer-tl-label {
+                position: relative;
+                color: @whiteColor;
+                font-family: mont-eb;
+                font-size: 1.8rem;
+                margin: 20px 0 20px 0;
+                .desktop({
+                   font-size: 1.3rem; 
+                });
+                
+                &:after {
+                    content: " ";
+                    position: absolute;
+                    width: 20%;
+                    height: 4px;
+                    background-color: @whiteColor;
+                    left: 0;
+                    bottom: -10px;
+                    .desktop({
+                        height: 3px;
+                        width: 15%;
+                    });
+                }
+            }
+            
+            // Ссылки
+            & > .footer-tl-link {
+                position: relative;
+                margin-bottom: 8px;
+                color: @whiteColor;
+                text-decoration: none;
+                overflow: hidden;
+                font-size: .9rem;
+                .desktop({
+                    font-size: .8rem;
+                    margin-bottom: 3px;
+                });
+                
+                &:after {
+                    content: " ";
+                    position: absolute;
+                    bottom: 0;
+                    width: 20%;
+                    height: 1px;
+                    background-color: @whiteColor;
+                    left: 0;
+                    transform: translate3d(-105%, 0, 0);
+                    transition: transform .2s;
+                }
+                
+                &:hover {
+                    &:after {
+                        transform: translate3d(0, 0, 0);
+                    }
+                }
+            }
+        }
+        
+        & > .footer-t-right {
+            display: flex;
+            flex-direction: column;
+            min-height: 200px;
+            justify-content: space-around;
+            padding: 20px 0;
+            .desktop({
+                width: 90%; 
+                padding: 0;
+            });
+            
+            & > .footer-t-text {
+                color: @whiteColor;
+                .desktop({
+                   font-size: .8rem; 
+                });
+            }
+            
+            & > .footer-t-order-btn {
+                padding: 10px 20px;
+                background-color: @fpColor;
+                color: @whiteColor;
+                text-transform: uppercase;
+                text-align: center;
+                font-family: mont-eb;
+                font-size: 1rem;
+                user-select: none;
+                cursor: pointer;
+                .desktop({
+                   padding: 10px;
+                });
+            }
+        }
+    }
+    
+    & > .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        .desktop({
+           flex-direction: column;
+            margin-top: 20px;
+        });
+        
+        & > .footer-b-logo {
+            width: 40%;
+            height: 100%;
+            min-height: 40px;
+            .ccibg();
+            background-image: url('/img/main/logo-black.png');
+            .desktop({
+                width: 90%;
+                min-height: 50px;
+            });
+        }
+        
+        & > .footer-b-wrapper {
+            display: flex;
+            width: 30%;
+            .desktop({
+                width: 90%;
+                flex-direction: column;
+                align-items: center;
+            });
+            
+            // Соц. сети
+            & > .footer-bw-soc {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100px;
+                width: 40px;
+                margin: 10px 30px 0 0;
+                .desktop({
+                    flex-direction: row;
+                    width: 90px;
+                    height: 50px;
+                    margin: 20px 0 0 0;
+                });
+                
+                & > .footer-bws-btn {
+                    width: 100%;
+                    height: 40px;
+                    .ccibg();
+                    background-image: url('/img/icons/instagram-blue.svg');
+                    
+                    &:last-child {
+                        background-image: url('/img/icons/youtube-red.svg');  
+                    }
+                }
+            }
+            
+            // Телефон и почта
+            & > .footer-bw-contact {
+                display: flex;
+                flex-direction: column;
+                margin: 20px 0;
+                
+                & > a {
+                    color: @fontColor;
+                    text-decoration: none;
+                    
+                    &:last-child {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    & > .footer-copyright {
+        margin: 5px 0;
     }
 }
