@@ -131,6 +131,10 @@ body {
 .video {
     -o-object-fit: cover;
 	object-fit: cover;
+    .desktop({
+       -o-object-fit: none;
+	    object-fit: none; 
+    });
 }
 
 // Блок с иконкой, фоновым цветом и заголовком
@@ -243,3 +247,20 @@ body {
     }
 }
 
+// Плюсы выбора
+.plus {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - @widthMenu);
+    left: @widthMenu;
+    .desktop({
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        left: 0;
+    });
+    
+    
+}

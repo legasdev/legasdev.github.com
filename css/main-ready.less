@@ -31,16 +31,16 @@
     
     // Логотип
     & > .menu-l-logo {
-        width: 95%;
+        width: 90%;
         height: 25%;
         .ccibg();
         background-image: url('/img/main/logo.png');
         
         .desktop({
-            height: 95%;
-            width: 40%;
+            height: 90%;
+            width: 33%;
             background-image: url('/img/main/logo-mini.png');
-            margin-left: 10%;
+            margin-left: 5%;
         });
     }
     
@@ -49,12 +49,12 @@
         .flex();
         flex-direction: column;
         position: relative;
-        height: 25%;
+        height: 20%;
         width: 100%;
         cursor: pointer;
         .desktop({
             height: 100%;
-            width: 20%;
+            width: 17%;
         });
         
         // Линии
@@ -64,10 +64,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 30%;
+            width: 25%;
             .desktop({
                 width: 50%;
-                margin-right: 50%;
+                margin-right: 25%;
             });
             
             & > i {
@@ -1589,4 +1589,137 @@
     & > .footer-copyright {
         margin: 5px 0;
     }
+}
+
+/************************/
+// Первый экран с видео
+.first-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    .desktop({
+        height: calc(100vh - @heightMenu);
+        margin-top: @heightMenu;
+    });
+    
+    & > .fs-design {
+        position: absolute;
+        width: 98%;
+        height: 92%;
+        left: 1%;
+        top: 2.5%;
+        background-color: @sbColor;
+        .desktop({
+            display: none;
+        });
+    }
+    
+    & > .fs-video {
+        position: relative;
+        width: 95%;
+        height: 92%;
+        top: 12px;
+        right: 0;
+        overflow: hidden;
+        .desktop({
+            width: 100%;
+            height: 100%;
+            top: 0;
+        });
+        
+        & > .fs-shadow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            overflow: hidden;
+            background-color: @blackColor;
+            opacity: .35;
+        }
+        
+        & > .fs-label {
+            position: absolute;
+            top: 40%;
+            left: @widthMenu * 2;
+            color: @whiteColor;
+            text-transform: uppercase;
+            font-family: mont-eb;
+            font-size: 4rem;
+            .big-desktop({
+                font-size: 3rem;
+            });
+            .desktop({
+                left: 12%;
+                top: 45%;
+                font-size: 2.1rem;
+            });
+        }
+        
+        // Меняющиеся слова
+        & > .fs-stream-text {
+            position: absolute;
+            top: 55%;
+            left: @widthMenu * 2.2;
+            color: @whiteColor;
+            font-size: 1.7rem;
+            .big-desktop({
+                font-size: 1.3rem;
+            });
+            .desktop({
+                left: 14%;
+                font-size: 1rem;
+            });
+        }
+        
+        // Кнопка заказать
+        & > .fs-btn {
+            position: absolute;
+            left: 50%;
+            transform: translate3d(-50%, 0 ,0);
+            bottom: 65px;
+            padding: 10px 30px;
+            background-color: @fpColor;
+            color: @whiteColor;
+            text-transform: uppercase;
+            font-family: mont-eb;
+            font-size: 2rem;
+            cursor: pointer;
+            .big-desktop({
+                font-size: 1.2rem;
+            });
+            .desktop({
+                font-size: .7rem;
+            });
+        }
+        
+        // Кнопки соц. сетей (только для мобильных)
+        & > .fs-soc {
+            display: none;
+            .desktop({
+               display: flex;
+                position: absolute;
+                bottom: 0;
+                right: 20px;
+            });
+            
+            & > .fs-soc-btn {
+                width: 40px;
+                height: 40px;
+                .ccibg();
+                background-size: 60% 60%;
+                background-image: url('/img/icons/youtube-logo.svg');
+                background-color: @fbColor;
+                
+                &:last-child {
+                    background-image: url('/img/icons/instagram.svg');
+                }
+            }
+        }
+    }
+    
+    
 }
