@@ -9,126 +9,6 @@
     width: 100%;
 }
 
-// Полоса меню слева
-.menu-line {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: @widthMenu;
-    //height: 85%;
-    height: 100%;
-    background-color: @fbColor;
-    z-index: 100;
-    .desktop({
-        flex-direction: row;
-        height: @heightMenu;
-        width: 100%;
-    });
-    
-    // Логотип
-    & > .menu-l-logo {
-        width: 90%;
-        height: 25%;
-        .ccibg();
-        background-image: url('/img/main/logo.png');
-        
-        .desktop({
-            height: 90%;
-            width: 33%;
-            background-image: url('/img/main/logo-mini.png');
-            margin-left: 5%;
-        });
-    }
-    
-    // Кнопка меню
-    & > .menu-l-menu-btn {
-        .flex();
-        flex-direction: column;
-        position: relative;
-        height: 20%;
-        width: 100%;
-        cursor: pointer;
-        .desktop({
-            height: 100%;
-            width: 17%;
-        });
-        
-        // Линии
-        & > .menu-lmb-wrapper {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 25%;
-            .desktop({
-                width: 50%;
-                margin-right: 25%;
-            });
-            
-            & > i {
-                width: 100%;
-                height: 3px;
-                background-color: @whiteColor;
-                margin: 4px 0;
-                border-radius: 100vh;
-                .desktop({
-                    height: 2px;
-                });
-            }
-        }
-        
-        // Метка
-        & > .menu-lmb-label {
-            text-transform: uppercase;
-            color: @whiteColor;
-            font-size: .8rem;
-            font-family: mont-b;
-            transition: color 0.3s;
-            .desktop({
-                display: none;
-            });
-        }
-        
-        &:hover {
-            & > .menu-lmb-wrapper {
-                & > i {
-                    animation: anim-menu-left 1s ease .6s infinite;
-
-                    &:nth-child(1) {
-                        animation: anim-menu-right 1s ease .2s infinite;
-                    }
-
-                    &:nth-child(2) {
-                        animation: anim-menu-right 1s ease .4s infinite;
-                    }
-                }
-            }
-        }
-    }
-    
-    // Телефоны
-    & > .menu-l-tel {
-        .flex();
-        flex-direction: column;
-        margin-bottom: 30%;
-        .desktop({
-            display: none;
-        });
-       
-        & > a {
-            color: @whiteColor;
-            text-align: left;
-            text-decoration: none;
-            font-size: .75rem;
-        }
-    }
-}
-
 // Стили главной
 .main-page {
     position: relative;
@@ -1722,4 +1602,450 @@
     }
     
     
+}
+
+// Плюсы выбора
+.plus {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - @widthMenu);
+    left: @widthMenu;
+    .desktop({
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        left: 0;
+    });
+    
+    & > .plus-wrapper {
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        
+        & > .plus-w-block {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            .desktop({
+                width: 100%;
+            });
+            &:last-child {
+                .desktop({
+                   display: none;
+                });
+            }
+            
+            & > .plus-wb-innerblock {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-bottom: 25px;
+                
+                & > .colorNameBlock {
+                    & > .cnb-text { 
+                        padding-top: 0;
+                    }
+                    
+                    & > .cnb-bg {
+                        width: 30%;
+                        height: 70%;
+                    }
+                }
+                
+                & > .plus-wbi-text {
+                    font-size: .84rem;
+                    .desktop({
+                       font-size: .7rem; 
+                    });
+                }
+            }
+        }
+    }
+}
+
+// Наши работы
+.works {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - @widthMenu);
+    left: @widthMenu;
+    .desktop({
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        left: 0;
+    });
+    
+    & > .works-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        left: 0;
+        width: 90%;
+        .desktop({
+           width: 100%; 
+        });
+        
+        & > .works-w-block {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            transform: translate3d(50%, 0, 0);
+            .desktop({
+                width: 100%;
+                transform: translate3d(0, 0, 0);
+            });
+            
+            & > .works-wb-bg {
+                position: absolute;
+                width: 90%;
+                height: 50%;
+                background-color: @sbColor;
+                left: 5%;
+                top: 5%;
+            }
+            
+            & > .works-wb-video {
+                position: relative;
+                left: 1%;
+                overflow: hidden;
+                width: 98%;
+                z-index: 5;
+                
+                & > .video {
+                    position: relative;
+                    bottom: -4px;
+                }
+                
+                & > .works-wbv-shadow {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0,0,0,.5);
+                    opacity: 0;
+                }
+            }
+            
+            & > .works-wb-label {
+                display: flex;
+                position: relative;
+                color: @whiteColor;
+                width: 96%;
+                left: 2%;
+                top: -100px;
+                background-color: @fbColor;
+                
+                & > hr {
+                    position: absolute;
+                    width: 95%;
+                    left: 2.5%;
+                    top: 50%;
+                    height: 2px;
+                    background-color: @whiteColor;
+                    border: none;
+                }
+                & > span {
+                    background-color: @fbColor;
+                    color: @whiteColor;
+                    margin: 10px 5%;
+                    padding: 0 10px;
+                    z-index: 2;
+                    font-size: 1.1rem;
+                    font-family: mont-b;
+                    .desktop({
+                        font-size: .85rem;
+                    });
+                }
+            }
+            
+            & > .works-wb-ui {
+                position: relative;
+                bottom: 100px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                margin: 10px 10% 0 0;
+                z-index: 2;
+                
+                & > .works-wbu-block {
+                    background-color: @fbColor;
+                    color: @whiteColor;
+                    padding: 10px 30px;
+                    
+                    & > span {
+                        position: relative;
+                        padding-left: 28px;
+                        font-size: .8rem;
+                        .desktop({
+                            font-size: .6rem;
+                        });
+                        
+                        &:before {
+                            content: " ";
+                            position: absolute;
+                            left: 0;
+                            width: 20px;
+                            height: 20px;
+                            .ccibg();
+                            background-image: url('/img/icons/calendar.svg');
+                        }
+                    }
+                    &:last-child {
+                        & > span {
+                            &:before {
+                                background-image: url('/img/icons/building.svg');
+                            }
+                        }
+                    }
+                }
+            }
+            
+            &.active {
+                z-index: 3;
+                & > .works-wb-label {
+                    top: 0;
+                }
+                & > .works-wb-ui {
+                    bottom: -5px;
+                }
+                & > .works-wb-bg {
+                    height: 90%;
+                }
+                & > .works-wb-video {
+                    & > .works-wbv-shadow {
+                        display: none;
+                        opacity: 0;
+                    }
+                }
+            }
+            
+            &.right {
+                z-index: 1;
+                transform: translate3d(70%, 0, 0) scale3d(.9, .9, 1);
+                & > .works-wb-video {
+                    & > .works-wbv-shadow {
+                        opacity: 1;
+                    }
+                }
+            }
+            
+            &.left {
+                z-index: 1;
+                transform: translate3d(30%, 0, 0) scale3d(.9, .9, 1);
+                & > .works-wb-video {
+                    & > .works-wbv-shadow {
+                        opacity: 1;
+                    }
+                }
+            }
+            
+            &.hidden {
+                display: none;
+            }
+        }
+        
+        & > .works-w-left, & > .works-w-right {
+            width: 10%;
+            height: 20%;
+            .ccibg();
+            background-image: url('/img/icons/arrow-slider.svg');
+            cursor: pointer;
+            .desktop({
+               display: none;
+            });
+        }
+        
+        & > .works-w-right {
+            transform: scale3d(-1, 1, 1);
+        }
+    }
+}
+
+// Гибкие предложения
+.price {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - @widthMenu);
+    left: @widthMenu;
+    .desktop({
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        left: 0;
+    });
+    
+    & > .price-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 98%;
+        .desktop({
+            width: auto;
+            margin-bottom: 20px;
+        });
+        
+        & > .price-w-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 20%;
+            .desktop({
+                width: 100vw;
+            });
+            
+            // Метка хита
+            & > .price-wb-hitlabel {
+                width: 95%;
+                background-color: @fpColor;
+                color: @whiteColor;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 10px 0;
+                font-family: mont-eb;
+                font-size: 1.1rem;
+                
+                &.hide {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+            
+            // Название
+            & > .price-wb-label {
+                display: flex;
+                position: relative;
+                width: 100%;
+                background-color: @fbColor;
+                margin-top: 10px;
+                
+                & > hr {
+                    position: absolute;
+                    width: 90%;
+                    left: 7.5%;
+                    top: 50%;
+                    height: 2px;
+                    background-color: @whiteColor;
+                    border: none;
+                }
+                & > span {
+                    background-color: @fbColor;
+                    color: @whiteColor;
+                    margin: 10px 5%;
+                    padding: 0 10px;
+                    z-index: 2;
+                    font-size: 1.1rem;
+                    font-family: mont-b;
+                    .desktop({
+                        font-size: .85rem;
+                    });
+                }
+                
+                &.hit {
+                    margin-top: 0;
+                    
+                    & > span {
+                        padding: 10px;
+                    }
+                }
+            }
+            
+            // Текст
+            & > .price-wb-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 95%;
+                background-color: @sbColor;
+                
+                // Что включено
+                & > ul {
+                    width: 80%;
+                    margin: 20px 0;
+                    list-style-type: none;
+                    
+                    & > li {
+                        position: relative;
+                        font-size: .8rem;
+                        padding-bottom: 10px;
+                        padding-left: 10px;
+                        
+                        &:before {
+                            content: " ";
+                            position: absolute;
+                            width: 10px;
+                            height: 2px;
+                            left: -5px;
+                            top: .4rem;
+                            background-color: @fpColor;
+                        }
+                    }
+                }
+                
+                // Цена до
+                & > .price-wbw-price {
+                    position: relative;
+                    font-family: mont-eb;
+                    color: @fontColor;
+                    font-size: 2rem;
+                    padding-bottom: 10px;
+                    
+                    &.old {
+                        font-size: 1.3rem;
+                        
+                        &:before {
+                            position: absolute;
+                            content: " ";
+                            width: 100%;
+                            height: 4px;
+                            background-color: @fontColor;
+                            left: 0;
+                            top: calc(1.3rem / 2);
+                        }
+                    }
+                }
+                
+                & > .price-wbw-price-new {
+                    font-family: mont-eb;
+                    color: @fpColor;
+                    font-size: 2rem;
+                    padding-bottom: 10px;
+                    
+                    &.hide {
+                        display: none;
+                    }
+                }
+                
+                // Кнопка заказать
+                & > .price-wbw-btn {
+                    position: relative;
+                    padding: 10px 30px;
+                    bottom: -5px;
+                    background-color: @fbColor;
+                    color: @whiteColor;
+                    text-transform: uppercase;
+                    font-family: mont-eb;
+                    cursor: pointer;
+                    
+                    &.hit {
+                        background-color: @fpColor;
+                    }
+                }
+                
+                // Выделение
+                &.wow {
+                    background-color: @spColor;
+                }
+            }
+        }
+    }
 }

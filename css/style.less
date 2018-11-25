@@ -210,10 +210,13 @@ body {
 
 // Управление слайдами
 .ui-slides {
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     height: 40px;
+    .desktop({
+       display: flex;
+    });
     
     & > .uis-left, & > .uis-right {
         width: 35px;
@@ -247,20 +250,459 @@ body {
     }
 }
 
-// Плюсы выбора
-.plus {
-    position: relative;
+// Полоса меню слева
+.menu-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: @widthMenu;
+    //height: 85%;
+    height: 100%;
+    background-color: @fbColor;
+    z-index: 100;
+    .desktop({
+        flex-direction: row;
+        height: @heightMenu;
+        width: 100%;
+    });
+    
+    // Логотип
+    & > .menu-l-logo {
+        width: 90%;
+        height: 25%;
+        .ccibg();
+        background-image: url('/img/main/logo.png');
+        
+        .desktop({
+            height: 90%;
+            width: 33%;
+            background-image: url('/img/main/logo-mini.png');
+            margin-left: 5%;
+        });
+    }
+    
+    // Кнопка меню
+    & > .menu-l-menu-btn {
+        .flex();
+        flex-direction: column;
+        position: relative;
+        height: 20%;
+        width: 100%;
+        cursor: pointer;
+        .desktop({
+            height: 100%;
+            width: 17%;
+        });
+        
+        // Линии
+        & > .menu-lmb-wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            .desktop({
+                width: 50%;
+                margin-right: 25%;
+            });
+            
+            & > i {
+                width: 100%;
+                height: 3px;
+                background-color: @whiteColor;
+                margin: 4px 0;
+                border-radius: 100vh;
+                .desktop({
+                    height: 2px;
+                });
+                opacity: 1;
+                transform-origin: left;
+                transform: rotate3d(0, 0, 1, 0);
+                transition: transform .2s, opacity .2s;
+            }
+        }
+        
+        // Метка
+        & > .menu-lmb-label {
+            text-transform: uppercase;
+            color: @whiteColor;
+            font-size: .8rem;
+            font-family: mont-b;
+            transition: color 0.3s;
+            opacity: 1;
+            transition: opacity .2s;
+            .desktop({
+                display: none;
+            });
+        }
+        
+        &.opened {
+            & > .menu-lmb-wrapper {
+                & > i {
+                    .desktop({
+                        width: 95%;
+                    });
+                    &:nth-child(1) {
+                        transform: rotate3d(0, 0, 1, 45deg);
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                    &:nth-child(3) {
+                        transform: rotate3d(0, 0, 1, -45deg);
+                    }
+                }
+            }
+            & > .menu-lmb-label {
+                opacity: 0;
+            }
+        }
+    }
+    
+    // Телефоны
+    & > .menu-l-tel {
+        .flex();
+        flex-direction: column;
+        margin-bottom: 30%;
+        .desktop({
+            display: none;
+        });
+       
+        & > a {
+            color: @whiteColor;
+            text-align: left;
+            text-decoration: none;
+            font-size: .75rem;
+        }
+    }
+}
+
+// Меню
+.menu {
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: calc(100% - @widthMenu);
+    top: 0;
     left: @widthMenu;
+    z-index: 100;
+    visibility: hidden;
+    transition: visibility 0s ease .8s;
     .desktop({
-        flex-direction: column;
-        height: auto;
+        top: @heightMenu;
         width: 100%;
         left: 0;
     });
     
+    & > .menu-wrapper {
+        display: flex;
+        width: 100%;
+        height: 95vh;
+        .desktop({
+            height: calc(95vh - @heightMenu);
+            flex-direction: column; 
+        });
+        
+        & > .menu-block {
+            position: relative;
+            width: 25%;
+            height: 100%;
+            .ccibg();
+            background-size: cover;
+            background-image: url('/img/img.jpg');
+            overflow: hidden;
+            transform: translate3d(0, -100%, 0);
+            transition: width .4s, transform .5s;
+            .desktop({
+                width: 100%;
+                transform: translate3d(-100%, 0, 0);
+            }); 
+            
+            &:nth-child(2) {
+                transition: width .4s, transform .5s ease .1s;
+            }
+            &:nth-child(3) {
+                transition: width .4s, transform .5s ease .2s;
+            }
+            &:nth-child(4) {
+                transition: width .4s, transform .5s ease .3s;
+            }
+            
+            & > .menu-b-shadow {
+                content: " ";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: @blackColor;
+                opacity: .3;
+                transition: opacity .4s;
+            }
+            
+            & > .menu-b-label {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                color: @whiteColor;
+
+                & > .menu-bl-wrapper {
+                    position: absolute;
+                    width: 100%;
+                    height: 70%;
+                    bottom: 0;
+                    .flex();
+                    flex-direction: column;
+
+                    // Фон
+                    & > .menu-blw-bg {
+                        position: absolute;
+                        .flex();
+                        width: 100%;
+                        height: 50%;
+                        background-color: @fbColor;
+                        opacity: 0;
+                        transform: scale3d(1, 0, 1);
+                        transition: opacity .4s, transform .4s;
+                        .desktop({
+                            opacity: .9;
+                            height: 80%;
+                            transform: scale3d(1, 1, 1);
+                            background-color: rgba(0,0,0,0);
+                        });
+
+                        // Более подробная инфа
+                        & > .menu-blw-info {
+                            position: relative;
+                            width: 80%;
+                            top: 0;
+                            opacity: 1;
+                            .desktop({
+                               font-size: .75rem; 
+                            });
+
+                            &:before {
+                                content: " ";
+                                position: absolute;
+                                top: -10px;
+                                height: 4px;
+                                width: 15%;
+                                background-color: @whiteColor;
+                                .desktop({
+                                    height: 2px;
+                                    width: 10%;
+                                });
+                            }
+                        }
+                    }
+
+                    & > .menu-blw-bg_name {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        width: 80%;
+                        left: 10%;
+                        height: 50%;
+                        .desktop({
+                            height: 80%;
+                            transform: scale3d(1, 1, 1);
+                        });
+
+                        // Название блока
+                        & > .menu-blw-name {
+                            position: absolute;
+                            font-family: mont-eb;
+                            text-transform: uppercase;
+                            font-size: 1.8rem;
+                            transform: translate3d(0,0,0);
+                            transition: transform .4s;
+                            .desktop({
+                                font-size: 1.1rem;
+                                transform: translate3d(0,-150%,0);
+                            });
+
+                            &:before, &:after {
+                                content: " ";
+                                position: absolute;
+                                width: 20%;
+                                height: 4px;
+                                background-color: @fpColor;
+                                top: 0;
+                                left: 0;
+                                opacity: 1;
+                                transition: opacity .4s;
+                                .desktop({
+                                   opacity: 0;
+                                });
+                            }
+                            &:after {
+                                top: auto;
+                                left: auto;
+                                right: 0;
+                                bottom: -4px;
+                                background-color: @fbColor;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // для мобилок название на уровне оставить
+            &:nth-child(2n) {
+                & > .menu-b-label {
+                    & > .menu-bl-wrapper {
+                        & > .menu-blw-bg_name {
+                            & > .menu-blw-name {
+                                .desktop({
+                                    transform: translate3d(0,-100%,0);
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+            
+            &:hover {
+                width: 40%;
+                .desktop({
+                    width: 100%;
+                });
+
+                & > .menu-b-shadow {
+                    opacity: .1;
+                    .desktop({
+                        opacity: .3;
+                    });
+                }
+
+                & > .menu-b-label {
+                    & > .menu-bl-wrapper {
+                        & > .menu-blw-bg {
+                            opacity: .9;
+                            transform: scale3d(1, 1, 1);
+                        }
+                        & > .menu-blw-bg_name {
+                            & > .menu-blw-name {
+                                transform: translate3d(0, -150%, 0);
+                                &:before, &:after {
+                                    opacity: 0;
+                                    .desktop({
+                                        opacity: 1;
+                                    });
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(2n) {
+                    & > .menu-b-label {
+                        & > .menu-bl-wrapper {
+                            & > .menu-blw-bg_name {
+                                & > .menu-blw-name {
+                                    transform: translate3d(0, -100%, 0);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     
+    // Нижний блок
+    & > .menu-block-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 5vh;
+        background-color: @fbColor;
+        transform: translate3d(0, 100%, 0);
+        transition: transform .2s;
+        
+        & > .menu-bb-wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 90%;
+            height: 90%;
+            
+            & > .menu-bbw-soc {
+                display: flex;
+                align-items: center;
+                width: 30%;
+                height: 100%;
+                
+                & > .menu-bbws-btn {
+                    width: 30px;
+                    height: 30px;
+                    .ccibg();
+                    background-image: url('/img/icons/youtube-logo.svg');
+                    margin-right: 10px;
+                    transform: scale3d(1, 1, 1);
+                    transition: transform .3s;
+                    .desktop({
+                        width: 20px;
+                        height: 20px;
+                    });
+                    
+                    &:nth-child(2) {
+                        background-image: url('/img/icons/instagram.svg');
+                    }
+                    
+                    &:hover {
+                        transform: scale3d(1.1, 1.1, 1);
+                    }
+                }
+            }
+            
+            & > .menu-bbw-main {
+                position: relative;
+                color: @whiteColor;
+                font-family: mont-b;
+                text-decoration: none;
+                text-transform: uppercase;
+                overflow: hidden;
+                .desktop({
+                   font-size: .6rem; 
+                });
+
+                &:before {
+                    content: " ";
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    left: 0;
+                    bottom: 0;
+                    background-color: @whiteColor;
+                    transform: translate3d(-90%, 0, 0);
+                    transition: transform .3s;
+                }
+                
+                &:hover {
+                    &:before {
+                        transform: translate3d(0, 0, 0);
+                    }
+                }
+            }
+        }
+    }
+    
+    &.opened {
+        visibility: visible;
+        transition-delay: 0s;
+        & > .menu-wrapper {
+            & > .menu-block {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        & > .menu-block-bottom {
+            transform: translate3d(0, 0, 0);
+        }
+    }
 }

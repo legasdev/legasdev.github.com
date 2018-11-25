@@ -16,11 +16,19 @@ var
 
 $(document).ready( () => {
     $('.reviews-wrapper').css('height', $('.reviews-w-block.active').height() + 60 );
+    $('.works-wrapper').css('height', $('.works-w-block.active').height() + 60 );
+    
+    // Нажатие на кнопку меню
+    $('body').on('click', '.menu-l-menu-btn', (e) => {
+        $('.menu').toggleClass('opened');
+        $('.menu-l-menu-btn').toggleClass('opened');
+    });
 });
 
 $(window).scroll( (e) => {
     
     $('.reviews-wrapper').css('height', $('.reviews-w-block.active').height() + 60 );
+    $('.works-wrapper').css('height', $('.works-w-block.active').height() + 60 );
     
 });
 
