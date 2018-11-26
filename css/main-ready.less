@@ -1867,7 +1867,7 @@
         
         & > .works-w-left, & > .works-w-right {
             width: 10%;
-            height: 20%;
+            height: 14%;
             .ccibg();
             background-image: url('/img/icons/arrow-slider.svg');
             cursor: pointer;
@@ -2058,6 +2058,61 @@
                 &.wow {
                     background-color: @spColor;
                 }
+            }
+        }
+    }
+}
+
+// Где используется
+.inuse {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - @widthMenu);
+    left: @widthMenu;
+    margin-bottom: 10px;
+    .desktop({
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        left: 0;
+    });
+    
+    & > .inuse-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        .desktop({
+           flex-direction: column;
+        });
+        
+        & > .inuse-block {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 50%;
+            height: 60px;
+            padding-left: 65px;
+            .desktop({
+                padding-left: 55px;
+                font-size: .8rem;
+            });
+            
+            &:before {
+                content: " ";
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                .ccibg();
+                background-image: url('/img/icons/icon-ok.svg');
+                left: 0;
+                top: 5px;
+                .desktop({
+                    width: 40px;
+                    height: 40px;
+                    top: 10px;
+                });
             }
         }
     }

@@ -282,6 +282,8 @@ body {
             width: 33%;
             background-image: url('/img/main/logo-mini.png');
             margin-left: 5%;
+            max-height: 55px;
+            max-width: 120px;
         });
     }
     
@@ -318,6 +320,7 @@ body {
                 margin: 4px 0;
                 border-radius: 100vh;
                 .desktop({
+                    width: 30px;
                     height: 2px;
                 });
                 opacity: 1;
@@ -912,5 +915,113 @@ body {
     & > .footer-copyright {
         font-size: 1.1rem;
         margin: 10px 0;
+    }
+}
+
+// Оборудование
+.equip {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - @widthMenu);
+    left: @widthMenu;
+    margin-bottom: 10px;
+    .desktop({
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        left: 0;
+    });
+    
+    & > .equip-wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 90%;
+        .desktop({
+            display: flex;
+            overflow: hidden;
+            flex-wrap: nowrap;
+        });
+        
+        & > .equip-w-w {
+            display: flex;
+            width: 100%;
+            .desktop({
+                display: flex;
+                overflow: hidden;
+                width: 100%;
+            });
+            
+            & > .equip-ww-w {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                width: 100%;
+                .desktop({
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: nowrap;
+                    width: auto;
+                });
+                
+                & > .equip-w-block {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 30%;
+                    margin-bottom: 30px;
+                    .desktop({
+                        width: 45vw;
+                    });
+                    .tablet({
+                        width: 90vw;
+                    });
+
+                    & > .equip-wb-design {
+                        position: absolute;
+                        width: 87.5%;
+                        height: 100%;
+                        top: 0;
+                        left: 6.25%;
+                        background-color: @sbColor;
+                    }
+
+                    // Название
+                    & > .equip-wb-label {
+                        position: relative;
+                        width: 90%;
+                        background-color: @fbColor;
+                        color: @whiteColor;
+                        padding: 15px;
+                        font-size: 1.1rem;
+                        font-family: mont-b;
+                        z-index: 2;
+                    }
+
+                    // Картинка
+                    & > .equip-wb-img {
+                        width: 90%;
+                        height: 120px;
+                        background-color: @whiteColor;
+                        .ccibg();
+                        background-image: url('/img/equip/main.jpg');
+                        margin: 10px 0;
+                        padding: 10px 0;
+                        z-index: 2;
+                    }
+
+                    // Текст
+                    & > .equip-wb-text {
+                        width: 85%;
+                        z-index: 2;
+                        padding: 0 10px 10px;
+                        font-size: .8rem;
+                    }
+                }  
+            }
+        }        
     }
 }
