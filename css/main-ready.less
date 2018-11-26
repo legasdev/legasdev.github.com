@@ -53,11 +53,13 @@
                 top: 7.5%;
                 opacity: 0;
                 overflow: hidden;
+                transform: scale3d(.9, .9, 1) translate3d(120%, 0, 0);
                 .desktop({
                     width: 100%;
                     height: 92%;
                     top: 4%;
                 });
+                transition: transform .4s, opacity .4s;
                 
                 // Тень
                 & > .main-page-s-shadow {
@@ -72,21 +74,20 @@
                 
                 // Активный слайд
                 &.active {
-                    left: -10%;
                     opacity: 1;
+                    transform: scale3d(1, 1, 1) translate3d(-11%, 0, 0);
                     .desktop({
                         width: 100%;
-                        left: 0;
+                        transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
                     });
                 }
                 
                 // Следующий
                 &.ready {
-                    left: 77.5%;
                     opacity: 1;
-                    transform: scale3d(.9, .9, 1);
+                    transform: scale3d(.9, .9, 1) translate3d(94.5%, 0, 0);
                     .desktop({
-                        left: 100%;
+                        transform: scale3d(.9, .9, 1) translate3d(120%, 0, 0);
                     });
                 }
             }
@@ -138,6 +139,7 @@
                     padding: 0 15px;
                     top: -.75rem;
                     background-color: @fbColor;
+                    transition: opacity .2s;
                 }
             }
             
@@ -822,7 +824,6 @@
             -webkit-transition: .5s;
             transition: .5s;
             .big-desktop({
-                width: 50px;
                 height: 50px;                
             });
         }
@@ -1714,6 +1715,7 @@
                 width: 100%;
                 transform: translate3d(0, 0, 0);
             });
+            transition: transform .6s, width .6s, z-index .3s;
             
             & > .works-wb-bg {
                 position: absolute;
@@ -1722,6 +1724,7 @@
                 background-color: @sbColor;
                 left: 5%;
                 top: 5%;
+                transition: height .3s;
             }
             
             & > .works-wb-video {
@@ -1744,6 +1747,8 @@
                     height: 100%;
                     background-color: rgba(0,0,0,.5);
                     opacity: 0;
+                    visibility: hidden;
+                    transition: opacity .6s, visibility .6s, display .6s;
                 }
             }
             
@@ -1755,6 +1760,7 @@
                 left: 2%;
                 top: -100px;
                 background-color: @fbColor;
+                transition: top .3s;
                 
                 & > hr {
                     position: absolute;
@@ -1787,6 +1793,7 @@
                 align-items: center;
                 margin: 10px 10% 0 0;
                 z-index: 2;
+                transition: bottom .3s;
                 
                 & > .works-wbu-block {
                     background-color: @fbColor;
@@ -1835,6 +1842,7 @@
                 & > .works-wb-video {
                     & > .works-wbv-shadow {
                         display: none;
+                        visibility: hidden;
                         opacity: 0;
                     }
                 }
@@ -1846,6 +1854,7 @@
                 & > .works-wb-video {
                     & > .works-wbv-shadow {
                         opacity: 1;
+                        visibility: visible;
                     }
                 }
             }
@@ -1856,6 +1865,7 @@
                 & > .works-wb-video {
                     & > .works-wbv-shadow {
                         opacity: 1;
+                        visibility: visible;
                     }
                 }
             }
