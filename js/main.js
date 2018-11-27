@@ -171,6 +171,9 @@ $(window).scroll( (e) => {
     $('.reviews-wrapper').css('height', $('.reviews-w-block.active').height() + 60 );
     $('.works-wrapper').css('height', $('.works-w-block.active').height() + 60 );
     changeWidthMiniSlider();
+});
+
+$(window).resize( () => {
     $('.price-ww').css('transform', 'translate3d(0,0,0)');
 });
 
