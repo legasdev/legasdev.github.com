@@ -12,7 +12,13 @@ var
     // Смена слов 
     changeWord,
     // Изменить слова на спаны
-    updatedWord;
+    updatedWord,
+    // Смена слайдов в портфолио на главной мобильной
+    changeMainWorkMob,
+    // Разрешение сдвинуть слайд в ценах
+    checkMovePrice = true,
+    // Смена слайдов в ценах и оборудовании
+    changePriceSlides;
 
 
 
@@ -54,6 +60,93 @@ $(document).ready( () => {
     // Запуск смены слов на остальных
     updatedWord('.fs-stream-t-word');
     changeWord('.fs-stream-t-word');
+    
+    // Для мобильных
+    
+    // Отзывы на главной
+    $('body').on('click', '.uis-left-l, .uis-left-r', (e) => {
+        if ($(e.currentTarget).hasClass('uis-left-r')) {
+            changeMainWork(true, 
+                    $(e.currentTarget).parent().siblings('.reviews-wrapper').find('.reviews-w-block.right'));
+            
+            let 
+                activeUi = $(e.currentTarget).siblings('.uis-center').find('.active'),
+                nextUi = $(activeUi).next();
+            $(nextUi).length === 0 ? nextUi = $(activeUi).siblings('.uis-tap:first') : true;
+            
+            $(activeUi).removeClass('active');
+            $(nextUi).addClass('active');
+            
+        } else if ($(e.currentTarget).hasClass('uis-left-l')) {
+            changeMainWork(false, 
+                    $(e.currentTarget).parent().siblings('.reviews-wrapper').find('.reviews-w-block.left'));
+            
+            let 
+                activeUi = $(e.currentTarget).siblings('.uis-center').find('.active'),
+                nextUi = $(activeUi).prev();
+            $(nextUi).length === 0 ? nextUi = $(activeUi).siblings('.uis-tap:last') : true;
+            
+            $(activeUi).removeClass('active');
+            $(nextUi).addClass('active');
+        }
+    });
+    
+    // Услуги
+    $('body').on('click', '.uis-left-p-l, .uis-left-p-r', (e) => {
+        if ($(e.currentTarget).hasClass('uis-left-p-r')) {
+            
+            if ( $('.plus-ww').css('transform').split(', ')[4] > 0) {
+                $('.plus-ww').css('transform', 'translate3d(-24%,0,0)');
+                $(e.currentTarget).siblings('.uis-center').find('.uis-tap:first').removeClass('active');
+                $(e.currentTarget).siblings('.uis-center').find('.uis-tap:last').addClass('active');
+            }
+            
+        } else if ($(e.currentTarget).hasClass('uis-left-p-l')) {
+            if ( $('.plus-ww').css('transform').split(', ')[4] < 0) {
+                $('.plus-ww').css('transform', 'translate3d(26%,0,0)');
+                $(e.currentTarget).siblings('.uis-center').find('.uis-tap:last').removeClass('active');
+                $(e.currentTarget).siblings('.uis-center').find('.uis-tap:first').addClass('active');
+            }
+        }
+    });
+    
+    // Конец анимации для цен
+    $('.price-ww').on('transitionend', ()=>{ checkMovePrice = true; });
+    
+    // Смена ценовых предложений
+    $('body').on('click', '.uis-left-pr-l, .uis-left-pr-r', (e) => {
+        
+        changePriceSlides(e);
+        
+    });
+    
+    // Смена слайдов в наших работах
+    $('body').on('click', '.uis-left-w-l, .uis-left-w-r', (e) => {
+       let
+            obj = $(e.currentTarget).parent().siblings('.works-wrapper').find('.works-w-left');
+       if ($(e.currentTarget).hasClass('uis-left-w-r')) {
+           changeUsWorkSlides(true, $(obj));
+           
+           let 
+                activeUi = $(e.currentTarget).siblings('.uis-center').find('.active'),
+                nextUi = $(activeUi).next();
+            $(nextUi).length === 0 ? nextUi = $(activeUi).siblings('.uis-tap:first') : true;
+            
+            $(activeUi).removeClass('active');
+            $(nextUi).addClass('active');
+           
+       } else {
+           changeUsWorkSlides(false, $(obj));
+           
+           let 
+                activeUi = $(e.currentTarget).siblings('.uis-center').find('.active'),
+                nextUi = $(activeUi).prev();
+            $(nextUi).length === 0 ? nextUi = $(activeUi).siblings('.uis-tap:last') : true;
+            
+            $(activeUi).removeClass('active');
+            $(nextUi).addClass('active');
+       }
+    });
     
 });
 
@@ -270,5 +363,48 @@ changeMainWork = (next, obj) => {
         
         $(left).removeClass('left');
         $(left).addClass('active');
+    }
+}
+
+// Смена слайдов в ценах и оборудовании
+changePriceSlides = (e) => {
+    let 
+        slides = $(e.currentTarget).parent().siblings('.price-wrapper').find('.price-ww'),
+        widthSlides = $(slides).find('.price-w-block').width(),
+        fullWidth = widthSlides * ($(slides).find('.price-w-block').length - 1),
+        maxDOF = fullWidth / 2;
+        
+    if ($(e.currentTarget).hasClass('uis-left-pr-r')) {
+        
+        if ( $(slides).css('transform').split(', ')[4] > -maxDOF  && checkMovePrice) {
+            checkMovePrice = false;
+            $(slides).css('transform', 
+                          'translate3d('+ 
+                          (parseFloat($(slides).css('transform').split(', ')[4]) - widthSlides) 
+                          +'px, 0, 0)');
+            
+            if ($(e.currentTarget).siblings('.uis-center')
+                .find('.active').next().length > 0) {
+                $(e.currentTarget).siblings('.uis-center')
+                    .find('.uis-tap.active').removeClass('active').next().addClass('active');
+            }
+        }
+        
+    } else if ($(e.currentTarget).hasClass('uis-left-pr-l')) {
+        
+        if ( $(slides).css('transform').split(', ')[4] < maxDOF  && checkMovePrice) {
+            checkMovePrice = false;
+            $(slides).css('transform', 
+                          'translate3d('+ 
+                          (parseFloat($(slides).css('transform').split(', ')[4]) + widthSlides) 
+                          +'px, 0, 0)');
+            
+            if ($(e.currentTarget).siblings('.uis-center')
+                .find('.active').prev().length > 0) {
+                $(e.currentTarget).siblings('.uis-center')
+                    .find('.uis-tap.active').removeClass('active').prev().addClass('active');
+            }
+        }
+        
     }
 }

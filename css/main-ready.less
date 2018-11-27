@@ -831,7 +831,7 @@
             font-size: 3rem;
             width: 80px;
             height: 250px;
-            margin: 0 30px;
+            padding: 0 30px;
             background-image: url('/img/icons/arrow-slider.svg');
             background-size: contain;
             background-position: center;
@@ -925,7 +925,7 @@
             .desktop({
                 width: 100%;
             });
-            transition: transform .6s, z-index .6s;
+            transition: transform .6s, z-index .6s, opacity .6s;
             
             // Дизайн
             & > .reviews-wb-design {
@@ -1034,12 +1034,17 @@
                 & > .reviews-wb-btn {
                     display: none;
                 }
+                .desktop({
+                    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+                    opacity: 1;
+                });
             }
             
             &.left {
                 transform: translate3d(0,0,0) scale3d(.8, .8, 1);
                 .desktop({
                     transform: translate3d(-150%, 0, 0);
+                    opacity: 0;
                 });
             }
             
@@ -1047,6 +1052,7 @@
                 transform: translate3d(44%,0,0) scale3d(.8, .8, 1);
                 .desktop({
                     transform: translate3d(150%, 0, 0);
+                    opacity: 0;
                 });
             }
         }
@@ -1663,46 +1669,59 @@
         display: flex;
         justify-content: space-around;
         width: 90%;
+        .desktop({
+            justify-content: flex-start;
+            overflow: hidden;
+            width: auto;
+        });
         
-        & > .plus-w-block {
-            position: relative;
+        & > .plus-ww {
             display: flex;
-            flex-direction: column;
-            width: 45%;
+            justify-content: space-around;
+            width: 90%;
             .desktop({
-                width: 100%;
+                width: auto;
+                overflow: hidden;
+                transform: translate3d(26%, 0, 0);
+                transition: transform .3s;
             });
-            &:last-child {
-                .desktop({
-                   display: none;
-                });
-            }
             
-            & > .plus-wb-innerblock {
+            & > .plus-w-block {
                 display: flex;
                 flex-direction: column;
-                width: 100%;
-                margin-bottom: 25px;
-                
-                & > .colorNameBlock {
-                    & > .cnb-text { 
-                        padding-top: 0;
+                width: 45%;
+                .desktop({
+                    width: 95vw;
+                    margin-right: 5vw;
+                });
+
+                & > .plus-wb-innerblock {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    margin-bottom: 25px;
+
+                    & > .colorNameBlock {
+                        & > .cnb-text { 
+                            padding-top: 0;
+                        }
+
+                        & > .cnb-bg {
+                            width: 30%;
+                            height: 70%;
+                        }
                     }
-                    
-                    & > .cnb-bg {
-                        width: 30%;
-                        height: 70%;
+
+                    & > .plus-wbi-text {
+                        font-size: .84rem;
+                        .desktop({
+                           font-size: .7rem; 
+                        });
                     }
-                }
-                
-                & > .plus-wbi-text {
-                    font-size: .84rem;
-                    .desktop({
-                       font-size: .7rem; 
-                    });
                 }
             }
         }
+        
     }
 }
 
@@ -1742,7 +1761,7 @@
                 width: 100%;
                 transform: translate3d(0, 0, 0);
             });
-            transition: transform .6s, width .6s, z-index .3s;
+            transition: transform .6s, width .6s, z-index .3s, opacity .6s;
             
             & > .works-wb-bg {
                 position: absolute;
@@ -1857,6 +1876,9 @@
             
             &.active {
                 z-index: 3;
+                .desktop({
+                    opacity: 1;
+                });
                 & > .works-wb-label {
                     top: 0;
                 }
@@ -1884,6 +1906,10 @@
                         visibility: visible;
                     }
                 }
+                .desktop({
+                    transform: translate3d(150%, 0, 0) scale3d(.9, .9, 1);
+                    opacity: 0;
+                });
             }
             
             &.left {
@@ -1895,6 +1921,10 @@
                         visibility: visible;
                     }
                 }
+                .desktop({
+                    transform: translate3d(-150%, 0, 0) scale3d(.9, .9, 1);
+                    opacity: 0;
+                });
             }
             
             &.hidden {
@@ -1944,159 +1974,175 @@
             margin-bottom: 20px;
         });
         
-        & > .price-w-block {
+        & > .price-ww {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 20%;
+            justify-content: center;
+            width: 98%;
             .desktop({
-                width: 100vw;
+                display: flex;
+                overflow: hidden;
+                width: auto;
+                transform: translate3d(0, 0, 0);
+                transition: transform .3s;
             });
             
-            // Метка хита
-            & > .price-wb-hitlabel {
-                width: 95%;
-                background-color: @fpColor;
-                color: @whiteColor;
-                text-transform: uppercase;
-                text-align: center;
-                padding: 10px 0;
-                font-family: mont-eb;
-                font-size: 1.1rem;
-                
-                &.hide {
-                    opacity: 0;
-                    visibility: hidden;
-                }
-            }
-            
-            // Название
-            & > .price-wb-label {
-                display: flex;
-                position: relative;
-                width: 100%;
-                background-color: @fbColor;
-                margin-top: 10px;
-                
-                & > hr {
-                    position: absolute;
-                    width: 90%;
-                    left: 7.5%;
-                    top: 50%;
-                    height: 2px;
-                    background-color: @whiteColor;
-                    border: none;
-                }
-                & > span {
-                    background-color: @fbColor;
-                    color: @whiteColor;
-                    margin: 10px 5%;
-                    padding: 0 10px;
-                    z-index: 2;
-                    font-size: 1.1rem;
-                    font-family: mont-b;
-                    .desktop({
-                        font-size: .85rem;
-                    });
-                }
-                
-                &.hit {
-                    margin-top: 0;
-                    
-                    & > span {
-                        padding: 10px;
-                    }
-                }
-            }
-            
-            // Текст
-            & > .price-wb-wrapper {
+            & > .price-w-block {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 95%;
-                background-color: @sbColor;
-                
-                // Что включено
-                & > ul {
-                    width: 80%;
-                    margin: 20px 0;
-                    list-style-type: none;
-                    
-                    & > li {
+                width: 20%;
+                .desktop({
+                    width: 100vw;
+                    margin-bottom: 10px;
+                });
+
+                // Метка хита
+                & > .price-wb-hitlabel {
+                    width: 95%;
+                    background-color: @fpColor;
+                    color: @whiteColor;
+                    text-transform: uppercase;
+                    text-align: center;
+                    padding: 10px 0;
+                    font-family: mont-eb;
+                    font-size: 1.1rem;
+
+                    &.hide {
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                }
+
+                // Название
+                & > .price-wb-label {
+                    display: flex;
+                    position: relative;
+                    width: 100%;
+                    background-color: @fbColor;
+                    margin-top: 10px;
+
+                    & > hr {
+                        position: absolute;
+                        width: 90%;
+                        left: 7.5%;
+                        top: 50%;
+                        height: 2px;
+                        background-color: @whiteColor;
+                        border: none;
+                    }
+                    & > span {
+                        background-color: @fbColor;
+                        color: @whiteColor;
+                        margin: 10px 5%;
+                        padding: 0 10px;
+                        z-index: 2;
+                        font-size: 1.1rem;
+                        font-family: mont-b;
+                        .desktop({
+                            font-size: .85rem;
+                        });
+                    }
+
+                    &.hit {
+                        margin-top: 0;
+
+                        & > span {
+                            padding: 10px;
+                        }
+                    }
+                }
+
+                // Текст
+                & > .price-wb-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 95%;
+                    background-color: @sbColor;
+
+                    // Что включено
+                    & > ul {
+                        width: 80%;
+                        margin: 20px 0;
+                        list-style-type: none;
+
+                        & > li {
+                            position: relative;
+                            font-size: .8rem;
+                            padding-bottom: 10px;
+                            padding-left: 10px;
+
+                            &:before {
+                                content: " ";
+                                position: absolute;
+                                width: 10px;
+                                height: 2px;
+                                left: -5px;
+                                top: .4rem;
+                                background-color: @fpColor;
+                            }
+                        }
+                    }
+
+                    // Цена до
+                    & > .price-wbw-price {
                         position: relative;
-                        font-size: .8rem;
+                        font-family: mont-eb;
+                        color: @fontColor;
+                        font-size: 2rem;
                         padding-bottom: 10px;
-                        padding-left: 10px;
-                        
-                        &:before {
-                            content: " ";
-                            position: absolute;
-                            width: 10px;
-                            height: 2px;
-                            left: -5px;
-                            top: .4rem;
+
+                        &.old {
+                            font-size: 1.3rem;
+
+                            &:before {
+                                position: absolute;
+                                content: " ";
+                                width: 100%;
+                                height: 4px;
+                                background-color: @fontColor;
+                                left: 0;
+                                top: calc(1.3rem / 2);
+                            }
+                        }
+                    }
+
+                    & > .price-wbw-price-new {
+                        font-family: mont-eb;
+                        color: @fpColor;
+                        font-size: 2rem;
+                        padding-bottom: 10px;
+
+                        &.hide {
+                            display: none;
+                        }
+                    }
+
+                    // Кнопка заказать
+                    & > .price-wbw-btn {
+                        position: relative;
+                        padding: 10px 30px;
+                        bottom: -5px;
+                        background-color: @fbColor;
+                        color: @whiteColor;
+                        text-transform: uppercase;
+                        font-family: mont-eb;
+                        cursor: pointer;
+
+                        &.hit {
                             background-color: @fpColor;
                         }
                     }
-                }
-                
-                // Цена до
-                & > .price-wbw-price {
-                    position: relative;
-                    font-family: mont-eb;
-                    color: @fontColor;
-                    font-size: 2rem;
-                    padding-bottom: 10px;
-                    
-                    &.old {
-                        font-size: 1.3rem;
-                        
-                        &:before {
-                            position: absolute;
-                            content: " ";
-                            width: 100%;
-                            height: 4px;
-                            background-color: @fontColor;
-                            left: 0;
-                            top: calc(1.3rem / 2);
-                        }
+
+                    // Выделение
+                    &.wow {
+                        background-color: @spColor;
                     }
-                }
-                
-                & > .price-wbw-price-new {
-                    font-family: mont-eb;
-                    color: @fpColor;
-                    font-size: 2rem;
-                    padding-bottom: 10px;
-                    
-                    &.hide {
-                        display: none;
-                    }
-                }
-                
-                // Кнопка заказать
-                & > .price-wbw-btn {
-                    position: relative;
-                    padding: 10px 30px;
-                    bottom: -5px;
-                    background-color: @fbColor;
-                    color: @whiteColor;
-                    text-transform: uppercase;
-                    font-family: mont-eb;
-                    cursor: pointer;
-                    
-                    &.hit {
-                        background-color: @fpColor;
-                    }
-                }
-                
-                // Выделение
-                &.wow {
-                    background-color: @spColor;
                 }
             }
         }
+        
+        
     }
 }
 
