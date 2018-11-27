@@ -363,19 +363,35 @@
         }
         
         & > .main-page-s-words {
+            position: relative;
             .flex();
             width: 100%;
             height: 70%;
             color: @whiteColor;
             text-transform: uppercase;
             font-family: mont-eb;
-            font-size: 3rem;
-            .big-desktop({
-                font-size: 2.2rem;
-            });
-            .desktop({
-                font-size: 1.5rem;
-            });
+            
+            & > p {
+                position: absolute;
+                opacity: 0;
+                transition: opacity .3s;
+                
+                &.active {
+                    opacity: 1;
+                }
+                
+                & > span {
+                    opacity: 0;
+                    font-family: mont-eb;
+                    font-size: 3rem;
+                    .big-desktop({
+                        font-size: 2.2rem;
+                    });
+                    .desktop({
+                        font-size: 1.5rem;
+                    });
+                }
+            }
         }
     }
 }
@@ -909,6 +925,7 @@
             .desktop({
                 width: 100%;
             });
+            transition: transform .6s, z-index .6s;
             
             // Дизайн
             & > .reviews-wb-design {
@@ -919,7 +936,6 @@
                 height: 95%;
                 background-color: @sbColor;
             }
-            
             // Видео
             & > .reviews-wb-video {
                 position: relative;
@@ -927,7 +943,6 @@
                 left: 2.5%;
                 width: 95%;
             }
-            
             // Кто написал
             & > .reviews-wb-text {
                 position: relative;
@@ -946,7 +961,6 @@
                     font-size: .9rem;
                 });
             }
-            
             // Дата и город
             & > .reviews-wb-ui {
                 display: flex;
@@ -1002,7 +1016,6 @@
                     }
                 }
             }
-            
             // Закрытие коммента
             & > .reviews-wb-btn {
                 position: absolute;
@@ -1016,8 +1029,7 @@
             }
             
             &.active {
-                left: 50%;
-                transform: translate3d(-50%, 0, 0);
+                transform: translate3d(22%, 0, 0) scale3d(1, 1, 1);
                 z-index: 2;
                 & > .reviews-wb-btn {
                     display: none;
@@ -1025,7 +1037,6 @@
             }
             
             &.left {
-                left: 0;
                 transform: translate3d(0,0,0) scale3d(.8, .8, 1);
                 .desktop({
                     transform: translate3d(-150%, 0, 0);
@@ -1033,8 +1044,7 @@
             }
             
             &.right {
-                right: 0;
-                transform: translate3d(0,0,0) scale3d(.8, .8, 1);
+                transform: translate3d(44%,0,0) scale3d(.8, .8, 1);
                 .desktop({
                     transform: translate3d(150%, 0, 0);
                 });
@@ -1558,14 +1568,31 @@
             top: 55%;
             left: @widthMenu * 2.2;
             color: @whiteColor;
-            font-size: 1.7rem;
-            .big-desktop({
-                font-size: 1.3rem;
-            });
             .desktop({
                 left: 14%;
-                font-size: 1rem;
             });
+            
+            & > .fs-stream-t-word {
+                position: absolute;
+                opacity: 0;
+                transition: opacity .3s;
+                width: 250px;
+                
+                &.active {
+                    opacity: 1;
+                }
+                
+                & > span {
+                    opacity: 0;
+                    font-size: 1.7rem;
+                    .big-desktop({
+                        font-size: 1.3rem;
+                    });
+                    .desktop({
+                        font-size: 1rem;
+                    });
+                }
+            }
         }
         
         // Кнопка заказать

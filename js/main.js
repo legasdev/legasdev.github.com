@@ -6,7 +6,13 @@ var
     // Подстраиваем размеры слайдов мини слайдера
     changeWidthMiniSlider,
     // Смена слайдов в наших работах
-    changeUsWorkSlides;
+    changeUsWorkSlides,
+    // Смена слайдов в портфолио на главной
+    changeMainWork,
+    // Смена слов 
+    changeWord,
+    // Изменить слова на спаны
+    updatedWord;
 
 
 
@@ -32,7 +38,23 @@ $(document).ready( () => {
            changeUsWorkSlides(true, $(e.currentTarget)) : changeUsWorkSlides(false, $(e.currentTarget));
     });
     
+    // Смена слайдов в портфолио на главной
+    $('body').on('click', '.reviews-wb-btn', (e) => {
+       if ($(e.currentTarget).parent().hasClass('right')) 
+           changeMainWork(true, $(e.currentTarget).parent());
+        else if ($(e.currentTarget).parent().hasClass('left'))
+                 changeMainWork(false, $(e.currentTarget).parent());
+    });
+    
     changeWidthMiniSlider();
+    
+    // Запуск смены слов на главной
+    updatedWord('.main-page-sw-w');
+    changeWord('.main-page-sw-w');
+    // Запуск смены слов на остальных
+    updatedWord('.fs-stream-t-word');
+    changeWord('.fs-stream-t-word');
+    
 });
 
 $(window).scroll( (e) => {
@@ -43,6 +65,72 @@ $(window).scroll( (e) => {
     
 });
 
+// Изменить слова на спаны
+updatedWord = (activeClass) => {
+    let
+        words = $(activeClass);
+    
+    words.each( (i, e) => {
+        
+        let word = $(e).html().split('');
+        
+        word.forEach( (elem, j) => {
+            if (i !== 0) {
+                word[j] = '<span>'+elem+'</span>';
+            } else {
+                word[j] = '<span style="opacity: 1;">'+elem+'</span>';
+            }
+            
+        });
+        
+        $(e).html(word);
+        
+    });
+}
+
+// Смена слов на главной
+changeWord = (activeClass) => {
+    let 
+        changeFullWordTime = 4000,
+        changeWordTime = 70,
+        active = $(activeClass+'.active');
+    
+    // Слово выведено
+    if ( $(active).hasClass('active') ) {
+        setTimeout( () => {
+            
+            let 
+                lengthWord = $(active).find('span').length,
+                timeout = setInterval( () => {
+                    
+                    $(active).find('span:eq('+(--lengthWord)+')').css('opacity', 0);
+                    if ( lengthWord === 0 ) {
+                        clearInterval(timeout);
+                        timeout = undefined;
+                        
+                        $(active).removeClass('active');
+                        $(active).next().length === 0 ? 
+                            active = $(active).siblings(activeClass+':first') : active = $(active).next();
+                        $(active).addClass('active');
+                        lengthWord = $(active).find('span').length;
+                        let currentNum = 0;
+                        
+                        timeout = setInterval( () => {
+                            $(active).find('span:eq('+(currentNum++)+')').css('opacity', 1);
+                            if (currentNum === lengthWord) {
+                                clearInterval(timeout);
+                                timeout = undefined;
+                                changeWord(activeClass);
+                            }
+                        }, changeWordTime);
+                    }
+
+                }, changeWordTime);
+            
+        }, changeFullWordTime);
+    }
+    
+}
 
 // Смена слайдов на главной
 // True - смена вперед; false - назад
@@ -146,5 +234,41 @@ changeUsWorkSlides = (next, obj) => {
         
         $(right).removeClass('right');
         $(right).addClass('active');
+    }
+}
+
+// Смена слайдов в портфолио на главной
+// True - смена вправо; false - влево
+changeMainWork = (next, obj) => {
+    if (next) {
+        
+        let
+            active = $(obj).siblings('.active'),
+            left = $(obj).siblings('.left'),
+            right = $(obj);
+        
+        $(active).removeClass('active');
+        $(active).addClass('left');
+        
+        $(right).removeClass('right');
+        $(right).addClass('active');
+        
+        $(left).removeClass('left');
+        $(left).addClass('right');
+        
+    } else {
+        let
+            active = $(obj).siblings('.active'),
+            left = $(obj),
+            right = $(obj).siblings('.right');
+        
+        $(active).removeClass('active');
+        $(active).addClass('right');
+        
+        $(right).removeClass('right');
+        $(right).addClass('left');
+        
+        $(left).removeClass('left');
+        $(left).addClass('active');
     }
 }
