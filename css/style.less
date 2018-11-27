@@ -84,15 +84,34 @@
 // Адаптация
 
 // Mode: Tablet
-@tablet-area: 650px;
+@tablet-area: 550px;
 .tablet(@rules) {
   @media (max-width: @tablet-area) { @rules(); }
 }
 
 // Mode: Small-Desktop
-@desktop-area: 1190px;
+@desktop-area: 700px;
 .desktop(@rules) {
   @media (max-width: @desktop-area) { @rules(); }
+}
+
+.desktop-land(@rules) {
+  @media (max-width: @desktop-area) and (orientation:landscape) { @rules(); }
+}
+
+// Mode: Small-Desktop
+@desktop-area-middle: 930px;
+.middle-desktop(@rules) {
+  @media (max-width: @desktop-area-middle) { @rules(); }
+}
+
+.middle-desktop-land(@rules) {
+  @media (max-width: @desktop-area-middle) and (orientation:landscape) { @rules(); }
+}
+
+@desktop-area-mini: 1200px;
+.mini-desktop(@rules) {
+  @media (max-width: @desktop-area-mini) { @rules(); }
 }
 
 // Mode: Big-Desktop
@@ -200,7 +219,11 @@ body {
         font-size: 2rem; 
         padding: 35px 0 35px 20px;
     });
-    .desktop({
+    .mini-desktop({
+        font-size: 1.5rem; 
+        padding: 35px 0 35px 20px;
+    });
+    .middle-desktop({
         font-size: 1.3rem; 
         padding: 35px 0 35px 20px;
     });
@@ -237,7 +260,7 @@ body {
         & > .uis-tap {
             width: 23px;
             height: 23px;
-            border: 3px solid @fbColor;
+            border: 2px solid @fbColor;
             margin: 0 10px;
             border-radius: 100%;
             transition: border .3s;
@@ -284,6 +307,41 @@ body {
             max-height: 55px;
             max-width: 120px;
         });
+    }
+    
+    // Соц. сети
+    & > .menu-ll-soc {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        .desktop({
+            display: flex;
+            flex-direction: row;
+        });
+        
+        & > .menu-lls-btn {
+            width: 30px;
+            height: 30px;
+            .ccibg();
+            background-image: url('/img/icons/youtube-logo.svg');
+            margin-bottom: 10px;
+            transform: scale3d(1, 1, 1);
+            transition: transform .3s;
+            .desktop({
+                width: 20px;
+                height: 20px;
+                margin-bottom: 0;
+                margin-left: 10px;
+            });
+            
+            &:nth-child(2) {
+                background-image: url('/img/icons/instagram.svg');
+            }
+            
+            &:hover {
+                transform: scale3d(1.1, 1.1, 1);
+            }
+        }
     }
     
     // Кнопка меню
@@ -347,7 +405,7 @@ body {
             & > .menu-lmb-wrapper {
                 & > i {
                     .desktop({
-                        width: 95%;
+                        width: 30px;
                     });
                     &:nth-child(1) {
                         transform: rotate3d(0, 0, 1, 45deg);
@@ -362,6 +420,38 @@ body {
             }
             & > .menu-lmb-label {
                 opacity: 0;
+            }
+        }
+    }
+    
+    // Соц. сети
+    & > .menu-l-soc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .desktop({
+           display: none;
+        });
+        
+        & > .menu-ls-btn {
+            width: 30px;
+            height: 30px;
+            .ccibg();
+            background-image: url('/img/icons/youtube-logo.svg');
+            margin-bottom: 10px;
+            transform: scale3d(1, 1, 1);
+            transition: transform .3s;
+            .desktop({
+                width: 20px;
+                height: 20px;
+            });
+            
+            &:nth-child(2) {
+                background-image: url('/img/icons/instagram.svg');
+            }
+            
+            &:hover {
+                transform: scale3d(1.1, 1.1, 1);
             }
         }
     }
@@ -483,8 +573,11 @@ body {
                             width: 80%;
                             top: 0;
                             opacity: 1;
-                            .desktop({
+                            .mini-desktop({
                                font-size: .75rem; 
+                            });
+                            .middle-desktop-land({
+                               display: none; 
                             });
 
                             &:before {
@@ -494,7 +587,11 @@ body {
                                 height: 4px;
                                 width: 15%;
                                 background-color: @whiteColor;
+                                .mini-desktop({
+                                    display: none;
+                                });
                                 .desktop({
+                                    display: block;
                                     height: 2px;
                                     width: 10%;
                                 });
@@ -513,6 +610,9 @@ body {
                             height: 80%;
                             transform: scale3d(1, 1, 1);
                         });
+                        .middle-desktop-land({
+                            top: 50%;
+                        });
 
                         // Название блока
                         & > .menu-blw-name {
@@ -522,6 +622,12 @@ body {
                             font-size: 1.8rem;
                             transform: translate3d(0,0,0);
                             transition: transform .4s;
+                            .mini-desktop({
+                                font-size: 1.4rem;
+                            });
+                            .middle-desktop({
+                                font-size: 1rem;
+                            });
                             .desktop({
                                 font-size: 1.1rem;
                                 transform: translate3d(0,-150%,0);
@@ -537,7 +643,7 @@ body {
                                 left: 0;
                                 opacity: 1;
                                 transition: opacity .4s;
-                                .desktop({
+                                .middle-desktop({
                                    opacity: 0;
                                 });
                             }
@@ -561,6 +667,9 @@ body {
                             & > .menu-blw-name {
                                 .desktop({
                                     transform: translate3d(0,-100%,0);
+                                });
+                                .middle-desktop-land({
+                                    transform: translate3d(0,-75%,0);
                                 });
                             }
                         }
@@ -635,7 +744,7 @@ body {
             height: 90%;
             
             & > .menu-bbw-soc {
-                display: flex;
+                display: none;
                 align-items: center;
                 width: 30%;
                 height: 100%;
@@ -756,6 +865,7 @@ body {
             .desktop({
                margin: 0 0 15px 0;
                align-self: center;
+                width: 85%;
             });
             
             // Заголовок
@@ -765,7 +875,7 @@ body {
                 font-family: mont-eb;
                 font-size: 1.8rem;
                 margin: 20px 0 20px 0;
-                .desktop({
+                .middle-desktop({
                    font-size: 1.3rem; 
                 });
                 
@@ -777,7 +887,7 @@ body {
                     background-color: @whiteColor;
                     left: 0;
                     bottom: -10px;
-                    .desktop({
+                    .middle-desktop({
                         height: 3px;
                         width: 15%;
                     });
@@ -792,7 +902,7 @@ body {
                 text-decoration: none;
                 overflow: hidden;
                 font-size: .9rem;
-                .desktop({
+                .middle-desktop({
                     font-size: .8rem;
                     margin-bottom: 3px;
                 });
@@ -822,12 +932,23 @@ body {
             display: flex;
             flex-direction: column;
             align-self: center;
+            .middle-desktop({
+                align-self: flex-start;
+            });
+            .desktop({
+                align-self: center;
+                width: 85%;
+            });
             
             // инфа
             & > .footer-t-info {
                 display: flex;
                 flex-direction: column;
                 color: @whiteColor;
+                .middle-desktop({
+                    font-size: .8rem; 
+                    padding-top: 20px;
+                });
                 
                 & > .footer-ti-tel {
                     display: flex;
@@ -849,7 +970,6 @@ body {
             // Кнопки соц. сетей
             & > .footer-t-soc {
                 display: flex;
-                justify-content: center;
                 align-items: center;
                 
                 & > .footer-ts-btn {
@@ -874,6 +994,10 @@ body {
             .desktop({
                width: 100%; 
             });
+            
+            & > ymaps {
+                height: 200px !important;
+            }
         }
     }
     
@@ -933,12 +1057,18 @@ body {
         left: 0;
     });
     
+    & > .ui-slides {
+        .middle-desktop({
+           display: flex; 
+        });        
+    }
+    
     & > .equip-wrapper {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
         width: 90%;
-        .desktop({
+        .middle-desktop({
             display: flex;
             overflow: hidden;
             flex-wrap: nowrap;
@@ -947,7 +1077,7 @@ body {
         & > .equip-w-w {
             display: flex;
             width: 100%;
-            .desktop({
+            .middle-desktop({
                 display: flex;
                 overflow: hidden;
                 width: 100%;
@@ -958,7 +1088,9 @@ body {
                 justify-content: space-around;
                 flex-wrap: wrap;
                 width: 100%;
-                .desktop({
+                transform: translate3d(0,0,0);
+                transition: transform .3s;
+                .middle-desktop({
                     display: flex;
                     justify-content: flex-start;
                     flex-wrap: nowrap;
@@ -972,10 +1104,10 @@ body {
                     align-items: center;
                     width: 30%;
                     margin-bottom: 30px;
-                    .desktop({
-                        width: 45vw;
+                    .middle-desktop({
+                        width: calc(90vw - @widthMenu);
                     });
-                    .tablet({
+                    .desktop({
                         width: 90vw;
                     });
 

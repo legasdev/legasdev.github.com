@@ -17,8 +17,12 @@ var
     changeMainWorkMob,
     // Разрешение сдвинуть слайд в ценах
     checkMovePrice = true,
-    // Смена слайдов в ценах и оборудовании
-    changePriceSlides;
+    // Смена слайдов в ценах
+    changePriceSlides,
+    // Смена слайдов в оборудовании
+    changeEquipSlides,
+    // Разрешение сдвинуть слайд в оборудовании
+    checkMoveEquip = true;
 
 
 
@@ -52,7 +56,9 @@ $(document).ready( () => {
                  changeMainWork(false, $(e.currentTarget).parent());
     });
     
-    changeWidthMiniSlider();
+    setTimeout( () => {
+        changeWidthMiniSlider();
+    }, 100);
     
     // Запуск смены слов на главной
     updatedWord('.main-page-sw-w');
@@ -113,6 +119,9 @@ $(document).ready( () => {
     // Конец анимации для цен
     $('.price-ww').on('transitionend', ()=>{ checkMovePrice = true; });
     
+    // Конец анимации для оборудования
+    $('.equip-ww-w').on('transitionend', ()=>{ checkMoveEquip = true; });
+    
     // Смена ценовых предложений
     $('body').on('click', '.uis-left-pr-l, .uis-left-pr-r', (e) => {
         
@@ -148,6 +157,13 @@ $(document).ready( () => {
        }
     });
     
+    // Смена слайдов в оборудовании
+    $('body').on('click', '.uis-equip-l, .uis-equip-r', (e) => {
+        
+        changeEquipSlides(e);
+        
+    });
+    
 });
 
 $(window).scroll( (e) => {
@@ -155,7 +171,7 @@ $(window).scroll( (e) => {
     $('.reviews-wrapper').css('height', $('.reviews-w-block.active').height() + 60 );
     $('.works-wrapper').css('height', $('.works-w-block.active').height() + 60 );
     changeWidthMiniSlider();
-    
+    $('.price-ww').css('transform', 'translate3d(0,0,0)');
 });
 
 // Изменить слова на спаны
@@ -282,8 +298,9 @@ changeMainSlider = (next, obj) => {
 changeWidthMiniSlider = () => {
     
     let num = 5;
-    $(window).width() < 1190 ? num = 3 : num;
-    $(window).width() < 700 ? num = 1 : num;
+    $(window).width() < 1190 ? num = 5 : num;
+    $(window).width() < 700 ? num = 3 : num;
+    $(window).width() < 550 ? num = 1 : num;
     
     let 
         width = $('.main-about-partner-center-wrapper').width() / num,
@@ -366,7 +383,7 @@ changeMainWork = (next, obj) => {
     }
 }
 
-// Смена слайдов в ценах и оборудовании
+// Смена слайдов в ценах
 changePriceSlides = (e) => {
     let 
         slides = $(e.currentTarget).parent().siblings('.price-wrapper').find('.price-ww'),
@@ -376,7 +393,7 @@ changePriceSlides = (e) => {
         
     if ($(e.currentTarget).hasClass('uis-left-pr-r')) {
         
-        if ( $(slides).css('transform').split(', ')[4] > -maxDOF  && checkMovePrice) {
+        if ( parseFloat($(slides).css('transform').split(', ')[4]) > -maxDOF && checkMovePrice) {
             checkMovePrice = false;
             $(slides).css('transform', 
                           'translate3d('+ 
@@ -392,13 +409,54 @@ changePriceSlides = (e) => {
         
     } else if ($(e.currentTarget).hasClass('uis-left-pr-l')) {
         
-        if ( $(slides).css('transform').split(', ')[4] < maxDOF  && checkMovePrice) {
+        if ( parseFloat($(slides).css('transform').split(', ')[4]) < maxDOF && checkMovePrice) {
             checkMovePrice = false;
             $(slides).css('transform', 
                           'translate3d('+ 
                           (parseFloat($(slides).css('transform').split(', ')[4]) + widthSlides) 
                           +'px, 0, 0)');
             
+            if ($(e.currentTarget).siblings('.uis-center')
+                .find('.active').prev().length > 0) {
+                $(e.currentTarget).siblings('.uis-center')
+                    .find('.uis-tap.active').removeClass('active').prev().addClass('active');
+            }
+        }
+        
+    }
+}
+
+// Смена слайдов в оборудовании
+changeEquipSlides = (e) => {
+    
+    let 
+        slides = $(e.currentTarget).parent().siblings('.equip-wrapper').find('.equip-ww-w'),
+        widthSlides = $(slides).find('.equip-w-block').width(),
+        fullWidth = widthSlides * $(slides).find('.equip-w-block').length,
+        maxDOF = fullWidth - widthSlides;
+    
+    if ($(e.currentTarget).hasClass('uis-equip-r')) {
+        if ( parseFloat($(slides).css('transform').split(', ')[4]) > -maxDOF + 10 && checkMoveEquip) {
+            checkMoveEquip = false;
+            $(slides).css('transform', 
+                          'translate3d('+ 
+                          (parseFloat($(slides).css('transform').split(', ')[4]) - widthSlides) 
+                          +'px, 0, 0)');
+            if ($(e.currentTarget).siblings('.uis-center')
+                .find('.active').next().length > 0) {
+                $(e.currentTarget).siblings('.uis-center')
+                    .find('.uis-tap.active').removeClass('active').next().addClass('active');
+            }
+        }
+        
+    } else if ($(e.currentTarget).hasClass('uis-equip-l')) {
+        
+        if ( parseFloat($(slides).css('transform').split(', ')[4]) < 0 && checkMoveEquip) {
+            checkMoveEquip = false;
+            $(slides).css('transform', 
+                          'translate3d('+ 
+                          (parseFloat($(slides).css('transform').split(', ')[4]) + widthSlides) 
+                          +'px, 0, 0)');
             if ($(e.currentTarget).siblings('.uis-center')
                 .find('.active').prev().length > 0) {
                 $(e.currentTarget).siblings('.uis-center')
