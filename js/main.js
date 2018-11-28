@@ -164,6 +164,16 @@ $(document).ready( () => {
         
     });
     
+    // Открыть форму заявки
+    $('body').on('click', '.footer-main-t-order-btn, .fs-btn, .price-wbw-btn, .footer-order-btn', () => {
+        $('.order').addClass('active');
+    });
+    
+    // Закрыть форму заказа
+    $('body').on('click', '.order-w-close', () => {
+        $('.order').removeClass('active');
+    });
+    
 });
 
 $(window).scroll( (e) => {
