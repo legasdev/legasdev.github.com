@@ -286,12 +286,12 @@
         z-index: 2;
         
         & > .main-page-s-btn {
-            width: 70px;
+            width: 50px;
             height: 50px;
             background-color: @fbColor;
             .ccibg();
-            background-size: 50%;
-            background-image: url('/img/icons/youtube-logo.svg');
+            background-size: 80%;
+            background-image: url('/img/soc/yt-icon-w.png');
             cursor: pointer;
             transform: scale3d(1, 1, 1);
             transform-origin: bottom;
@@ -302,7 +302,7 @@
             });
             
             &:nth-child(2) {
-                background-image: url('/img/icons/instagram.svg');
+                background-image: url('/img/soc/in-icon-w.png');
             }
             
             &:hover {
@@ -320,10 +320,10 @@
         flex-direction: column;
         align-items: center;
         border: 2px solid @whiteColor;
-        width: 30%;
+        width: 470px;
         height: 20%;
         .mini-desktop({
-             width: 315px;
+             width: 345px;
         });
         .desktop({
             bottom: 30%;
@@ -357,17 +357,17 @@
                 color: @whiteColor;
                 text-transform: uppercase;
                 font-family: mont-eb;
-                font-size: 1rem;
+                font-size: 1.5rem;
                 border-left: 1px solid @whiteColor;
                 border-bottom: 2px solid @whiteColor;
                 .big-desktop({
-                    font-size: .8rem;
+                    font-size: 1.3rem;
                 });
                 .mini-desktop({
-                    font-size: .6rem;
+                    font-size: 1rem;
                 });
-                .middle-desktop({
-                    font-size: .55rem;
+                .desktop({
+                    font-size: .85rem;
                 });
             }
         }
@@ -1288,9 +1288,12 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            width: 40%;
+            width: 400px;
             background-color: @fbColor;
             z-index: 2;
+            .middle-desktop({
+                width: 300px;
+            });
             
             & > .contacts-wf-label {
                 display: flex;
@@ -1351,16 +1354,14 @@
                 font-family: mont-eb;
                 color: @whiteColor;
                 background-color: @fpColor;
-                border: none;
                 cursor: pointer;
                 bottom: -10px;
                 margin: 0;
+                padding: 10px 30px;
                 font-size: .9rem;
-                min-height: 3rem;
+                border-radius: 3px;
                 .mini-desktop({
-                    width: 44%;
-                    min-height: 2rem;
-                    font-size: .7rem;
+                    font-size: .8rem;
                 });
             }
         }
@@ -1483,12 +1484,18 @@
             .desktop({
                 width: 90%; 
                 padding: 0;
+                min-height: auto;
             });
             
             & > .footer-main-t-text {
                 color: @whiteColor;
+                text-align: center;
                 .mini-desktop({
-                   font-size: .8rem; 
+                   font-size: 1rem; 
+                    
+                });
+                .desktop({
+                    margin: 20px 0;
                 });
             }
             
@@ -1502,9 +1509,13 @@
                 font-size: 1rem;
                 user-select: none;
                 cursor: pointer;
+                border-radius: 3px;
                 .mini-desktop({
                     font-size: .9rem;
-                   padding: 10px;
+                    padding: 10px;
+                });
+                .desktop({
+                    margin: 10px 0;
                 });
             }
         }
@@ -1566,18 +1577,26 @@
                 & > .footer-main-bws-btn {
                     width: 40px;
                     height: 40px;
+                    margin-bottom: 5px;
+                    transform: scale3d(1, 1, 1);
+                    transition: transform .2s;
                     .mini-desktop({
-                        width: 25px;
-                        height: 25px;
+                        width: 35px;
+                        height: 35px;
                     });
                     .desktop({
                        margin-right: 5px; 
+                        margin-bottom: 0;
                     });
                     .ccibg();
-                    background-image: url('/img/icons/instagram-blue.svg');
+                    background-image: url('/img/soc/in-icon-b.png');
                     
                     &:last-child {
-                        background-image: url('/img/icons/youtube-red.svg');  
+                        background-image: url('/img/soc/yt-icon-b.png');  
+                    }
+                    
+                    &:hover {
+                        transform: scale3d(1.1, 1.1, 1);
                     }
                 }
             }
@@ -1607,7 +1626,7 @@
     }
     
     & > .footer-main-copyright {
-        margin: 5px 0;
+        margin: 0 0 10px;
     }
 }
 
@@ -1711,7 +1730,10 @@
                 position: absolute;
                 opacity: 0;
                 transition: opacity .3s;
-                width: 250px;
+                width: 350px;
+                .desktop({
+                    width: 250px;
+                });
                 
                 &.active {
                     opacity: 1;
@@ -1719,12 +1741,12 @@
                 
                 & > span {
                     opacity: 0;
-                    font-size: 1.7rem;
+                    font-size: 2rem;
                     .big-desktop({
-                        font-size: 1.3rem;
+                        font-size: 1.8rem;
                     });
                     .mini-desktop({
-                        font-size: 1rem;
+                        font-size: 1.6rem;
                     });
                     .desktop({
                         font-size: 1rem;
@@ -1739,14 +1761,14 @@
             left: 50%;
             transform: translate3d(-50%, 0 ,0);
             bottom: 65px;
-            padding: 10px 30px;
+            padding: 10px 60px;
             background-color: @fpColor;
             color: @whiteColor;
             text-transform: uppercase;
             font-family: mont-eb;
             font-size: 2rem;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 3px;
             .big-desktop({
                 font-size: 1.2rem;
             });
@@ -2292,6 +2314,7 @@
                         text-transform: uppercase;
                         font-family: mont-eb;
                         cursor: pointer;
+                        border-radius: 3px;
 
                         &.hit {
                             background-color: @fpColor;
@@ -2390,6 +2413,7 @@
         background-color: @fpColor;
         bottom: -5px;
         cursor: pointer;
+        border-radius: 3px;
         .big-desktop({
             padding: 10px 60px;
             font-size: 1.2rem;
@@ -2520,15 +2544,21 @@
                 align-items: center;
                 
                 & > .footer-ts-btn {
-                    width: 35px;
-                    height: 35px;
+                    width: 40px;
+                    height: 40px;
                     margin: 10px 5px;
                     .ccibg();
                     background-size: 80%;
-                    background-image: url('/img/icons/instagram.svg');
+                    background-image: url('/img/soc/in-icon-w.png');
+                    transform: scale3d(1, 1, 1);
+                    transition: transform .2s;
                     
                     &:nth-child(2) {
-                        background-image: url('/img/icons/youtube-red-2.svg');
+                        background-image: url('/img/soc/yt-icon-w.png');
+                    }
+                    
+                    &:hover {
+                        transform: scale3d(1.1, 1.1, 1);
                     }
                 }
             }
@@ -2553,10 +2583,10 @@
         justify-content: space-between;
         align-items: center;
         width: 90%;
-        margin: 25px 0;
+        margin: 25px 0 0;
         .desktop({
            flex-direction: column;
-            margin-top: 20px;
+            margin: 20px 0;
         });
         
         & > .footer-b-logo {
@@ -2573,19 +2603,20 @@
         
         & > .footer-b-text {
             width: 30%;
-            font-size: .9rem;
+            font-size: 1rem;
+            text-align: center;
             .desktop({
                 width: 90%;
-                font-size: .8rem;
+                font-size: 1rem;
                 margin-top: 20px;
             });
         }
     }
     
     & > .footer-copyright {
-        font-size: 1.1rem;
-        margin: 10px 0;
+        margin: 0 0 10px;
     }
+    
 }
 
 // Оборудование

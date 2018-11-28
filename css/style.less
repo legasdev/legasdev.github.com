@@ -258,15 +258,15 @@ body {
         position: relative;
         
         & > .uis-tap {
-            width: 23px;
-            height: 23px;
+            width: 18px;
+            height: 18px;
             border: 2px solid @fbColor;
             margin: 0 10px;
             border-radius: 100%;
             transition: border .3s;
             
             &.active {
-                border: 12.5px solid @fbColor;
+                border: 9px solid @fbColor;
             }
         }
     }
@@ -320,22 +320,22 @@ body {
         });
         
         & > .menu-lls-btn {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             .ccibg();
-            background-image: url('/img/icons/youtube-logo.svg');
+            background-image: url('/img/soc/yt-icon-w.png');
             margin-bottom: 10px;
             transform: scale3d(1, 1, 1);
             transition: transform .3s;
             .desktop({
-                width: 20px;
-                height: 20px;
+                width: 30px;
+                height: 30px;
                 margin-bottom: 0;
                 margin-left: 10px;
             });
             
             &:nth-child(2) {
-                background-image: url('/img/icons/instagram.svg');
+                background-image: url('/img/soc/in-icon-w.png');
             }
             
             &:hover {
@@ -378,7 +378,7 @@ body {
                 border-radius: 100vh;
                 .desktop({
                     width: 30px;
-                    height: 2px;
+                    height: 3px;
                 });
                 opacity: 1;
                 transform-origin: left;
@@ -389,6 +389,7 @@ body {
         
         // Метка
         & > .menu-lmb-label {
+            display: none;
             text-transform: uppercase;
             color: @whiteColor;
             font-size: .8rem;
@@ -396,9 +397,6 @@ body {
             transition: color 0.3s;
             opacity: 1;
             transition: opacity .2s;
-            .desktop({
-                display: none;
-            });
         }
         
         &.opened {
@@ -434,20 +432,20 @@ body {
         });
         
         & > .menu-ls-btn {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             .ccibg();
-            background-image: url('/img/icons/youtube-logo.svg');
+            background-image: url('/img/soc/yt-icon-w.png');
             margin-bottom: 10px;
             transform: scale3d(1, 1, 1);
             transition: transform .3s;
             .desktop({
-                width: 20px;
-                height: 20px;
+                width: 30px;
+                height: 30px;
             });
             
             &:nth-child(2) {
-                background-image: url('/img/icons/instagram.svg');
+                background-image: url('/img/soc/in-icon-w.png');
             }
             
             &:hover {
@@ -467,9 +465,13 @@ body {
        
         & > a {
             color: @whiteColor;
-            text-align: left;
+            text-align: center;
             text-decoration: none;
-            font-size: .75rem;
+            font-size: .9rem;
+        }
+        
+        & > .menu-lt-mail {
+            font-size: .9rem;
         }
     }
 }

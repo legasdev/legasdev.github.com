@@ -183,10 +183,6 @@ $(window).scroll( (e) => {
     changeWidthMiniSlider();
 });
 
-$(window).resize( () => {
-    $('.price-ww').css('transform', 'translate3d(0,0,0)');
-});
-
 // Изменить слова на спаны
 updatedWord = (activeClass) => {
     let
@@ -213,8 +209,8 @@ updatedWord = (activeClass) => {
 // Смена слов на главной
 changeWord = (activeClass) => {
     let 
-        changeFullWordTime = 4000,
-        changeWordTime = 70,
+        changeFullWordTime = 2000,
+        changeWordTime = 60,
         active = $(activeClass+'.active');
     
     // Слово выведено
