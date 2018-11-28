@@ -62,10 +62,10 @@ $(document).ready( () => {
     
     // Запуск смены слов на главной
     updatedWord('.main-page-sw-w');
-    changeWord('.main-page-sw-w');
+    changeWord('.main-page-sw-w', 0);
     // Запуск смены слов на остальных
     updatedWord('.fs-stream-t-word');
-    changeWord('.fs-stream-t-word');
+    changeWord('.fs-stream-t-word', 0);    
     
     // Для мобильных
     
@@ -207,9 +207,9 @@ updatedWord = (activeClass) => {
 }
 
 // Смена слов на главной
-changeWord = (activeClass) => {
+changeWord = (activeClass, time) => {
     let 
-        changeFullWordTime = 2000,
+        changeFullWordTime = time,
         changeWordTime = 60,
         active = $(activeClass+'.active');
     
@@ -222,23 +222,34 @@ changeWord = (activeClass) => {
                 timeout = setInterval( () => {
                     
                     $(active).find('span:eq('+(--lengthWord)+')').css('opacity', 0);
+                    let
+                        x = $(active).find('span:eq('+(lengthWord)+')').position().left,
+                        y = $(active).find('span:eq('+(lengthWord)+')').position().top;
+                    $('.fs-stream-t-cursor').css('transform', 'translate3d('+x+'px,'+y+'px,0)');
                     if ( lengthWord === 0 ) {
                         clearInterval(timeout);
                         timeout = undefined;
                         
                         $(active).removeClass('active');
-                        $(active).next().length === 0 ? 
+                        $(active).next().filter(activeClass).length === 0 ? 
                             active = $(active).siblings(activeClass+':first') : active = $(active).next();
                         $(active).addClass('active');
                         lengthWord = $(active).find('span').length;
                         let currentNum = 0;
                         
                         timeout = setInterval( () => {
+                            let
+                                x = $(active).find('span:eq('+(currentNum)+')').position().left +
+                                        $(active).find('span:eq('+(currentNum)+')').width(),
+                                y = $(active).find('span:eq('+(currentNum)+')').position().top;
+                            $('.fs-stream-t-cursor').css('transform', 'translate3d('+x+'px,'+y+'px,0)');
+                            
                             $(active).find('span:eq('+(currentNum++)+')').css('opacity', 1);
+                            
                             if (currentNum === lengthWord) {
                                 clearInterval(timeout);
                                 timeout = undefined;
-                                changeWord(activeClass);
+                                changeWord(activeClass, 2000);
                             }
                         }, changeWordTime);
                     }
