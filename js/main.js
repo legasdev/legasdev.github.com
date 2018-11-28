@@ -58,7 +58,7 @@ $(document).ready( () => {
     
     setTimeout( () => {
         changeWidthMiniSlider();
-    }, 100);
+    }, 500);
     
     // Запуск смены слов на главной
     updatedWord('.main-page-sw-w');
