@@ -2937,11 +2937,29 @@ body {
 }
 .fs-stream-t-cursor {
   position: absolute;
-  width: 1px;
+  width: 3px;
   height: 2rem;
   background-color: #fff;
   transform: translate3d(300px, 0, 0);
   animation: anim-cursor 0.8s infinite;
+}
+.fs-stream-t-cursor::before {
+	content: " ";
+    position: absolute;
+    height: 2px;
+    width: 12px;
+    top: 0;
+    left: -4px;
+    background-color: #fff;
+}
+.fs-stream-t-cursor::after {
+	content: " ";
+    position: absolute;
+    height: 2px;
+    width: 12px;
+    bottom: 0;
+    left: -4px;
+    background-color: #fff;
 }
 @media (max-width: 700px) {
   .fs-stream-t-cursor {
