@@ -153,8 +153,23 @@ body {
     height: 2rem;
     background-color: @whiteColor;
     transform: translate3d(300px,0,0);
+    animation: anim-cursor .8s infinite;
     .desktop({
         height: 1rem;
+    });
+}
+
+@keyframes anim-cursor {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+// Кнопка чата
+.button_1O {
+    margin-bottom: 60px !important;
+    .desktop-land({
+        margin-bottom: 30px !important;
     });
 }
 
