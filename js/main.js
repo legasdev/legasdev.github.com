@@ -66,7 +66,7 @@ $(document).ready(function () {
         });
     setTimeout(()=>{
         $('.contacts-map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A56e1d2bd89352bcb70e4707529b3d7eee67bd987e6115467916d6a14623513d5&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>');
-    }, 2000);
+    }, 6000);
     
 });
 $(window).scroll(function (a) {
