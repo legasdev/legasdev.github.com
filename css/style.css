@@ -2854,27 +2854,22 @@
 @font-face {
   font-family: mont-r;
   src: url('/fonts/Montserrat-Regular.ttf');
-  font-display: swap;
 }
 @font-face {
   font-family: mont-b;
   src: url('/fonts/Montserrat-Bold.ttf');
-  font-display: swap;
 }
 @font-face {
   font-family: mont-eb;
   src: url('/fonts/Montserrat-ExtraBold.ttf');
-  font-display: swap;
 }
 @font-face {
   font-family: mont-l;
   src: url('/fonts/Montserrat-Light.ttf');
-  font-display: swap;
 }
 @font-face {
   font-family: mont-sb;
   src: url('/fonts/Montserrat-SemiBold.ttf');
-  font-display: swap;
 }
 @keyframes anim-menu-left {
   0% {
@@ -2937,44 +2932,15 @@ body {
 }
 .fs-stream-t-cursor {
   position: absolute;
-  width: 3px;
+  width: 1px;
   height: 2rem;
   background-color: #fff;
   transform: translate3d(300px, 0, 0);
   animation: anim-cursor 0.8s infinite;
 }
-.fs-stream-t-cursor::before {
-	content: " ";
-    position: absolute;
-    height: 2px;
-    width: 10px;
-    top: 0;
-    left: -3px;
-    background-color: #fff;
-}
-.fs-stream-t-cursor::after {
-	content: " ";
-    position: absolute;
-    height: 2px;
-    width: 12px;
-    bottom: 0;
-    left: -4px;
-    background-color: #fff;
-}
 @media (max-width: 700px) {
   .fs-stream-t-cursor {
     height: 1rem;
-	width: 2px;
-  }
-  .fs-stream-t-cursor::before {
-	width: 6px;
-    height: 1px;
-    left: -2px;
-  }
-  .fs-stream-t-cursor::after {
-	width: 6px;
-    height: 1px;
-    left: -2px;
   }
 }
 @keyframes anim-cursor {

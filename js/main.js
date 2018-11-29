@@ -1,195 +1,595 @@
-var changeMainSlider, changeWidthMiniSlider, changeUsWorkSlides, changeMainWork, changeWord, updatedWord, changeMainWorkMob, checkMovePrice = !0,
-    changePriceSlides, changeEquipSlides, checkMoveEquip = !0;
-$(document).ready(function () {
-    $(".reviews-wrapper").css("height", $(".reviews-w-block.active").height() + 60);
-    $(".works-wrapper").css("height", $(".works-w-block.active").height() + 60);
-    $("body").on("click", ".menu-l-menu-btn", function (a) {
-        $(".menu").toggleClass("opened");
-        $(".menu-l-menu-btn").toggleClass("opened")
+'use strict'
+
+var
+    // Смена слайдов на главной
+    changeMainSlider,
+    // Подстраиваем размеры слайдов мини слайдера
+    changeWidthMiniSlider,
+    // Смена слайдов в наших работах
+    changeUsWorkSlides,
+    // Смена слайдов в портфолио на главной
+    changeMainWork,
+    // Смена слов 
+    changeWord,
+    // Изменить слова на спаны
+    updatedWord,
+    // Смена слайдов в портфолио на главной мобильной
+    changeMainWorkMob,
+    // Разрешение сдвинуть слайд в ценах
+    checkMovePrice = true,
+    // Смена слайдов в ценах
+    changePriceSlides,
+    // Смена слайдов в оборудовании
+    changeEquipSlides,
+    // Разрешение сдвинуть слайд в оборудовании
+    checkMoveEquip = true;
+
+
+
+$(document).ready( () => {
+    $('.reviews-wrapper').css('height', $('.reviews-w-block.active').height() + 60 );
+    $('.works-wrapper').css('height', $('.works-w-block.active').height() + 60 );
+    
+    // Нажатие на кнопку меню
+    $('body').on('click', '.menu-l-menu-btn', (e) => {
+        $('.menu').toggleClass('opened');
+        $('.menu-l-menu-btn').toggleClass('opened');
     });
-    $("body").on("click", ".main-page-s", function (a) {
-        "\u0412\u043f\u0435\u0440\u0435\u0434" === $(a.currentTarget).html() ? changeMainSlider(!0, $(a.currentTarget)) : changeMainSlider(!1, $(a.currentTarget))
+    
+    // Смена слайдов на главной
+    $('body').on('click', '.main-page-s', (e) => {
+       ($(e.currentTarget).html() === 'Вперед') ? 
+           changeMainSlider(true, $(e.currentTarget)) : changeMainSlider(false, $(e.currentTarget));
     });
-    $("body").on("click", ".works-w-left, .works-w-right", function (a) {
-        $(a.currentTarget).hasClass("works-w-right") ? changeUsWorkSlides(!0, $(a.currentTarget)) : changeUsWorkSlides(!1, $(a.currentTarget))
+    
+    // Смена слайдов в наших работах
+    $('body').on('click', '.works-w-left, .works-w-right', (e) => {
+       ($(e.currentTarget).hasClass('works-w-right')) ? 
+           changeUsWorkSlides(true, $(e.currentTarget)) : changeUsWorkSlides(false, $(e.currentTarget));
     });
-    $("body").on("click", ".reviews-wb-btn", function (a) {
-        $(a.currentTarget).parent().hasClass("right") ? changeMainWork(!0, $(a.currentTarget).parent()) : $(a.currentTarget).parent().hasClass("left") && changeMainWork(!1, $(a.currentTarget).parent())
+    
+    // Смена слайдов в портфолио на главной
+    $('body').on('click', '.reviews-wb-btn', (e) => {
+       if ($(e.currentTarget).parent().hasClass('right')) 
+           changeMainWork(true, $(e.currentTarget).parent());
+        else if ($(e.currentTarget).parent().hasClass('left'))
+                 changeMainWork(false, $(e.currentTarget).parent());
     });
-    setTimeout(function () {
-        changeWidthMiniSlider()
+    
+    setTimeout( () => {
+        changeWidthMiniSlider();
     }, 500);
-    updatedWord(".main-page-sw-w");
-    changeWord(".main-page-sw-w", 0);
-    updatedWord(".fs-stream-t-word");
-    changeWord(".fs-stream-t-word", 0);
-    $("body").on("click", ".uis-left-l, .uis-left-r", function (a) {
-        if ($(a.currentTarget).hasClass("uis-left-r")) {
-            changeMainWork(!0, $(a.currentTarget).parent().siblings(".reviews-wrapper").find(".reviews-w-block.right"));
-            a = $(a.currentTarget).siblings(".uis-center").find(".active");
-            var b = $(a).next();
-            0 === $(b).length ? b = $(a).siblings(".uis-tap:first") : !0;
-            $(a).removeClass("active");
-            $(b).addClass("active")
-        } else $(a.currentTarget).hasClass("uis-left-l") &&
-            (changeMainWork(!1, $(a.currentTarget).parent().siblings(".reviews-wrapper").find(".reviews-w-block.left")), a = $(a.currentTarget).siblings(".uis-center").find(".active"), b = $(a).prev(), 0 === $(b).length ? b = $(a).siblings(".uis-tap:last") : !0, $(a).removeClass("active"), $(b).addClass("active"))
+    
+    // Запуск смены слов на главной
+    updatedWord('.main-page-sw-w');
+    changeWord('.main-page-sw-w', 0);
+    // Запуск смены слов на остальных
+    updatedWord('.fs-stream-t-word');
+    changeWord('.fs-stream-t-word', 0);    
+    
+    // Для мобильных
+    
+    // Отзывы на главной
+    $('body').on('click', '.uis-left-l, .uis-left-r', (e) => {
+        if ($(e.currentTarget).hasClass('uis-left-r')) {
+            changeMainWork(true, 
+                    $(e.currentTarget).parent().siblings('.reviews-wrapper').find('.reviews-w-block.right'));
+            
+            let 
+                activeUi = $(e.currentTarget).siblings('.uis-center').find('.active'),
+                nextUi = $(activeUi).next();
+            $(nextUi).length === 0 ? nextUi = $(activeUi).siblings('.uis-tap:first') : true;
+            
+            $(activeUi).removeClass('active');
+            $(nextUi).addClass('active');
+            
+        } else if ($(e.currentTarget).hasClass('uis-left-l')) {
+            changeMainWork(false, 
+                    $(e.currentTarget).parent().siblings('.reviews-wrapper').find('.reviews-w-block.left'));
+            
+            let 
+                activeUi = $(e.currentTarget).siblings('.uis-center').find('.active'),
+                nextUi = $(activeUi).prev();
+            $(nextUi).length === 0 ? nextUi = $(activeUi).siblings('.uis-tap:last') : true;
+            
+            $(activeUi).removeClass('active');
+            $(nextUi).addClass('active');
+        }
     });
-    $("body").on("click", ".uis-left-p-l, .uis-left-p-r", function (a) {
-        $(a.currentTarget).hasClass("uis-left-p-r") ? 0 < $(".plus-ww").css("transform").split(", ")[4] && ($(".plus-ww").css("transform", "translate3d(-24%,0,0)"),
-            $(a.currentTarget).siblings(".uis-center").find(".uis-tap:first").removeClass("active"), $(a.currentTarget).siblings(".uis-center").find(".uis-tap:last").addClass("active")) : $(a.currentTarget).hasClass("uis-left-p-l") && 0 > $(".plus-ww").css("transform").split(", ")[4] && ($(".plus-ww").css("transform", "translate3d(26%,0,0)"), $(a.currentTarget).siblings(".uis-center").find(".uis-tap:last").removeClass("active"), $(a.currentTarget).siblings(".uis-center").find(".uis-tap:first").addClass("active"))
+    
+    // Услуги
+    $('body').on('click', '.uis-left-p-l, .uis-left-p-r', (e) => {
+        if ($(e.currentTarget).hasClass('uis-left-p-r')) {
+            
+            if ( $('.plus-ww').css('transform').split(', ')[4] > 0) {
+                $('.plus-ww').css('transform', 'translate3d(-24%,0,0)');
+                $(e.currentTarget).siblings('.uis-center').find('.uis-tap:first').removeClass('active');
+                $(e.currentTarget).siblings('.uis-center').find('.uis-tap:last').addClass('active');
+            }
+            
+        } else if ($(e.currentTarget).hasClass('uis-left-p-l')) {
+            if ( $('.plus-ww').css('transform').split(', ')[4] < 0) {
+                $('.plus-ww').css('transform', 'translate3d(26%,0,0)');
+                $(e.currentTarget).siblings('.uis-center').find('.uis-tap:last').removeClass('active');
+                $(e.currentTarget).siblings('.uis-center').find('.uis-tap:first').addClass('active');
+            }
+        }
     });
-    $(".price-ww").on("transitionend",
-        function () {
-            checkMovePrice = !0
-        });
-    $(".equip-ww-w").on("transitionend", function () {
-        checkMoveEquip = !0
+    
+    // Конец анимации для цен
+    $('.price-ww').on('transitionend', (e)=>{ checkMovePrice = true; });
+    
+    // Конец анимации для оборудования
+    $('.equip-ww-w').on('transitionend', ()=>{ checkMoveEquip = true; });
+    
+    // Смена ценовых предложений
+    $('body').on('click', '.uis-left-pr-l, .uis-left-pr-r', (e) => {
+        
+        changePriceSlides(e);
+        
     });
-    $("body").on("click", ".uis-left-pr-l, .uis-left-pr-r", function (a) {
-        changePriceSlides(a)
+    
+    // Смена слайдов в наших работах
+    $('body').on('click', '.uis-left-w-l, .uis-left-w-r', (e) => {
+       let
+            obj = $(e.currentTarget).parent().siblings('.works-wrapper').find('.works-w-left');
+       if ($(e.currentTarget).hasClass('uis-left-w-r')) {
+           changeUsWorkSlides(true, $(obj));
+           
+           let 
+                activeUi = $(e.currentTarget).siblings('.uis-center').find('.active'),
+                nextUi = $(activeUi).next();
+            $(nextUi).length === 0 ? nextUi = $(activeUi).siblings('.uis-tap:first') : true;
+            
+            $(activeUi).removeClass('active');
+            $(nextUi).addClass('active');
+           
+       } else {
+           changeUsWorkSlides(false, $(obj));
+           
+           let 
+                activeUi = $(e.currentTarget).siblings('.uis-center').find('.active'),
+                nextUi = $(activeUi).prev();
+            $(nextUi).length === 0 ? nextUi = $(activeUi).siblings('.uis-tap:last') : true;
+            
+            $(activeUi).removeClass('active');
+            $(nextUi).addClass('active');
+       }
     });
-    $("body").on("click", ".uis-left-w-l, .uis-left-w-r", function (a) {
-        var b = $(a.currentTarget).parent().siblings(".works-wrapper").find(".works-w-left");
-        $(a.currentTarget).hasClass("uis-left-w-r") ? (changeUsWorkSlides(!0, $(b)), a = $(a.currentTarget).siblings(".uis-center").find(".active"), b = $(a).next(), 0 === $(b).length ? b = $(a).siblings(".uis-tap:first") :
-            !0, $(a).removeClass("active"), $(b).addClass("active")) : (changeUsWorkSlides(!1, $(b)), a = $(a.currentTarget).siblings(".uis-center").find(".active"), b = $(a).prev(), 0 === $(b).length ? b = $(a).siblings(".uis-tap:last") : !0, $(a).removeClass("active"), $(b).addClass("active"))
+    
+    // Смена слайдов в оборудовании
+    $('body').on('click', '.uis-equip-l, .uis-equip-r', (e) => {
+        
+        changeEquipSlides(e);
+        
     });
-    $("body").on("click", ".uis-equip-l, .uis-equip-r", function (a) {
-        changeEquipSlides(a)
+    
+    // Открыть форму заявки
+    $('body').on('click', '.footer-main-t-order-btn, .fs-btn, .price-wbw-btn, .footer-order-btn', () => {
+        $('.order').addClass('active');
     });
-    $("body").on("click", ".footer-main-t-order-btn, .fs-btn, .price-wbw-btn, .footer-order-btn", function () {
-        $(".order").addClass("active")
+    
+    // Закрыть форму заказа
+    $('body').on('click', '.order-w-close', () => {
+        $('.order').removeClass('active');
     });
-    $("body").on("click",
-        ".order-w-close",
-        function () {
-            $(".order").removeClass("active")
-        });
+    
+    // Загрузить карту позднее
     setTimeout(()=>{
         $('.contacts-map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A56e1d2bd89352bcb70e4707529b3d7eee67bd987e6115467916d6a14623513d5&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>');
-    }, 6000);
+    },6000);
+    
+    // Смещение цен при драге
+    // При наведении
+    $('body').on('mouseenter', '.price-ww', () => {
+        // При нажатии
+        if ($(window).width() < 930) {
+            $('body').on('mousedown', '.price-ww', (e) => {
+                let 
+                    mouseX = e.pageX;
+                $('.price-ww').css('cursor', 'grabbing');
+                $('.price-ww').css('user-select', 'none');
+                $('body').on('mousemove', '.price-ww', (e) => {
+                    let
+                        delta = mouseX - e.pageX,
+                        divX = parseFloat($('.price-ww').css('transform').split(', ')[4]),
+                        maxDrag = ($('.price-ww').width() - $('.price-ww').find('.price-w-block').width()) / 2;
+
+                    mouseX = e.pageX;
+
+                    if (divX - delta < maxDrag && divX - delta > -maxDrag) {
+                        $('.price-ww').css('transform', 
+                                       'translate3d('+(divX - delta)+'px,0,0)');
+                    }
+
+                });
+            });
+            $('body').on('mouseup', '.price-ww', () => {
+                $('body').off('mousemove', '.price-ww');
+                $('.price-ww').css('cursor', 'grab');
+                $('.price-ww').css('user-select', 'auto');
+            });
+        }
+    });
+    
+    // При наведении
+    $('body').on('touchstart', '.price-ww', (e) => {
+        let 
+            mouseX = e.changedTouches[0].pageX,
+            divX = parseFloat($('.price-ww').css('transform').split(', ')[4]),
+            maxDrag = ($('.price-ww').width() - $('.price-ww').find('.price-w-block').width()) / 2,
+            iterX = maxDrag,
+            interval;
+        
+        interval = setInterval(() => {
+            let 
+                i = 0,
+                nextX = parseFloat($('.price-ww').css('transform').split(', ')[4]);
+            
+            maxDrag = ($('.price-ww').width() - $('.price-ww').find('.price-w-block').width()) / 2;
+            iterX = maxDrag;
+            
+            while (iterX - $('.price-ww').find('.price-w-block').width() >= nextX) {
+                i++;
+                iterX -= $('.price-ww').find('.price-w-block').width();
+            }
+
+            $('.price-ww').parent().siblings('.ui-slides').find('.uis-tap').removeClass('active');
+            $('.price-ww').parent().siblings('.ui-slides').find('.uis-tap:eq('+i+')').addClass('active');
+        }, 100);
+        
+        $('.price-ww').css('cursor', 'grabbing');
+        $('.price-ww').css('user-select', 'none');
+        $('body').on('touchmove', '.price-ww', (e) => {
+            let
+                delta = mouseX - e.changedTouches[0].pageX,
+                divX = parseFloat($('.price-ww').css('transform').split(', ')[4]),
+                nextX = divX - delta,
+                i = 0;
+
+            mouseX = e.changedTouches[0].pageX;
+
+            if (nextX <= maxDrag && nextX >= -maxDrag) {
+                $('.price-ww').css('transform', 'translate3d('+nextX+'px,0,0)');
+            } else if (nextX > maxDrag) {
+                $('.price-ww').css('transform', 'translate3d('+maxDrag+'px,0,0)');
+            } else if (nextX < -maxDrag) {
+                $('.price-ww').css('transform', 'translate3d('+(-maxDrag)+'px,0,0)');
+            }
+        });
+        $('body').on('touchend', '.price-ww', () => {
+            $('body').off('touchmove', '.price-ww');
+            $('.price-ww').css('cursor', 'grab');
+            $('.price-ww').css('user-select', 'auto');
+            clearInterval(interval);
+        });
+    });
+    
     
 });
-$(window).scroll(function (a) {
-    $(".reviews-wrapper").css("height", $(".reviews-w-block.active").height() + 60);
-    $(".works-wrapper").css("height", $(".works-w-block.active").height() + 60);
-    changeWidthMiniSlider()
+
+$(window).scroll( (e) => {
+    
+    $('.reviews-wrapper').css('height', $('.reviews-w-block.active').height() + 60 );
+    $('.works-wrapper').css('height', $('.works-w-block.active').height() + 60 );
+    changeWidthMiniSlider();
 });
-updatedWord = function (a) {
-    $(a).each(function (a, c) {
-        var b = $(c).html().split("");
-        b.forEach(function (c, d) {
-            b[d] = 0 !== a ? "<span>" + c + "</span>" : '<span style="opacity: 1;">' + c + "</span>"
+
+// Изменить слова на спаны
+updatedWord = (activeClass) => {
+    let
+        words = $(activeClass);
+    
+    words.each( (i, e) => {
+        
+        let word = $(e).html().split('');
+        
+        word.forEach( (elem, j) => {
+            if (i !== 0) {
+                word[j] = '<span>'+elem+'</span>';
+            } else {
+                word[j] = '<span style="opacity: 1;">'+elem+'</span>';
+            }
+            
         });
-        $(c).html(b)
-    })
-};
-changeWord = function (a, b) {
-    var c = $(a + ".active");
-    $(c).hasClass("active") && setTimeout(function () {
-        var b = $(c).find("span").length,
-            e = setInterval(function () {
-                $(c).find("span:eq(" + --b + ")").css("opacity", 0);
-                var d = $(c).find("span:eq(" + b + ")").position().left,
-                    g = $(c).find("span:eq(" + b + ")").position().top;
-                $(".fs-stream-t-cursor").css("transform", "translate3d(" + d + "px," + g + "px,0)");
-                if (0 === b) {
-                    clearInterval(e);
-                    e = void 0;
-                    $(c).removeClass("active");
-                    0 === $(c).next().filter(a).length ? c = $(c).siblings(a + ":first") : c = $(c).next();
-                    $(c).addClass("active");
-                    b = $(c).find("span").length;
-                    var f = 0;
-                    e = setInterval(function () {
-                        var d = $(c).find("span:eq(" + f + ")").position().left + $(c).find("span:eq(" + f + ")").width(),
-                            g = $(c).find("span:eq(" + f + ")").position().top;
-                        $(".fs-stream-t-cursor").css("transform", "translate3d(" + d + "px," + g + "px,0)");
-                        $(c).find("span:eq(" + f++ + ")").css("opacity", 1);
-                        f === b && (clearInterval(e), e = void 0, changeWord(a, 2E3))
-                    }, 60)
-                }
-            }, 60)
-    }, b)
-};
-changeMainSlider = function (a, b) {
-    if (a) {
-        var c = $(b).parent().siblings(".main-page-slides").find(".main-page-s-slide.ready"),
-            d = $(b).parent().siblings(".main-page-slides").find(".main-page-s-slide.active");
-        $(d).removeClass("active");
-        $(c).removeClass("ready");
-        $(c).addClass("active");
-        0 < $(c).next().length ? $(c).next().addClass("ready") : $(d).siblings(".main-page-s-slide:first").addClass("ready");
-        $(".main-page-sw-word").find("span").css("opacity", 0);
-        setTimeout(function () {
-            $(".main-page-sw-word").find("span").html($(c).attr("data-word"));
-            $(".main-page-sw-current").html($(c).attr("data-num"));
-            $(".main-page-sw-word").find("span").css("opacity", 1)
-        }, 200)
-    } else {
-        d = $(b).parent().siblings(".main-page-slides").find(".main-page-s-slide.ready");
-        var e = $(b).parent().siblings(".main-page-slides").find(".main-page-s-slide.active");
-        $(e).removeClass("active");
-        $(e).addClass("ready");
-        $(d).removeClass("ready");
-        0 < $(e).prev().length ? $(e).prev().addClass("active") : $(e).siblings(".main-page-s-slide:last").addClass("active");
-        e = $(b).parent().siblings(".main-page-slides").find(".main-page-s-slide.active");
-        $(".main-page-sw-word").find("span").css("opacity", 0);
-        setTimeout(function () {
-            $(".main-page-sw-word").find("span").html($(e).attr("data-word"));
-            $(".main-page-sw-current").html($(e).attr("data-num"));
-            $(".main-page-sw-word").find("span").css("opacity", 1)
-        }, 200)
+        
+        $(e).html(word);
+        
+    });
+}
+
+// Смена слов на главной
+changeWord = (activeClass, time) => {
+    let 
+        changeFullWordTime = time,
+        changeWordTime = 60,
+        active = $(activeClass+'.active');
+    
+    // Слово выведено
+    if ( $(active).hasClass('active') ) {
+        setTimeout( () => {
+            
+            let 
+                lengthWord = $(active).find('span').length,
+                timeout = setInterval( () => {
+                    
+                    $(active).find('span:eq('+(--lengthWord)+')').css('opacity', 0);
+                    let
+                        x = $(active).find('span:eq('+(lengthWord)+')').position().left,
+                        y = $(active).find('span:eq('+(lengthWord)+')').position().top;
+                    $('.fs-stream-t-cursor').css('transform', 'translate3d('+x+'px,'+y+'px,0)');
+                    if ( lengthWord === 0 ) {
+                        clearInterval(timeout);
+                        timeout = undefined;
+                        
+                        $(active).removeClass('active');
+                        $(active).next().filter(activeClass).length === 0 ? 
+                            active = $(active).siblings(activeClass+':first') : active = $(active).next();
+                        $(active).addClass('active');
+                        lengthWord = $(active).find('span').length;
+                        let currentNum = 0;
+                        
+                        timeout = setInterval( () => {
+                            let
+                                x = $(active).find('span:eq('+(currentNum)+')').position().left +
+                                        $(active).find('span:eq('+(currentNum)+')').width(),
+                                y = $(active).find('span:eq('+(currentNum)+')').position().top;
+                            $('.fs-stream-t-cursor').css('transform', 'translate3d('+x+'px,'+y+'px,0)');
+                            
+                            $(active).find('span:eq('+(currentNum++)+')').css('opacity', 1);
+                            
+                            if (currentNum === lengthWord) {
+                                clearInterval(timeout);
+                                timeout = undefined;
+                                changeWord(activeClass, 2000);
+                            }
+                        }, changeWordTime);
+                    }
+
+                }, changeWordTime);
+            
+        }, changeFullWordTime);
     }
-};
-changeWidthMiniSlider = function () {
-    var a = 5;
-    1190 > $(window).width() ? a = 5 : a;
-    700 > $(window).width() ? a = 3 : a;
-    550 > $(window).width() ? a = 1 : a;
-    a = $(".main-about-partner-center-wrapper").width() / a;
-    var b = .1 * a;
-    a -= 2 * b;
-    $(".main-about-partner-center-logo").css("width", a);
-    $(".main-about-partner-center-logo").css("margin-left", b);
-    $(".main-about-partner-center-logo").css("margin-right", b)
-};
-changeUsWorkSlides = function (a, b) {
-    if (a) {
-        var c = $(b).siblings(".active"),
-            d = $(b).siblings(".left"),
-            e = $(b).siblings(".right");
-        $(c).removeClass("active");
-        $(c).addClass("right");
-        $(e).removeClass("right");
-        $(e).addClass("left");
-        $(d).removeClass("left");
-        $(d).addClass("active")
-    } else c = $(b).siblings(".active"), d = $(b).siblings(".left"), e = $(b).siblings(".right"), $(c).removeClass("active"), $(c).addClass("left"), $(d).removeClass("left"), $(d).addClass("right"), $(e).removeClass("right"), $(e).addClass("active")
-};
-changeMainWork = function (a, b) {
-    if (a) {
-        var c = $(b).siblings(".active"),
-            d = $(b).siblings(".left"),
-            e = $(b);
-        $(c).removeClass("active");
-        $(c).addClass("left");
-        $(e).removeClass("right");
-        $(e).addClass("active");
-        $(d).removeClass("left");
-        $(d).addClass("right")
-    } else c = $(b).siblings(".active"), d = $(b), e = $(b).siblings(".right"), $(c).removeClass("active"), $(c).addClass("right"), $(e).removeClass("right"), $(e).addClass("left"), $(d).removeClass("left"), $(d).addClass("active")
-};
-changePriceSlides = function (a) {
-    var b = $(a.currentTarget).parent().siblings(".price-wrapper").find(".price-ww"),
-        c = $(b).find(".price-w-block").width(),
-        d = c * ($(b).find(".price-w-block").length - 1) / 2;
-    $(a.currentTarget).hasClass("uis-left-pr-r") ? parseFloat($(b).css("transform").split(", ")[4]) > -d && checkMovePrice && (checkMovePrice = !1, $(b).css("transform", "translate3d(" + (parseFloat($(b).css("transform").split(", ")[4]) - c) + "px, 0, 0)"), 0 < $(a.currentTarget).siblings(".uis-center").find(".active").next().length &&
-        $(a.currentTarget).siblings(".uis-center").find(".uis-tap.active").removeClass("active").next().addClass("active")) : $(a.currentTarget).hasClass("uis-left-pr-l") && parseFloat($(b).css("transform").split(", ")[4]) < d && checkMovePrice && (checkMovePrice = !1, $(b).css("transform", "translate3d(" + (parseFloat($(b).css("transform").split(", ")[4]) + c) + "px, 0, 0)"), 0 < $(a.currentTarget).siblings(".uis-center").find(".active").prev().length && $(a.currentTarget).siblings(".uis-center").find(".uis-tap.active").removeClass("active").prev().addClass("active"))
-};
-changeEquipSlides = function (a) {
-    var b = $(a.currentTarget).parent().siblings(".equip-wrapper").find(".equip-ww-w"),
-        c = $(b).find(".equip-w-block").width(),
-        d = c * $(b).find(".equip-w-block").length - c;
-    $(a.currentTarget).hasClass("uis-equip-r") ? parseFloat($(b).css("transform").split(", ")[4]) > -d + 10 && checkMoveEquip && (checkMoveEquip = !1, $(b).css("transform", "translate3d(" + (parseFloat($(b).css("transform").split(", ")[4]) - c) + "px, 0, 0)"), 0 < $(a.currentTarget).siblings(".uis-center").find(".active").next().length &&
-        $(a.currentTarget).siblings(".uis-center").find(".uis-tap.active").removeClass("active").next().addClass("active")) : $(a.currentTarget).hasClass("uis-equip-l") && 0 > parseFloat($(b).css("transform").split(", ")[4]) && checkMoveEquip && (checkMoveEquip = !1, $(b).css("transform", "translate3d(" + (parseFloat($(b).css("transform").split(", ")[4]) + c) + "px, 0, 0)"), 0 < $(a.currentTarget).siblings(".uis-center").find(".active").prev().length && $(a.currentTarget).siblings(".uis-center").find(".uis-tap.active").removeClass("active").prev().addClass("active"))
-};
+    
+}
+
+// Смена слайдов на главной
+// True - смена вперед; false - назад
+changeMainSlider = (next, obj) => {
+    if (next) {
+        let 
+            slideReady = $(obj).parent().siblings('.main-page-slides').find('.main-page-s-slide.ready'),
+            slideActive = $(obj).parent().siblings('.main-page-slides').find('.main-page-s-slide.active');
+        
+        $(slideActive).removeClass('active'); 
+        $(slideReady).removeClass('ready'); 
+        $(slideReady).addClass('active'); 
+        if ($(slideReady).next().length > 0) {
+            $(slideReady).next().addClass('ready'); 
+        } else {
+            $(slideActive).siblings('.main-page-s-slide:first').addClass('ready'); 
+        }
+        
+        // Меняем слова
+        $('.main-page-sw-word').find('span').css('opacity', 0);
+        setTimeout(()=>{
+            $('.main-page-sw-word').find('span').html($(slideReady).attr('data-word'));
+            $('.main-page-sw-current').html($(slideReady).attr('data-num'));
+            $('.main-page-sw-word').find('span').css('opacity', 1);
+        }, 200);
+        
+    } else {
+        let 
+            slideReady = $(obj).parent().siblings('.main-page-slides').find('.main-page-s-slide.ready'),
+            slideActive = $(obj).parent().siblings('.main-page-slides').find('.main-page-s-slide.active');
+        
+        
+        $(slideActive).removeClass('active'); 
+        $(slideActive).addClass('ready');
+        $(slideReady).removeClass('ready');
+        
+        if ($(slideActive).prev().length > 0) {
+            $(slideActive).prev().addClass('active'); 
+        } else {
+            $(slideActive).siblings('.main-page-s-slide:last').addClass('active'); 
+        }
+        
+        slideActive = $(obj).parent().siblings('.main-page-slides').find('.main-page-s-slide.active');
+        
+        // Меняем слова
+        $('.main-page-sw-word').find('span').css('opacity', 0);
+        setTimeout(()=>{
+            $('.main-page-sw-word').find('span').html($(slideActive).attr('data-word'));
+            $('.main-page-sw-current').html($(slideActive).attr('data-num'));
+            $('.main-page-sw-word').find('span').css('opacity', 1);
+        }, 200);
+    }
+}
+
+// Подстраиваем размеры слайдов мини слайдера
+changeWidthMiniSlider = () => {
+    
+    let num = 5;
+    $(window).width() < 1190 ? num = 5 : num;
+    $(window).width() < 700 ? num = 3 : num;
+    $(window).width() < 550 ? num = 1 : num;
+    
+    let 
+        width = $('.main-about-partner-center-wrapper').width() / num,
+        margin = width * .1;
+    width -= margin * 2;
+    $('.main-about-partner-center-logo').css('width', width);
+    $('.main-about-partner-center-logo').css('margin-left', margin);
+    $('.main-about-partner-center-logo').css('margin-right', margin);
+}
+
+// Смена слайдов в наших работах
+// True - смена вправо; false - влево
+changeUsWorkSlides = (next, obj) => {
+    if (next) {
+        
+        let
+            active = $(obj).siblings('.active'),
+            left = $(obj).siblings('.left'),
+            right = $(obj).siblings('.right');
+        
+        $(active).removeClass('active');
+        $(active).addClass('right');
+        
+        $(right).removeClass('right');
+        $(right).addClass('left');
+        
+        $(left).removeClass('left');
+        $(left).addClass('active');
+        
+    } else {
+        let
+            active = $(obj).siblings('.active'),
+            left = $(obj).siblings('.left'),
+            right = $(obj).siblings('.right');
+        
+        $(active).removeClass('active');
+        $(active).addClass('left');
+        
+        $(left).removeClass('left');
+        $(left).addClass('right');
+        
+        $(right).removeClass('right');
+        $(right).addClass('active');
+    }
+}
+
+// Смена слайдов в портфолио на главной
+// True - смена вправо; false - влево
+changeMainWork = (next, obj) => {
+    if (next) {
+        
+        let
+            active = $(obj).siblings('.active'),
+            left = $(obj).siblings('.left'),
+            right = $(obj);
+        
+        $(active).removeClass('active');
+        $(active).addClass('left');
+        
+        $(right).removeClass('right');
+        $(right).addClass('active');
+        
+        $(left).removeClass('left');
+        $(left).addClass('right');
+        
+    } else {
+        let
+            active = $(obj).siblings('.active'),
+            left = $(obj),
+            right = $(obj).siblings('.right');
+        
+        $(active).removeClass('active');
+        $(active).addClass('right');
+        
+        $(right).removeClass('right');
+        $(right).addClass('left');
+        
+        $(left).removeClass('left');
+        $(left).addClass('active');
+    }
+}
+
+// Смена слайдов в ценах
+changePriceSlides = (e) => {
+    let 
+        slides = $(e.currentTarget).parent().siblings('.price-wrapper').find('.price-ww'),
+        widthSlides = $(slides).find('.price-w-block').width(),
+        currentX = parseFloat($(slides).css('transform').split(', ')[4]),
+        fullWidth = widthSlides * ($(slides).find('.price-w-block').length - 1),
+        maxDOF = fullWidth / 2,
+        nextX = 0;
+    
+    $(slides).css('transition', 'transform .2s');
+    setTimeout(()=>{
+        $(slides).css('transition', 'none');
+    }, 200);
+        
+    if ($(e.currentTarget).hasClass('uis-left-pr-r')) {
+        
+        nextX = maxDOF;
+        
+        while (nextX >= currentX) {
+            nextX -= widthSlides;
+        }
+        
+        if ( nextX >= -maxDOF) {
+            
+            $(slides).css('transform', 
+                          'translate3d('+ nextX +'px, 0, 0)');
+            
+            if ($(e.currentTarget).siblings('.uis-center')
+                .find('.active').next().length > 0) {
+                $(e.currentTarget).siblings('.uis-center')
+                    .find('.uis-tap.active').removeClass('active').next().addClass('active');
+            }
+        }
+        
+    } else if ($(e.currentTarget).hasClass('uis-left-pr-l')) {
+        
+        nextX = -maxDOF;
+        
+        while (nextX <= currentX) {
+            nextX += widthSlides;
+        }
+        
+        if ( nextX <= maxDOF) {
+            
+            $(slides).css('transform', 
+                          'translate3d('+ nextX +'px, 0, 0)');
+        
+            if ($(e.currentTarget).siblings('.uis-center')
+                .find('.active').prev().length > 0) {
+                $(e.currentTarget).siblings('.uis-center')
+                    .find('.uis-tap.active').removeClass('active').prev().addClass('active');
+            }
+        }
+        
+    }
+}
+
+// Смена слайдов в оборудовании
+changeEquipSlides = (e) => {
+    
+    let 
+        slides = $(e.currentTarget).parent().siblings('.equip-wrapper').find('.equip-ww-w'),
+        widthSlides = $(slides).find('.equip-w-block').width(),
+        fullWidth = widthSlides * $(slides).find('.equip-w-block').length,
+        maxDOF = fullWidth - widthSlides;
+    
+    if ($(e.currentTarget).hasClass('uis-equip-r')) {
+        if ( parseFloat($(slides).css('transform').split(', ')[4]) > -maxDOF + 10 && checkMoveEquip) {
+            checkMoveEquip = false;
+            $(slides).css('transform', 
+                          'translate3d('+ 
+                          (parseFloat($(slides).css('transform').split(', ')[4]) - widthSlides) 
+                          +'px, 0, 0)');
+            if ($(e.currentTarget).siblings('.uis-center')
+                .find('.active').next().length > 0) {
+                $(e.currentTarget).siblings('.uis-center')
+                    .find('.uis-tap.active').removeClass('active').next().addClass('active');
+            }
+        }
+        
+    } else if ($(e.currentTarget).hasClass('uis-equip-l')) {
+        
+        if ( parseFloat($(slides).css('transform').split(', ')[4]) < 0 && checkMoveEquip) {
+            checkMoveEquip = false;
+            $(slides).css('transform', 
+                          'translate3d('+ 
+                          (parseFloat($(slides).css('transform').split(', ')[4]) + widthSlides) 
+                          +'px, 0, 0)');
+            if ($(e.currentTarget).siblings('.uis-center')
+                .find('.active').prev().length > 0) {
+                $(e.currentTarget).siblings('.uis-center')
+                    .find('.uis-tap.active').removeClass('active').prev().addClass('active');
+            }
+        }
+        
+    }
+}

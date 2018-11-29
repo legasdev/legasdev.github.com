@@ -12,22 +12,27 @@
 @font-face {
     font-family: mont-r;
     src: url('/fonts/Montserrat-Regular.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: mont-b;
     src: url('/fonts/Montserrat-Bold.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: mont-eb;
     src: url('/fonts/Montserrat-ExtraBold.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: mont-l;
     src: url('/fonts/Montserrat-Light.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: mont-sb;
     src: url('/fonts/Montserrat-SemiBold.ttf');
+    font-display: swap;
 }
 
 // Переменные
@@ -135,7 +140,7 @@ textarea {resize:horizontal;}
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: mont-r;
+    font-family: mont-r, Arial;
 }
 
 body {
@@ -149,13 +154,32 @@ body {
 // Курсор
 .fs-stream-t-cursor {
     position: absolute;
-    width: 1px;
+    width: 3px;
     height: 2rem;
     background-color: @whiteColor;
     transform: translate3d(300px,0,0);
     animation: anim-cursor .8s infinite;
+    &:before, &:after {
+        content: " ";
+        position: absolute;
+        height: 2px;
+        width: 9px;
+        top: 0;
+        left: -3px;
+        background-color: @whiteColor;
+    }
+    &:after {
+        top: auto;
+        bottom: 0;
+    }
     .desktop({
+        width: 2px;
         height: 1rem;
+        &:before, &:after {
+            width: 6px;
+            height: 1px;
+            left: -2px;
+        }
     });
 }
 
@@ -209,7 +233,7 @@ body {
         max-width: 510px;
         z-index: 2;
         font-size: 1.35rem; 
-        font-family: mont-sb;
+        font-family: mont-sb, Arial;
         color: @fontColor;
         .big-desktop({
             font-size: 1rem;
@@ -239,7 +263,7 @@ body {
 .name-block {
     font-size: 2.5rem;
     color: @fontColor;
-    font-family: mont-eb;    
+    font-family: mont-eb, Arial;    
     align-self: flex-start;
     padding: 35px 0 35px 50px;
     .big-desktop({
