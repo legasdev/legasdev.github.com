@@ -22,7 +22,8 @@ var
     // Смена слайдов в оборудовании
     changeEquipSlides,
     // Разрешение сдвинуть слайд в оборудовании
-    checkMoveEquip = true;
+    checkMoveEquip = true,
+    mouseX = 0;
 
 
 
@@ -180,91 +181,70 @@ $(document).ready( () => {
     },6000);
     
     // Смещение цен при драге
-    // При наведении
-    $('body').on('mouseenter', '.price-ww', () => {
-        // При нажатии
-        if ($(window).width() < 930) {
-            $('body').on('mousedown', '.price-ww', (e) => {
-                let 
-                    mouseX = e.pageX;
-                $('.price-ww').css('cursor', 'grabbing');
-                $('.price-ww').css('user-select', 'none');
-                $('body').on('mousemove', '.price-ww', (e) => {
-                    let
-                        delta = mouseX - e.pageX,
-                        divX = parseFloat($('.price-ww').css('transform').split(', ')[4]),
-                        maxDrag = ($('.price-ww').width() - $('.price-ww').find('.price-w-block').width()) / 2;
-
-                    mouseX = e.pageX;
-
-                    if (divX - delta < maxDrag && divX - delta > -maxDrag) {
-                        $('.price-ww').css('transform', 
-                                       'translate3d('+(divX - delta)+'px,0,0)');
-                    }
-
-                });
-            });
-            $('body').on('mouseup', '.price-ww', () => {
-                $('body').off('mousemove', '.price-ww');
-                $('.price-ww').css('cursor', 'grab');
-                $('.price-ww').css('user-select', 'auto');
-            });
-        }
-    });
     
     // При наведении
     $('body').on('touchstart', '.price-ww', (e) => {
-        let 
-            mouseX = e.changedTouches[0].pageX,
-            divX = parseFloat($('.price-ww').css('transform').split(', ')[4]),
-            maxDrag = ($('.price-ww').width() - $('.price-ww').find('.price-w-block').width()) / 2,
-            iterX = maxDrag,
-            interval;
         
-        interval = setInterval(() => {
-            let 
-                i = 0,
-                nextX = parseFloat($('.price-ww').css('transform').split(', ')[4]);
-            
-            maxDrag = ($('.price-ww').width() - $('.price-ww').find('.price-w-block').width()) / 2;
-            iterX = maxDrag;
-            
-            while (iterX - $('.price-ww').find('.price-w-block').width() >= nextX) {
-                i++;
-                iterX -= $('.price-ww').find('.price-w-block').width();
-            }
-
-            $('.price-ww').parent().siblings('.ui-slides').find('.uis-tap').removeClass('active');
-            $('.price-ww').parent().siblings('.ui-slides').find('.uis-tap:eq('+i+')').addClass('active');
-        }, 100);
+        mouseX = e.changedTouches[0].pageX;
         
-        $('.price-ww').css('cursor', 'grabbing');
-        $('.price-ww').css('user-select', 'none');
-        $('body').on('touchmove', '.price-ww', (e) => {
-            let
-                delta = mouseX - e.changedTouches[0].pageX,
-                divX = parseFloat($('.price-ww').css('transform').split(', ')[4]),
-                nextX = divX - delta,
-                i = 0;
-
-            mouseX = e.changedTouches[0].pageX;
-
-            if (nextX <= maxDrag && nextX >= -maxDrag) {
-                $('.price-ww').css('transform', 'translate3d('+nextX+'px,0,0)');
-            } else if (nextX > maxDrag) {
-                $('.price-ww').css('transform', 'translate3d('+maxDrag+'px,0,0)');
-            } else if (nextX < -maxDrag) {
-                $('.price-ww').css('transform', 'translate3d('+(-maxDrag)+'px,0,0)');
-            }
-        });
-        $('body').on('touchend', '.price-ww', () => {
-            $('body').off('touchmove', '.price-ww');
-            $('.price-ww').css('cursor', 'grab');
-            $('.price-ww').css('user-select', 'auto');
-            clearInterval(interval);
-        });
     });
     
+    $('body').on('touchend', '.price-ww', (e) => {
+        let 
+            delta = e.changedTouches[0].pageX - mouseX,
+            slides = $('.price-ww'),
+            widthSlides = $(slides).find('.price-w-block').width(),
+            currentX = parseFloat($(slides).css('transform').split(', ')[4]),
+            fullWidth = widthSlides * ($(slides).find('.price-w-block').length - 1),
+            maxDOF = fullWidth / 2,
+            nextX = 0;
+
+        $(slides).css('transition', 'transform .2s');
+        setTimeout(()=>{
+            $(slides).css('transition', 'none');
+        }, 200);
+
+        if (delta < -20) {
+
+            nextX = maxDOF;
+
+            while (nextX >= currentX) {
+                nextX -= widthSlides;
+            }
+
+            if ( nextX >= -maxDOF) {
+
+                $(slides).css('transform', 
+                              'translate3d('+ nextX +'px, 0, 0)');
+
+                if ($(slides).parent().siblings('.ui-slides').find('.uis-center')
+                    .find('.active').next().length > 0) {
+                    $(slides).parent().siblings('.ui-slides').find('.uis-center')
+                        .find('.uis-tap.active').removeClass('active').next().addClass('active');
+                }
+            }
+
+        } else if (delta > 20) {
+
+            nextX = -maxDOF;
+
+            while (nextX <= currentX) {
+                nextX += widthSlides;
+            }
+
+            if ( nextX <= maxDOF) {
+
+                $(slides).css('transform', 
+                              'translate3d('+ nextX +'px, 0, 0)');
+
+                if ($(slides).parent().siblings('.ui-slides').find('.uis-center')
+                    .find('.active').prev().length > 0) {
+                    $(slides).parent().siblings('.ui-slides').find('.uis-center')
+                        .find('.uis-tap.active').removeClass('active').prev().addClass('active');
+                }
+            }
+        }
+    });
     
 });
 
