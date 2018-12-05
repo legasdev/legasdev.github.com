@@ -27,7 +27,7 @@
                    <p class="fs-stream-t-word">Меняющиеся слова 4</p>
                    <div class="fs-stream-t-cursor"></div>
                </div>
-               <div class="fs-btn">Оставить заявку</div>
+               <div class="fs-btn" data-from="online">Оставить заявку</div>
                <div class="fs-soc">
                     <a href="/" class="fs-soc-btn"></a>
                     <a href="/" class="fs-soc-btn"></a>
@@ -125,7 +125,7 @@
                             </ul>
                             <div class="price-wbw-price">10000 руб.</div>
                             <div class="price-wbw-price-new hide">10000 руб.</div>
-                            <div class="price-wbw-btn">Заказать</div>
+                            <div class="price-wbw-btn" data-from="online" data-type="Эконом">Заказать</div>
                         </div>
                     </div>
                     <div class="price-w-block">
@@ -147,7 +147,7 @@
                             </ul>
                             <div class="price-wbw-price old">35000 руб.</div>
                             <div class="price-wbw-price-new">28000 руб.</div>
-                            <div class="price-wbw-btn">Заказать</div>
+                            <div class="price-wbw-btn" data-from="online" data-type="Эконом плюс">Заказать</div>
                         </div>
                     </div>
                     <div class="price-w-block">
@@ -171,7 +171,7 @@
                             </ul>
                             <div class="price-wbw-price">40000 руб.</div>
                             <div class="price-wbw-price-new hide">40000 руб.</div>
-                            <div class="price-wbw-btn">Заказать</div>
+                            <div class="price-wbw-btn" data-from="online" data-type="Базовый">Заказать</div>
                         </div>
                     </div>
                     <div class="price-w-block">
@@ -197,7 +197,7 @@
                             </ul>
                             <div class="price-wbw-price old">45000 руб.</div>
                             <div class="price-wbw-price-new">36000 руб.</div>
-                            <div class="price-wbw-btn hit">Заказать</div>
+                            <div class="price-wbw-btn hit" data-from="online" data-type="Оптимальный">Заказать</div>
                         </div>
                     </div>
                     <div class="price-w-block">
@@ -223,7 +223,7 @@
                             </ul>
                             <div class="price-wbw-price">70000 руб.</div>
                             <div class="price-wbw-price-new hide">70000 руб.</div>
-                            <div class="price-wbw-btn">Заказать</div>
+                            <div class="price-wbw-btn" data-from="online" data-type="Премиум">Заказать</div>
                         </div>
                     </div>
                 </div>
@@ -347,7 +347,7 @@
     </div>
     
     <footer class="footer">
-       <div class="footer-order-btn">Оставить заявку</div>
+       <div class="footer-order-btn" data-from="online">Оставить заявку</div>
         <div class="footer-top">
             <div class="footer-t-links">
                 <div class="footer-tl-label">Важные ссылки</div>
@@ -487,6 +487,7 @@
            <div class="order-w-desk">Мы свяжемся с Вами в ближайшее время</div>
             <input type="text" class="order-w-name" placeholder="Ваше имя*">
             <input type="tel" class="order-w-tel" placeholder="Ваш телефон*">
+            <div class="order-w-status"></div>
             <input type="button" class="order-w-send" value="Отправить">
         </div>
     </div>
@@ -501,4 +502,5 @@
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="/js/miniSlider.js"></script>
 <script src="/js/main.js"></script>
+<script src="/js/ws-connect.js" defer></script>
 </html>

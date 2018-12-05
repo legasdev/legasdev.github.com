@@ -621,13 +621,13 @@ body {
                                 height: 4px;
                                 width: 15%;
                                 background-color: @whiteColor;
-                                .mini-desktop({
-                                    display: none;
-                                });
                                 .desktop({
                                     display: block;
                                     height: 2px;
                                     width: 10%;
+                                });
+                                .mini-desktop({
+                                    display: none;
                                 });
                             }
                         }
@@ -679,6 +679,9 @@ body {
                                 transition: opacity .4s;
                                 .middle-desktop({
                                    opacity: 0;
+                                });
+                                .desktop({
+                                   display: none;
                                 });
                             }
                             &:after {
@@ -885,11 +888,11 @@ body {
             align-self: flex-end;
             color: @whiteColor;
             cursor: pointer;
+            padding: 0 10px;
             .desktop({
                 font-size: 1.2rem;
             });
         }
-        
         & > .order-w-label {
             text-transform: uppercase;
             color: @whiteColor;
@@ -899,23 +902,24 @@ body {
                 font-size: 1.2rem;
             });
         }
-        
         & > .order-w-desk {
             color: @whiteColor;
-            font-size: .9rem;
+            font-size: 1rem;
             margin: 10px 0;
             .desktop({
                 font-size: .8rem;
             });
         }
-        
         & > input {
             width: 90%;
             padding: 10px;
+            font-size: 1rem;
             margin-bottom: 10px;
             border: none;
         }
-        
+        & > .order-w-status {
+            margin-bottom: 10px;
+        }
         & > .order-w-send {
             color: @whiteColor;
             background-color: @fpColor;

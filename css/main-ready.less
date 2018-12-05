@@ -888,7 +888,7 @@
         & > .main-about-partner-left, .main-about-partner-right {
             font-size: 3rem;
             width: 80px;
-            height: 250px;
+            height: 70px;
             padding: 0 30px;
             background-image: url('/img/icons/arrow-slider.svg');
             background-size: contain;
@@ -970,149 +970,160 @@
     & > .reviews-wrapper {
         position: relative;
         width: 90%;
-        
-        & > .reviews-w-block {
-            position: absolute;
-            width: 830px;
-            background-color: @whiteColor;
-            box-shadow: 0 0 25px rgba(0,0,0,.25);
-            margin-top: 20px;
-            .big-desktop({
-                width: 700px;
-            });
+        & > .reviews-w {
+            position: relative;
+            left: 50%; 
             .mini-desktop({
                 width: 100%;
-            });
-            transition: transform .6s, z-index .6s, opacity .6s;
-            
-            // Дизайн
-            & > .reviews-wb-design {
-                position: absolute;
-                top: 2.5%;
-                left: 5%;
-                width: 90%;
-                height: 95%;
-                background-color: @sbColor;
-            }
-            // Видео
-            & > .reviews-wb-video {
-                position: relative;
-                top: -30px;
-                left: 2.5%;
-                width: 95%;
-            }
-            // Кто написал
-            & > .reviews-wb-text {
-                position: relative;
-                width: 80%;
-                top: -10px;
-                left: 10%;
-                padding-bottom: 15px;
-                font-size: 1.5rem;
-                color: @fontColor;
-                font-family: mont-b;
-                .big-desktop({
-                    font-size: 1rem;
-                    padding-bottom: 10px;
-                });
-                .desktop({
-                    font-size: .9rem;
-                });
-            }
-            // Дата и город
-            & > .reviews-wb-ui {
-                display: flex;
-                justify-content: space-between;
-                position: relative;
-                width: 70%;
-                left: 15%;
-                bottom: -10px;
-                .big-desktop({
-                    width: 60%;
-                    left: 20%;
-                });
-                
-                & > .reviews-wbu-date, & > .reviews-wbu-city {
-                    background-color: @fbColor;
-                    color: @whiteColor;
-                    padding: 20px 30px;
-                    .big-desktop({
-                        padding: 10px 20px;
-                    });
-                    
-                    & > span {
-                        position: relative;
-                        padding-left: 38px;
-                        .big-desktop({
-                            font-size: .8rem;
-                            padding-left: 28px;
-                        });
-                        
-                        &:before {
-                            content: " ";
-                            position: absolute;
-                            width: 30px;
-                            height: 30px;
-                            .ccibg();
-                            background-image: url('/img/icons/calendar.svg');
-                            left: 0;
-                            top: -7.5px;
-                            .big-desktop({
-                                width: 20px;
-                                height: 20px;
-                                top: -5px;
-                            });
-                        }
-                    }
-                }
-                
-                & > .reviews-wbu-city {
-                    & > span {
-                        &:before {
-                            background-image: url('/img/icons/building.svg');
-                        }
-                    }
-                }
-            }
-            // Закрытие коммента
-            & > .reviews-wb-btn {
-                position: absolute;
-                display: block;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0,0,0,0);
-                top: 0;
                 left: 0;
-                z-index: 4;
-            }
+            });
             
-            &.active {
-                transform: translate3d(22%, 0, 0) scale3d(1, 1, 1);
-                z-index: 2;
-                & > .reviews-wb-btn {
-                    display: none;
+           & > .reviews-w-block {
+                position: absolute;
+                width: 830px;
+                background-color: @whiteColor;
+                box-shadow: 0 0 25px rgba(0,0,0,.25);
+                margin-top: 20px;
+                left: -415px;
+                .big-desktop({
+                    width: 700px;
+                    left: -350px;
+                });
+                .mini-desktop({
+                    width: 100%;
+                    left: 0;
+                });
+                transition: transform .6s, z-index .6s, opacity .6s;
+
+                // Дизайн
+                & > .reviews-wb-design {
+                    position: absolute;
+                    top: 2.5%;
+                    left: 5%;
+                    width: 90%;
+                    height: 95%;
+                    background-color: @sbColor;
                 }
-                .mini-desktop({
+                // Видео
+                & > .reviews-wb-video {
+                    position: relative;
+                    top: -30px;
+                    left: 2.5%;
+                    width: 95%;
+                }
+                // Кто написал
+                & > .reviews-wb-text {
+                    position: relative;
+                    width: 80%;
+                    top: -10px;
+                    left: 10%;
+                    padding-bottom: 15px;
+                    font-size: 1.5rem;
+                    color: @fontColor;
+                    font-family: mont-b;
+                    .big-desktop({
+                        font-size: 1rem;
+                        padding-bottom: 10px;
+                    });
+                    .desktop({
+                        font-size: .9rem;
+                    });
+                }
+                // Дата и город
+                & > .reviews-wb-ui {
+                    display: flex;
+                    justify-content: space-between;
+                    position: relative;
+                    width: 70%;
+                    left: 15%;
+                    bottom: -10px;
+                    .big-desktop({
+                        width: 60%;
+                        left: 20%;
+                    });
+
+                    & > .reviews-wbu-date, & > .reviews-wbu-city {
+                        background-color: @fbColor;
+                        color: @whiteColor;
+                        padding: 20px 30px;
+                        .big-desktop({
+                            padding: 10px 20px;
+                        });
+
+                        & > span {
+                            position: relative;
+                            padding-left: 38px;
+                            .big-desktop({
+                                font-size: .8rem;
+                                padding-left: 28px;
+                            });
+
+                            &:before {
+                                content: " ";
+                                position: absolute;
+                                width: 30px;
+                                height: 30px;
+                                .ccibg();
+                                background-image: url('/img/icons/calendar.svg');
+                                left: 0;
+                                top: -7.5px;
+                                .big-desktop({
+                                    width: 20px;
+                                    height: 20px;
+                                    top: -5px;
+                                });
+                            }
+                        }
+                    }
+
+                    & > .reviews-wbu-city {
+                        & > span {
+                            &:before {
+                                background-image: url('/img/icons/building.svg');
+                            }
+                        }
+                    }
+                }
+                // Закрытие коммента
+                & > .reviews-wb-btn {
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0,0,0,0);
+                    top: 0;
+                    left: 0;
+                    z-index: 4;
+                }
+
+                &.active {
                     transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-                    opacity: 1;
-                });
-            }
-            
-            &.left {
-                transform: translate3d(0,0,0) scale3d(.8, .8, 1);
-                .mini-desktop({
-                    transform: translate3d(-150%, 0, 0);
-                    opacity: 0;
-                });
-            }
-            
-            &.right {
-                transform: translate3d(44%,0,0) scale3d(.8, .8, 1);
-                .mini-desktop({
-                    transform: translate3d(150%, 0, 0);
-                    opacity: 0;
-                });
-            }
+                    z-index: 2;
+                    & > .reviews-wb-btn {
+                        display: none;
+                    }
+                    .mini-desktop({
+                        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+                        opacity: 1;
+                    });
+                }
+
+                &.left {
+                    transform: translate3d(-25%,0,0) scale3d(.8, .8, 1);
+                    .mini-desktop({
+                        transform: translate3d(-150%, 0, 0);
+                        opacity: 0;
+                    });
+                }
+
+                &.right {
+                    transform: translate3d(25%,0,0) scale3d(.8, .8, 1);
+                    .mini-desktop({
+                        transform: translate3d(150%, 0, 0);
+                        opacity: 0;
+                    });
+                }
+            } 
         }
     }
     
@@ -1334,6 +1345,7 @@
                 height: 2rem;
                 padding: 15px;
                 margin: 10px 0;
+                font-size: 1rem;
                 border: none;
                 
                 .mini-desktop({
@@ -1836,7 +1848,7 @@
             color: @whiteColor;
             text-transform: uppercase;
             font-family: mont-eb;
-            font-size: 2rem;
+            font-size: 1.5rem;
             cursor: pointer;
             border-radius: 3px;
             .big-desktop({
@@ -2339,7 +2351,6 @@
                         font-family: mont-eb;
                         color: @fontColor;
                         font-size: 2rem;
-                        padding-bottom: 10px;
                         .mini-desktop({
                             font-size: 1.5rem;
                         });
@@ -2354,10 +2365,13 @@
                                 position: absolute;
                                 content: " ";
                                 width: 100%;
-                                height: 4px;
+                                height: 3px;
                                 background-color: @fontColor;
                                 left: 0;
                                 top: calc(1.3rem / 2);
+                                .desktop({
+                                    top: calc(1.1rem / 2);
+                                });
                             }
                         }
                     }
@@ -2477,7 +2491,7 @@
     
     & > .footer-order-btn {
         position: relative;
-        padding: 20px 100px;
+        padding: 10px 100px;
         font-family: mont-eb;
         color: @whiteColor;
         font-size: 1.5rem;

@@ -166,13 +166,21 @@ $(document).ready( () => {
     });
     
     // Открыть форму заявки
-    $('body').on('click', '.footer-main-t-order-btn, .fs-btn, .price-wbw-btn, .footer-order-btn', () => {
+    $('body').on('click', '.footer-main-t-order-btn, .fs-btn, .price-wbw-btn, .footer-order-btn', (e) => {
         $('.order').addClass('active');
+
+        $('.order').find('.order-wrapper').attr('data-from', 
+                                                       $(e.currentTarget).attr('data-from'));
+        $('.order').find('.order-wrapper').attr('data-type', 
+                                                       $(e.currentTarget).attr('data-type'));
+        
     });
     
     // Закрыть форму заказа
     $('body').on('click', '.order-w-close', () => {
         $('.order').removeClass('active');
+        $('.order').find('.order-wrapper').removeAttr('data-from');
+        $('.order').find('.order-wrapper').removeAttr('data-type');
     });
     
     // Загрузить карту позднее
