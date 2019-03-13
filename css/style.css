@@ -15,21 +15,21 @@ body {
   color: #2b2b2b;
   overflow-x: hidden;
 }
-h1 {
+.fs-label {
   font-family: 'Lumberjack', 'Arial';
   text-transform: uppercase;
   text-align: center;
   color: #fff;
   font-size: 93px;
 }
-h2 {
+h1 {
   position: relative;
   font-family: 'Lumberjack', 'Arial';
   color: #2B2B2B;
   font-size: 54px;
   margin-bottom: 40px;
 }
-h2:after {
+h1:after {
   content: "";
   position: absolute;
   bottom: -25px;
@@ -41,13 +41,13 @@ h2:after {
   background-size: contain;
   background-repeat: no-repeat;
 }
-h2.white {
+h1.white {
   color: #fff;
 }
-h2.white:after {
+h1.white:after {
   background-image: url('../images/h2-white.png');
 }
-h2 + .block-desk {
+h1 + .block-desk {
   font-size: 18px;
   color: #5A5A5A;
   text-align: center;
@@ -854,6 +854,7 @@ h5:after {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-top: 50px;
 }
 .main > .wrapper > .contacts > .c-left {
   display: flex;
