@@ -1,0 +1,163 @@
+/*======================================*\
+*
+*   Title: Общие параметры
+*   Autor: Artem Stepanov
+*   E-mail: temka.do@gmail.com
+*
+\*======================================*/
+
+// Цвета
+@white: #fff;
+@black: #000;
+@font: #11454f;
+@h: #e57883;
+@desk: #619796;
+@btn: #e85261;
+@btnhover: #d23646;
+@pink: #fee2d7;
+@pink2: #fbc9cc;
+@add: #93d9d8;
+
+// Шрифты
+@font-face {
+    font-family: 'AleksandraC';
+    src: url('/fonts/AleksandraC.otf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nord';
+    src: url('/fonts/NordBold.ttf');
+    font-weight: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NordRegular';
+    src: url('/fonts/NordRegular.ttf');
+    font-weight: normal;
+    font-display: swap;
+}
+
+// Основные стили
+body {
+	font-family: 'AleksandraC', 'Arial';
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}
+
+// Полоска снизу при наведении
+.after() {
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: @font;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+// Круг 
+.ellips() { 
+	content: "";
+	position: absolute;
+	top: -150px;
+	left: -150px;
+	width: 370px;
+	height: 370px;
+	border: 2px solid @pink;
+	border-radius: 50%;
+}
+
+// Сетка из точек
+.mesh() {
+	content: "";
+	position: absolute;
+	top: -103px;
+	right: -102px;
+	width: 246px;
+	height: 239px;
+	background-image: url('/img/dot.png');
+}
+
+// Кнопка
+.button() {
+	align-self: center;
+	width: 536px;
+	height: 75px;
+	background-color: @btn;
+	border-radius: 5px;
+	color: @white;
+	line-height: 75px;
+	text-align: center;
+	font-size: 22px;
+	cursor: pointer;
+	transition: background-color .2s ease;
+	user-select: none;
+
+	&:hover {
+		background-color: @btnhover;
+	}
+}
+
+// Блок
+.block() {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 1364px;
+	margin: 0 auto 90px;
+}
+
+h1 {
+	font-family: 'Nord', 'Arial';
+	color: @h;
+	font-size: 68px;
+}
+
+h2 {
+	font-family: 'Nord', 'Arial';
+	color: @h;
+	font-size: 56px;
+	text-align: center;
+
+	& + .block-desk {
+		position: relative;
+		color: @desk;
+		font-size: 20px;
+		text-align: center;
+		left: -40px;
+	}
+}
+
+h3 {
+	font-family: 'Nord', 'Arial';
+	color: @h;
+	font-size: 30px;
+}
+
+h4 {
+	font-family: 'NordRegular', 'Arial';
+	color: @btn;
+	font-size: 24px;
+}
+
+a {color: @font;}
+
+a:active, a:focus { outline: none; }
+
+input, textarea {outline:none;}
+input:active, textarea:active {outline:none;}
+:focus {outline:none;}
+textarea {resize:none;}
+textarea {resize:vertical;}
+textarea {resize:horizontal;}
