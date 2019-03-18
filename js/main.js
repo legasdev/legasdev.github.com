@@ -209,7 +209,7 @@ function loadApartments() {
 
 	setTimeout(() => {
 
-		$('.ap-slider').html(ap);
+		$('.wrapper').html(ap);
 
 		const
 			slider = $('.background-slider>.slides');
