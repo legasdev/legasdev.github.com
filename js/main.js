@@ -5,7 +5,7 @@ let
 	timerBackground;
 
 const
-	ap = `<div class="ap-s-slide" style="background-image: url(/img/photos/5.jpg); transform: translateX(600px) perspective(60px) rotateY(-1deg); border: none">
+	ap = `<div class="ap-slider"><div class="ap-s-slide" style="background-image: url(/img/photos/5.jpg); transform: translateX(600px) perspective(60px) rotateY(-1deg); border: none">
 				<div class="apss-info">
 					<p><span>Квартира</span> на Юго-Западе</p>
 					<p><span>85</span> м. кв.</p>
@@ -34,7 +34,7 @@ const
 					<p><span>Квартира</span> на Юго-Западе</p>
 					<p><span>85</span> м. кв.</p>
 				</div>
-			</div>`;
+			</div></div>`;
 
 $(document).ready( () => {
 
