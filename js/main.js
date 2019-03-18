@@ -166,14 +166,14 @@ function loadPublicSpace() {
 
 	$('.page-menu>p').html('Публичные пространства');
 
-	$('.loading').addClass('active');
-	$('.wrapper').addClass('hidden');
-	$('.wrapper').html('');
-	$('.background-slider>.next').removeClass('hidden');
-	$('.background-slider>.title').removeClass('hidden');
-	$('.background-slider').removeClass('only-back');
-
 	setTimeout(() => {
+		$('.loading').addClass('active');
+		$('.wrapper').addClass('hidden');
+		$('.wrapper').html('');
+		$('.background-slider>.next').removeClass('hidden');
+		$('.background-slider>.title').removeClass('hidden');
+		$('.background-slider').removeClass('only-back');
+
 		const
 			slider = $('.background-slider>.slides');
 
@@ -198,17 +198,16 @@ function loadPublicSpace() {
 
 // Квартиры
 function loadApartments() {
-
+	
 	$('.page-menu>p').html('Квартиры');
-	$('.wrapper').removeClass('hidden');
-	$('.background-slider>.next').addClass('hidden');
-	$('.background-slider>.title').addClass('hidden');
-	$('.background-slider').addClass('only-back');
-
 	$('.loading').addClass('active');
 
 	setTimeout(() => {
 
+		$('.wrapper').removeClass('hidden');
+		$('.background-slider>.next').addClass('hidden');
+		$('.background-slider>.title').addClass('hidden');
+		$('.background-slider').addClass('only-back');
 		$('.wrapper').html(ap);
 
 		const
@@ -218,8 +217,8 @@ function loadApartments() {
 				<div style="background-image: url(/img/photos/apartments/fil/4.jpg);" data-title="<span>Чиптрип</span>"></div>
 				<div style="background-image: url(/img/photos/apartments/krasnop/1.jpg);" data-title="<span>Чиптрип</span> на Яузе"></div>
 				<div style="background-image: url(/img/photos/apartments/krasnop/4.jpg);" data-title="<span>Чиптрип</span> на Яузе"></div>
-				<div style="background-image: url(/img/photos/apartments/pokrovsk/3.jpg);" data-title="<span>Япон</span>"></div>
-				<div style="background-image: url(/img/photos/apartments/pokrovsk/1.jpg);" data-title="<span>Япон</span>" class="active"></div>`);
+				<div style="background-image: url(/img/photos/apartments/krasnop/3.jpg);" data-title="<span>Япон</span>"></div>
+				<div style="background-image: url(/img/photos/apartments/krasnop/1.jpg);" data-title="<span>Япон</span>" class="active"></div>`);
 
 		setTimeout(()=>{
 			startBackgroundSlider();
