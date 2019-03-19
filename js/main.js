@@ -2,39 +2,73 @@
 
 let
 	checkNextBack = true,
-	timerBackground;
+	timerBackground,
+	sliderAp,
+	checkNextAp = true;
 
+// Сгенерированные на сервере слайды квартир
 const
-	ap = `<div class="ap-slider"><div class="ap-s-slide" style="background-image: url(/img/photos/5.jpg); transform: translateX(600px) perspective(60px) rotateY(-1deg); border: none">
-				<div class="apss-info">
-					<p><span>Квартира</span> на Юго-Западе</p>
-					<p><span>85</span> м. кв.</p>
+	ap = `<div class="ap-slider">
+			<div class="slides">
+				<div class="ap-s-slide inactive hidden" style="background-image: url(/img/photos/4.jpg); transform: translateX(1050px) perspective(60px) rotateY(-1deg);">
+					<div class="apss-info">
+						<p><span>Квартира</span> на Юго-Западе</p>
+						<p><span>25</span> м. кв.</p>
+					</div>
+					<a href="#nameapart" class="link-to-apart"></a>
+				</div>
+				<div class="ap-s-slide inactive hidden" style="background-image: url(/img/photos/4.jpg); transform: translateX(900px) perspective(60px) rotateY(-1deg);">
+					<div class="apss-info">
+						<p><span>Квартира</span> на Юго-Западе</p>
+						<p><span>35</span> м. кв.</p>
+					</div>
+					<a href="#nameapart" class="link-to-apart"></a>
+				</div>
+				<div class="ap-s-slide inactive hidden" style="background-image: url(/img/photos/5.jpg); transform: translateX(750px) perspective(60px) rotateY(-1deg);">
+					<div class="apss-info">
+						<p><span>Квартира</span> на Юго-Западе</p>
+						<p><span>45</span> м. кв.</p>
+					</div>
+					<a href="#nameapart" class="link-to-apart"></a>
+				</div>
+				<div class="ap-s-slide inactive" style="background-image: url(/img/photos/5.jpg); transform: translateX(600px) perspective(60px) rotateY(-1deg);">
+					<div class="apss-info">
+						<p><span>Квартира</span> на Юго-Западе</p>
+						<p><span>55</span> м. кв.</p>
+					</div>
+					<a href="#nameapart" class="link-to-apart"></a>
+				</div>
+				<div class="ap-s-slide inactive" style="background-image: url(/img/photos/4.jpg); transform: translateX(450px) perspective(60px) rotateY(-1deg);">
+					<div class="apss-info">
+						<p><span>Квартира</span> на Юго-Западе</p>
+						<p><span>65</span> м. кв.</p>
+					</div>
+					<a href="#nameapart" class="link-to-apart"></a>
+				</div>
+				<div class="ap-s-slide inactive" style="background-image: url(/img/photos/3.jpg); transform: translateX(300px) perspective(60px) rotateY(-1deg);">
+					<div class="apss-info">
+						<p><span>Квартира</span> на Юго-Западе</p>
+						<p><span>85</span> м. кв.</p>
+					</div>
+					<a href="#nameapart" class="link-to-apart"></a>
+				</div>
+				<div class="ap-s-slide inactive" style="background-image: url(/img/photos/2.jpg); transform: translateX(150px) perspective(60px) rotateY(-1deg);">
+					<div class="apss-info">
+						<p><span>Квартира</span> на Юго-Западе</p>
+						<p><span>75</span> м. кв.</p>
+					</div>
+					<a href="#nameapart" class="link-to-apart"></a>
+				</div>
+				<div class="ap-s-slide" style="background-image: url(/img/photos/1.jpg);">
+					<div class="apss-info">
+						<p><span>Квартира</span> на Юго-Западе</p>
+						<p><span>95</span> м. кв.</p>
+					</div>
+					<a href="#nameapart" class="link-to-apart"></a>
 				</div>
 			</div>
-			<div class="ap-s-slide" style="background-image: url(/img/photos/4.jpg); transform: translateX(450px) perspective(60px) rotateY(-1deg); border: none">
-				<div class="apss-info">
-					<p><span>Квартира</span> на Юго-Западе</p>
-					<p><span>85</span> м. кв.</p>
-				</div>
-			</div>
-			<div class="ap-s-slide" style="background-image: url(/img/photos/3.jpg); transform: translateX(300px) perspective(60px) rotateY(-1deg); border: none">
-				<div class="apss-info">
-					<p><span>Квартира</span> на Юго-Западе</p>
-					<p><span>85</span> м. кв.</p>
-				</div>
-			</div>
-			<div class="ap-s-slide" style="background-image: url(/img/photos/2.jpg); transform: translateX(150px) perspective(60px) rotateY(-1deg); border: none">
-				<div class="apss-info">
-					<p><span>Квартира</span> на Юго-Западе</p>
-					<p><span>85</span> м. кв.</p>
-				</div>
-			</div>
-			<div class="ap-s-slide" style="background-image: url(/img/photos/1.jpg);">
-				<div class="apss-info">
-					<p><span>Квартира</span> на Юго-Западе</p>
-					<p><span>85</span> м. кв.</p>
-				</div>
-			</div></div>`;
+			<div class="next"><i></i><i></i></div>
+		</div>`;
 
 $(document).ready( () => {
 
@@ -44,7 +78,7 @@ $(document).ready( () => {
 	}, 8000);
 	
 	// Что делать при клике на следующий фон
-	$('.background-slider>.next').on('click', () => {
+	$('body').on('click', '.background-slider>.next', () => {
 		if (checkNextBack) {
 			startBackgroundSlider();
 		}
@@ -74,6 +108,18 @@ $(document).ready( () => {
 	$('.menu-btn').on('click', (e) => {
 		$('.link').removeClass('hidden');
 		$('.page-menu').removeClass('open');
+	});
+
+	// Событие при нажатии на следующий слайд
+	// в слайдере квартир
+	$('body').on('click', '.ap-s-slide.inactive', (e)=>{changeApSlide($(e.currentTarget));});
+
+	// Нажатие на стрелочку в слайдере квартир
+	$('body').on('click', '.ap-slider>.next', ()=>{
+		if (checkNextAp) {
+			checkNextAp = false;
+			changeApSlide($('.ap-s-slide.inactive:last'));
+		}
 	});
 });
 
@@ -159,15 +205,58 @@ function checkImgOnFormat(div) {
 	});
 }
 
+// Слайдер для квартир
+function changeApSlide(e) {
+
+	let
+		obj = $(e),
+		index = $(obj).index();
+
+	// Скрыть все перед нажатым
+	for (let i=$('.ap-s-slide').length - 1; i > index; i--) {
+		$('.ap-s-slide:eq('+i+')').addClass('hidden').addClass('inactive');
+	}
+
+	// После скрытия
+	clearInterval(sliderAp);
+	sliderAp = setInterval(()=>{
+		clearInterval(sliderAp);
+
+		// Ставим активный на первое место
+		$(obj).removeClass('inactive')
+				.css('transform', 'translateX(0) perspective(0) rotateY(0)');
+
+		// Все только что скрытые поставить назад
+		for (let i=$('.ap-s-slide').length - 1; i > index; i--) {
+			const
+				_obj = $('.ap-s-slide:eq('+
+					( $('.ap-s-slide').length - 1 )+')');
+			$(_obj).detach();
+			$('.ap-slider>.slides').prepend(_obj);
+		}
+
+		// Сдвинуть все активные после выбранного
+		for (let i=$('.ap-s-slide').length - 2, j=1; i >= 0; i--, j++) {
+			$('.ap-s-slide:eq('+i+')').css('transform',
+				'translateX('+(j*150)+'px) perspective(60px) rotateY(-1deg)');
+		}
+
+		for (let i=$('.ap-s-slide').length - 2; i >= $('.ap-s-slide').length - 5; i--)
+			$('.ap-s-slide:eq('+i+')').removeClass('hidden');
+
+		checkNextAp = true;
+	}, 500);
+}
+
 // Имитация загрузки страниц
 
 // Публичные пространства
 function loadPublicSpace() {
 
 	$('.page-menu>p').html('Публичные пространства');
+	$('.loading').addClass('active');
 
 	setTimeout(() => {
-		$('.loading').addClass('active');
 		$('.wrapper').addClass('hidden');
 		$('.wrapper').html('');
 		$('.background-slider>.next').removeClass('hidden');
@@ -198,7 +287,7 @@ function loadPublicSpace() {
 
 // Квартиры
 function loadApartments() {
-	
+
 	$('.page-menu>p').html('Квартиры');
 	$('.loading').addClass('active');
 
