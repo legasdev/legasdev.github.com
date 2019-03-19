@@ -2,7 +2,7 @@
 
 let
 	checkNextBack = true,
-	timerBackground,
+	timerBackground, int1, int2,
 	sliderAp,
 	checkNextAp = true;
 
@@ -140,16 +140,12 @@ function changeBackground() {
 		title = $('.background-slider>.slides>div:eq('+newNum+')').attr('data-title'),
 		newActive = $('.background-slider>.slides>div:eq('+newNum+')').detach();
 
-	let
-		int1, int2;
-
 	changeTitleBackground(title);
 
 	$('.background-slider>.slides').append(newActive);
 
 	clearInterval(int1);
 	clearInterval(int2);
-
 	int1 = setInterval( () => {
 		$('.background-slider>.slides>div:last').addClass('active');
 		clearInterval(int1);
