@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Archtochka</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet/less" type="text/css" href="/css/style.less">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>	
 </head>
 <body>
 
@@ -52,9 +53,9 @@
 					</ul>
 				</li>
 				<li><a href="#apartments" class="link">Квартиры</a></li>
-				<li><a href="/" class="link">Дома</a></li>
+				<li><a href="#houses" class="link">Дома</a></li>
 				<li><a href="#public" class="link">Публичные пространства</a></li>
-				<li><a href="/" class="link">О нас</a></li>
+				<li><a href="#about" class="link">О нас</a></li>
 			</ul>
 		</nav>
 		<div class="page-menu">
@@ -64,69 +65,33 @@
 	</div>
 
 	<div class="wrapper hidden">
-		
-		<!-- <div class="ap-slider">
-			<div class="slides">
-				<div class="ap-s-slide inactive hidden" style="background-image: url(/img/photos/4.jpg); transform: translateX(1050px) perspective(60px) rotateY(-1deg);">
-					<div class="apss-info">
-						<p><span>Квартира</span> на Юго-Западе</p>
-						<p><span>25</span> м. кв.</p>
-					</div>
-					<a href="#nameapart" class="link-to-apart"></a>
-				</div>
-				<div class="ap-s-slide inactive hidden" style="background-image: url(/img/photos/4.jpg); transform: translateX(900px) perspective(60px) rotateY(-1deg);">
-					<div class="apss-info">
-						<p><span>Квартира</span> на Юго-Западе</p>
-						<p><span>35</span> м. кв.</p>
-					</div>
-					<a href="#nameapart" class="link-to-apart"></a>
-				</div>
-				<div class="ap-s-slide inactive hidden" style="background-image: url(/img/photos/5.jpg); transform: translateX(750px) perspective(60px) rotateY(-1deg);">
-					<div class="apss-info">
-						<p><span>Квартира</span> на Юго-Западе</p>
-						<p><span>45</span> м. кв.</p>
-					</div>
-					<a href="#nameapart" class="link-to-apart"></a>
-				</div>
-				<div class="ap-s-slide inactive" style="background-image: url(/img/photos/5.jpg); transform: translateX(600px) perspective(60px) rotateY(-1deg);">
-					<div class="apss-info">
-						<p><span>Квартира</span> на Юго-Западе</p>
-						<p><span>55</span> м. кв.</p>
-					</div>
-					<a href="#nameapart" class="link-to-apart"></a>
-				</div>
-				<div class="ap-s-slide inactive" style="background-image: url(/img/photos/4.jpg); transform: translateX(450px) perspective(60px) rotateY(-1deg);">
-					<div class="apss-info">
-						<p><span>Квартира</span> на Юго-Западе</p>
-						<p><span>65</span> м. кв.</p>
-					</div>
-					<a href="#nameapart" class="link-to-apart"></a>
-				</div>
-				<div class="ap-s-slide inactive" style="background-image: url(/img/photos/3.jpg); transform: translateX(300px) perspective(60px) rotateY(-1deg);">
-					<div class="apss-info">
-						<p><span>Квартира</span> на Юго-Западе</p>
-						<p><span>85</span> м. кв.</p>
-					</div>
-					<a href="#nameapart" class="link-to-apart"></a>
-				</div>
-				<div class="ap-s-slide inactive" style="background-image: url(/img/photos/2.jpg); transform: translateX(150px) perspective(60px) rotateY(-1deg);">
-					<div class="apss-info">
-						<p><span>Квартира</span> на Юго-Западе</p>
-						<p><span>75</span> м. кв.</p>
-					</div>
-					<a href="#nameapart" class="link-to-apart"></a>
-				</div>
-				<div class="ap-s-slide" style="background-image: url(/img/photos/1.jpg);">
-					<div class="apss-info">
-						<p><span>Квартира</span> на Юго-Западе</p>
-						<p><span>95</span> м. кв.</p>
-					</div>
-					<a href="#nameapart" class="link-to-apart"></a>
-				</div>
+		<div class="ap-wrapper">
+			<div class="ap-more-slider">
+				<div class="apm-slide" style="background-image: url(/img/photos/1.jpg);"></div>
+				<div class="apm-slide" style="background-image: url(/img/photos/2.jpg);"></div>
+				<div class="apm-slide" style="background-image: url(/img/photos/3.jpg);"></div>
+				<div class="apm-slide" style="background-image: url(/img/photos/4.jpg);"></div>
+				<div class="apm-slide active" style="background-image: url(/img/photos/2.jpg);"></div>
 			</div>
+			<div class="prev"><i></i><i></i></div>
 			<div class="next"><i></i><i></i></div>
-		</div> -->
-		
+			<div class="ap-more-info">
+				<div class="apmi-title">
+					<p><span>Квартира</span> на Покровке</p>
+				</div>
+				<div class="apmi-slider">
+					<div class="apmis-wrapper">
+						<div class="slide" style="background-image: url(/img/photos/1.jpg);"></div>
+						<div class="slide" style="background-image: url(/img/photos/2.jpg);"></div>
+						<div class="slide" style="background-image: url(/img/photos/3.jpg);"></div>
+						<div class="slide" style="background-image: url(/img/photos/4.jpg);"></div>
+						<div class="slide active" style="background-image: url(/img/photos/2.jpg);"></div>
+					</div>
+				</div>
+				<div class="apmis-next"><i></i><i></i></div>
+				<p class="apmi-desk">Нам необходимо было создать атмосферу, насыщенную цветом уютом и аристократическим лоском, а также функционально разместить все зоны.<br>В данном случае зона кухни столовой и гостиной были объединены вокруг абсолютно эксклюзивной встроенной кухни, которая выглядит как высококачественный и технологичный шкаф. Его задача - добавить утонченности и сдержанной роскоши к общему восприятию интерьера.</p>
+			</div>
+		</div>
 	</div>
 
 	<div class="loading">Загрузка</div>

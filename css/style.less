@@ -238,6 +238,10 @@ body {
 	z-index: 1000;
 
 	& > .menu {
+		opacity: 1;
+		visibility: visible;
+		transition: opacity .2s,
+					visibility .2s;
 		
 		& > ul {
 			display: flex;
@@ -246,17 +250,6 @@ body {
 			// Главные пункты меню
 			& > li {
 				position: relative;
-
-				& > a {
-
-
-					// &:hover {
-					// 	& + ul {
-					// 		opacity: 1;
-					// 		visibility: visible;
-					// 	}
-					// }
-				}
 
 				// Внутреннее меню
 				& > ul {
@@ -350,6 +343,11 @@ body {
 				}
 			}
 		}
+
+		&.hidden {
+			opacity: 0;
+			visibility: hidden;
+		}
 	}
 
 	& > .page-menu {
@@ -424,6 +422,7 @@ body {
 							visibility .4s,
 							border-color .4s;
 
+				// Квартира, дома
 				& > .apss-info {
 					position: absolute;
 					right: -1px; top: -1px;
@@ -435,6 +434,10 @@ body {
 	    			justify-content: space-between;
 	    			align-items: center;
 	    			padding: 0 50px;
+	    			opacity: 1;
+	    			visibility: visible;
+	    			transition: opacity .2s,
+	    						visibility .2s;
 
 	    			& > p {
 	    				font-family: 'BebasNeueL';
@@ -446,6 +449,78 @@ body {
 	    					font-family: 'BebasNeueB';
 	    				}
 	    			}
+
+	    			&.hidden {
+	    				opacity: 0;
+	    				visibility: hidden;
+	    			}
+				}
+
+				// Тень
+				& > .apss-w-shadow {
+					position: absolute;
+					left: 0; top: 0;
+					right: 0; bottom: 0;
+					background-color: #000;
+					opacity: .65;
+					visibility: visible;
+					transition: opacity .2s,
+								visibility .2s;
+
+					&.hidden {
+						opacity: 0;
+						visibility: hidden;
+					}
+				}
+
+				// О нас
+				& > .apss-wrapper {
+					position: absolute;
+					left: 0; top: 0;
+					right: 0; bottom: 0;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					opacity: 1;
+					visibility: visible;
+					transition: opacity .2s,
+								visibility .2s;
+
+					& > .apss-title {
+						color: #fff;
+						width: 100%;
+						font-family: 'BebasNeueB';
+						font-size: 34px;
+						padding: 15px 10px;
+						text-transform: uppercase;
+
+						& > span {
+							font-family: 'BebasNeueL';
+						}
+					}
+
+					& > .apss-t-inner {
+						display: flex;
+						justify-content: space-between;
+						width: 100%;
+
+						& > .apss-ti-text {
+							width: 600px;
+							padding: 5px 10px;
+							color: #fff;
+						}
+
+						& > .apss-ti-img {
+							width: 246px; height: 317px;
+							margin-right: 10px;
+							object-fit: cover;
+						}
+					}
+
+					&.hidden {
+						opacity: 0;
+						visibility: hidden;
+					}
 				}
 
 				& > .link-to-apart {
@@ -484,6 +559,120 @@ body {
 	&.hidden {
 		opacity: 0;
 		visibility: hidden;
+	}
+}
+
+.ap-wrapper {
+	position: absolute;
+	left: 0; top: 0;
+	right: 0; bottom: 0;
+
+	& > .ap-more-slider {
+		position: absolute;
+		left: 0; top: 0;
+		right: 0; bottom: 0;
+
+		& > .apm-slide {
+			position: absolute;
+			left: 0; top: 0;
+			right: 0; bottom: 0;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+
+	& > .prev, & > .next {
+		.arrowSlider();
+	}
+
+	& > .prev {
+		right: auto; left: 50px;
+		transform: scaleX(-1) translateY(-50%);
+	}
+
+	& > .ap-more-info {
+		position: absolute;
+		left: 90px; bottom: 50px;
+		right: 90px;
+		display: flex;
+		justify-content: space-between;
+
+		& > .apmi-title {
+
+			& > p {
+				font-family: 'BebasNeueT';
+			    font-size: 33px;
+			    width: 320px;
+			    text-transform: uppercase;
+			    color: #fff;
+			    padding: 0 0 0 10px;
+			    opacity: 1;
+			    max-width: 95%;
+			    background-color: rgba(0,0,0,.5);
+			    overflow: hidden;
+			    transition: opacity 0.3s;
+
+			    & > span {
+			    	font-family: 'BebasNeueB';
+			    }
+			}
+		}
+
+		& > .apmi-slider {
+			position: relative;
+			width: 734px; height: 130px;
+			overflow: hidden;
+
+			& > .apmis-wrapper {
+				position: absolute;
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: center;
+				height: 100%;
+				left: 0; top: 0;
+				transform: translate3d(0,0,0);
+				transition: transform .2s;
+
+				& > .slide {
+					width: 225px; height: 100%;
+					margin: 0 5px;
+					background-position: center;
+					background-size: cover;
+					background-repeat: no-repeat;
+					cursor: pointer;
+					border: 1px solid rgba(255,255,255,0);
+					opacity: .8;
+					transition: border .2s,
+								opacity .2s;
+
+					&:hover {
+						border-color: #fff;
+						opacity: 1;
+					}
+
+					&.active {
+						opacity: 1;
+						border-color: #fff;
+					}
+				}
+			}
+		}
+
+		& > .apmis-next {
+			.arrowSlider();
+			position: static;
+			transform: translateY(17px);
+			margin-left: 10px;
+		}
+
+		& > .apmi-desk {
+			width: 694px;
+			padding: 10px 50px 10px 10px;
+			color: #fff;
+			background-color: rgba(0,0,0,.5);
+			font-size: 17px;
+		}
 	}
 }
 
