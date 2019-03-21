@@ -5,7 +5,9 @@ let
 	timerBackground, int1, int2,
 	sliderAp,
 	checkNextAp = true,
-	hideInfoActive = false;
+	hideInfoActive = false,
+	numCurrentMoreSlide = 0,
+	checkNextMoreSlide = true;
 
 // Сгенерированный фон
 const
@@ -14,7 +16,12 @@ const
 				<div style="background-image: url(/img/photos/apartments/krasnop/1.jpg);" data-title="<span>Чиптрип</span> на Яузе"></div>
 				<div style="background-image: url(/img/photos/apartments/krasnop/4.jpg);" data-title="<span>Чиптрип</span> на Яузе"></div>
 				<div style="background-image: url(/img/photos/apartments/krasnop/3.jpg);" data-title="<span>Япон</span>"></div>
-				<div style="background-image: url(/img/photos/apartments/krasnop/1.jpg);" data-title="<span>Япон</span>" class="active"></div>`;
+				<div style="background-image: url(/img/photos/apartments/krasnop/1.jpg);" data-title="<span>Япон</span>"></div>`;
+
+const 
+	backStart = `<div style="background-image: url(/img/photos/2.jpg);" data-title="<span>Название</span> 2"></div>
+			<div style="background-image: url(/img/photos/3.jpg);" data-title="<span>Название</span> 3"></div>
+			<div style="background-image: url(/img/photos/4.jpg);" data-title="<span>Название</span> 4"></div>`;
 
 // Сгенерированные на сервере слайды квартир
 const
@@ -149,71 +156,74 @@ const
 	about = `<div class="ap-slider">
 			<div class="slides">
 				<div class="ap-s-slide inactive" style="background-image: url(/img/photos/houses/nadya/2.jpg); transform: translateX(600px) perspective(60px) rotateY(-1deg); border: none;">
+					<div class="apss-w-shadow hidden"></div>
+					<div class="apss-wrapper hidden">
+						<div class="apss-title">Сергей Зайцев <span>(Главный)</span></div>
+						<div class="apss-t-inner">
+							<p class="apss-ti-text">Мастерская, основанная в 1999 году двумя профессиональными архитекторами Сергеем Зайцевым и Мариной Сергеевой. С 1999 года мы преображаем облик мегаполиса, воплощая в жизнь оригинальные дизайн-проекты коттеджей и квартир.<br>Мы не стремимся на каждом объекте сразу же реализовать самые невероятные идеи. Хотя, поверьте, у нас их достаточно. Скорее, мы помогаем органично воплотить в жизнь ваши собственные представления о пространстве, в котором вам предстоит жить или работать. Гармония между вашими желаниями и нашим видением – главная цель AXIS при работе над проектом.</p>
+							<img src="/img/10.jpg" class="apss-ti-img">
+							<img src="/img/10.jpg" class="apss-ti-img-back">
+						</div>
+					</div>
 					<div class="apss-info">
 						<p><span>Клара</span> Цеткин</p>
 						<p>Клининг</p>
 					</div>
+				</div>
+				<div class="ap-s-slide inactive" style="background-image: url(/img/photos/houses/vodniki/5.jpg); transform: translateX(450px) perspective(60px) rotateY(-1deg); border: none;">
 					<div class="apss-w-shadow hidden"></div>
 					<div class="apss-wrapper hidden">
 						<div class="apss-title">Сергей Зайцев <span>(Главный)</span></div>
 						<div class="apss-t-inner">
 							<p class="apss-ti-text">Мастерская, основанная в 1999 году двумя профессиональными архитекторами Сергеем Зайцевым и Мариной Сергеевой. С 1999 года мы преображаем облик мегаполиса, воплощая в жизнь оригинальные дизайн-проекты коттеджей и квартир.<br>Мы не стремимся на каждом объекте сразу же реализовать самые невероятные идеи. Хотя, поверьте, у нас их достаточно. Скорее, мы помогаем органично воплотить в жизнь ваши собственные представления о пространстве, в котором вам предстоит жить или работать. Гармония между вашими желаниями и нашим видением – главная цель AXIS при работе над проектом.</p>
-							<img src="/img/1.jpg" class="apss-ti-img">
+							<img src="/img/11.jpg" class="apss-ti-img">
+							<img src="/img/11.jpg" class="apss-ti-img-back">
 						</div>
 					</div>
-				</div>
-				<div class="ap-s-slide inactive" style="background-image: url(/img/photos/houses/vodniki/5.jpg); transform: translateX(450px) perspective(60px) rotateY(-1deg); border: none;">
 					<div class="apss-info">
 						<p><span>Иванов</span> Иван</p>
 						<p>Строитель</p>
 					</div>
+				</div>
+				<div class="ap-s-slide inactive" style="background-image: url(/img/photos/houses/vodniki/3.jpg); transform: translateX(300px) perspective(60px) rotateY(-1deg); border: none;">
 					<div class="apss-w-shadow hidden"></div>
 					<div class="apss-wrapper hidden">
 						<div class="apss-title">Сергей Зайцев <span>(Главный)</span></div>
 						<div class="apss-t-inner">
 							<p class="apss-ti-text">Мастерская, основанная в 1999 году двумя профессиональными архитекторами Сергеем Зайцевым и Мариной Сергеевой. С 1999 года мы преображаем облик мегаполиса, воплощая в жизнь оригинальные дизайн-проекты коттеджей и квартир.<br>Мы не стремимся на каждом объекте сразу же реализовать самые невероятные идеи. Хотя, поверьте, у нас их достаточно. Скорее, мы помогаем органично воплотить в жизнь ваши собственные представления о пространстве, в котором вам предстоит жить или работать. Гармония между вашими желаниями и нашим видением – главная цель AXIS при работе над проектом.</p>
-							<img src="/img/1.jpg" class="apss-ti-img">
+							<img src="/img/14.jpg" class="apss-ti-img">
+							<img src="/img/14.jpg" class="apss-ti-img-back">
 						</div>
 					</div>
-				</div>
-				<div class="ap-s-slide inactive" style="background-image: url(/img/photos/houses/vodniki/3.jpg); transform: translateX(300px) perspective(60px) rotateY(-1deg); border: none;">
 					<div class="apss-info">
 						<p><span>Куперман</span> Яков</p>
 						<p>Бухгалтер</p>
 					</div>
+				</div>
+				<div class="ap-s-slide inactive" style="background-image: url(/img/photos/houses/check/2.jpg); transform: translateX(150px) perspective(60px) rotateY(-1deg); border: none;">
 					<div class="apss-w-shadow hidden"></div>
 					<div class="apss-wrapper hidden">
 						<div class="apss-title">Сергей Зайцев <span>(Главный)</span></div>
 						<div class="apss-t-inner">
 							<p class="apss-ti-text">Мастерская, основанная в 1999 году двумя профессиональными архитекторами Сергеем Зайцевым и Мариной Сергеевой. С 1999 года мы преображаем облик мегаполиса, воплощая в жизнь оригинальные дизайн-проекты коттеджей и квартир.<br>Мы не стремимся на каждом объекте сразу же реализовать самые невероятные идеи. Хотя, поверьте, у нас их достаточно. Скорее, мы помогаем органично воплотить в жизнь ваши собственные представления о пространстве, в котором вам предстоит жить или работать. Гармония между вашими желаниями и нашим видением – главная цель AXIS при работе над проектом.</p>
-							<img src="/img/1.jpg" class="apss-ti-img">
+							<img src="/img/12.jpg" class="apss-ti-img">
+							<img src="/img/12.jpg" class="apss-ti-img-back">
 						</div>
 					</div>
-				</div>
-				<div class="ap-s-slide inactive" style="background-image: url(/img/photos/houses/check/2.jpg); transform: translateX(150px) perspective(60px) rotateY(-1deg); border: none;">
 					<div class="apss-info">
 						<p><span>Сергей</span> Зайцев</p>
 						<p>Главный</p>
 					</div>
-					<div class="apss-w-shadow hidden"></div>
-					<div class="apss-wrapper hidden">
-						<div class="apss-title">Сергей Зайцев <span>(Главный)</span></div>
-						<div class="apss-t-inner">
-							<p class="apss-ti-text">Мастерская, основанная в 1999 году двумя профессиональными архитекторами Сергеем Зайцевым и Мариной Сергеевой. С 1999 года мы преображаем облик мегаполиса, воплощая в жизнь оригинальные дизайн-проекты коттеджей и квартир.<br>Мы не стремимся на каждом объекте сразу же реализовать самые невероятные идеи. Хотя, поверьте, у нас их достаточно. Скорее, мы помогаем органично воплотить в жизнь ваши собственные представления о пространстве, в котором вам предстоит жить или работать. Гармония между вашими желаниями и нашим видением – главная цель AXIS при работе над проектом.</p>
-							<img src="/img/1.jpg" class="apss-ti-img">
-						</div>
-					</div>
 				</div>
 				<div class="ap-s-slide" style="background-image: url(/img/photos/houses/check/1.jpg); border: none;">
-					<div class="apss-info hidden">
-						<p><span>Команда</span> за работой</p>
-					</div>
-					<div class="apss-w-shadow"></div>
 					<div class="apss-wrapper">
 						<div class="apss-title">Команда за работой</div>
 						<div class="apss-t-inner">
 							<p class="apss-ti-text">Мастерская, основанная в 1999 году двумя профессиональными архитекторами Сергеем Зайцевым и Мариной Сергеевой. С 1999 года мы преображаем облик мегаполиса, воплощая в жизнь оригинальные дизайн-проекты коттеджей и квартир.<br>Мы не стремимся на каждом объекте сразу же реализовать самые невероятные идеи. Хотя, поверьте, у нас их достаточно. Скорее, мы помогаем органично воплотить в жизнь ваши собственные представления о пространстве, в котором вам предстоит жить или работать. Гармония между вашими желаниями и нашим видением – главная цель AXIS при работе над проектом.</p>
 						</div>
+					</div>
+					<div class="apss-info hidden">
+						<p><span>Команда</span> за работой</p>
 					</div>
 				</div>
 			</div>
@@ -221,15 +231,21 @@ const
 		</div>`;
 
 $(document).ready( () => {
-
+	
+	$('.background-slider>.slides').html(randomBackground(backStart));
+	changeTitleBackground($('.background-slider>.slides>div.active').attr('data-title'));
 	checkImgOnFormat('.background-slider>.slides');
+	startBackgroundSlider();
 	setTimeout(()=>{
-		startBackgroundSlider();
-	}, 8000);
+		$('.loading').removeClass('active');
+	}, 600);
 	
 	// Что делать при клике на следующий фон
 	$('body').on('click', '.background-slider>.next', () => {
 		if (checkNextBack) {
+			clearInterval(timerBackground);
+			clearInterval(int1);
+			clearInterval(int2);
 			startBackgroundSlider();
 		}
 	});
@@ -240,6 +256,7 @@ $(document).ready( () => {
 		$('.link').addClass('hidden');
 		$('.menu').addClass('hidden');
 		$('.page-menu').addClass('open');
+		clearInterval(timerBackground);
 		clearInterval(int1);
 		clearInterval(int2);
 
@@ -287,17 +304,45 @@ $(document).ready( () => {
 
 	// Событие при нажатии на следующий слайд
 	// в слайдере квартир
-	$('body').on('click', '.ap-s-slide.inactive', (e)=>{changeApSlide($(e.currentTarget));});
+	$('body').on('click', '.ap-s-slide.inactive', (e)=>{
+		changeApSlide($(e.currentTarget));
+	});
 
 	// Нажатие на стрелочку в слайдере квартир
 	$('body').on('click', '.ap-slider>.next', ()=>{
 		changeApSlide($('.ap-s-slide.inactive:last'));
 	});
+
+	// Нажатие далее в подробном слайдере квартир
+	$('body').on('click', '.ap-wrapper>.next', ()=>{
+		changeMoreSlide($('.apm-slide').length-2);
+	});
+
+	// Нажатие назад в подробном слайдере квартир
+	$('body').on('click', '.ap-wrapper>.prev', ()=>{
+		changeMoreSlide(0);
+	});
+
+	// Нажатие на нужный слайд в управлении слайдером
+	$('body').on('click', '.apmis-wrapper>.slide', (e)=>{
+		changeMoreSliderInUi($(e.currentTarget).index());
+	});
+
+	// Промотка в подробном слайдере квартир (управление)
+	$('body').on('click', '.apmis-next', moveMoreSliderUi);
 });
+
+/********************
+
+ Фоновый слайдер
+
+********************/
 
 // Запуск слайдера на фоне
 function startBackgroundSlider() {
 	clearInterval(timerBackground);
+	clearInterval(int1);
+	clearInterval(int2);
 	changeBackground();
 	timerBackground = setInterval(changeBackground, 8000);
 }
@@ -316,8 +361,6 @@ function changeBackground() {
 
 	$('.background-slider>.slides').append(newActive);
 
-	clearInterval(int1);
-	clearInterval(int2);
 	int1 = setInterval( () => {
 		$('.background-slider>.slides>div:last').addClass('active');
 		clearInterval(int1);
@@ -351,6 +394,34 @@ function changeTitleBackground(title) {
 	}, time);
 }
 
+// Рандом при загрузке страницы
+// str: строка со слайдами
+function randomBackground(str) {
+	let
+		strArray = str.split('</div>');
+
+	strArray.pop();
+
+	strArray.forEach((e, i)=>{
+		strArray[i] = e + '</div>';
+	});
+
+	strArray.sort(function(){ return 0.5-Math.random() });
+
+	strArray[strArray.length-1] = 
+		strArray[strArray.length-1].replace('><', ' class="active"><');
+
+	console.log(strArray.join(''));
+
+	return strArray.join('');
+}
+
+/********************
+
+ Доп функции
+
+********************/
+
 function rand(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -372,6 +443,12 @@ function checkImgOnFormat(div) {
 		}
 	});
 }
+
+/********************
+
+Слайдер квартир, о нас и т.п.
+
+********************/
 
 // Слайдер для квартир
 function changeApSlide(e) {
@@ -437,7 +514,115 @@ function changeApSlide(e) {
 	}
 }
 
-// Имитация загрузки страниц
+/********************
+
+ Слайдер в подробнее о квартире
+
+********************/
+
+// Смена слайдов
+// num: Номер слайда
+function changeMoreSlide(num) {
+	if (checkNextMoreSlide) {
+
+		checkNextMoreSlide = false;
+
+		const
+			currentSlide = $('.apm-slide.active'),
+			nextSlide = $('.apm-slide:eq('+num+')').detach();
+
+		changeMoreSliderUi(parseInt($(nextSlide).attr('data-num')));
+		$('.ap-more-slider').append(nextSlide);
+		setTimeout(()=>{
+			$(nextSlide).addClass('active');
+			setTimeout(() => {
+				$(currentSlide).removeClass('active');
+				if (num > 0) {
+					$(currentSlide).detach();
+					$('.ap-more-slider').prepend(currentSlide);
+				}
+				checkNextMoreSlide = true;
+
+			}, 500);
+		}, 100);
+	}
+}
+
+// Смена слайда по превью
+function changeMoreSliderInUi(num) {
+	if (checkNextMoreSlide) {
+
+		checkNextMoreSlide = false;
+
+		const
+			currentSlide = $('.apm-slide.active'),
+			length = $('.apm-slide').length - 1;
+
+		let
+			nextSlide;
+
+		for (let i = $('.apm-slide').length - 1; i >= 0; i--) {
+			if ( parseInt($('.apm-slide:eq('+i+')').attr('data-num')) 
+					=== length - num )
+				nextSlide = $('.apm-slide:eq('+i+')');
+		}
+
+		num = $(nextSlide).index();
+
+		for (let i = $('.apm-slide').length - 1; i > num; i--) {
+			const
+				_obj = $('.apm-slide:eq('+length+')').detach();
+			$('.ap-more-slider').prepend(_obj);
+		}
+
+		changeMoreSliderUi(parseInt($(nextSlide).attr('data-num')));
+		setTimeout(()=>{
+			$(nextSlide).addClass('active');
+			setTimeout(() => {
+				$(currentSlide).removeClass('active');
+				checkNextMoreSlide = true;
+
+			}, 500);
+		}, 100);
+	}
+}
+
+// Управление слайдером
+function changeMoreSliderUi(num) {
+	let
+		width = 235,
+		x = num * -width,
+		all = $('.apmis-wrapper>.slide').length,
+		maxX = (all - 3) * -width;
+
+	if ( x < maxX ) x = maxX;
+
+	$('.apmis-wrapper').css('transform', 'translate3d('+ x +'px,0,0)');
+	$('.apmis-wrapper>.slide').removeClass('active');
+	$('.apmis-wrapper>.slide:eq('+
+		($('.apmis-wrapper>.slide').length - 1 - num )
+		+')').addClass('active');
+}
+
+// Управление слайдером через кнопку в ui
+function moveMoreSliderUi() {
+
+	let
+		width = 235,
+		x = $('.apmis-wrapper').css('transform').split(',')[4] - width,
+		all = $('.apmis-wrapper>.slide').length,
+		maxX = (all - 3) * -width;
+
+	if ( x < maxX ) x = 0;
+
+	$('.apmis-wrapper').css('transform', 'translate3d('+ x +'px,0,0)');
+}
+
+/********************
+
+ Имитация загрузки страниц 
+
+********************/
 
 // Публичные пространства
 function loadPublicSpace() {
@@ -446,7 +631,7 @@ function loadPublicSpace() {
 	$('.loading').addClass('active');
 
 	setTimeout(() => {
-		$('.wrapper').removeClass('hidden');
+		$('.wrapper').addClass('hidden');
 		$('.wrapper').html('');
 		$('.background-slider>.next').removeClass('hidden');
 		$('.background-slider>.prev').addClass('hidden');
@@ -454,14 +639,16 @@ function loadPublicSpace() {
 		$('.background-slider').removeClass('only-back');
 
 		const
-			slider = $('.background-slider>.slides');
-
-		$(slider).html(`<div style="background-image: url(/img/photos/office/chiptrip/1.jpg);" data-title="<span>Чиптрип</span>"></div>
+			slider = $('.background-slider>.slides'),
+			slidesStr = `<div style="background-image: url(/img/photos/office/chiptrip/1.jpg);" data-title="<span>Чиптрип</span>"></div>
 				<div style="background-image: url(/img/photos/office/chiptrip/4.jpg);" data-title="<span>Чиптрип</span>"></div>
 				<div style="background-image: url(/img/photos/office/chipyauza/1.jpg);" data-title="<span>Чиптрип</span> на Яузе"></div>
 				<div style="background-image: url(/img/photos/office/chipyauza/4.jpg);" data-title="<span>Чиптрип</span> на Яузе"></div>
 				<div style="background-image: url(/img/photos/office/yapon/3.jpg);" data-title="<span>Япон</span>"></div>
-				<div style="background-image: url(/img/photos/office/yapon/1.jpg);" data-title="<span>Япон</span>" class="active"></div>`);
+				<div style="background-image: url(/img/photos/office/yapon/1.jpg);" data-title="<span>Япон</span>"></div>`;
+
+		$(slider).html(randomBackground(slidesStr));
+		changeTitleBackground($('.background-slider>.slides>div.active').attr('data-title'));
 
 		setTimeout(()=>{
 			startBackgroundSlider();
@@ -475,7 +662,7 @@ function loadPublicSpace() {
 	}, 3000);
 }
 
-// Дома и квартиры
+// Дома, квартиры, о нас
 function loadApHouseAbout(titleText, backgroundSlider, outerSlider) {
 
 	$('.page-menu>p').html(titleText);
@@ -498,7 +685,8 @@ function loadApHouseAbout(titleText, backgroundSlider, outerSlider) {
 			slider = $('.background-slider>.slides');
 
 		// Добаввляем картинки на фоновый слайд
-		$(slider).html(backgroundSlider);
+		$(slider).html(randomBackground(backgroundSlider));
+		changeTitleBackground($('.background-slider>.slides>div.active').attr('data-title'));
 
 		setTimeout(()=>{
 			startBackgroundSlider();
@@ -521,11 +709,11 @@ function loadMore() {
 		$('.wrapper').html(`
 		<div class="ap-wrapper">
 			<div class="ap-more-slider">
-				<div class="apm-slide" style="background-image: url(/img/photos/1.jpg);"></div>
-				<div class="apm-slide" style="background-image: url(/img/photos/2.jpg);"></div>
-				<div class="apm-slide" style="background-image: url(/img/photos/3.jpg);"></div>
-				<div class="apm-slide" style="background-image: url(/img/photos/4.jpg);"></div>
-				<div class="apm-slide active" style="background-image: url(/img/photos/2.jpg);"></div>
+				<div class="apm-slide" data-num="4" style="background-image: url(/img/photos/1.jpg);"></div>
+				<div class="apm-slide" data-num="3" style="background-image: url(/img/photos/2.jpg);"></div>
+				<div class="apm-slide" data-num="2" style="background-image: url(/img/photos/3.jpg);"></div>
+				<div class="apm-slide" data-num="1" style="background-image: url(/img/photos/4.jpg);"></div>
+				<div class="apm-slide active" data-num="0" style="background-image: url(/img/photos/2.jpg);"></div>
 			</div>
 			<div class="prev"><i></i><i></i></div>
 			<div class="next"><i></i><i></i></div>
@@ -565,5 +753,5 @@ function loadMore() {
 
 	setTimeout(()=>{
 		$('.loading').removeClass('active');
-	}, 300);
+	}, 1000);
 }

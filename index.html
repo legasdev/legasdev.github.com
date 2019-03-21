@@ -4,29 +4,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Archtochka</title>
-    <link rel="stylesheet/less" type="text/css" href="/css/style.less">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>	
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
 
 	<div class="background-slider">
-		<div class="slides">
-			<!-- 
-				Сюда вывести все фотки с фоном
-				+ последний сделать с классом "active"
-				+ в data-title записать названия интерьера
-			-->
-			<div style="background-image: url(/img/photos/1.jpg);" data-title="<span>Чиптрип</span> на Яузе"></div>
-			<div style="background-image: url(/img/photos/2.jpg);" data-title="<span>Название</span> 2"></div>
-			<div style="background-image: url(/img/photos/3.jpg);" data-title="<span>Название</span> 3"></div>
-			<div style="background-image: url(/img/photos/4.jpg);" data-title="<span>Название</span> 4"></div>
-			<div style="background-image: url(/img/photos/5.jpg);" data-title="<span>Название</span> 5" class="active"></div>
-		</div>
+		<div class="slides"></div>
 		<div class="title">
-			<!--
-				При выдаче страницы в <p> поместить название с последнего фона
-			-->
-			<p><span>Квартира</span> на юго-западе</p>
+			<p></p>
 			<div><i></i><i></i><i></i></div>
 		</div>
 		<div class="next"><i></i><i></i></div>
@@ -65,36 +50,10 @@
 	</div>
 
 	<div class="wrapper hidden">
-		<div class="ap-wrapper">
-			<div class="ap-more-slider">
-				<div class="apm-slide" style="background-image: url(/img/photos/1.jpg);"></div>
-				<div class="apm-slide" style="background-image: url(/img/photos/2.jpg);"></div>
-				<div class="apm-slide" style="background-image: url(/img/photos/3.jpg);"></div>
-				<div class="apm-slide" style="background-image: url(/img/photos/4.jpg);"></div>
-				<div class="apm-slide active" style="background-image: url(/img/photos/2.jpg);"></div>
-			</div>
-			<div class="prev"><i></i><i></i></div>
-			<div class="next"><i></i><i></i></div>
-			<div class="ap-more-info">
-				<div class="apmi-title">
-					<p><span>Квартира</span> на Покровке</p>
-				</div>
-				<div class="apmi-slider">
-					<div class="apmis-wrapper">
-						<div class="slide" style="background-image: url(/img/photos/1.jpg);"></div>
-						<div class="slide" style="background-image: url(/img/photos/2.jpg);"></div>
-						<div class="slide" style="background-image: url(/img/photos/3.jpg);"></div>
-						<div class="slide" style="background-image: url(/img/photos/4.jpg);"></div>
-						<div class="slide active" style="background-image: url(/img/photos/2.jpg);"></div>
-					</div>
-				</div>
-				<div class="apmis-next"><i></i><i></i></div>
-				<p class="apmi-desk">Нам необходимо было создать атмосферу, насыщенную цветом уютом и аристократическим лоском, а также функционально разместить все зоны.<br>В данном случае зона кухни столовой и гостиной были объединены вокруг абсолютно эксклюзивной встроенной кухни, которая выглядит как высококачественный и технологичный шкаф. Его задача - добавить утонченности и сдержанной роскоши к общему восприятию интерьера.</p>
-			</div>
-		</div>
+		
 	</div>
 
-	<div class="loading">Загрузка</div>
+	<div class="loading active">Загрузка</div>
 
 	<script src="//code.jquery.com/jquery-3.3.1.min.js" defer></script>
 	<script src="/js/main.js" defer></script>
