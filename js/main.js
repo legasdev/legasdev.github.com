@@ -7,7 +7,9 @@ let
 	checkNextAp = true,
 	hideInfoActive = false,
 	numCurrentMoreSlide = 0,
-	checkNextMoreSlide = true;
+	checkNextMoreSlide = true,
+	timerMoreSliderUi,
+	canHideUi = true;
 
 // Сгенерированный фон
 const
@@ -151,7 +153,7 @@ const
 			<div class="next"><i></i><i></i></div>
 		</div>`;
 
-// Сгенерированные на сервере слайды домов
+// Сгенерированные на сервере слайды о нас
 const
 	about = `<div class="ap-slider">
 			<div class="slides">
@@ -284,6 +286,24 @@ $(document).ready( () => {
 		}
 	});
 
+	$('.link-inner').on('click', (e)=>{
+		// Закрытие меню
+		$('.link').addClass('hidden');
+		$('.menu').addClass('hidden');
+		$('.page-menu').addClass('open');
+		clearInterval(timerBackground);
+		clearInterval(int1);
+		clearInterval(int2);
+
+		// Подгрузка
+		switch ($(e.target).attr('href')) {
+
+			case '#design':
+				loadDesign('Дизайн-проект');
+			break;
+		}
+	});
+
 	// Имитация перехода в страницу подробнее о квартире
 	$('body').on('click', '.link-to-apart', (e)=>{
 		const
@@ -328,8 +348,48 @@ $(document).ready( () => {
 		changeMoreSliderInUi($(e.currentTarget).index());
 	});
 
+	// Скрывать превью сладйера в квартирах
+	$('body').on('mousemove', (e)=>{
+		if ($('.ap-wrapper').length && canHideUi) {
+			$('.ap-more-info').removeClass('hidden');
+			clearTimeout(timerMoreSliderUi);
+			timerMoreSliderUi = setTimeout(()=>{
+				$('.ap-more-info').addClass('hidden');
+			}, 2000);
+		}
+	});
+
+	// Запрет скрытия, если навелись на информацию
+	$('body').on('mouseenter', '.ap-more-info', ()=>{
+		canHideUi = false;
+		clearTimeout(timerMoreSliderUi);
+	});
+
+	// Разрешение скрытия, если убрали наведение с информации
+	$('body').on('mouseleave', '.ap-more-info', ()=>{
+		canHideUi = true;
+	});
+
+	// Листание при помощи клавиатуры
+	$('body').on('keydown', (e)=>{
+		if (e.which === 39 && $('.ap-wrapper').length) {
+			changeMoreSlide($('.apm-slide').length-2);
+		} else if (e.which === 37 && $('.ap-wrapper').length) {
+			changeMoreSlide(0);
+		}
+	});
+
 	// Промотка в подробном слайдере квартир (управление)
 	$('body').on('click', '.apmis-next', moveMoreSliderUi);
+
+	// Дизайн-проект калькулятор
+	$('body').on('input', '.calc-in', (e)=>{
+		let
+			meters = $(e.currentTarget).val(),
+			price = 3223;
+
+		$('.calc-price>span').html(parseInt(price*meters));
+	});
 });
 
 /********************
@@ -410,8 +470,6 @@ function randomBackground(str) {
 
 	strArray[strArray.length-1] = 
 		strArray[strArray.length-1].replace('><', ' class="active"><');
-
-	console.log(strArray.join(''));
 
 	return strArray.join('');
 }
@@ -632,6 +690,7 @@ function loadPublicSpace() {
 
 	setTimeout(() => {
 		$('.wrapper').addClass('hidden');
+		$('.wrapper').removeClass('design');
 		$('.wrapper').html('');
 		$('.background-slider>.next').removeClass('hidden');
 		$('.background-slider>.prev').addClass('hidden');
@@ -672,6 +731,7 @@ function loadApHouseAbout(titleText, backgroundSlider, outerSlider) {
 
 		// Показываем общий блок
 		$('.wrapper').removeClass('hidden');
+		$('.wrapper').removeClass('design');
 		// Скрываем управление слайдера-фона
 		$('.background-slider>.next').addClass('hidden');
 		$('.background-slider>.title').addClass('hidden');
@@ -706,6 +766,7 @@ function loadMore() {
 
 	setTimeout(() => {
 		$('.wrapper').removeClass('hidden');
+		$('.wrapper').removeClass('design');
 		$('.wrapper').html(`
 		<div class="ap-wrapper">
 			<div class="ap-more-slider">
@@ -743,6 +804,111 @@ function loadMore() {
 			slider = $('.background-slider>.slides');
 
 		$(slider).html(back);
+
+		setTimeout(()=>{
+			startBackgroundSlider();
+		}, 8000);
+
+		checkImgOnFormat('.background-slider>.slides');
+	}, 500);
+
+	setTimeout(()=>{
+		$('.loading').removeClass('active');
+	}, 1000);
+}
+
+// Страница Дизайн-проект
+function loadDesign(titleText) {
+	$('.page-menu>p').html(titleText);
+	$('.loading').addClass('active');
+
+	setTimeout(() => {
+		$('.wrapper').removeClass('hidden');
+		$('.wrapper').addClass('design');
+		$('.wrapper').html(`
+		<div class="design-wrapper">
+			<div class="info">
+				<p class="title">
+					Общий проект<br><span>включает в себя:</span>
+				</p>
+				<div class="info-wrapper">
+					<div class="label">
+						<div class="label-title">
+							Колористическое<br>решение
+							<div style="background-image: url('/img/icons/ico_color.png');"></div>
+						</div>
+						<p class="text">
+							В зависимости от назначения комнаты, необходимо подбирать подходящее освещение. Чаще всего хозяева начинают с обустройства гостиной. Для этого типа комнаты нужен достаточно хороший свет, ведь именно здесь семья проводит время вместе, принимает гостей. В последнее время популярно разделение комнаты на так называемые зоны.
+						</p>
+					</div>
+					<div class="label">
+						<div class="label-title">
+							Мебель
+							<div style="background-image: url('/img/icons/ico_furniture.png');"></div>
+						</div>
+						<p class="text">
+							В зависимости от назначения комнаты, необходимо подбирать подходящее освещение. Чаще всего хозяева начинают с обустройства гостиной. Для этого типа комнаты нужен достаточно хороший свет, ведь именно здесь семья проводит время вместе, принимает гостей. В последнее время популярно разделение комнаты на так называемые зоны.
+						</p>
+					</div>
+					<div class="label">
+						<div class="label-title">
+							Свет
+							<div style="background-image: url('/img/icons/ico_light.png');"></div>
+						</div>
+						<p class="text">
+							В зависимости от назначения комнаты, необходимо подбирать подходящее освещение. Чаще всего хозяева начинают с обустройства гостиной. Для этого типа комнаты нужен достаточно хороший свет, ведь именно здесь семья проводит время вместе, принимает гостей. В последнее время популярно разделение комнаты на так называемые зоны.
+						</p>
+					</div>
+					<div class="label">
+						<div class="label-title">
+							Аксессуары
+							<div style="background-image: url('/img/icons/ico_accessories.png');"></div>
+						</div>
+						<p class="text">
+							В зависимости от назначения комнаты, необходимо подбирать подходящее освещение. Чаще всего хозяева начинают с обустройства гостиной. Для этого типа комнаты нужен достаточно хороший свет, ведь именно здесь семья проводит время вместе, принимает гостей. В последнее время популярно разделение комнаты на так называемые зоны.
+						</p>
+					</div>
+					<div class="label">
+						<div class="label-title">
+							Скидки<br>от партнеров
+							<div style="background-image: url('/img/icons/ico_discounts.png');"></div>
+						</div>
+						<p class="text">
+							В зависимости от назначения комнаты, необходимо подбирать подходящее освещение. Чаще всего хозяева начинают с обустройства гостиной. Для этого типа комнаты нужен достаточно хороший свет, ведь именно здесь семья проводит время вместе, принимает гостей. В последнее время популярно разделение комнаты на так называемые зоны.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="calc">
+				<div class="calc-wrapper-in">
+					<div class="label">Введите общее количество метров</div>
+					<div class="input-text">
+						<input type="text" class="calc-in" value="76" minlength="1" maxlength="3">
+						<p>кв. м.</p>
+					</div>
+				</div>
+				<div class="calc-wrapper-in">
+					<div class="label">Финальная стоимость</div>
+					<div class="calc-price"><span>244948</span> р.</div>
+				</div>
+			</div>
+		</div>
+		`);
+		$('.background-slider>.next').removeClass('hidden');
+		$('.background-slider>.title').removeClass('hidden');
+		$('.background-slider').removeClass('only-back');
+
+		const
+			slider = $('.background-slider>.slides'),
+			slidesStr = `<div style="background-image: url(/img/photos/office/chiptrip/1.jpg);" data-title="<span>Чиптрип</span>"></div>
+				<div style="background-image: url(/img/photos/office/chiptrip/4.jpg);" data-title="<span>Чиптрип</span>"></div>
+				<div style="background-image: url(/img/photos/office/chipyauza/1.jpg);" data-title="<span>Чиптрип</span> на Яузе"></div>
+				<div style="background-image: url(/img/photos/office/chipyauza/4.jpg);" data-title="<span>Чиптрип</span> на Яузе"></div>
+				<div style="background-image: url(/img/photos/office/yapon/3.jpg);" data-title="<span>Япон</span>"></div>
+				<div style="background-image: url(/img/photos/office/yapon/1.jpg);" data-title="<span>Япон</span>"></div>`;
+
+		$(slider).html(randomBackground(slidesStr));
+		changeTitleBackground($('.background-slider>.slides>div.active').attr('data-title'));
 
 		setTimeout(()=>{
 			startBackgroundSlider();

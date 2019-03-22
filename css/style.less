@@ -28,6 +28,12 @@
     font-display: swap;
 }
 
+a:active, a:focus { outline: none; }
+
+input, textarea {outline:none;}
+input:active, textarea:active {outline:none;}
+:focus {outline:none;}
+
 // Миксина стрелки для слайдера
 .arrowSlider() {
 	position: absolute;
@@ -311,6 +317,7 @@ body {
 					margin-right: 17px;
 					font-size: 18px;
 					width: auto;
+					cursor: pointer;
 					transition: color .2s,
 								opacity .2s,
 								visibility .2s,
@@ -573,6 +580,10 @@ body {
 		opacity: 0;
 		visibility: hidden;
 	}
+
+	&.design {
+		bottom: auto;
+	}
 }
 
 .ap-wrapper {
@@ -619,6 +630,10 @@ body {
 		right: 90px;
 		display: flex;
 		justify-content: space-between;
+		opacity: 1;
+		transform: translate3d(0,0,0);
+		transition: opacity .6s,
+					transform .6s;
 
 		& > .apmi-title {
 
@@ -694,6 +709,134 @@ body {
 			color: #fff;
 			background-color: rgba(0,0,0,.5);
 			font-size: 17px;
+		}
+
+		&.hidden {
+			opacity: 0;
+			transform: translate3d(0,200%,0);
+		}
+	}
+}
+
+.design-wrapper {
+	position: absolute;
+	right: 215px; top: 220px;
+
+	& > .info {
+		display: flex;
+		flex-direction: column;
+
+		& > .title {
+			color: #fff;
+			font-size: 24px;
+			text-transform: uppercase;
+    		text-align: right;
+
+			& > span {
+				font-size: 18px;
+			}
+		}
+
+		& > .info-wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			margin-top: 30px;
+			height: 450px;
+
+			& > .label {
+				width: 290px; height: 60px;
+				color: #fff;
+				text-align: right;
+				cursor: pointer;
+				padding: 10px;
+				font-size: 18px;
+				overflow: hidden;
+				transition: height .3s,
+							background-color .3s;
+
+				& > .label-title {
+					display: flex;
+					text-transform: uppercase;
+					align-items: center;
+					justify-content: flex-end;
+
+					& > div {
+						position: relative;
+						right: 0;
+						margin-left: 26px;
+						width: 41px; height: 41px;
+						background-position: center;
+						background-size: contain;
+						background-repeat: no-repeat;
+					}
+				}
+
+
+
+				& > .text {
+					opacity: 0;
+					visibility: hidden;
+					color: #fff;
+					margin: 15px 70px 10px 10px;
+				}
+
+				&:hover {
+					width: 660px; height: 212px;
+					background-color: rgba(0,0,0,.5);
+
+					& > .text {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+
+	& > .calc {
+		display: flex;
+		flex-direction: column;
+
+		& > .calc-wrapper-in {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			font-size: 36px;
+
+			&:first-child {
+				margin-bottom: 25px;
+			}
+
+			& > .label {
+				color: #fff;
+				text-transform: uppercase;
+				font-size: 18px;
+			}
+
+			& > .input-text {
+				display: flex;
+
+				& > .calc-in {
+					background: transparent;
+					color: #fff;
+					font-size: 36px;
+					border: none;
+					width: 100px;
+				    text-align: right;
+				    margin-right: 16px;
+
+				}
+
+				& > p {
+					color: #fff;
+				}
+			}
+
+			& > .calc-price {
+				color: #fff;
+				font-size: 36px;
+			}
 		}
 	}
 }
