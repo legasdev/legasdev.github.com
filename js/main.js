@@ -490,8 +490,6 @@ function checkImgOnFormat(div) {
 		img,
 		w, h;
 
-	console.log($(div));
-
 	$(div).each( (i, e) => {
 		img = new Image();
 		img.src = $(e).css('background-image').split('"')[1];
