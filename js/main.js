@@ -236,7 +236,7 @@ $(document).ready( () => {
 	
 	$('.background-slider>.slides').html(randomBackground(backStart));
 	changeTitleBackground($('.background-slider>.slides>div.active').attr('data-title'));
-	checkImgOnFormat('.background-slider>.slides');
+	checkImgOnFormat('.background-slider>.slides>div');
 	startBackgroundSlider();
 	setTimeout(()=>{
 		$('.loading').removeClass('active');
@@ -490,7 +490,9 @@ function checkImgOnFormat(div) {
 		img,
 		w, h;
 
-	$(div+'>div').each( (i, e) => {
+	console.log($(div));
+
+	$(div).each( (i, e) => {
 		img = new Image();
 		img.src = $(e).css('background-image').split('"')[1];
 		img.onload = function() {
@@ -713,7 +715,7 @@ function loadPublicSpace() {
 			startBackgroundSlider();
 		}, 8000);
 
-		checkImgOnFormat('.background-slider>.slides');
+		checkImgOnFormat('.background-slider>.slides>div');
 	}, 500);
 
 	setTimeout(()=>{
@@ -752,7 +754,7 @@ function loadApHouseAbout(titleText, backgroundSlider, outerSlider) {
 			startBackgroundSlider();
 		}, 8000);
 
-		checkImgOnFormat('.background-slider>.slides');
+		checkImgOnFormat('.background-slider>.slides>div');
 	}, 500);
 
 	setTimeout(()=>{
@@ -800,6 +802,9 @@ function loadMore() {
 		$('.background-slider>.title').addClass('hidden');
 		$('.background-slider').addClass('only-back');
 
+		checkImgOnFormat('.ap-more-slider>.apm-slide');
+		checkImgOnFormat('.apmis-wrapper>.slide');
+
 		const
 			slider = $('.background-slider>.slides');
 
@@ -809,7 +814,7 @@ function loadMore() {
 			startBackgroundSlider();
 		}, 8000);
 
-		checkImgOnFormat('.background-slider>.slides');
+		checkImgOnFormat('.background-slider>.slides>div');
 	}, 500);
 
 	setTimeout(()=>{

@@ -608,9 +608,46 @@ body {
 			transition: opacity .5s,
 						visibility .5s;
 
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0; top: 0;
+				width: 100%; height: 100%;
+				background-image: inherit;
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				opacity: 0; visibility: hidden;
+				transition: opacity .2s,
+							visibility .2s;
+			}
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0; top: 0;
+				background-color: rgba(0,0,0,.7);
+				width: 100%; height: 100%;
+				opacity: 0; visibility: hidden;
+			}
+
 			&.active {
 				opacity: 1;
 				visibility: visible;
+
+				&:after, &:before {
+					opacity: 1; visibility: visible;
+				}
+			}
+
+			&.notfull {
+				&:after {
+					height: 90%;
+					top: 50%;
+					transform: translateY(-50%);
+					background-position: 35% center;
+					background-size: contain;
+				}
 			}
 		}
 	}
@@ -672,6 +709,7 @@ body {
 				transition: transform .2s;
 
 				& > .slide {
+					position: relative;
 					width: 225px; height: 100%;
 					margin: 0 5px;
 					background-position: center;
@@ -688,9 +726,48 @@ body {
 						opacity: 1;
 					}
 
+					&:after {
+						content: "";
+						position: absolute;
+						left: 0; top: 0;
+						width: 100%; height: 100%;
+						background-image: inherit;
+						background-position: center;
+						background-size: cover;
+						background-repeat: no-repeat;
+						opacity: 0; visibility: hidden;
+						transition: opacity .2s,
+									visibility .2s;
+					}
+
+					&:before {
+						content: "";
+						position: absolute;
+						left: 0; top: 0;
+						background-color: rgba(0,0,0,.7);
+						width: 100%; height: 100%;
+						opacity: 0; visibility: hidden;
+					}
+
 					&.active {
 						opacity: 1;
 						border-color: #fff;
+
+						
+					}
+
+					&.notfull {
+						&:after {
+							height: 90%;
+							top: 50%;
+							transform: translateY(-50%);
+							background-position: 35% center;
+							background-size: contain;
+						}
+
+						&:after, &:before {
+							opacity: 1; visibility: visible;
+						}
 					}
 				}
 			}
