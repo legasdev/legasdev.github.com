@@ -917,7 +917,7 @@ function loadDesign(titleText) {
 			startBackgroundSlider();
 		}, 8000);
 
-		checkImgOnFormat('.background-slider>.slides');
+		checkImgOnFormat('.background-slider>.slides>div');
 	}, 500);
 
 	setTimeout(()=>{
