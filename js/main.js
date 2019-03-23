@@ -257,6 +257,7 @@ $(document).ready( () => {
 		// Закрытие меню
 		$('.link').addClass('hidden');
 		$('.menu').addClass('hidden');
+		$('.menu-btn').removeClass('close');
 		$('.page-menu').addClass('open');
 		clearInterval(timerBackground);
 		clearInterval(int1);
@@ -290,6 +291,7 @@ $(document).ready( () => {
 		// Закрытие меню
 		$('.link').addClass('hidden');
 		$('.menu').addClass('hidden');
+		$('.menu-btn').removeClass('close');
 		$('.page-menu').addClass('open');
 		clearInterval(timerBackground);
 		clearInterval(int1);
@@ -300,6 +302,10 @@ $(document).ready( () => {
 
 			case '#design':
 				loadDesign('Дизайн-проект');
+			break;
+
+			case '#plan':
+				loadDesign('Планировочное решение');
 			break;
 		}
 	});
@@ -317,9 +323,10 @@ $(document).ready( () => {
 
 	// Открытие меню
 	$('.menu-btn').on('click', (e) => {
-		$('.link').removeClass('hidden');
-		$('.menu').removeClass('hidden');
-		$('.page-menu').removeClass('open');
+		$('.link').toggleClass('hidden');
+		$('.menu').toggleClass('hidden');
+		$('.menu-btn').toggleClass('close');
+		$('.page-menu').toggleClass('open');
 	});
 
 	// Событие при нажатии на следующий слайд
@@ -386,9 +393,16 @@ $(document).ready( () => {
 	$('body').on('input', '.calc-in', (e)=>{
 		let
 			meters = $(e.currentTarget).val(),
-			price = 3223;
+			price = [3000, 5000, 8000],
+			a = 0;
 
-		$('.calc-price>span').html(parseInt(price*meters));
+		if (meters <= 70) a = price[0];
+		else if (meters <= 120) a = price[1];
+		else a = price[2];
+
+		($('.page-menu>p').html().toLowerCase() === 'дизайн-проект') ?
+			$('.calc-price>span').html(parseInt(a*meters)) :
+			$('.calc-price>span').html(parseInt(price[0]*meters));
 	});
 });
 
