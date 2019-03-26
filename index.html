@@ -1,98 +1,253 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Archtochka</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">	
+	<meta charset="UTF-8">
+	<title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet/less" type="text/css" href="/css/style-main.less">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
 </head>
-<body>
+<body id="body">
+    
+    <header class="">
+        <div class="header-wrapper">
+            <div class="header-w-left">
+                <a href="/" class="hwl-logo"><img src="/img/logo.jpg" alt="Логотип Море Пряников"></a>
+                <nav class="hwl-menu">
+                    <ul>
+                        <li class="active"><a href="/">Главная</a></li>
+                        <li class="more">Особенные пряники</li>
+                        <li class="more">Галерея</li>
+                        <li class="more">О нас</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-w-right">
+                <div class="hwr-buy">Оформить заявку</div>
+                <div class="hwr-info">
+                    <a href="tel:89040608038" class="hwr-i-tel">8-904-060-80-38</a>
+                    <a href="mailto:more-pr@mail.ru" class="hwr-i-mail">more-pr@mail.ru</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-	<div class="background-slider">
-		<div class="slides"></div>
-		<div class="title">
-			<p></p>
-			<div><i></i><i></i><i></i></div>
-		</div>
-		<div class="next"><i></i><i></i></div>
-	</div>
+    <main>
 
-	<div class="title-page">
-		<a href="/" class="main-title">Archtochka</a>
-		<div class="tp-tel">
-			<a href="tel:81234567890">+7|123|456-7890</a>
-			<a href="tel:81234567890">+7|123|456-7890</a>
-		</div>
-	</div>
+        <div class="block-first">
+            <article class="bf-left">
+                <p class="bfl-slogan">Вкусно и приятно</p>
+                <h1>Создаем вкусные подарки</h1>
+                <p class="bfl-desk">Мы заботимся о своих покупателях, поэтому изготавливаем пряники без искусственных консервантов и используем только качественные продукты.</p>
+                <div class="bfl-buy">Закажите прямо сейчас</div>
+            </article>
+            <div class="bf-right">
+                <img src="/img/index/main.png" alt="Набор вкусных пряников">
+            </div>
+        </div>
 
-	<div class="main-menu">
-		<nav class="menu">
-			<ul>
-				<li>
-					<a class="link">Стоимость услуг</a>
-					<ul>
-						<li><a href="#plan" class="link-inner">Планировочное решение</a></li>
-						<li><a href="#design" class="link-inner">Декор-решение</a></li>
-						<li><a href="#plan" class="link-inner">Дизайн-проект</a></li>
-						<li><a href="#plan" class="link-inner">Архитектурное решение</a></li>
-					</ul>
-				</li>
-				<li><a href="#apartments" class="link">Квартиры</a></li>
-				<li><a href="#houses" class="link">Дома</a></li>
-				<li><a href="#public" class="link">Публичные пространства</a></li>
-				<li><a href="#about" class="link">О нас</a></li>
-			</ul>
-		</nav>
-		<div class="page-menu">
-			<p>Главная</p>
-		</div>
-		<div class="menu-btn close"><i></i><i></i><i></i></div>
-	</div>
+        <article class="block-adv">
+            <h2>Наши пряники - лучший подарок</h2>
+            <p class="block-desk">Подарок, преподнесенный с улыбкой, ценен вдвойне. (Т. Фуллер)</p>
+            <div class="ba-inner">
+                <div class="bai-img"><img src="/img/index/Pic2.png" alt="Разнообразие вариантов"></div>
+                <section class="bai-adv">
+                    <h3>Разнообразие вариантов</h3>
+                    <p class="baia-text">Пряники могут принимать любую форму - от небольшого сердечка до целого пряничного домика. Можно сделать практически все, что можно представить.</p>
+                </section>
+            </div>
+            <div class="ba-inner">
+                <div class="bai-img"><img src="/img/index/Pic2.png" alt="Разнообразие вариантов"></div>
+                <section class="bai-adv">
+                    <h3>Ручное исполнение</h3>
+                    <p class="baia-text">Пряники - это ручная работа, а не штампованный сувенир, поэтому ценится гораздо выше обычных подарков.</p>
+                </section>
+            </div>
+            <div class="ba-inner">
+                <div class="bai-img"><img src="/img/index/Pic2.png" alt="Разнообразие вариантов"></div>
+                <section class="bai-adv">
+                    <h3>Эффект неожиданности</h3>
+                    <p class="baia-text">Приятное удивление клиентов и сотрудников гарантировано! Ваш подарок точно будет использован по назначению, а не заброшен в угол к куче брендированных ручек и календариков.</p>
+                </section>
+            </div>
+            <div class="ba-inner">
+                <div class="bai-img"><img src="/img/index/Pic2.png" alt="Разнообразие вариантов"></div>
+                <section class="bai-adv">
+                    <h3>Незабываемые эмоции</h3>
+                    <p class="baia-text">Благодаря эффектному внешнему виду, многие не едят пряники сразу, а оставляют как сувенир и украшение для дома или офиса.</p>
+                </section>
+            </div>
+            <div class="ba-inner">
+                <div class="bai-img"><img src="/img/index/Pic2.png" alt="Разнообразие вариантов"></div>
+                <section class="bai-adv">
+                    <h3>Срок годности</h3>
+                    <p class="baia-text">Хоть пряники и являются кондитерскими изделиями, их срок годности более 3-х месяцев и отсутствие хрупких элементов оформления позволяют транспортировать их куда угодно и долго хранить.</p>
+                </section>
+            </div>
+            <div class="ba-inner">
+                <div class="bai-img"><img src="/img/index/Pic2.png" alt="Разнообразие вариантов"></div>
+                <section class="bai-adv">
+                    <h3>Оптимальная цена</h3>
+                    <p class="baia-text">Средняя цена за штуку - 50-150 рублей. Есть возможность изготовить полноценные подарки под любой бюджет.</p>
+                </section>
+            </div>
+            <div class="ba-buy">Закажите свой подарок</div>
+        </article>
 
-	<div class="wrapper hidden">
-		
-	</div>
+        <article class="block-galery">
+            <h2>Чем мы уже порадовали Вас</h2>
+            <p class="block-desk">Мини-галерея наших вкусностей</p>
+            <div class="bg-wrapper">
+                <div class="bg-left">
+                    <img src="/img/index/Pic1.png" alt="Фото нашей работы">
+                    <img src="/img/index/Pic1.png" alt="Фото нашей работы">
+                    <img src="/img/index/Pic1.png" alt="Фото нашей работы">
+                    <img src="/img/index/Pic1.png" alt="Фото нашей работы">
+                    <img src="/img/index/Pic1.png" alt="Фото нашей работы">
+                    <img src="/img/index/Pic1.png" alt="Фото нашей работы">
+                </div>
+                <blockquote class="bg-right">
+                    <p class="quote">Каждый подарок от друга – это пожелание счастья.</p>
+                    <p>Ричард Бах <br><span>Писатель</span></p>
+                </blockquote>
+            </div>
+        </article>
 
-	<div class="loading active">
-		<div class="preloader">
-    		<div class="dank-ass-loader">
-				 <div class="row">
-					<div class="arrow up outer outer-18"></div>
-					 <div class="arrow down outer outer-17"></div>
-					 <div class="arrow up outer outer-16"></div>
-					 <div class="arrow down outer outer-15"></div>
-					 <div class="arrow up outer outer-14"></div>
-				  </div>
-				  <div class="row">
-					 <div class="arrow up outer outer-1"></div>
-					 <div class="arrow down outer outer-2"></div>
-					 <div class="arrow up inner inner-6"></div>
-					 <div class="arrow down inner inner-5"></div>
-					 <div class="arrow up inner inner-4"></div>
-					 <div class="arrow down outer outer-13"></div>
-					 <div class="arrow up outer outer-12"></div>
-				  </div>
-				  <div class="row">
-					 <div class="arrow down outer outer-3"></div>
-					 <div class="arrow up outer outer-4"></div>
-					 <div class="arrow down inner inner-1"></div>
-					 <div class="arrow up inner inner-2"></div>
-					 <div class="arrow down inner inner-3"></div>
-					 <div class="arrow up outer outer-11"></div>
-					 <div class="arrow down outer outer-10"></div>
-				  </div>
-				  <div class="row">
-					 <div class="arrow down outer outer-5"></div>
-					 <div class="arrow up outer outer-6"></div>
-					 <div class="arrow down outer outer-7"></div>
-					 <div class="arrow up outer outer-8"></div>
-					 <div class="arrow down outer outer-9"></div>
-				  </div>
-   			</div>
-    	</div>
-	</div>
+        <article class="block-pack">
+            <h2>Ещё больше красоты!</h2>
+            <p class="block-desk">Мы стараемся уделять максимум внимания каждой детали, в том числе и упаковке</p>
+            <div class="bp-wrapper">
+                <div class="bpw-img">
+                    <img src="/img/index/pack-1.png" alt="Прозрачный пакет">
+                    <p class="bpw-name">Прозрачный пакет</p>
+                </div>
+                <div class="bpw-img">
+                    <img src="/img/index/pack-2.png" alt="Коробка для наборов">
+                    <p class="bpw-name">Коробка для наборов</p>
+                </div>
+                <div class="bpw-img">
+                    <img src="/img/index/pack-3.png" alt="Прозрачный пакет для объемных композиций">
+                    <p class="bpw-name">Прозрачный пакет для объемных композиций</p>
+                </div>
+                <div class="bpw-img">
+                    <img src="/img/index/pack-4.png" alt="Прозрачный пакет с атласной лентой">
+                    <p class="bpw-name">Прозрачный пакет с атласной лентой</p>
+                </div>
+            </div>
+        </article>
 
+        <article class="block-rev">
+            <h2>Наши счастливые клиенты</h2>
+            <p class="block-desk">Ради таких слов мы и работаем, спасибо вам</p>
+            <div class="br-wrapper">
+                <blockquote class="brw-rev">
+                    <h4>Наталья Уханова</h4>
+                    <p class="rev-text">Большое спасибо за красоту! 👩‍🍳👩‍🍳👩‍🍳<br>
+                        Отдельно слова благодарности Анастасии, всегда посоветует, найдет выход, подскажет и сделает красиво!<br>
+                        🤗🤗🤗 Дочка и гости в восторге! 
+                    </p>
+                    <div class="brwr-ui">
+                        <time>17/02/2019</time>
+                        <div class="brwr-ui-like">100</div>
+                    </div>
+                </blockquote>
+                <blockquote class="brw-rev">
+                    <h4>Наталья Уханова</h4>
+                    <p class="rev-text">Большое спасибо за красоту! 👩‍🍳👩‍🍳👩‍🍳<br>
+                        Отдельно слова благодарности Анастасии, всегда посоветует, найдет выход, подскажет и сделает красиво!<br>
+                        🤗🤗🤗 Дочка и гости в восторге! 
+                    </p>
+                    <div class="brwr-ui">
+                        <time>17/02/2019</time>
+                        <div class="brwr-ui-like">100</div>
+                    </div>
+                </blockquote>
+                <blockquote class="brw-rev">
+                    <h4>Наталья Уханова</h4>
+                    <p class="rev-text">Большое спасибо за красоту! 👩‍🍳👩‍🍳👩‍🍳<br>
+                        Отдельно слова благодарности Анастасии, всегда посоветует, найдет выход, подскажет и сделает красиво!<br>
+                        🤗🤗🤗 Дочка и гости в восторге! 
+                    </p>
+                    <div class="brwr-ui">
+                        <time>17/02/2019</time>
+                        <div class="brwr-ui-like">100</div>
+                    </div>
+                </blockquote>
+                <blockquote class="brw-rev">
+                    <h4>Наталья Уханова</h4>
+                    <p class="rev-text">Большое спасибо за красоту! 👩‍🍳👩‍🍳👩‍🍳<br>
+                        Отдельно слова благодарности Анастасии, всегда посоветует, найдет выход, подскажет и сделает красиво!<br>
+                        🤗🤗🤗 Дочка и гости в восторге! 
+                    </p>
+                    <div class="brwr-ui">
+                        <time>17/02/2019</time>
+                        <div class="brwr-ui-like">100</div>
+                    </div>
+                </blockquote>
+            </div>
+            <div class="br-btns">
+                <div class="brb-more">Посмотрите больше отзывов</div>
+                <div class="brb-buy">Или закажите свои пряники</div>
+            </div>
+        </article>
+
+        <article class="block-contacts">
+            <h2>Где нас искать и кто мы</h2>
+            <p class="block-desk">Почему мы любим свою работу и как нас найти</p>
+            <div class="bc-wrapper">
+                <div class="bcw-left">
+                    <p>"Море Пряников" - проект предприятия "Пекарни Круглова", основанного в 1996 году. Занимаясь изготовлением имбирных пряников, мы стараемся объединить 20-летний опыт наших пекарен и современные технологии.​<br><br> Наше производство находится в Нижегородской области, но мы с радостью работаем не только с клиентами из Нижнего Новгорода, но и по всей России.<br><br> Будем рады придумать и изготовить для вас корпоративные подарки или любую другую пряничную продукцию!</p>
+                    <div class="bcw-soc">
+                        <a href="/" target="_blank"></a>
+                        <a href="/" target="_blank"></a>
+                    </div>
+                </div>
+                <div class="bcw-map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A16a92daa44df0688c91578e0ec4fab6cadf9a45291ba2e0a20d38886c117178c&amp;width=706&amp;height=370&amp;lang=ru_RU&amp;scroll=true"></script></div>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <div class="f-wrapper">
+            <div class="f-left">
+                <div class="fl-links">
+                    <h4>Полезное</h4>
+                    <div><a href="/" target="_blank">Главная</a></div>
+                    <div><a href="/" target="_blank">Галерея</a></div>
+                    <div><a href="/" target="_blank">Отзывы</a></div>
+                </div>
+                <div class="fl-links">
+                    <h4>Клиентам</h4>
+                    <div><a href="/" target="_blank">О нас</a></div>
+                    <div><a href="/" target="_blank">Доставка</a></div>
+                    <div><a href="/" target="_blank">Корпоративным клиентам</a></div>
+                </div>
+            </div>
+            <div class="f-right">
+                <div class="fr-btns">
+                    <div class="frb-buy">Оформить заявку</div>
+                    <div class="frb-send">Напишите нам</div>
+                </div>
+                <div class="fr-contacts">
+                    <div class="frc-info">
+                        <a href="tel:89040608038" class="hwr-i-tel">8-904-060-80-38</a>
+                        <a href="mailto:more-pr@mail.ru" class="hwr-i-mail">more-pr@mail.ru</a>
+                    </div>
+                    <div class="frc-soc">
+                        <a href="/" target="_blank"></a>
+                        <a href="/" target="_blank"></a>
+                    </div>
+                </div>
+                <a href="/" target="_blank" title="Главная" class="fr-logo">
+                    <img src="/img/logo.jpg" alt="Логотип Море Пряников">
+                </a>
+            </div>
+        </div>
+        <p class="copyright">© 2019 "Море Пряников"</p>        
+    </footer>
+    
 	<script src="//code.jquery.com/jquery-3.3.1.min.js" defer></script>
 	<script src="/js/main.js" defer></script>
 </body>
-</html> 
+</html>
