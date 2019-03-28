@@ -37,6 +37,12 @@ $(document).ready(()=>{
 	$('.close-btn').on('click', ()=>{
 		$('.pop-up').removeClass('open');
 	});
+
+	// Открыть и закрыть меню в мобильной версии
+	$('.menu-btn').on('click', ()=>{
+		$('.menu-btn').toggleClass('open');
+		$('.mobile-menu').toggleClass('open');
+	});
 });
 
 // Старт слайдера на главной
