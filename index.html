@@ -1,293 +1,485 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Жайлау — База отдыха на северном берегу Капчагая</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/media.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>VIDEOSALON | Производство промороликов, видеосъемка мероприятий в МСК</title>
+    <link rel="stylesheet/less" type="text/css" href="/css/style.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.8.1/less.min.js" ></script>
+    <script src="https://vk.com/js/api/openapi.js?159" type="text/javascript"></script>
 </head>
 <body>
-
-	<header class="header not-fix">
-		<div class="wrapper">
-			<a href="/" class="logo"><img src="/img/logo.png" alt="Логотип Жайлау"></a>
-			<div class="header-wrapper">
-				<nav class="menu">
-					<ul>
-						<li><a href="/" class="link active">Главная</a></li>
-						<li><a href="/rooms" class="link">Номера</a></li>
-						<li><a href="/gallery" class="link">Галерея</a></li>
-						<li><a href="/price" class="link">Прайс</a></li>
-						<li><a href="/rules" class="link">Правила</a></li>
-						<li><a href="/contacts" class="link">Контакты</a></li>
-					</ul>
-				</nav>
-				<div class="menu-btn"><i></i><i></i><i></i></div>
-				<div class="header-tel">
-					<a class="tel" href="tel:87052287808">+7 (705) 228-7808</a>
-					<a class="tel" href="tel:87072444676">+7 (707) 244-4676</a>
-				</div>
-			</div>
-		</div>
-	</header>
-
-	<nav class="mobile-menu not-fix">
-		<ul>
-			<li><a href="/" class="link active">Главная</a></li>
-			<li><a href="/rooms" class="link">Номера</a></li>
-			<li><a href="/gallery" class="link">Галерея</a></li>
-			<li><a href="/price" class="link">Прайс</a></li>
-			<li><a href="/rules" class="link">Правила</a></li>
-			<li><a href="/contacts" class="link">Контакты</a></li>
-		</ul>
-	</nav>
-
-	<main class="wrapper">
-		<div class="first-screen">
-			<div class="background"></div>
-			<div class="inner-wrapper">
-				<div class="prev-text">
-					<h3>Зона семейного отдыха</h3>
-					<p>Одно из самых чистых, зеленых и борудованных мест для купания на Северном побережье Капчагая.<br>Всего 50 метров до пляжа!</p>
-					<div class="buy-btn">Отдохнуть!</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="advantages">
-			<section class="inner-wrapper">
-				<div class="title">
-					<div class="t-shadow">Преимущества</div>
-					<h2>Преимущества</h2>
-				</div>
-				
-				<div class="ad-wrapper">
-					<div class="adw-info">
-						<p class="title-info"><span>01</span>Уютные номера</p>
-						<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper augue vel hendrerit congue. Integer ac dui ante.</p>
-					</div>
-					<div class="adw-info">
-						<p class="title-info"><span>02</span>Близкий пляж</p>
-						<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper augue vel hendrerit congue. Integer ac dui ante.</p>
-					</div>
-					<div class="adw-info">
-						<p class="title-info"><span>03</span>Чисто и комфортно</p>
-						<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper augue vel hendrerit congue. Integer ac dui ante.</p>
-					</div>
-					<div class="adw-info">
-						<p class="title-info"><span>04</span>Тихо и спокойно</p>
-						<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper augue vel hendrerit congue. Integer ac dui ante.</p>
-					</div>
-					<div class="adw-info">
-						<p class="title-info"><span>05</span>Душевный простор</p>
-						<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper augue vel hendrerit congue. Integer ac dui ante.</p>
-					</div>
-				</div>
-			</section>
-		</div>
-
-		<div class="about">
-			<section class="inner-wrapper">
-				<div class="title">
-					<div class="t-shadow">Отдых с нами</div>
-					<h2>Отдых с нами</h2>
-				</div>
-				<div class="a-wrapper">
-					<div class="card">
-						<img src="/img/1.jpg" alt="Домик">
-						<div class="desk">
-							<p>Просторная территория площадью около 1 Га утопает в зелени почти 200 деревьев! Повсюду есть лавочки, беседки, качели.</p>
-						</div>
-					</div>
-					<div class="card">
-						<img src="/img/2.jpg" alt="Домик">
-						<div class="desk">
-							<p>У нас 4 бассейна: два взрослых, один детский и один надувной лягушатник. Мы гарантируем их чистоту и качество воды – наши собственные дети тоже в них купаются! Шезлонги - бесплатно. Зонтики можно взять в аренду. В аренду можно также взять плавательные принадлежности для детей (круги, надувные матрацы, нарукавники).</p>
-						</div>
-					</div>
-					<div class="card">
-						<img src="/img/3.jpg" alt="Домик">
-						<div class="desk">
-							<p>Наше постельное белье всегда чистое - на него можно без опаски класть ребенка, а кровати с новыми матрацами и подушками удобные и ровные - их можно сдвинуть и разместить детей до 7 лет бесплатно. Мы выдаем летние одеяла!</p>
-						</div>
-					</div>
-					<div class="card">
-						<img src="/img/4.jpg" alt="Домик">
-						<div class="desk">
-							<p>Мы любим детей и поэтому делаем все, чтобы родителям с детьми было у нас комфортно. Мы установили несколько игровых площадок: для малышей и ребят постарше.</p>
-						</div>
-					</div>
-					<div class="card">
-						<img src="/img/5.jpg" alt="Домик">
-						<div class="desk">
-							<p>У нас тихо и спокойно, негромкая фоновая музыка звучит до 22.00. Бассейн работает до 23.00. Распитие спиртных напитков в бассейне запрещается. Мы не приветствуем шумные компании – наша зона отдыха для детей и их родителей.</p>
-						</div>
-					</div>
-					<div class="card">
-						<img src="/img/6.jpg" alt="Домик">
-						<div class="desk">
-							<p>Для взрослых - бадминтон, настольный теннис, домино, баскетбольное кольцо. А если все же захочется праздника – рядом множество кафе и летних площадок, где можно вдоволь повеселиться и потанцевать.</p>
-						</div>
-					</div>
-				</div>
-			</section>
-		</div>
-
-		<div class="add">
-			<section class="inner-wrapper">
-				<div class="title">
-					<div class="t-shadow">Дополнительно</div>
-					<h2>Дополнительно</h2>
-				</div>
-				<div class="a-wrapper">
-					<p class="info">Дополнительные детские кровати и спальные места в номерах предоставляются за отдельную плату.</p>
-					<p class="info">Вы можете приготовить для себя еду на летней кухне: есть раковина, газовые плиты, холодильник, микроволновка. Посуда предоставляется бесплатно.</p>
-					<p class="info">Также можно арендовать мангал, коктальницу, казан. Дрова можно не везти – они есть у нас.</p>
-					<p class="info green">Всегда в наличии – холодные прохладительные напитки, пиво, питьевая вода.</p>
-					<p class="info green">Свежая рыба для коктала – по запросу. Или поймайте сами - мы предоставим в аренду снасти и наживку.</p>
-				</div>
-			</section>
-		</div>
-
-		<div class="gallery">
-			<section class="inner-wrapper">
-				<div class="title">
-					<div class="t-shadow">Галерея</div>
-					<h2>Галерея</h2>
-				</div>
-				
-				<div class="g-wrapper">
-					<div class="slider">
-						<div class="slides">
-							<img src="/img/gallery/1.jpg" class="slide active">
-							<img src="/img/gallery/2.jpg" class="slide">
-							<img src="/img/gallery/3.jpg" class="slide">
-							<img src="/img/gallery/4.jpg" class="slide">
-							<img src="/img/gallery/5.jpg" class="slide">
-						</div>
-						<div class="slides-ui">
-							<div class="ui-btn active"></div>
-							<div class="ui-btn"></div>
-							<div class="ui-btn"></div>
-							<div class="ui-btn"></div>
-							<div class="ui-btn"></div>
-						</div>
-					</div>
-					<a href="/gallery" class="to-gallery-link" title="Галерея">Посмотреть все фотографии</a>
-				</div>
-			</section>
-		</div>
-
-		<div class="contacts">
-			<section class="inner-wrapper">
-				<div class="title">
-					<div class="t-shadow">Контакты</div>
-					<h2>Контакты</h2>
-				</div>
-
-				<div class="c-wrapper">
-					<div class="info">
-						<div class="i-wr">
-							<h4>Телефон</h4>
-							<a href="tel:87052287808" class="i-link">+7 (705) 228-7808</a>
-							<a href="tel:87072444676" class="i-link">+7 (707) 244-4676</a>
-						</div>
-						<div class="i-wr">
-							<h4>Email</h4>
-							<a href="mailto:mail@mail.ru" class="i-link">mail@mail.ru</a>
-						</div>
-						<div class="i-wr">
-							<h4>Адрес</h4>
-							<p>Северное побережье<br>Капшагайского водохранилища</p>
-						</div>
-					</div>
-					<div class="form">
-						<h4>Напишите нам</h4>
-						<div class="input-wrapper">
-							<input class="f-name" type="text" name="name" required>
-							<label>Ваше имя</label>
-						</div>
-						<div class="input-wrapper">
-							<input class="f-email" type="text" name="email" required>
-							<label>Ваша почта</label>
-						</div>
-						<div class="input-wrapper-text">
-							<textarea class="f-msg" required></textarea>
-							<label>Ваше сообщение</label>
-						</div>
-						<div class="send-btn">Отправить</div>
-					</div>
-				</div>
-			</section>
-		</div>
-	</main>
-
-	<footer class="footer">
-		<div class="footer-wrapper">
-			<div class="f-inner-wrapper">
-				<div class="fiw-info">
-					<h5>Наши контакты</h5>
-					<div class="fiw-w">
-						<a href="tel:">+7 (705) 228-7808</a>
-						<a href="tel:">+7 (705) 228-7808</a>
-					</div>
-					<div class="fiw-w">
-						<a href="tel:">mail@mail.ru</a>
-					</div>
-					<div class="fiw-w">
-						<p>Северное побережье<br>Капшагайского водохранилища</p>
-					</div>
-					<div class="fiw-w">
-						<a href="/" class="soc-btn">
-							<img src="/img/instagram.svg">
-						</a>
-					</div>
-				</div>
-				<div class="fiw-links">
-					<div class="fiwl-left">
-						<h5>Гостям</h5>
-						<a href="/">Главная</a>
-						<a href="/rooms">Номера</a>
-						<a href="/gallery">Галерея</a>
-					</div>
-					<div class="fiwl-left">
-						<h5>Полезное</h5>
-						<a href="/price">Прайс</a>
-						<a href="/rules">Правила</a>
-						<a href="/contacts">Контакты</a>
-					</div>
-				</div>
-				<div class="fiw-logo">
-					<a href="/"><img src="/img/logo.png" alt="Логотип"></a>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-				</div>
-			</div>
-		</div>
-		<div class="copyright">База отдыха Жайлау © 2018 - 2019</div>
-	</footer>
-
-	<div class="pop-up">
-		<div class="pp-wrapper">
-			<h3>Оставьте заявку</h3>
-			<p>Оставьте ваши контакты и мы перезвоним в ближайшее время.</p>
-			<div class="form">
-				<div class="input-wrapper">
-					<input class="fp-name" type="text" name="name" required>
-					<label>Ваше имя</label>
-				</div>
-				<div class="input-wrapper">
-					<input class="fp-tel" type="text" name="tel" required>
-					<label>Ваш телефон</label>
-				</div>
-				<div class="fp-send-btn">Отправить</div>
-			</div>
-			<div class="close-btn"><i></i><i></i></div>
-		</div>
-	</div>
-
-	<script src="//code.jquery.com/jquery-3.3.1.min.js" defer></script>
-	<script src="/js/main.js" defer></script>
-	<script src="/js/menu.js" defer></script>
+    
+    <div class="wrapper">
+        
+        <div class="main-page">
+            <div class="main-page-bluebg"></div>
+            <div class="main-page-slider">
+                <div class="main-page-slides">
+                    <div class="main-page-s-slide active" data-word="Счастье" data-num="01">
+                        <video class="video" width="100%" height="100%" autoplay loop poster="/video/poster.webp">
+                            <source src="/video/file.mp4" type="video/mp4">
+                        </video>
+                        <div class="main-page-s-shadow"></div>
+                    </div>
+                    <div class="main-page-s-slide ready" data-word="Радость" data-num="02">
+                        <video class="video" width="100%" height="100%" autoplay loop poster="/video/poster.webp">
+                            <source src="/video/file.mp4" type="video/mp4">
+                        </video>
+                        <div class="main-page-s-shadow"></div>
+                    </div>
+                    <div class="main-page-s-slide" data-word="Красота" data-num="03">
+                        <video class="video" width="100%" height="100%" autoplay loop poster="/video/poster.webp">
+                            <source src="/video/file.mp4" type="video/mp4">
+                        </video>
+                        <div class="main-page-s-shadow"></div>
+                    </div>
+                </div>
+                <div class="main-page-s-words">
+                    <div class="main-page-sw-current">01</div>
+                    <div class="main-page-sw-word">
+                       <hr noshade>
+                       <span>Счастье</span>
+                    </div>
+                    <div class="main-page-sw-all">/03</div>
+                </div>
+                <div class="main-page-ui">
+                    <span class="main-page-s">Назад</span>
+                    <div></div>
+                    <span class="main-page-s">Вперед</span>
+                </div>
+            </div>
+            <div class="main-page-soc">
+                <a href="https://www.youtube.com/user/VideoSalonStudio" class="main-page-s-btn"></a>
+                <a href="https://www.instagram.com/videosalon.info/" class="main-page-s-btn"></a>
+            </div>
+            <div class="main-page-slogan">
+                <div class="main-page-s-top">
+                    <div class="main-page-st-icon"></div>
+                    <div class="main-page-st-slogan">Мы создаем хорошее видео</div>
+                </div>
+                <div class="main-page-s-words">
+                    <p class="main-page-sw-w active">Уникально</p>
+                    <p class="main-page-sw-w">Креативно</p>
+                    <p class="main-page-sw-w">Творчески</p>
+                    <p class="main-page-sw-w">Оригинально</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="services">
+            <a href="/wedding" class="services-block" style="background-image: url('/img/main/poster.webp');">
+                <div class="services-b-shadow"></div>
+                <div class="services-b-label">
+                   <div class="services-bl-wrapper">
+                       <div class="services-blw-bg">
+                           <p class="services-blw-info">Более подробная информация</p>
+                       </div>
+                       <div class="services-blw-bg_name">
+                          <p class="services-blw-name">Свадьбы</p>
+                       </div>
+                   </div>
+                </div>
+            </a>
+            <a href="/online" class="services-block" style="background-image: url('/img/main/online.webp');">
+                <div class="services-b-shadow"></div>
+                <div class="services-b-label">
+                   <div class="services-bl-wrapper">
+                      <div class="services-blw-bg">
+                          <p class="services-blw-info">Более подробная информация</p>
+                      </div>
+                      <div class="services-blw-bg_name">
+                          <p class="services-blw-name">Онлайн<br>трансляции</p>
+                      </div>
+                   </div>
+                </div>
+            </a>
+            <a href="/event" class="services-block" style="background-image: url('/img/main/promo.webp');">
+                <div class="services-b-shadow"></div>
+                <div class="services-b-label">
+                   <div class="services-bl-wrapper">
+                      <div class="services-blw-bg">
+                          <p class="services-blw-info">Более подробная информация</p>
+                      </div>
+                      <div class="services-blw-bg_name">
+                          <p class="services-blw-name">Ивенты</p>
+                      </div>
+                   </div>
+                </div>
+            </a>
+            <a href="/school" class="services-block" style="background-image: url('/img/main/child.webp');">
+                <div class="services-b-shadow"></div>
+                <div class="services-b-label">
+                   <div class="services-bl-wrapper">
+                      <div class="services-blw-bg">
+                          <p class="services-blw-info">Более подробная информация</p>
+                      </div>
+                      <div class="services-blw-bg_name">
+                          <p class="services-blw-name">Школы<br>Дет. сады</p>
+                      </div>
+                   </div>
+                </div>
+            </a>
+        </div>
+        
+        <section class="adv">
+            <div class="adv-block">
+               <div class="colorNameBlock">
+                   <div class="cnb-bg"></div>
+                   <div class="cnb-icon" style="background-image: url('/img/icons/support.svg');"></div>
+                   <div class="cnb-text">Мы команда, и для нас нет невыполнимых задач</div>
+                </div>
+            </div>
+            <div class="adv-block">
+                <div class="colorNameBlock">
+                    <div class="cnb-bg"></div>
+                    <div class="cnb-icon" style="background-image: url('/img/icons/bar-chart.svg');"></div>
+                    <div class="cnb-text">Работаем на профессиональном уровне с 2011 года</div>
+                </div>
+                <a href="/" class="adv-logo"></a>
+                <div class="colorNameBlock">
+                    <div class="cnb-bg"></div>
+                    <div class="cnb-icon" style="background-image: url('/img/icons/smile.svg');"></div>
+                    <div class="cnb-text">Высокий уровень обслуживания</div>
+                </div>
+            </div>
+            <div class="adv-block">
+                <div class="colorNameBlock">
+                    <div class="cnb-bg"></div>
+                    <div class="cnb-icon" style="background-image: url('/img/icons/tag.svg');"></div>
+                    <div class="cnb-text">Адекватные цены</div>
+                </div>
+                <div class="colorNameBlock">
+                    <div class="cnb-bg"></div>
+                    <div class="cnb-icon" style="background-image: url('/img/icons/settings.svg');"></div>
+                    <div class="cnb-text">Современное оборудование</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="step">
+            <h2 class="name-block">Этапы создания или как мы работаем</h2>
+            <div class="step-wrapper">
+                <div class="step-left">
+                    <div class="step-block">
+                        <h3 class="step-b-label">
+                            <hr noshade>
+                            <p>Этап 1</p>
+                        </h3>
+                        <p class="step-b-text">Текст</p>
+                    </div>
+                    <div class="step-block">
+                        <h3 class="step-b-label">
+                            <hr noshade>
+                            <p>Этап 2</p>
+                        </h3>
+                        <p class="step-b-text">Текст</p>
+                    </div>
+                    <div class="step-block">
+                        <h3 class="step-b-label">
+                            <hr noshade>
+                            <p>Этап 3</p>
+                        </h3>
+                        <p class="step-b-text">Текст</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="partners">
+            <h2 class="name-block">Наши клиенты</h2>
+            <div class="main-about-partner">
+                <div class="main-about-partner-left"></div>
+                <div class="main-about-partner-center-wrapper">
+                    <div class="main-about-partner-center">
+                        <div class="main-about-partner-center-logo"></div>
+                        <div class="main-about-partner-center-logo"></div>
+                        <div class="main-about-partner-center-logo"></div>
+                        <div class="main-about-partner-center-logo"></div>
+                        <div class="main-about-partner-center-logo"></div>
+                        <div class="main-about-partner-center-logo"></div>
+                        <div class="main-about-partner-center-logo"></div>
+                        <div class="main-about-partner-center-logo"></div>
+                        <div class="main-about-partner-center-logo"></div>
+                    </div>
+                </div>
+                <div class="main-about-partner-right"></div>
+            </div>
+        </section>
+        
+        <section class="reviews">
+            <h2 class="name-block">Отзывы наших клиентов</h2>
+            <div class="reviews-wrapper">
+                <div class="reviews-w">
+                    <div class="reviews-w-block active">
+                        <div class="reviews-wb-design"></div>
+                        <div class="reviews-wb-video">
+                            <video class="video" width="100%" height="100%" loop controls>
+                                <source src="/video/file.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="reviews-wb-text">Кто оставил отзыв</div>
+                        <div class="reviews-wb-ui">
+                            <div class="reviews-wbu-date">
+                                <span>01.01.2018</span>
+                            </div>
+                            <div class="reviews-wbu-city">
+                                <span>Москва</span>
+                            </div>
+                        </div>
+                        <div class="reviews-wb-btn"></div>
+                    </div>
+                    <div class="reviews-w-block left">
+                        <div class="reviews-wb-design"></div>
+                        <div class="reviews-wb-video">
+                            <video class="video" width="100%" height="100%" loop controls>
+                                <source src="/video/file.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="reviews-wb-text">Кто оставил отзыв</div>
+                        <div class="reviews-wb-ui">
+                            <div class="reviews-wbu-date">
+                                <span>01.01.2018</span>
+                            </div>
+                            <div class="reviews-wbu-city">
+                                <span>Москва</span>
+                            </div>
+                        </div>
+                        <div class="reviews-wb-btn"></div>
+                    </div>
+                    <div class="reviews-w-block right">
+                        <div class="reviews-wb-design"></div>
+                        <div class="reviews-wb-video">
+                            <video class="video" width="100%" height="100%" loop controls>
+                                <source src="/video/file.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="reviews-wb-text">Кто оставил отзыв</div>
+                        <div class="reviews-wb-ui">
+                            <div class="reviews-wbu-date">
+                                <span>01.01.2018</span>
+                            </div>
+                            <div class="reviews-wbu-city">
+                                <span>Москва</span>
+                            </div>
+                        </div>
+                        <div class="reviews-wb-btn"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-slides">
+                <div class="uis-left uis-left-l"></div>
+                <div class="uis-center">
+                    <div class="uis-tap active"></div>
+                    <div class="uis-tap"></div>
+                    <div class="uis-tap"></div>
+                </div>
+                <div class="uis-right uis-left-r"></div>
+            </div>
+        </section>
+        
+        <section class="social">
+            <h2 class="name-block">Подписывайтесь на нас</h2>
+            <div class="social-wrapper">
+                <div class="social-w-block">
+                    <!-- VK Widget -->
+                    <div id="vk_groups"></div>
+                    <script type="text/javascript">
+                    VK.Widgets.Group("vk_groups", {mode: 4, wide: 2, height: "550"}, 61331456);
+                    </script>
+                </div>
+                <div class="social-w-block">
+                    <!-- InstaWidget  -->
+                    <a href="https://instawidget.net/v/user/videosalon.info" id="link-7f8bba4b8524ba17f8c2d6a7b908d69389e511c2fc397e2278d48adfdb35c0b3">@videosalon.info</a>
+                    <script src="https://instawidget.net/js/instawidget.js?u=7f8bba4b8524ba17f8c2d6a7b908d69389e511c2fc397e2278d48adfdb35c0b3&width=400px"></script>
+                </div>
+            </div>
+        </section>
+        
+        <section class="team">
+            <h2 class="name-block">Наша команда</h2>
+<!--            <div class="team-img"></div>-->
+           <img src="/img/team/img.jpg" alt="" width="100%">
+        </section>
+        
+        <section class="contacts">
+            <h2 class="name-block">Наши контакты</h2>
+            <div class="contacts-map">
+            </div>
+            <div class="contacts-wrapper">
+                <div class="contacts-w-design"></div>
+                <div class="contacts-w-info">
+                    <p class="contacts-wi-info">Москва<br>Просвирин переулок<br> д. 13, оф. 12</p>
+                    <p class="contacts-wi-info"><a href="tel:84951758973">+7 (495) 175-8973</a></p>
+                    <p class="contacts-wi-info"><a href="mailto:video-salon@mail.ru">video-salon@mail.ru</a></p>
+                </div>
+                <div class="contacts-w-form">
+                    <div class="contacts-wf-label">
+                        <hr noshade>
+                        <p>Напишите нам</p>
+                    </div>
+                    <input type="text" class="contacts-wf-name" placeholder="Ваше имя*">
+                    <input type="text" class="contacts-wf-email" placeholder="Ваш e-mail*">
+                    <textarea class="contacts-wf-text" placeholder="Введите Ваше сообщение..."></textarea>
+                    <div class="contacts-wf-status"></div>
+                    <div class="contacts-wf-send">Отправить</div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    
+    <footer class="footer-main">
+        <div class="footer-main-top">
+            <div class="footer-main-t-links">
+                <div class="footer-main-tl-label">Важные ссылки</div>
+                <a href="/" class="footer-main-tl-link">Главная</a>
+                <a href="/wedding" class="footer-main-tl-link">Свадебные съемки</a>
+                <a href="/online" class="footer-main-tl-link">Онлайн трансдяции</a>
+                <a href="/event" class="footer-main-tl-link">Ивенты</a>
+                <a href="/school" class="footer-main-tl-link">Школы и детские сады</a>
+            </div>
+            <div class="footer-main-t-right">
+                <div class="footer-main-bw-soc">
+                    <a href="https://www.youtube.com/user/VideoSalonStudio" class="footer-main-bws-btn" style="background-image: url('/img/soc/yt-icon-w.png');" target="_blank"></a>
+                    <a href="https://www.instagram.com/videosalon.info/" class="footer-main-bws-btn" style="background-image: url('/img/soc/in-icon-w.png');" target="_blank"></a>
+                    <a href="https://vk.com/st.videosalon" class="footer-main-bws-btn" style="background-image: url('/img/soc/vk-icon-w.png');" target="_blank"></a>
+                    <a href="https://www.facebook.com/videosalonpro" class="footer-main-bws-btn" style="background-image: url('/img/soc/fb-icon-w.png');" target="_blank"></a>
+                </div>
+                <div class="footer-main-t-order-btn" data-from="main">Закажите прямо сейчас</div>
+            </div>
+        </div>
+        <div class="footer-main-bottom">
+            <a href="/" class="footer-main-b-logo"></a>
+            <div class="footer-main-copyright">2011 - 2018</div>
+            <div class="footer-main-b-text">
+                Мы создаем хорошее видео
+            </div>
+            <div class="footer-main-b-wrapper">
+                <div class="footer-main-bw-contact">
+                    Мы делаем хорошее видео
+                </div>
+            </div>
+            
+        </div>
+        <div class="footer-main-copyright">2011 - 2018</div>
+    </footer>
+    
+    <div class="menu">
+        <div class="menu-wrapper">
+            <a href="/wedding" class="menu-block" style="background-image: url('/img/main/poster.webp');">
+                <div class="menu-b-shadow"></div>
+                <div class="menu-b-label">
+                   <div class="menu-bl-wrapper">
+                       <div class="menu-blw-bg">
+                           <p class="menu-blw-info">Более подробная информация</p>
+                       </div>
+                       <div class="menu-blw-bg_name">
+                          <p class="menu-blw-name">Свадьбы</p>
+                       </div>
+                   </div>
+                </div>
+            </a>
+            <a href="/online" class="menu-block" style="background-image: url('/img/main/online.webp');">
+                <div class="menu-b-shadow"></div>
+                <div class="menu-b-label">
+                   <div class="menu-bl-wrapper">
+                      <div class="menu-blw-bg">
+                          <p class="menu-blw-info">Более подробная информация</p>
+                      </div>
+                      <div class="menu-blw-bg_name">
+                          <p class="menu-blw-name">Онлайн<br>трансляции</p>
+                      </div>
+                   </div>
+                </div>
+            </a>
+            <a href="/event" class="menu-block" style="background-image: url('/img/main/promo.webp');">
+                <div class="menu-b-shadow"></div>
+                <div class="menu-b-label">
+                   <div class="menu-bl-wrapper">
+                      <div class="menu-blw-bg">
+                          <p class="menu-blw-info">Более подробная информация</p>
+                      </div>
+                      <div class="menu-blw-bg_name">
+                          <p class="menu-blw-name">Ивенты</p>
+                      </div>
+                   </div>
+                </div>
+            </a>
+            <a href="/school" class="menu-block" style="background-image: url('/img/main/child.webp');">
+                <div class="menu-b-shadow"></div>
+                <div class="menu-b-label">
+                   <div class="menu-bl-wrapper">
+                      <div class="menu-blw-bg">
+                          <p class="menu-blw-info">Более подробная информация</p>
+                      </div>
+                      <div class="menu-blw-bg_name">
+                          <p class="menu-blw-name">Школы<br>Дет. сады</p>
+                      </div>
+                   </div>
+                </div>
+            </a>
+        </div>
+        <div class="menu-block-bottom">
+            <div class="menu-bb-wrapper">
+                <div class="menu-bbw-soc">
+                    <a href="/" class="menu-bbws-btn"></a>
+                    <a href="/" class="menu-bbws-btn"></a>
+                </div>
+                <a href="/" class="menu-bbw-main">Вернуться на главную</a>
+            </div>
+        </div>
+    </div>
+    
+    <aside class="menu-line">
+        <a href="/" class="menu-l-logo"></a>
+        <div class="menu-ll-soc">
+            <a href="https://www.youtube.com/user/VideoSalonStudio" class="menu-lls-btn" style="background-image: url('/img/soc/yt-icon-w.png');" target="_blank"></a>
+            <a href="https://www.instagram.com/videosalon.info/" class="menu-lls-btn" style="background-image: url('/img/soc/in-icon-w.png');" target="_blank"></a>
+            <a href="https://vk.com/st.videosalon" class="menu-lls-btn" style="background-image: url('/img/soc/vk-icon-w.png');" target="_blank"></a>
+            <a href="https://www.facebook.com/videosalonpro" class="menu-lls-btn" style="background-image: url('/img/soc/fb-icon-w.png');" target="_blank"></a>
+        </div>
+        <div class="menu-l-menu-btn">
+            <div class="menu-lmb-wrapper">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+            <p class="menu-lmb-label">Меню</p>
+        </div>
+        <div class="menu-l-soc">
+            <a href="https://www.youtube.com/user/VideoSalonStudio" class="menu-ls-btn" style="background-image: url('/img/soc/yt-icon-w.png');" target="_blank"></a>
+            <a href="https://www.instagram.com/videosalon.info/" class="menu-ls-btn" style="background-image: url('/img/soc/in-icon-w.png');" target="_blank"></a>
+            <a href="https://vk.com/st.videosalon" class="menu-ls-btn" style="background-image: url('/img/soc/vk-icon-w.png');" target="_blank"></a>
+            <a href="https://www.facebook.com/videosalonpro" class="menu-ls-btn" style="background-image: url('/img/soc/fb-icon-w.png');" target="_blank"></a>
+        </div>
+        <div class="menu-l-tel">
+            <a href="tel:84951758973">+7 (495) 175-8973</a>
+            <a href="mailto:video-salon@mail.ru" class="menu-lt-mail">video-salon<br>@mail.ru</a>
+        </div>
+    </aside>
+    
+    <div class="order">
+        <div class="order-wrapper" data-from="main">
+            <div class="order-w-close">x</div>
+            <div class="order-w-label">Оставьте заявку</div>
+            <div class="order-w-desk">Мы свяжемся с Вами в ближайшее время</div>
+            <input type="text" class="order-w-name" placeholder="Ваше имя*">
+            <input type="tel" class="order-w-tel" placeholder="Ваш телефон*">
+            <div class="order-w-status"></div>
+            <input type="button" class="order-w-send" value="Отправить">
+        </div>
+    </div>
+    
+        <!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = 'G7yn9xCs7F';var d=document;var w=window;function l(){var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- {/literal} END JIVOSITE CODE -->
+    
 </body>
-</html> 
+<script src="//code.jquery.com/jquery-3.3.1.min.js" defer></script>
+<script src="/js/miniSlider.js" defer></script>
+<script src="/js/main.js" defer></script>
+<script src="/js/ws-connect.js" defer></script>
+</html>
