@@ -1,0 +1,136 @@
+<!DOCTYPE html> 
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="body">
+
+    <header class="header">
+        <div class="header__top">
+            <a href="#"><img src="./img/logo2.png" alt="Логотип Win&Win Casino" class="logo"></a>
+            <div class="header__top-contact">
+                <a href="mailto:mail@mail.ru" class="link link--margin-right">mail@mail.ru</a>
+                <a href="tel:+71234567890" class="link">+7 (123) 456-78-90</a>
+            </div>
+            <div class="menu_mob">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+        <nav class="header__bottom">
+            <a href="#" class="nav__link active">Главная</a>
+            <a href="#" class="nav__link">Описание</a>
+            <a href="#" class="nav__link">Подключение</a>
+            <a href="#" class="nav__link">Пополнение (Q-Pay)</a>
+            <a href="#" class="nav__link">Игры Win-Win</a>
+            <a href="#" class="nav__link">Скачать демо-версию</a>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <section class="block block__firstscreen">
+            <div class="block__wrapper">
+                <div class="canvas">
+                    <img src="./img/LowLayer.png" alt="" class="canvas__img canvas__img-low">
+                    <img src="./img/Roulet.png" alt="" class="canvas__img canvas__img-roulet">
+                    <img src="./img/MiddleLayer.png" alt="" class="canvas__img canvas__img-middle">
+                    <img src="./img/MiddleTopLayer.png" alt="" class="canvas__img canvas__img-middle_top">
+                    <img src="./img/HighLayer.png" alt="" class="canvas__img canvas__img-high">
+                </div>
+                <h1 class="title title--main title--firstscreen">Win&Win Casino - система для игорного интерактивного клуба</h1>
+                <p class="block__firstscreen_desk">Вин Вин – разработка израильских программистов: благодаря регулярным обновлениям и использованию передовых технологий, софт поддерживает интерес гемблеров к игровым слотам на постоянной основе.</p>
+                <form action="" class="form form__firstscreen">
+                    <h3 class="title title--h3 form__title">Скачайте <span class="title__span--semibold">демо-версию</span> системы</h3>
+                    <p class="form__desk">И получить 25 000 кредитов в подарок</p>
+
+                    <div class="form__checkbox-wrapper">
+                        <div class="form__checkbox">
+                            <input type="radio" value="club" name="type" class="input__checkbox" id="firstscreen__checkbox_club" checked>
+                            <label for="firstscreen__checkbox_club">Для клуба</label>
+                        </div>
+                        <div class="form__checkbox">
+                            <input type="radio" value="home" name="type" class="input__checkbox" id="firstscreen__checkbox_home">
+                            <label for="firstscreen__checkbox_home">Для дома</label>
+                        </div>
+                    </div>
+
+                    <div class="form__input-wrapper">
+                        <input type="text" class="form__input" name="name" placeholder="&nbsp;">
+                        <label>Имя</label>
+                    </div>
+
+                    <div class="form__input-wrapper">
+                        <input type="tel" class="form__input" name="tel" placeholder="&nbsp;">
+                        <label>Номер телефона</label>
+                    </div>
+
+                    <button class="btn btn__form btn--margin-top" type="submit">Скачать</button>
+
+                    <p class="form__politic form__politic--margin">Ваши  персональные данные полностью защищены</p>
+                    
+                </form>
+            </div>
+            
+        </section>
+
+        <section class="block">
+            <div class="block__wrapper block__pluses">
+                <div class="card card__wrapper">
+                    <img src="./img/card_1.png" class="card__img" alt="">
+                    <h4 class="title card__title">Собственная форма пополнения</h4>
+                    <p class="card__desk">Время зачисления средств на счет системы - 3 минуты!</p>
+                </div>
+                <div class="card card__wrapper">
+                    <img src="./img/card_2.png" class="card__img" alt="">
+                    <h4 class="title card__title">Более 20 способов оплаты</h4>
+                    <p class="card__desk">От терминалов Связного или карт Visa&MasterCard, Приват24 до криптовалют</p>
+                </div>
+                <div class="card card__wrapper">
+                    <img src="./img/card_5.png" class="card__img" alt="">
+                    <h4 class="title card__title">Личный менеджер</h4>
+                    <p class="card__desk">Поддержка 24 часа в сутки и 7 дней в неделю</p>
+                </div>
+                <div class="card card__wrapper">
+                    <img src="./img/card_3.png" class="card__img" alt="">
+                    <h4 class="title card__title">Самая гибкая система</h4>
+                    <p class="card__desk">3 настраиваемых джекпота, регулируемый кешбек до 35%, прибыль до 99%</p>
+                </div>
+                <div class="card card__wrapper">
+                    <img src="./img/card_4.png" class="card__img" alt="">
+                    <h4 class="title card__title">Демоверсия +25000 кредитов</h4>
+                    <p class="card__desk">Тест системы на собственном зале на 25 000 кредитов без потерь!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="block">
+            <div class="block__wrapper block__wrapper--width block__wrapper--margin block__wrapper--padding">
+                <h3 class="title title--h3 block__order-title">Закажите обратный звонок, заполнив форму, и мы с удовольствием расскажем Вам все подробности!</h3>
+                <form action="" class="form form__order">
+                    <div class="form__input-wrapper form__input-wrapper--width form__input-wrapper--margin-b">
+                        <input type="text" class="form__input" name="name" placeholder="&nbsp;">
+                        <label>Имя</label>
+                    </div>
+
+                    <div class="form__input-wrapper form__input-wrapper--width form__input-wrapper--margin-b">
+                        <input type="tel" class="form__input" name="tel" placeholder="&nbsp;">
+                        <label>Номер телефона</label>
+                    </div>
+
+                    <button class="btn btn__form" type="submit">Заказать</button>
+                </form>
+                <p class="form__politic form__politic--margin form__politic--width">Ваши  персональные данные полностью защищены</p>
+            </div>
+        </section>
+    </main>
+    
+    <script src="./js/main.js" defer></script>
+    <script src="./js/parallax.js" defer></script>
+</body>
+</html>
