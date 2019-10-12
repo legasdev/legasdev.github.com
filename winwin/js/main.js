@@ -12,5 +12,16 @@
             header.classList.remove('fix');
         }
     });
+
+    const menuMob = document.querySelector('.menu_mob');
+
+    menuMob.addEventListener('touchend', e => {
+        e.preventDefault();
+        e.target.click();
+    }, false);
+
+    menuMob.addEventListener('click', e => {
+        e.currentTarget.classList.toggle('active');        
+    }, false);
     
 })();
