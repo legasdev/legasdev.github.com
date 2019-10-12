@@ -21,7 +21,8 @@
     }, false);
 
     menuMob.addEventListener('click', e => {
-        e.currentTarget.classList.toggle('active');        
+        e.currentTarget.classList.toggle('active');
+        document.querySelector('.header__bottom').classList.toggle('active');     
     }, false);
     
 })();
