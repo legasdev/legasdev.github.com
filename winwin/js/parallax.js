@@ -1,31 +1,27 @@
 ;(function () {
     'use strict';
 
-    if (window.innerHeight > 1270) {
-        const 
-            canvas__img = document.querySelectorAll('.canvas__img'),
-            screen = document.querySelector('.block__firstscreen'),
-            speed = [0.1, 0.05, 0.2, 0.3, 0.4];
+    const 
+        canvas__img = document.querySelectorAll('.canvas__img'),
+        screen = document.querySelector('.block__firstscreen'),
+        speed = [0.1, 0.05, 0.2, 0.3, 0.4];
+    
+    let firstX = -1;
+    screen.addEventListener('mousemove', e => {
         
-        let firstX = -1;
-
-        screen.addEventListener('mousemove', e => {
-
+        if (window.innerWidth > 1000) {
             if (firstX <= 0) {firstX = e.screenX};
             
             const deltaX = e.screenX - firstX;
-
             canvas__img.forEach( (item, i) => {
-
                 const
                     style = getComputedStyle(item),
                     transform = style.transform || style.webkitTransform || style.mozTransform || style.msTransform,
                     posX = +transform.split(', ')[4];
-
                 item.style.transform = `matrix(1, 0, 0, 1, ${deltaX * speed[i] * 0.1}, 0)`;
             });
-        });
-    }
+        }
+    });
     
     function getTranslate(item) {
         var transArr = [];
