@@ -21,6 +21,10 @@ textarea {resize:horizontal;}
 	@media screen and (max-width: @width) { @rules(); };
 }
 
+.landscape( @width; @rules ) {
+	@media screen and (orientation: landscape) and (max-width: @width) { @rules(); };
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -119,6 +123,10 @@ textarea {resize:horizontal;}
         & .nav__link {
             padding: 10px 5px;
         }
+
+        & .header__bottom {
+            box-shadow: unset;
+        }
     }
 }
 
@@ -163,6 +171,8 @@ textarea {resize:horizontal;}
         flex-wrap: wrap;
         justify-content: space-evenly;
         background-color: var(--backgroundColor);
+        box-shadow: 0 3px 16px rgba(0,0,0,.1);
+        padding-bottom: 15px;
         height: 0;
         opacity: 0;
         visibility: hidden;
@@ -675,6 +685,18 @@ textarea {resize:horizontal;}
     top: 197px;
     width: 100vw;
     height: 100vh;
+
+    .adaptive( @TABLET_SCREEN; {
+        top: 137px;
+    });
+
+    .adaptive(@TABLET_MEDIUM_SCREEN, {
+        top: 197px;
+    });
+
+    .landscape(@TABLET_SCREEN; {
+        top: 400px;
+    });
 }
 
 .canvas__img {

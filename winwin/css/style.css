@@ -113,6 +113,9 @@ textarea {
 .header.fix .nav__link {
   padding: 10px 5px;
 }
+.header.fix .header__bottom {
+  box-shadow: unset;
+}
 .header__top {
   display: flex;
   align-items: center;
@@ -153,6 +156,8 @@ textarea {
     flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: var(--backgroundColor);
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px;
     height: 0;
     opacity: 0;
     visibility: hidden;
@@ -640,6 +645,21 @@ textarea {
   top: 197px;
   width: 100vw;
   height: 100vh;
+}
+@media screen and (max-width: 1000px) {
+  .canvas {
+    top: 137px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .canvas {
+    top: 197px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 1000px) {
+  .canvas {
+    top: 400px;
+  }
 }
 .canvas__img {
   position: absolute;
