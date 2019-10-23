@@ -3,7 +3,7 @@
 
     const 
         canvas__img = document.querySelectorAll('.canvas__img'),
-        screen = document.querySelector('.block__firstscreen'),
+        screen = document.querySelector('.block--parallax'),
         speed = [0.1, 0.05, 0.2, 0.3, 0.4];
     
     let firstX = -1;
@@ -18,7 +18,10 @@
                     style = getComputedStyle(item),
                     transform = style.transform || style.webkitTransform || style.mozTransform || style.msTransform,
                     posX = +transform.split(', ')[4];
-                item.style.transform = `matrix(1, 0, 0, 1, ${deltaX * speed[i] * 0.1}, 0)`;
+                i === 1 
+                    ? item.style.transform = `matrix(-1, 0, 0, 1, ${deltaX * speed[i] * 0.1}, 0)`
+                    : item.style.transform = `matrix(1, 0, 0, 1, ${deltaX * speed[i] * 0.1}, 0)`;
+                
             });
         }
     });

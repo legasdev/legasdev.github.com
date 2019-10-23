@@ -35,12 +35,17 @@ textarea {resize:horizontal;}
 .body {
     --backgroundColor: #29253F;
     --backgroundDarkColor: #1E1A30;
+    --backgroundLightColor: #D3CDF5;
     --fontColor: #DAD7E5;
     --hColor: #F3F2F5;
     --borderColor: #6A619D;
+    --yellowBorderColor: #ECE151;
+
+    --faqBg: #37334D;
+    --faqBg2: #221E39;
 
     --maxScreen: 1670px;
-    --bigScreen: 1350px;
+    --bigScreen: 1390px;
     --middleScreen: 1200px;
     --tabletScreen: 950px;
     --tabletMediumScreen: 700px;
@@ -53,6 +58,7 @@ textarea {resize:horizontal;}
     scroll-behavior: smooth;
 }
 
+// Ссылки
 .link {
     position: relative;
     color: var(--fontColor);
@@ -83,11 +89,12 @@ textarea {resize:horizontal;}
     });
 }
 
+// Логотип
 .logo {
     width: 103px;
     height: 45px;
     object-fit: contain;
-    margin: 20px 30px;
+    margin: 5px 30px;
     transition: margin .2s;
 
     .adaptive(@TABLET_SCREEN, {
@@ -97,6 +104,7 @@ textarea {resize:horizontal;}
     });
 }
 
+// Шапка сайта
 .header {
     width: 100vw;
     position: fixed;
@@ -113,8 +121,6 @@ textarea {resize:horizontal;}
         box-shadow: 0 3px 16px rgba(0,0,0,.1);
 
         & .logo {
-            margin: 10px 30px;
-
             .adaptive(@TABLET_SCREEN, {
                 margin: 9px 0;
             });
@@ -214,6 +220,7 @@ textarea {resize:horizontal;}
     
 }
 
+// Мобильное меню
 .menu_mob {
     display: none;
     width: 24px;
@@ -250,6 +257,7 @@ textarea {resize:horizontal;}
     }
 }
 
+// Заголовок
 .title {
     color: var(--hColor);
 }
@@ -257,7 +265,7 @@ textarea {resize:horizontal;}
 .title--firstscreen {z-index: 1;}
 
 .title--main {
-    font-size: 41px;
+    font-size: 32px;
     font-weight: 600;
     text-align: center;
 
@@ -267,7 +275,7 @@ textarea {resize:horizontal;}
 }
 
 .title--h3 {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 400;
 
     .adaptive(@BIG_SCREEN; {
@@ -277,6 +285,11 @@ textarea {resize:horizontal;}
     .adaptive(@MOBILE_SCREEN; {
         font-size: 21px;
     });
+}
+
+.title--h4 {
+    font-size: 26px;
+    font-weight: 500;
 }
 
 .title__span--semibold {
@@ -300,7 +313,7 @@ textarea {resize:horizontal;}
         width: 24px;
         height: 24px;
         border-radius: 50%;
-        border: 1px solid var(--borderColor);
+        border: 1px solid var(--backgroundDarkColor);
     }
 
     & + label:after {
@@ -311,7 +324,7 @@ textarea {resize:horizontal;}
         width: 14px;
         height: 14px;
         border-radius: 50%;
-        background-color: var(--borderColor);
+        background-color: var(--backgroundDarkColor);
         opacity: 0;
         transition: opacity .2s;
     }
@@ -321,6 +334,7 @@ textarea {resize:horizontal;}
     }
 }
 
+// Кнопка желтая
 .btn {
     display: flex;
     align-items: center;
@@ -348,27 +362,59 @@ textarea {resize:horizontal;}
 }
 
 .btn--margin-top {
-    margin-top: 35px;
+    margin-top: 25px;
 }
 
+.btn__standart {
+    width: 483px; height: 104px;
+    border-radius: 50vh;
+    border: 4px solid var(--borderColor);
+    justify-content: space-between;
+    padding: 0 33px;
+    box-shadow: 0 0 16px var(--borderColor),
+                inset 0 0 16px var(--borderColor);
+}
+
+.btn__article {
+    width: 230px; height: 37px;
+    color: var(--fontColor);
+    text-decoration: none;
+    border: 1px solid var(--borderColor);
+    border-radius: 19px;
+    box-shadow: unset;
+    padding: 0 15px;
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.btn__arrow {
+    width: 26px;
+}
+
+// Главный блок
 .main {
     width: 100vw;
 }
 
+// Блок контента
 .block {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.block--overflow {
+    overflow: hidden;
+}
+
+.block--back {
+    background-color: var(--backgroundDarkColor);
+}
+
 .block__firstscreen {
-    min-height: 1080px;
-    background-image: url('../img/background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding-top: 200px;
+    padding-top: 125px;
 
     .adaptive(@TABLET_SCREEN, {
         padding-top: 110px;        
@@ -408,21 +454,50 @@ textarea {resize:horizontal;}
     
 }
 
+.block__wrapper--padding-top {
+    padding-top: 90px;
+}
+
+.block__wrapper--middle-width {
+    width: var(--bigScreen);
+}
+
+.block__wrapper-back {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100vw;
+    z-index: -1;
+}
+
+.block__wrapper-back--opacity {
+    opacity: .03;
+}
+
 .block__wrapper--width {
     max-width: 100%;
     background-color: var(--backgroundDarkColor);
 }
 
 .block__wrapper--margin {
-    margin: 50px 0 40px;
+    margin: 50px 0 0;
 
     .adaptive(@MAIN_SCREEN; {
         margin: 0 0 40px;
     });
 }
 
+.block__wrapper--marginb {
+    margin-bottom: 70px;
+}
+
 .block__wrapper--padding {
     padding: 21px 0 0;
+}
+
+.block__wrapper--border {
+    border: 2px solid var(--yellowBorderColor);
+    border-left: unset;
+    border-right: unset; 
 }
 
 .block__order-title {
@@ -446,7 +521,7 @@ textarea {resize:horizontal;}
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 50px;
+    margin-top: 90px;
 
     .adaptive( @MAIN_SCREEN; {
         max-width: var(--middleScreen);
@@ -460,8 +535,8 @@ textarea {resize:horizontal;}
 .block__firstscreen_desk {
     width: 1100px;
     text-align: center;
-    margin-top: 40px;
-    font-size: 14px;
+    margin-top: 11px;
+    font-size: 18px;
     z-index: 1;
 
     .adaptive( @BIG_SCREEN; {
@@ -477,18 +552,37 @@ textarea {resize:horizontal;}
     });
 }
 
+.block__firstscreen_desk--aleft {
+    text-align: left;
+}
+
+.block__wrapper-form {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+
+    & > img {
+        height: 500px;
+    }
+} 
+
+.block__wrapper-form--margint {
+    margin-top: 70px;
+}
+
+// Форма
 .form__firstscreen {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 85px;
-    align-self: flex-end;
     z-index: 1;
 
-    background-color: var(--backgroundDarkColor);
+    background-color: var(--backgroundLightColor);
+    color: var(--backgroundDarkColor);
     border-radius: 3px;
     box-sizing: border-box;
-    box-shadow: 0 6px 20px rgba(106, 97, 157, .16);
+    animation: form-animate 6s linear 0s infinite;
 
     &:before {
         content: '';
@@ -510,6 +604,16 @@ textarea {resize:horizontal;}
     });
 }
 
+@keyframes form-animate {
+    0%   {box-shadow: 0 6px 60px rgba(91, 75, 184, 0.5);}
+    15%  {box-shadow: 0 6px 60px rgba(175, 75, 184, 0.5);}
+    35%  {box-shadow: 0 6px 60px rgba(184, 75, 75, 0.5);}
+    50%  {box-shadow: 0 6px 60px rgba(184, 173, 75, 0.5);}
+    65%  {box-shadow: 0 6px 60px rgba(75, 184, 90, 0.5);}
+    80%  {box-shadow: 0 6px 60px rgba(75, 162, 184, 0.5);}
+    100% {box-shadow: 0 6px 60px rgba(91, 75, 184, 0.5);}
+}
+
 .form__order {
     display: flex;
     align-items: center;
@@ -526,10 +630,11 @@ textarea {resize:horizontal;}
 .form__title {
     margin: 20px 15px 0;
     text-align: center;
+    color: var(--backgroundDarkColor);
 }
 
 .form__desk {
-    margin-top: 15px;
+    margin-top: 5px;
 
     .adaptive(@MOBILE_SCREEN; {
         font-size: 14px;
@@ -541,7 +646,7 @@ textarea {resize:horizontal;}
     align-items: center;
     justify-content: space-between;
     width: 315px;
-    margin-top: 50px;
+    margin-top: 30px;
 
     .adaptive(@MOBILE_SCREEN; {
         width: 235px;
@@ -551,15 +656,15 @@ textarea {resize:horizontal;}
 .form__input-wrapper {
     position: relative;
     width: 90%;
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
 .form__input {
     width: 100%;
     background: transparent;
     border: unset;
-    border-bottom: 1px solid var(--borderColor);
-    color: var(--fontColor);
+    border-bottom: 1px solid var(--backgroundDarkColor);
+    color: var(--backgroundDarkColor);
     font-weight: 200;
     font-size: 16px;
     padding: 0 10px 5px;
@@ -578,6 +683,16 @@ textarea {resize:horizontal;}
     &:focus + label {
         top: -1.3rem;
         font-size: 12px;
+        color: var(--backgroundDarkColor);
+    }
+}
+
+.form__input--white {
+    border-bottom: 1px solid var(--borderColor);
+    color: var(--fontColor);
+
+    &:not(:placeholder-shown) + label,
+    &:focus + label {
         color: var(--borderColor);
     }
 }
@@ -610,13 +725,14 @@ textarea {resize:horizontal;}
     margin-top: 0;
 }
 
+// Карточки плюсов
 .card__wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 272px;
-    height: 205px;
+    height: 235px;
     margin: 0 15px;
     background-color: var(--backgroundDarkColor);
     border-radius: 3px;
@@ -645,15 +761,15 @@ textarea {resize:horizontal;}
 
     &:nth-child(2) {
        & .card__img {width: 130px; margin-bottom: 14px;}
-       & .card__desk {margin: 20px 14px;}
+       & .card__desk {margin: 20px 14px 0;}
     }
     &:nth-child(3) {
         & .card__img {width: 150px; margin-top: -75px; margin-bottom: 20px;}
-        & .card__desk {margin: 20px 28px;}
+        & .card__desk {margin: 43px 15px 0;}
     }
     &:nth-child(4) {
         & .card__img {margin-bottom: 12px;}
-        & .card__desk {margin: 20px 20px;}
+        & .card__desk {margin: 41px 7px 0;}
     }
     
     &:nth-child(5) .card__img {width: 98px; margin-bottom: 10px;}
@@ -666,7 +782,7 @@ textarea {resize:horizontal;}
 }
 
 .card__title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     text-align: center;
     margin: 31px 10px 0;
@@ -675,16 +791,17 @@ textarea {resize:horizontal;}
 .card__desk {
     text-align: center;
     margin: 20px 10px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 200;
 }
 
+// Параллакс
 .canvas {
     position: absolute;
-    left: 0;
-    top: 197px;
+    left: 0; top: 0;
     width: 100vw;
     height: 100vh;
+    transform: scaleX(-1);
 
     .adaptive( @TABLET_SCREEN; {
         top: 137px;
@@ -763,6 +880,7 @@ textarea {resize:horizontal;}
     left: 290px;
     top: 335px;
     width: 20vw;
+    transform: scaleX(-1);
 
     .adaptive( @BIG_SCREEN; {
         left: 200px;
@@ -774,4 +892,351 @@ textarea {resize:horizontal;}
         transform: translate3d(-50%, -50%, 0);
         width: 30vw;
     });
+}
+
+// Горизонтальный блок с информацией
+.hblock {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 60px 0;
+}
+
+.hblock--aic {
+    align-items: center;
+}
+
+.hblock__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hblock__wrapper--width {
+    width: 590px;
+    font-size: 20px;
+}
+
+.hblock__wrapper--rmargin {
+    margin-right: 130px;
+}
+
+// Значки оплат
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 680px;
+    margin-top: 35px;
+}
+
+.logos__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.logos__img {
+    object-fit: contain;
+    transition: transform .2s;
+    will-change: transform;
+
+    &:hover {
+        transform: scale3d(1.2, 1.2, 1.2);
+    }
+}
+
+// Видео
+.video {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 698px;
+    padding: 10px 7px 7px 7px;
+    background-color: var(--backgroundColor);
+    box-shadow: 0 6px 20px var(--backgroundColor);
+    border-radius: 3px;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--borderColor);
+    }
+}
+
+// Соцсети
+.social {
+    display: flex;
+    align-items: center;
+
+    & > * + * {
+        margin-left: 25px;
+    }
+
+    & > a {
+        transition: transform .2s;
+        will-change: transform;
+
+        &:hover {
+            transform: scale3d(1.2, 1.2, 1.2);
+        }
+    }
+}
+
+.social--margin-top {
+    align-self: flex-start;
+    margin-top: 50px;
+}
+
+.social--margin {
+    margin: 25px 0;
+}
+
+// Список
+.list {
+
+    & > li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        font-size: 18px;
+        list-style: none;
+        padding-left: 50px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 21px; height: 21px;
+            border-radius: 11vh;
+            border: 2px solid var(--borderColor);
+            box-shadow: 0 0 6px var(--borderColor), inset 0 0 6px var(--borderColor);
+            background-color: transparent;
+        }
+    }
+
+    & > li + li {
+        margin-top: 20px;
+    }
+}
+
+// Горизонтальная полоска из карточек
+.hr-card {
+    display: grid;
+    grid-template-columns: repeat(11, 100px);
+    grid-template-rows: 100px;
+    width: 100vw;
+    justify-content: space-around;
+
+    & > img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Производители
+.manufacturers {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.manufacturers__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 25px 0;
+}
+
+.manufacturers__row--jcsa {
+    justify-content: space-around;
+}
+
+// Подвал
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    padding-bottom: 5px;
+    background-color: var(--backgroundDarkColor);
+}
+
+.nav__link--nocheck {
+
+    padding-bottom: 1px;
+    margin-bottom: 19px;
+
+    &:before {
+        display: none;
+    }
+}
+
+// Блок на странице контактов
+.block__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 550px; height: 384px;
+    background-color: var(--backgroundDarkColor);
+    border-radius: 3px;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: var(--borderColor);
+    }
+}
+
+.block__info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+
+    & > h4 {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    & > p {
+        font-size: 18px;
+        font-weight: 200;
+    }
+}
+
+.block__info-title {
+    margin-top: 20px;
+}
+
+.block__contact-desk {
+    margin-top: 60px;
+}
+
+.map {
+    width: 100%;
+    height: 350px;
+    margin-top: 25px;
+}
+
+// Вопрос-ответ
+.faq {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin: 70px 0;
+}
+
+.faq__wrapper {
+    width: 812px;
+
+    &:nth-child(2n) > .faq__question {
+        background-color: var(--faqBg2);
+    }
+}
+
+.faq__question {
+    position: relative;
+    padding: 26px 15px;
+    width: 100%;
+    background-color: var(--backgroundDarkColor);
+    cursor: pointer;
+    transition: background-color .5s;
+
+    &:after {
+        content: url('../img/arrow_faq.png');
+        position: absolute;
+        right: 15px;
+        transition: transform .5s;
+        will-change: transform;
+    }
+}
+
+.faq__wrapper > .faq__question.active {
+    background-color: var(--faqBg);
+
+    &:after {
+        transform: rotate(90deg);
+    }
+
+    & + .faq__answer {
+        padding: 37px;
+        max-height: 300px;
+        opacity: 1;
+    }
+}
+
+.faq__answer {
+    position: relative;
+    background-color: var(--faqBg);
+    padding: 0 37px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: padding 1s, 
+                max-height 1s,
+                opacity 1s;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0; left: 5%;
+        width: 90%;
+        height: 1px;
+        background-color: var(--backgroundDarkColor);
+    }
+}
+
+// Статья
+.article {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 536px;
+    margin: 20px 0;
+    background-color: var(--backgroundDarkColor);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 3px 20px rgba(106, 97, 157, 0.16);;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: var(--borderColor);
+    }
+}
+
+.article__title {
+    margin: 23px 23px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.article__desk {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 15px 23px 23px;
+}
+
+.article__btn {
+    align-self: flex-end;
+    margin: 0 23px 23px;
 }

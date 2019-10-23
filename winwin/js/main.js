@@ -18,11 +18,28 @@
     menuMob.addEventListener('touchend', e => {
         e.preventDefault();
         e.target.click();
-    }, false);
+    });
 
     menuMob.addEventListener('click', e => {
         e.currentTarget.classList.toggle('active');
         document.querySelector('.header__bottom').classList.toggle('active');     
-    }, false);
+    });
+
+    // Открытие FAQ вопросов
+    const questions = document.querySelectorAll('.faq__question');
+
+    questions.forEach(item => {
+        item.addEventListener('click', e => {       
+            const clickItem = e.currentTarget;
+
+            if (clickItem.classList.contains('active')) 
+                clickItem.classList.remove('active');
+            else
+                questions.forEach(value => {
+                    value.classList.remove('active');
+                    if (clickItem === value) value.classList.add('active');
+                });
+        });
+    })
     
 })();
