@@ -607,6 +607,9 @@ textarea {
   border-left: unset;
   border-right: unset;
 }
+.block > .block__wrapper--fullw {
+  max-width: 100vw;
+}
 .block__order-title {
   font-size: 20px;
   text-align: center;
@@ -1240,11 +1243,10 @@ textarea {
   justify-content: space-around;
 }
 .country-map {
-  width: 100%;
+  margin-top: 50px;
 }
-.country-map > img {
-  width: 100%;
-  object-fit: contain;
+.country-map > .map {
+  background-repeat: no-repeat;
 }
 .footer {
   display: flex;
@@ -1335,12 +1337,12 @@ textarea {
   margin-top: 60px;
   text-align: center;
 }
-.map {
+.map-contact {
   width: 100%;
   height: 350px;
   margin-top: 25px;
 }
-.map > img {
+.map-contact > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
