@@ -233,10 +233,10 @@
     };
     F.fn.maphilight.defaults = {
         fill: true,
-        fillColor: "000000",
+        fillColor: "37334D",
         fillOpacity: 0.2,
         stroke: true,
-        strokeColor: "ff0000",
+        strokeColor: "ECE151",
         strokeOpacity: 1,
         strokeWidth: 1,
         fade: true,

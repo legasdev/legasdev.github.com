@@ -1,38 +1,4 @@
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_cJD3g3D-w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459W1hzg.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_ZpC3g3D-w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_bZF3g3D-w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_c5H3g3D-w.ttf) format('truetype');
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,800&display=swap&subset=cyrillic');
 a:active,
 a:focus {
   outline: none;
@@ -71,6 +37,7 @@ textarea {
   --hColor: #F3F2F5;
   --borderColor: #6A619D;
   --yellowBorderColor: #ECE151;
+  --yellowHoverColor: #e4d72b;
   --faqBg: #37334D;
   --faqBg2: #221E39;
   --maxScreen: 1670px;
@@ -100,7 +67,7 @@ textarea {
   height: 1px;
   background-color: var(--fontColor);
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: opacity .2s;
 }
 .link:hover:after {
   opacity: 1;
@@ -118,7 +85,7 @@ textarea {
   height: 45px;
   object-fit: contain;
   margin: 5px 30px;
-  transition: margin 0.2s;
+  transition: margin .2s;
 }
 @media screen and (max-width: 1000px) {
   .logo {
@@ -203,7 +170,8 @@ textarea {
     height: 0;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s, visibility 0.2s;
+    transition: opacity .2s,
+                    visibility .2s;
   }
 }
 .header__bottom.active {
@@ -216,7 +184,7 @@ textarea {
   color: var(--fontColor);
   text-decoration: none;
   padding: 20px 5px;
-  transition: padding 0.2s;
+  transition: padding .2s;
 }
 .nav__link:before {
   content: '';
@@ -228,7 +196,7 @@ textarea {
   background-color: var(--fontColor);
   transform: scaleY(0);
   transform-origin: top;
-  transition: transform 0.2s;
+  transition: transform .2s;
 }
 .nav__link.active:before,
 .nav__link:hover:before {
@@ -254,7 +222,8 @@ textarea {
   background-color: var(--fontColor);
   border-radius: 50vh;
   transform-origin: left;
-  transition: transform 0.2s, opacity 0.2s;
+  transition: transform .2s,
+                    opacity .2s;
 }
 .menu_mob.active > i:nth-child(1) {
   transform: rotate(45deg) scaleX(0.9);
@@ -353,7 +322,7 @@ textarea {
   border-radius: 50%;
   background-color: var(--backgroundDarkColor);
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: opacity .2s;
 }
 @media screen and (max-width: 500px) {
   .input__checkbox + label:after {
@@ -396,7 +365,7 @@ textarea {
   justify-content: space-between;
   padding: 0 33px;
   box-shadow: 0 0 16px var(--borderColor), inset 0 0 16px var(--borderColor);
-  transition: padding 0.2s;
+  transition: padding .2s;
 }
 .btn__standart:hover {
   animation: btn__standart-animate 5s linear infinite;
@@ -439,6 +408,20 @@ textarea {
     height: 70px;
     margin: 20px 0;
   }
+}
+.btn__yellow {
+  width: 250px;
+  height: 64px;
+  border-radius: 32px;
+  border: 2px solid var(--yellowBorderColor);
+  padding: 0 33px;
+  color: var(--fontColor);
+  text-decoration: none;
+  box-shadow: 0 0 16px var(--yellowBorderColor), inset 0 0 16px var(--yellowBorderColor);
+  transition: box-shadow 0.4s;
+}
+.btn__yellow:hover {
+  box-shadow: 0 0 22px var(--yellowHoverColor), inset 0 0 22px var(--yellowHoverColor);
 }
 @keyframes btn__standart-animate {
   0% {
@@ -587,7 +570,7 @@ textarea {
   }
 }
 .block__wrapper-back--opacity {
-  opacity: 0.03;
+  opacity: .03;
 }
 .block__wrapper--width {
   max-width: 100%;
@@ -919,7 +902,7 @@ textarea {
 .canvas__img {
   position: absolute;
   transform: translate3d(0, 0, 0);
-  transition: transform 0.1s linear;
+  transition: transform .1s linear;
 }
 .canvas__img-low {
   left: 1011px;
@@ -1035,7 +1018,7 @@ textarea {
 }
 .logos__img {
   object-fit: contain;
-  transition: transform 0.2s;
+  transition: transform .2s;
   will-change: transform;
 }
 .logos__img:hover {
@@ -1105,7 +1088,7 @@ textarea {
   }
 }
 .social > a {
-  transition: transform 0.2s;
+  transition: transform .2s;
   will-change: transform;
 }
 .social > a:hover {
@@ -1195,7 +1178,7 @@ textarea {
   object-fit: contain;
   width: 100%;
   height: 100%;
-  transition: transform 0.8s;
+  transition: transform .8s;
 }
 .hr-card > img:hover {
   transform: rotateY(360deg);
@@ -1247,6 +1230,25 @@ textarea {
 }
 .country-map > .map {
   background-repeat: no-repeat;
+  background-size: contain;
+  object-fit: contain;
+  width: 800px;
+  height: 485px;
+}
+@media screen and (max-width: 1000px) {
+  .country-map > .map {
+    width: 500px;
+    height: 285px;
+  }
+}
+#tooltip {
+  background: var(--backgroundColor);
+  border: 1px solid var(--borderColor);
+  color: var(--fontColor);
+  margin: 10px;
+  padding: 3px 5px;
+  position: absolute;
+  visibility: hidden;
 }
 .footer {
   display: flex;
@@ -1379,7 +1381,7 @@ textarea {
   position: absolute;
   right: 15px;
   top: 38%;
-  transition: transform 0.5s;
+  transition: transform .5s;
   will-change: transform;
 }
 .faq__wrapper > .faq__question.active {
@@ -1457,4 +1459,13 @@ textarea {
 .article__btn {
   align-self: flex-end;
   margin: 0 23px 23px;
+}
+.block__404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.block__404-p {
+  margin-bottom: 50px;
+  text-align: center;
 }

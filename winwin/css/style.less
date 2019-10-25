@@ -40,6 +40,7 @@ textarea {resize:horizontal;}
     --hColor: #F3F2F5;
     --borderColor: #6A619D;
     --yellowBorderColor: #ECE151;
+    --yellowHoverColor: rgb(228, 215, 43);
 
     --faqBg: #37334D;
     --faqBg2: #221E39;
@@ -198,8 +199,6 @@ textarea {resize:horizontal;}
         visibility: visible;
     }
 }
-
-
 
 .nav__link {
     position: relative;
@@ -442,6 +441,23 @@ textarea {resize:horizontal;}
         width: 90%; height: 70px;
         margin: 20px 0;
     });
+}
+
+.btn__yellow {
+    width: 250px; height: 64px;
+    border-radius: 32px;
+    border: 2px solid var(--yellowBorderColor);
+    padding: 0 33px;
+    color: var(--fontColor);
+    text-decoration: none;
+    box-shadow: 0 0 16px var(--yellowBorderColor),
+                inset 0 0 16px var(--yellowBorderColor);
+    transition: box-shadow .4s;
+
+    &:hover {
+        box-shadow: 0 0 22px var(--yellowHoverColor),
+                inset 0 0 22px var(--yellowHoverColor);
+    }
 }
 
 @keyframes btn__standart-animate {
@@ -1304,6 +1320,25 @@ textarea {resize:horizontal;}
 
 .country-map > .map {
     background-repeat: no-repeat;
+    background-size: contain;
+    object-fit: contain;
+    width: 800px;
+    height: 485px;
+
+    .adaptive(@TABLET_SCREEN; {
+        width: 500px;
+        height: 285px;
+    });
+}
+
+#tooltip{
+    background: var(--backgroundColor);
+    border: 1px solid var(--borderColor);
+    color: var(--fontColor);
+    margin: 10px;
+    padding: 3px 5px;
+    position: absolute;
+    visibility: hidden;
 }
 
 // Подвал
@@ -1541,4 +1576,16 @@ textarea {resize:horizontal;}
 .article__btn {
     align-self: flex-end;
     margin: 0 23px 23px;
+}
+
+// 404
+.block__404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block__404-p {
+    margin-bottom: 50px;
+    text-align: center;
 }
