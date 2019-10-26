@@ -1,4 +1,38 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,800&display=swap&subset=cyrillic');
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_cJD3g3D-w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459W1hzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_ZpC3g3D-w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_bZF3g3D-w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_c5H3g3D-w.ttf) format('truetype');
+}
 a:active,
 a:focus {
   outline: none;
@@ -67,7 +101,7 @@ textarea {
   height: 1px;
   background-color: var(--fontColor);
   opacity: 0;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 .link:hover:after {
   opacity: 1;
@@ -85,7 +119,7 @@ textarea {
   height: 45px;
   object-fit: contain;
   margin: 5px 30px;
-  transition: margin .2s;
+  transition: margin 0.2s;
 }
 @media screen and (max-width: 1000px) {
   .logo {
@@ -170,8 +204,7 @@ textarea {
     height: 0;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .2s,
-                    visibility .2s;
+    transition: opacity 0.2s, visibility 0.2s;
   }
 }
 .header__bottom.active {
@@ -184,7 +217,7 @@ textarea {
   color: var(--fontColor);
   text-decoration: none;
   padding: 20px 5px;
-  transition: padding .2s;
+  transition: padding 0.2s;
 }
 .nav__link:before {
   content: '';
@@ -196,7 +229,7 @@ textarea {
   background-color: var(--fontColor);
   transform: scaleY(0);
   transform-origin: top;
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 .nav__link.active:before,
 .nav__link:hover:before {
@@ -222,8 +255,7 @@ textarea {
   background-color: var(--fontColor);
   border-radius: 50vh;
   transform-origin: left;
-  transition: transform .2s,
-                    opacity .2s;
+  transition: transform 0.2s, opacity 0.2s;
 }
 .menu_mob.active > i:nth-child(1) {
   transform: rotate(45deg) scaleX(0.9);
@@ -322,7 +354,7 @@ textarea {
   border-radius: 50%;
   background-color: var(--backgroundDarkColor);
   opacity: 0;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 @media screen and (max-width: 500px) {
   .input__checkbox + label:after {
@@ -357,6 +389,9 @@ textarea {
 .btn--margin-top {
   margin-top: 25px;
 }
+.btn--margin-topmin {
+  margin-top: 10px;
+}
 .btn__standart {
   width: 483px;
   height: 104px;
@@ -365,7 +400,7 @@ textarea {
   justify-content: space-between;
   padding: 0 33px;
   box-shadow: 0 0 16px var(--borderColor), inset 0 0 16px var(--borderColor);
-  transition: padding .2s;
+  transition: padding 0.2s;
 }
 .btn__standart:hover {
   animation: btn__standart-animate 5s linear infinite;
@@ -570,7 +605,7 @@ textarea {
   }
 }
 .block__wrapper-back--opacity {
-  opacity: .03;
+  opacity: 0.03;
 }
 .block__wrapper--width {
   max-width: 100%;
@@ -603,9 +638,13 @@ textarea {
   }
 }
 .block__pluses {
-  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
+}
+@media screen and (max-width: 1000px) {
+  .block__pluses {
+    flex-wrap: wrap;
+  }
 }
 .block__wrapper-form {
   display: flex;
@@ -614,11 +653,11 @@ textarea {
   align-items: center;
 }
 .block__wrapper-form > img {
-  height: 500px;
+  height: 400px;
 }
 @media screen and (max-width: 1270px) {
   .block__wrapper-form > img {
-    height: 425px;
+    height: 400px;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -721,6 +760,10 @@ textarea {
   text-align: center;
   color: var(--backgroundDarkColor);
 }
+.form__title--min {
+  margin: 15px 10px 0;
+  font-size: 22px;
+}
 .form__desk {
   margin-top: 5px;
 }
@@ -730,6 +773,10 @@ textarea {
     font-size: 14px;
     margin-top: 10px;
   }
+}
+.form__desk--min {
+  font-size: 14px;
+  margin-top: 5px;
 }
 .form__checkbox-wrapper {
   display: flex;
@@ -745,6 +792,20 @@ textarea {
 }
 @media screen and (max-width: 500px) {
   .form__checkbox-wrapper {
+    margin-left: 20px;
+  }
+}
+.form__checkbox-wrapper--min {
+  margin-top: 15px;
+  width: 250px;
+}
+@media screen and (max-width: 750px) {
+  .form__checkbox-wrapper--min {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .form__checkbox-wrapper--min {
     margin-left: 20px;
   }
 }
@@ -808,6 +869,9 @@ textarea {
 .form__politic--margin {
   margin: 20px 0 10px;
 }
+.form__politic--marginmin {
+  margin: 10px 0;
+}
 .form__politic--width {
   width: auto;
   margin-top: 0;
@@ -820,7 +884,7 @@ textarea {
   width: 272px;
   height: 235px;
   margin: 0 15px;
-  margin-top: 90px;
+  margin-top: 84px;
   background-color: var(--backgroundDarkColor);
   border-radius: 3px;
   box-shadow: 0 6px 20px rgba(106, 97, 157, 0.16);
@@ -844,7 +908,7 @@ textarea {
   margin-bottom: 14px;
 }
 .card__wrapper:nth-child(2) .card__desk {
-  margin: 20px 14px 0;
+  margin: 20px 10px 0;
 }
 .card__wrapper:nth-child(3) .card__img {
   width: 150px;
@@ -858,11 +922,24 @@ textarea {
   margin-bottom: 12px;
 }
 .card__wrapper:nth-child(4) .card__desk {
-  margin: 41px 7px 0;
+  margin: 20px 7px 0;
 }
 .card__wrapper:nth-child(5) .card__img {
   width: 98px;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 1270px) {
+  .card__wrapper {
+    width: 272px;
+    height: 270px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .card__wrapper {
+    width: 272px;
+    height: 235px;
+    margin-top: 110px;
+  }
 }
 @media screen and (max-width: 500px) {
   .card__wrapper {
@@ -880,11 +957,21 @@ textarea {
   text-align: center;
   margin: 31px 10px 0;
 }
+@media screen and (max-width: 1400px) {
+  .card__title {
+    margin: 10px 10px 0;
+  }
+}
 .card__desk {
   text-align: center;
-  margin: 20px 10px;
+  margin: 20px 20px;
   font-size: 16px;
   font-weight: 200;
+}
+@media screen and (max-width: 1400px) {
+  .card__desk {
+    font-size: 14px;
+  }
 }
 .canvas {
   position: absolute;
@@ -902,7 +989,7 @@ textarea {
 .canvas__img {
   position: absolute;
   transform: translate3d(0, 0, 0);
-  transition: transform .1s linear;
+  transition: transform 0.1s linear;
 }
 .canvas__img-low {
   left: 1011px;
@@ -1018,7 +1105,7 @@ textarea {
 }
 .logos__img {
   object-fit: contain;
-  transition: transform .2s;
+  transition: transform 0.2s;
   will-change: transform;
 }
 .logos__img:hover {
@@ -1088,7 +1175,7 @@ textarea {
   }
 }
 .social > a {
-  transition: transform .2s;
+  transition: transform 0.2s;
   will-change: transform;
 }
 .social > a:hover {
@@ -1178,7 +1265,7 @@ textarea {
   object-fit: contain;
   width: 100%;
   height: 100%;
-  transition: transform .8s;
+  transition: transform 0.8s;
 }
 .hr-card > img:hover {
   transform: rotateY(360deg);
@@ -1249,6 +1336,9 @@ textarea {
   padding: 3px 5px;
   position: absolute;
   visibility: hidden;
+}
+area:hover {
+  background-color: #fff;
 }
 .footer {
   display: flex;
@@ -1381,7 +1471,7 @@ textarea {
   position: absolute;
   right: 15px;
   top: 38%;
-  transition: transform .5s;
+  transition: transform 0.5s;
   will-change: transform;
 }
 .faq__wrapper > .faq__question.active {
