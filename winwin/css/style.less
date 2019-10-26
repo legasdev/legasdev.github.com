@@ -1370,6 +1370,11 @@ textarea {resize:horizontal;}
 // Интерактивная карта
 .country-map {
     margin-top: 50px;
+
+    .adaptive(@TABLET_SCREEN; {
+        display: none;
+        margin-top: 0;
+    });
 }
 
 .country-map > .map {
@@ -1377,11 +1382,29 @@ textarea {resize:horizontal;}
     background-size: contain;
     object-fit: contain;
     width: 800px;
-    height: 485px;
+    height: 485px;    
+}
+
+.map__tab {
+    display: none;
 
     .adaptive(@TABLET_SCREEN; {
-        width: 500px;
-        height: 285px;
+        display: block;
+        margin-top: 50px;
+    });
+
+    .adaptive(@MOBILE_SCREEN; {
+        display: none;
+        margin-top: 0;
+    });
+}
+
+.map__min {
+    display: none;
+
+    .adaptive(@MOBILE_SCREEN; {
+        display: block;
+        margin-top: 50px;
     });
 }
 

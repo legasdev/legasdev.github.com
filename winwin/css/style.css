@@ -1315,6 +1315,12 @@ textarea {
 .country-map {
   margin-top: 50px;
 }
+@media screen and (max-width: 1000px) {
+  .country-map {
+    display: none;
+    margin-top: 0;
+  }
+}
 .country-map > .map {
   background-repeat: no-repeat;
   background-size: contain;
@@ -1322,10 +1328,28 @@ textarea {
   width: 800px;
   height: 485px;
 }
+.map__tab {
+  display: none;
+}
 @media screen and (max-width: 1000px) {
-  .country-map > .map {
-    width: 500px;
-    height: 285px;
+  .map__tab {
+    display: block;
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .map__tab {
+    display: none;
+    margin-top: 0;
+  }
+}
+.map__min {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  .map__min {
+    display: block;
+    margin-top: 50px;
   }
 }
 #tooltip {
