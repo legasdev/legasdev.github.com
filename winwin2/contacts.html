@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="body">
+    <header class="header">
+        <div class="header__wrapper">
+            <a href="./index.html"><img src="./img/logo.png" alt="Логотип Novotech"></a>
+            <nav class="navigate">
+                <a href="./index.html" class="link">Главная</a>
+                <a href="#" class="link">Демо</a>
+                <a href="#" class="link">Акция</a>
+                <a href="#" class="link">Подключение</a>
+                <a href="./faq.html" class="link">FAQ</a>
+                <a href="#" class="link">Игры</a>
+                <a href="#" class="link">Контакты</a>
+            </nav>
+            <div class="menu__btn"><i></i><i></i><i></i></div>
+        </div>
+    </header>
+
+    <div class="mobile_menu">
+        <a href="./index.html" class="link">Главная</a>
+        <a href="./page.html" class="link">Демо</a>
+        <a href="./page.html" class="link">Акция</a>
+        <a href="./page.html" class="link">Подключение</a>
+        <a href="./faq.html" class="link">FAQ</a>
+        <a href="./page.html" class="link">Игры</a>
+        <a href="./contacts.html" class="link">Контакты</a>
+        <a href="tel:81234567890" class="link">+7 (123) 456-78-90</a> 
+        <a href="mailto:mail@mail.com" class="link">mail@mail.com</a>
+    </div>
+
+    <main class="main">
+        
+        <section class="block block--margin-124">
+            <img src="./img/bg5.png" class="block__main_bg" alt="Фон первого экрана">
+            <header class="block__header">
+                <h1>Связаться с нами</h1>
+                <p class="block__desk block__desk--width block__desk--margin-top">Заполните поля ниже и мы сами перезвоним Вам</p>
+            </header>
+
+            <form class="form__contacts">
+                <div class="form__contacts_input_wrapper">
+                    <label for="formName">Здравствуйте, меня зовут</label>
+                    <input id="formName" class="form__contacts_input" type="text" name="name">
+                </div>
+                <div class="form__contacts_input_wrapper">
+                    <label for="formTel">Мой номер телефона</label>
+                    <input id="formTel" class="form__contacts_input" type="tel" name="tel">
+                </div>
+                <button class="btn btn__form btn--orange btn--margin55 btn--orange-line">Связаться</button>
+            </form>
+            <address class="contacts__info">
+                <a href="tel:81234567890" class="link">+7 (123) 456-78-90</a>
+                <p>Россия, Москва,<br> Большой Казенный<br> переулок, 1</p>
+                <a href="mailto:mail@mail.com" class="link">mail@mail.com</a>
+            </address>
+        </section>
+
+        <section class="block">
+            <img src="./img/map2.png" class="map" alt="Карта">
+        </section>
+
+        <section class="form__hor block--margin-top-48 block--margin-b-48">
+            <h3 class="form__title">Хотите узнать подробности как подключить Novotech?</h3>
+            <p class="form__desk">Оставьте свой номер телефона!</p>
+            <div class="form__hor_wrapper">
+                <div class="form__input-wrapper form__input-wrapper--width">
+                    <input type="text" class="form__input" name="name" placeholder="&nbsp;">
+                    <label>Ваше имя*</label>
+                </div>
+                <div class="form__input-wrapper form__input-wrapper--width">
+                    <input type="tel" class="form__input" name="tel" placeholder="&nbsp;">
+                    <label>Ваш телефон*</label>
+                </div>
+                <button class="btn btn__form btn--orange btn--margin20">Жду звонка</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/main.min.js"></script>
+</body>
+</html>
