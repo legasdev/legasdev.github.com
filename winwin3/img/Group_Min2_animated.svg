@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="288" height="1140" viewBox="0 0 288 1140" style="">
+  <g id="Group_Min2" transform="translate(-193 -6827)">
+    <g id="Group_25" data-name="Group 25" transform="translate(216 6827)">
+      <g id="Ð¨Ð°Ð³" transform="translate(34.322)">
+        <g id="ÐÑÑÐ³-Ð¿ÑÐ½ÐºÑ">
+          <g id="Ellipse_26" data-name="Ellipse 26" fill="none" stroke="#600d0d" stroke-width="2">
+            <path stroke="none" d="M0,61.387A61.387,61.387 0,1,1 122.774,61.387A61.387,61.387 0,1,1 0,61.387" class="AoKyQMCU_0"></path>
+            <path fill="none" d="M1,61.387A60.387,60.387 0,1,1 121.774,61.387A60.387,60.387 0,1,1 1,61.387" class="AoKyQMCU_1"></path>
+          </g>
+          <path id="Ellipse_27" data-name="Ellipse 27" transform="translate(14.635 14.635)" fill="#fff" d="M0,46.752A46.752,46.752 0,1,1 93.504,46.752A46.752,46.752 0,1,1 0,46.752" class="AoKyQMCU_2"></path>
+          <g id="Ellipse_28" data-name="Ellipse 28" transform="translate(18.701 18.701)" fill="none" stroke="#dbb778" stroke-width="2">
+            <path stroke="none" d="M0,42.687A42.687,42.687 0,1,1 85.374,42.687A42.687,42.687 0,1,1 0,42.687" class="AoKyQMCU_3"></path>
+            <path fill="none" d="M1,42.687A41.687,41.687 0,1,1 84.374,42.687A41.687,41.687 0,1,1 1,42.687" class="AoKyQMCU_4"></path>
+          </g>
+        </g>
+      </g>
+      <text id="_1._ÐÑÑÐ°Ð²Ð¸ÑÑ_Ð¸Ð¼Ñ_Ð¸_ÑÐ²Ð¾Ð¹_Ð½Ð¾Ð¼ÐµÑ_ÑÐµÐ»ÐµÑÐ¾Ð½Ð°_Ð²_ÑÐ¾ÑÐ¼Ðµ_Ð¾Ð±ÑÐ°ÑÐ½Ð¾Ð¹_ÑÐ²ÑÐ·Ð¸" data-name="1. ÐÑÑÐ°Ð²Ð¸ÑÑ Ð¸Ð¼Ñ Ð¸ ÑÐ²Ð¾Ð¹
+Ð½Ð¾Ð¼ÐµÑ ÑÐµÐ»ÐµÑÐ¾Ð½Ð° Ð² ÑÐ¾ÑÐ¼Ðµ Ð¾Ð±ÑÐ°ÑÐ½Ð¾Ð¹ ÑÐ²ÑÐ·Ð¸" transform="translate(-23 135)" fill="#260c0c" font-size="20" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="9.591" y="19">1.</tspan><tspan y="19" xml:space="preserve" font-family="Roboto-Regular, Roboto" font-weight="400"> Оставить имя и свой</tspan><tspan font-family="Roboto-Regular, Roboto" font-weight="400"><tspan x="33.521" y="43">номер телефона в </tspan><tspan x="11.319" y="67">форме обратной связи</tspan></tspan></text>
+      <g id="talk" transform="translate(73.081 39.171)">
+        <path id="Path_661" data-name="Path 661" d="M20.938,20.244H24.3a3.1,3.1,0,0,0,3.094-3.094V3.094A3.1,3.1,0,0,0,24.3,0H3.169A3.1,3.1,0,0,0,.075,3.094V17.15a3.1,3.1,0,0,0,3.094,3.094H11.49l5.787,5.032a2.192,2.192,0,0,0,1.443.546,2.224,2.224,0,0,0,.924-.2,2.187,2.187,0,0,0,1.294-2.011Zm-2.652-1.326v3.72l-5.43-4.721a1.326,1.326,0,0,0-.87-.325H3.169a.443.443,0,0,1-.442-.442V3.094a.443.443,0,0,1,.442-.442H24.3a.443.443,0,0,1,.442.442V17.15a.443.443,0,0,1-.442.442H19.612a1.326,1.326,0,0,0-1.326,1.326Z" transform="translate(-0.075)" fill="#600d0d" class="AoKyQMCU_5"></path>
+        <path id="Path_662" data-name="Path 662" d="M61.4,72.652H68.65a1.326,1.326,0,1,0,0-2.652H61.4a1.326,1.326,0,0,0,0,2.652Z" transform="translate(-54.771 -63.812)" fill="#600d0d" class="AoKyQMCU_6"></path>
+        <path id="Path_663" data-name="Path 663" d="M76.783,131.326A1.326,1.326,0,0,0,75.457,130H61.4a1.326,1.326,0,1,0,0,2.652H75.457A1.326,1.326,0,0,0,76.783,131.326Z" transform="translate(-54.771 -118.508)" fill="#600d0d" class="AoKyQMCU_7"></path>
+        <path id="Path_664" data-name="Path 664" d="M256.492,246.3l-.687-5.809a9.069,9.069,0,0,0-6.618-7.68,6.484,6.484,0,1,0-9.986-.037,9.069,9.069,0,0,0-6.756,7.717l-.687,5.809a1.326,1.326,0,0,0,1.317,1.482h22.1a1.326,1.326,0,0,0,1.317-1.482ZM244.209,224.83a3.832,3.832,0,1,1-3.832,3.832A3.836,3.836,0,0,1,244.209,224.83Zm-9.643,20.3.512-4.328a6.413,6.413,0,0,1,6.367-5.658H246.8a6.413,6.413,0,0,1,6.367,5.658l.512,4.327Z" transform="translate(-211.268 -202.537)" fill="#600d0d" class="AoKyQMCU_8"></path>
+      </g>
+    </g>
+    <g id="Group_24" data-name="Group 24" transform="translate(179.459 7060)">
+      <text id="_2._ÐÐ¾Ð¶Ð´Ð°ÑÑÑÑ_Ð·Ð²Ð¾Ð½ÐºÐ°_Ð¼ÐµÐ½ÐµÐ´Ð¶ÐµÑÐ°_Ð¸_Ð¾Ð±ÑÑÐ´Ð¸ÑÑ_Ð´ÐµÑÐ°Ð»Ð¸" data-name="2. ÐÐ¾Ð¶Ð´Ð°ÑÑÑÑ Ð·Ð²Ð¾Ð½ÐºÐ° Ð¼ÐµÐ½ÐµÐ´Ð¶ÐµÑÐ° Ð¸ Ð¾Ð±ÑÑÐ´Ð¸ÑÑ Ð´ÐµÑÐ°Ð»Ð¸"
+       transform="translate(63.541 135)" fill="#260c0c" font-size="20" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="19.176" y="19">2.</tspan><tspan y="19" xml:space="preserve" font-family="Roboto-Regular, Roboto" font-weight="400"> Дождаться звонка </tspan><tspan x="11.671" y="43" font-family="Roboto-Regular, Roboto" font-weight="400">менеджера и обсудить </tspan><tspan x="86.002" y="67" font-family="Roboto-Regular, Roboto" font-weight="400">детали</tspan></text>
+      <g id="Group_33" data-name="Group 33" transform="translate(50)">
+        <g id="Ð¨Ð°Ð³-2" data-name="Ð¨Ð°Ð³" transform="translate(70.917)">
+          <g id="ÐÑÑÐ³-Ð¿ÑÐ½ÐºÑ-2" data-name="ÐÑÑÐ³-Ð¿ÑÐ½ÐºÑ">
+            <g id="Ellipse_26-2" data-name="Ellipse 26" fill="none" stroke="#600d0d" stroke-width="2">
+              <path stroke="none" d="M0,61.379A61.379,61.379 0,1,1 122.758,61.379A61.379,61.379 0,1,1 0,61.379" class="AoKyQMCU_9"></path>
+              <path fill="none" d="M1,61.379A60.379,60.379 0,1,1 121.758,61.379A60.379,60.379 0,1,1 1,61.379" class="AoKyQMCU_10"></path>
+            </g>
+            <path id="Ellipse_27-2" data-name="Ellipse 27" transform="translate(14.633 14.633)" fill="#fff" d="M0,46.745A46.745,46.745 0,1,1 93.49,46.745A46.745,46.745 0,1,1 0,46.745" class="AoKyQMCU_11"></path>
+            <g id="Ellipse_28-2" data-name="Ellipse 28" transform="translate(18.698 18.698)" fill="none" stroke="#dbb778" stroke-width="2">
+              <path stroke="none" d="M0,42.681A42.681,42.681 0,1,1 85.362,42.681A42.681,42.681 0,1,1 0,42.681" class="AoKyQMCU_12"></path>
+              <path fill="none" d="M1,42.681A41.681,41.681 0,1,1 84.362,42.681A41.681,41.681 0,1,1 1,42.681" class="AoKyQMCU_13"></path>
+            </g>
+          </g>
+        </g>
+        <g id="call-center" transform="translate(110.04 38.616)">
+          <path id="Path_665" data-name="Path 665" d="M43.514,35.369a13.726,13.726,0,0,0-4.7-4.971l-7.452-4.675a11.082,11.082,0,0,0,.788-1.167h.537A4.864,4.864,0,0,0,37.54,19.7V13.6a4.866,4.866,0,0,0-4.115-4.8,11.042,11.042,0,0,0-21.854,2.24v7.95a10.985,10.985,0,0,0,2.3,6.732L6.415,30.4A13.691,13.691,0,0,0,0,42v1.9a1.325,1.325,0,0,0,1.325,1.325H43.9A1.325,1.325,0,0,0,45.225,43.9V42A13.725,13.725,0,0,0,43.514,35.369ZM31,11.306h-1.83a5.767,5.767,0,0,1-4.158-1.782L23.572,8.008a1.325,1.325,0,0,0-.957-.411h0A1.325,1.325,0,0,0,21.657,8L20.209,9.513a5.769,5.769,0,0,1-4.143,1.767H14.221v-.238a8.391,8.391,0,0,1,16.783,0ZM16.066,13.929a8.432,8.432,0,0,0,6.055-2.582l.488-.508.489.513a8.43,8.43,0,0,0,6.077,2.6H31v5.035a8.351,8.351,0,0,1-.522,2.915H24.467a1.325,1.325,0,0,0,0,2.65h4.42a8.387,8.387,0,0,1-14.666-5.565V13.929Zm6.546,16.1a10.975,10.975,0,0,0,5.708-1.593,5.741,5.741,0,0,1-11.416,0A10.975,10.975,0,0,0,22.613,30.032ZM34.89,13.6V19.7a2.212,2.212,0,0,1-1.6,2.124,11.017,11.017,0,0,0,.368-2.83V11.62A2.211,2.211,0,0,1,34.89,13.6Zm7.685,28.972H2.65V42a10.98,10.98,0,0,1,5.174-9.353l6.434-4.037a8.391,8.391,0,0,0,16.709,0L37.4,32.643A10.981,10.981,0,0,1,42.575,42Z" transform="translate(0)" fill="#600d0d" class="AoKyQMCU_14"></path>
+          <path id="Path_666" data-name="Path 666" d="M330.8,422h-8.257a1.548,1.548,0,1,0,0,3.1H330.8a1.548,1.548,0,1,0,0-3.1Z" transform="translate(-293.953 -386.064)" fill="#600d0d" class="AoKyQMCU_15"></path>
+        </g>
+      </g>
+    </g>
+    <g id="Group_26" data-name="Group 26" transform="translate(180.172 7293)">
+      <text id="_3._ÐÐ¾Ð»ÑÑÐ¸ÑÑ_Ð´ÐµÐ¼Ð¾Ð²ÐµÑÑÐ¸Ñ_Ð¸_Ð¸Ð½ÑÑÑÑÐºÑÐ¸Ñ_Ð¿Ð¾_ÑÑÑÐ°Ð½Ð¾Ð²ÐºÐµ" data-name="3. ÐÐ¾Ð»ÑÑÐ¸ÑÑ Ð´ÐµÐ¼Ð¾Ð²ÐµÑÑÐ¸Ñ Ð¸ Ð¸Ð½ÑÑÑÑÐºÑÐ¸Ñ Ð¿Ð¾ ÑÑÑÐ°Ð½Ð¾Ð²ÐºÐµ" 
+        transform="translate(12.828 133)" fill="#260c0c" font-size="20" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="2.455" y="19">3.</tspan><tspan y="19" xml:space="preserve" font-family="Roboto-Regular, Roboto" font-weight="400"> Получить демоверсию </tspan><tspan x="41.684" y="43" font-family="Roboto-Regular, Roboto" font-weight="400">и инструкцию по </tspan><tspan x="73.129" y="67" font-family="Roboto-Regular, Roboto" font-weight="400">установке</tspan></text>
+      <g id="Group_34" data-name="Group 34">
+        <g id="Ð¨Ð°Ð³-3" data-name="Ð¨Ð°Ð³" transform="translate(70.5)">
+          <g id="ÐÑÑÐ³-Ð¿ÑÐ½ÐºÑ-3" data-name="ÐÑÑÐ³-Ð¿ÑÐ½ÐºÑ">
+            <g id="Ellipse_26-3" data-name="Ellipse 26" fill="none" stroke="#600d0d" stroke-width="2">
+              <path stroke="none" d="M0,61.456A61.456,61.456 0,1,1 122.912,61.456A61.456,61.456 0,1,1 0,61.456" class="AoKyQMCU_16"></path>
+              <path fill="none" d="M1,61.456A60.456,60.456 0,1,1 121.912,61.456A60.456,60.456 0,1,1 1,61.456" class="AoKyQMCU_17"></path>
+            </g>
+            <path id="Ellipse_27-3" data-name="Ellipse 27" transform="translate(14.652 14.652)" fill="#fff" d="M0,46.804A46.804,46.804 0,1,1 93.608,46.804A46.804,46.804 0,1,1 0,46.804" class="AoKyQMCU_18"></path>
+            <g id="Ellipse_28-3" data-name="Ellipse 28" transform="translate(18.722 18.722)" fill="none" stroke="#dbb778" stroke-width="2">
+              <path stroke="none" d="M0,42.734A42.734,42.734 0,1,1 85.468,42.734A42.734,42.734 0,1,1 0,42.734" class="AoKyQMCU_19"></path>
+              <path fill="none" d="M1,42.734A41.734,41.734 0,1,1 84.468,42.734A41.734,41.734 0,1,1 1,42.734" class="AoKyQMCU_20"></path>
+            </g>
+          </g>
+        </g>
+        <path id="email" d="M43.663,16.222,25.456,1.112a4.812,4.812,0,0,0-6.142,0L1.106,16.222A3.052,3.052,0,0,0,0,18.577V39.964a4.815,4.815,0,0,0,4.809,4.809H39.96a4.815,4.815,0,0,0,4.809-4.809V18.577A3.052,3.052,0,0,0,43.663,16.222ZM42.146,39.964a2.174,2.174,0,0,1-.134.754l-13.34-9.142L42.146,20.395Zm-39.523,0V20.395L16.1,31.576,2.757,40.718a2.175,2.175,0,0,1-.134-.755ZM36.812,21.412,23.743,32.258a2.129,2.129,0,0,1-2.718,0L7.957,21.412V19.679a.438.438,0,0,1,.437-.437H36.375a.438.438,0,0,1,.437.437ZM18.2,33.318l1.154.958a4.753,4.753,0,0,0,6.068,0l1.154-.958L39.46,42.15H5.309ZM20.989,3.131a2.187,2.187,0,0,1,2.792,0l17.53,14.548L39.406,19.26a3.065,3.065,0,0,0-3.031-2.641H8.394A3.065,3.065,0,0,0,5.363,19.26L3.458,17.679Z" transform="translate(109.838 36.625)" fill="#600d0d" class="AoKyQMCU_21"></path>
+      </g>
+    </g>
+    <g id="Group_27" data-name="Group 27" transform="translate(-325 780)">
+      <text id="_4._Ð£ÑÑÐ°Ð½Ð¾Ð²Ð¸ÑÑ_Ð²_ÑÐ²Ð¾ÐµÐ¼_Ð·Ð°Ð»Ðµ_ÑÐ¸ÑÑÐµÐ¼Ñ_Ð¸_Ð¿Ð¾Ð»ÑÑÐ¸ÑÑ_30_000_ÐºÑÐµÐ´Ð¸ÑÐ¾Ð²" data-name="4. Ð£ÑÑÐ°Ð½Ð¾Ð²Ð¸ÑÑ Ð² ÑÐ²Ð¾ÐµÐ¼ Ð·Ð°Ð»Ðµ ÑÐ¸ÑÑÐµÐ¼Ñ Ð¸ Ð¿Ð¾Ð»ÑÑÐ¸ÑÑ 
+30 000 ÐºÑÐµÐ´Ð¸ÑÐ¾Ð²" transform="translate(568 6881)" fill="#260c0c" font-size="20" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="13.307" y="19">4.</tspan><tspan y="19" xml:space="preserve" font-family="Roboto-Regular, Roboto" font-weight="400"> Установить в своем </tspan><tspan x="2.687" y="43" font-family="Roboto-Regular, Roboto" font-weight="400">зале систему и получить </tspan><tspan font-family="Roboto-Regular, Roboto" font-weight="400"><tspan x="41.866" y="67">30 000 кредитов</tspan></tspan></text>
+      <g id="Group_35" data-name="Group 35" transform="translate(12 -28)">
+        <g id="Ð¨Ð°Ð³-4" data-name="Ð¨Ð°Ð³" transform="translate(613.5 6773)">
+          <g id="ÐÑÑÐ³-Ð¿ÑÐ½ÐºÑ-4" data-name="ÐÑÑÐ³-Ð¿ÑÐ½ÐºÑ" transform="translate(0 0)">
+            <g id="Ellipse_26-4" data-name="Ellipse 26" fill="none" stroke="#600d0d" stroke-width="2">
+              <path stroke="none" d="M0,61.947A61.947,61.947 0,1,1 123.894,61.947A61.947,61.947 0,1,1 0,61.947" class="AoKyQMCU_22"></path>
+              <path fill="none" d="M1,61.947A60.947,60.947 0,1,1 122.894,61.947A60.947,60.947 0,1,1 1,61.947" class="AoKyQMCU_23"></path>
+            </g>
+            <path id="Ellipse_27-4" data-name="Ellipse 27" transform="translate(14.769 14.769)" fill="#fff" d="M0,47.178A47.178,47.178 0,1,1 94.356,47.178A47.178,47.178 0,1,1 0,47.178" class="AoKyQMCU_24"></path>
+            <g id="Ellipse_28-4" data-name="Ellipse 28" transform="translate(18.871 18.871)" fill="none" stroke="#dbb778" stroke-width="2">
+              <path stroke="none" d="M0,43.075A43.075,43.075 0,1,1 86.15,43.075A43.075,43.075 0,1,1 0,43.075" class="AoKyQMCU_25"></path>
+              <path fill="none" d="M1,43.075A42.075,42.075 0,1,1 85.15,43.075A42.075,42.075 0,1,1 1,43.075" class="AoKyQMCU_26"></path>
+            </g>
+          </g>
+        </g>
+        <g id="tv" transform="translate(653.09 6814.571)">
+          <path id="Path_667" data-name="Path 667" d="M42.042,25.174H3.085A3.088,3.088,0,0,0,0,28.259V52.937a3.088,3.088,0,0,0,3.085,3.085H16.107v3.534L5.382,63.292a1.322,1.322,0,0,0,.87,2.5l14.427-5.025a5.751,5.751,0,0,1,3.769,0l14.427,5.025a1.322,1.322,0,0,0,.87-2.5L29.019,59.556V56.022H42.042a3.088,3.088,0,0,0,3.085-3.085V28.259a3.088,3.088,0,0,0-3.085-3.085ZM26.375,58.635l-1.058-.368a8.406,8.406,0,0,0-5.509,0l-1.058.368V56.022h7.624Zm16.107-5.7a.441.441,0,0,1-.441.441H3.085a.441.441,0,0,1-.441-.441V28.259a.441.441,0,0,1,.441-.441H42.042a.441.441,0,0,1,.441.441Z" transform="translate(0 -25.174)" fill="#600d0d" class="AoKyQMCU_27"></path>
+          <path id="Path_668" data-name="Path 668" d="M57.743,84.149l2.395-2.395a1.022,1.022,0,0,0-1.445-1.445L56.3,82.7a1.022,1.022,0,1,0,1.445,1.445Z" transform="translate(-52.186 -76.276)" fill="#600d0d" class="AoKyQMCU_28"></path>
+          <path id="Path_669" data-name="Path 669" d="M74.217,91.973l-6.254,6.254a1.021,1.021,0,1,0,1.445,1.445l6.254-6.254a1.021,1.021,0,0,0-1.445-1.445Z" transform="translate(-63.056 -87.145)" fill="#600d0d" class="AoKyQMCU_29"></path>
+        </g>
+      </g>
+    </g>
+    <g id="Group_28" data-name="Group 28" transform="translate(-364 1029)">
+      <text id="_5._ÐÐ°ÑÐ°ÑÑ_Ð·Ð°ÑÐ°Ð±Ð°ÑÑÐ²Ð°ÑÑ_Ð¿Ð¾_ÑÑÑÐ°Ð½Ð¾Ð²Ð»ÐµÐ½Ð½Ð¾Ð¼Ñ_Ð¿ÑÐ¾ÑÐµÐ½ÑÑ_Ð¾ÑÐ´Ð°ÑÐ¸_Ð·Ð°Ð»Ð°" 
+        data-name="5. ÐÐ°ÑÐ°ÑÑ Ð·Ð°ÑÐ°Ð±Ð°ÑÑÐ²Ð°ÑÑ Ð¿Ð¾ ÑÑÑÐ°Ð½Ð¾Ð²Ð»ÐµÐ½Ð½Ð¾Ð¼Ñ Ð¿ÑÐ¾ÑÐµÐ½ÑÑ Ð¾ÑÐ´Ð°ÑÐ¸ Ð·Ð°Ð»Ð°" transform="translate(557 6865)" fill="#260c0c" font-size="20" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="5.475" y="19">5.</tspan><tspan y="19" xml:space="preserve" font-family="Roboto-Regular, Roboto" font-weight="400"> Начать зарабатывать </tspan><tspan x="27.335" y="43" font-family="Roboto-Regular, Roboto" font-weight="400">по установленному </tspan><tspan x="15.89" y="67" font-family="Roboto-Regular, Roboto" font-weight="400">проценту отдачи зала</tspan></text>
+      <g id="Group_36" data-name="Group 36" transform="translate(0 -43)">
+        <g id="Ð¨Ð°Ð³-5" data-name="Ð¨Ð°Ð³" transform="translate(613.5 6773)">
+          <g id="ÐÑÑÐ³-Ð¿ÑÐ½ÐºÑ-5" data-name="ÐÑÑÐ³-Ð¿ÑÐ½ÐºÑ" transform="translate(0 0)">
+            <g id="Ellipse_26-5" data-name="Ellipse 26" fill="none" stroke="#600d0d" stroke-width="2">
+              <path stroke="none" d="M0,61.436A61.436,61.436 0,1,1 122.872,61.436A61.436,61.436 0,1,1 0,61.436" class="AoKyQMCU_30"></path>
+              <path fill="none" d="M1,61.436A60.436,60.436 0,1,1 121.872,61.436A60.436,60.436 0,1,1 1,61.436" class="AoKyQMCU_31"></path>
+            </g>
+            <path id="Ellipse_27-5" data-name="Ellipse 27" transform="translate(14.647 14.647)" fill="#fff" d="M0,46.789A46.789,46.789 0,1,1 93.578,46.789A46.789,46.789 0,1,1 0,46.789" class="AoKyQMCU_32"></path>
+            <g id="Ellipse_28-5" data-name="Ellipse 28" transform="translate(18.715 18.715)" fill="none" stroke="#dbb778" stroke-width="2">
+              <path stroke="none" d="M0,42.72A42.72,42.72 0,1,1 85.44,42.72A42.72,42.72 0,1,1 0,42.72" class="AoKyQMCU_33"></path>
+              <path fill="none" d="M1,42.72A41.72,41.72 0,1,1 84.44,42.72A41.72,41.72 0,1,1 1,42.72" class="AoKyQMCU_34"></path>
+            </g>
+          </g>
+        </g>
+        <g id="like" transform="translate(652.358 6811.455)">
+          <path id="Path_670" data-name="Path 670" d="M41.555,0H5.225A4.37,4.37,0,0,0,.86,4.365V35.072a4.37,4.37,0,0,0,4.365,4.365h6.731V43a2.21,2.21,0,0,0,3.334,1.9l9.234-5.467h17.03a4.37,4.37,0,0,0,4.365-4.365V4.365A4.37,4.37,0,0,0,41.555,0ZM43.27,35.072a1.717,1.717,0,0,1-1.715,1.715H24.162a1.325,1.325,0,0,0-.675.185l-8.88,5.257V38.113a1.325,1.325,0,0,0-1.325-1.325H5.225a1.717,1.717,0,0,1-1.715-1.715V4.365A1.717,1.717,0,0,1,5.225,2.651H41.555A1.717,1.717,0,0,1,43.27,4.365Z" transform="translate(-0.86 0)" fill="#600d0d" class="AoKyQMCU_35"></path>
+          <path id="Path_671" data-name="Path 671" d="M131.955,77.455h-3.789V73.832a4.865,4.865,0,0,0-4.859-4.859h-1.414a2.211,2.211,0,0,0-2.209,2.209v4.464a.442.442,0,0,1-.061.225l-2.359,3.988a.444.444,0,0,1-.38.217h-2.526a3.1,3.1,0,0,0-3.092,3.092v6.361a3.1,3.1,0,0,0,3.092,3.092h2.951a.445.445,0,0,1,.263.087l2.6,1.925a3.113,3.113,0,0,0,1.842.609h8.533a4.851,4.851,0,0,0,4.787-4.021l1.413-8.069a4.859,4.859,0,0,0-4.787-5.7Zm-1.413,15.137h-8.533a.445.445,0,0,1-.263-.087l-2.6-1.925a3.113,3.113,0,0,0-1.842-.609h-2.951a.442.442,0,0,1-.442-.442V83.168a.442.442,0,0,1,.442-.442h2.526a3.105,3.105,0,0,0,2.662-1.518l2.359-3.988a3.094,3.094,0,0,0,.431-1.574V71.624h.972a2.211,2.211,0,0,1,2.209,2.209V78.78a1.325,1.325,0,0,0,1.325,1.325h5.115a2.209,2.209,0,0,1,2.176,2.59l-1.413,8.069A2.2,2.2,0,0,1,130.543,92.592Z" transform="translate(-101.51 -62.879)" fill="#600d0d" class="AoKyQMCU_36"></path>
+        </g>
+      </g>
+    </g>
+    <path id="Path_672" data-name="Path 672" d="M4031.966,6905.058h84.2s11.32,2.423,11.32,14.484v203.265s1.109,16.083-12.568,16.083c-5.581,0-.657.023-32.438,0" transform="translate(-3660 -17)" fill="none" stroke="#600d0d" stroke-width="2" class="AoKyQMCU_37"></path>
+    <path id="Path_673" data-name="Path 673" d="M4127.508,6905.058h-84.2s-11.32,2.423-11.32,14.484v203.265s-1.109,16.083,12.568,16.083c5.581,0,.657.023,32.438,0" transform="translate(-3826 217)" fill="none" stroke="#600d0d" stroke-width="2" class="AoKyQMCU_38"></path>
+    <path id="Path_675" data-name="Path 675" d="M4127.508,6905.058h-84.2s-11.32,2.423-11.32,14.484v203.265s-1.109,16.083,12.568,16.083c5.581,0,.657.023,32.438,0" transform="translate(-3826 681)" fill="none" stroke="#600d0d" stroke-width="2" class="AoKyQMCU_39"></path>
+    <path id="Path_674" data-name="Path 674" d="M4031.966,6905.058h84.2s11.32,2.423,11.32,14.484v203.265s1.109,16.083-12.568,16.083c-5.581,0-.657.023-32.438,0" transform="translate(-3659 448)" fill="none" stroke="#600d0d" stroke-width="2" class="AoKyQMCU_40"></path>
+  </g>
+<style data-made-with="vivus-instant">.AoKyQMCU_0{stroke-dasharray:386 388;stroke-dashoffset:387;animation:AoKyQMCU_draw 2000ms linear 0ms forwards;}.AoKyQMCU_1{stroke-dasharray:380 382;stroke-dashoffset:381;animation:AoKyQMCU_draw 2000ms linear 25ms forwards;}.AoKyQMCU_2{stroke-dasharray:294 296;stroke-dashoffset:295;animation:AoKyQMCU_draw 2000ms linear 50ms forwards;}.AoKyQMCU_3{stroke-dasharray:269 271;stroke-dashoffset:270;animation:AoKyQMCU_draw 2000ms linear 75ms forwards;}.AoKyQMCU_4{stroke-dasharray:262 264;stroke-dashoffset:263;animation:AoKyQMCU_draw 2000ms linear 100ms forwards;}.AoKyQMCU_5{stroke-dasharray:176 178;stroke-dashoffset:177;animation:AoKyQMCU_draw 2000ms linear 125ms forwards;}.AoKyQMCU_6{stroke-dasharray:23 25;stroke-dashoffset:24;animation:AoKyQMCU_draw 2000ms linear 150ms forwards;}.AoKyQMCU_7{stroke-dasharray:37 39;stroke-dashoffset:38;animation:AoKyQMCU_draw 2000ms linear 175ms forwards;}.AoKyQMCU_8{stroke-dasharray:166 168;stroke-dashoffset:167;animation:AoKyQMCU_draw 2000ms linear 200ms forwards;}.AoKyQMCU_9{stroke-dasharray:386 388;stroke-dashoffset:387;animation:AoKyQMCU_draw 2000ms linear 225ms forwards;}.AoKyQMCU_10{stroke-dasharray:380 382;stroke-dashoffset:381;animation:AoKyQMCU_draw 2000ms linear 250ms forwards;}.AoKyQMCU_11{stroke-dasharray:294 296;stroke-dashoffset:295;animation:AoKyQMCU_draw 2000ms linear 275ms forwards;}.AoKyQMCU_12{stroke-dasharray:269 271;stroke-dashoffset:270;animation:AoKyQMCU_draw 2000ms linear 300ms forwards;}.AoKyQMCU_13{stroke-dasharray:262 264;stroke-dashoffset:263;animation:AoKyQMCU_draw 2000ms linear 325ms forwards;}.AoKyQMCU_14{stroke-dasharray:433 435;stroke-dashoffset:434;animation:AoKyQMCU_draw 2000ms linear 350ms forwards;}.AoKyQMCU_15{stroke-dasharray:27 29;stroke-dashoffset:28;animation:AoKyQMCU_draw 2000ms linear 375ms forwards;}.AoKyQMCU_16{stroke-dasharray:387 389;stroke-dashoffset:388;animation:AoKyQMCU_draw 2000ms linear 400ms forwards;}.AoKyQMCU_17{stroke-dasharray:380 382;stroke-dashoffset:381;animation:AoKyQMCU_draw 2000ms linear 425ms forwards;}.AoKyQMCU_18{stroke-dasharray:295 297;stroke-dashoffset:296;animation:AoKyQMCU_draw 2000ms linear 450ms forwards;}.AoKyQMCU_19{stroke-dasharray:269 271;stroke-dashoffset:270;animation:AoKyQMCU_draw 2000ms linear 475ms forwards;}.AoKyQMCU_20{stroke-dasharray:263 265;stroke-dashoffset:264;animation:AoKyQMCU_draw 2000ms linear 500ms forwards;}.AoKyQMCU_21{stroke-dasharray:496 498;stroke-dashoffset:497;animation:AoKyQMCU_draw 2000ms linear 525ms forwards;}.AoKyQMCU_22{stroke-dasharray:390 392;stroke-dashoffset:391;animation:AoKyQMCU_draw 2000ms linear 550ms forwards;}.AoKyQMCU_23{stroke-dasharray:383 385;stroke-dashoffset:384;animation:AoKyQMCU_draw 2000ms linear 575ms forwards;}.AoKyQMCU_24{stroke-dasharray:297 299;stroke-dashoffset:298;animation:AoKyQMCU_draw 2000ms linear 600ms forwards;}.AoKyQMCU_25{stroke-dasharray:271 273;stroke-dashoffset:272;animation:AoKyQMCU_draw 2000ms linear 625ms forwards;}.AoKyQMCU_26{stroke-dasharray:265 267;stroke-dashoffset:266;animation:AoKyQMCU_draw 2000ms linear 650ms forwards;}.AoKyQMCU_27{stroke-dasharray:357 359;stroke-dashoffset:358;animation:AoKyQMCU_draw 2000ms linear 675ms forwards;}.AoKyQMCU_28{stroke-dasharray:14 16;stroke-dashoffset:15;animation:AoKyQMCU_draw 2000ms linear 700ms forwards;}.AoKyQMCU_29{stroke-dasharray:25 27;stroke-dashoffset:26;animation:AoKyQMCU_draw 2000ms linear 725ms forwards;}.AoKyQMCU_30{stroke-dasharray:387 389;stroke-dashoffset:388;animation:AoKyQMCU_draw 2000ms linear 750ms forwards;}.AoKyQMCU_31{stroke-dasharray:380 382;stroke-dashoffset:381;animation:AoKyQMCU_draw 2000ms linear 775ms forwards;}.AoKyQMCU_32{stroke-dasharray:295 297;stroke-dashoffset:296;animation:AoKyQMCU_draw 2000ms linear 800ms forwards;}.AoKyQMCU_33{stroke-dasharray:269 271;stroke-dashoffset:270;animation:AoKyQMCU_draw 2000ms linear 825ms forwards;}.AoKyQMCU_34{stroke-dasharray:263 265;stroke-dashoffset:264;animation:AoKyQMCU_draw 2000ms linear 850ms forwards;}.AoKyQMCU_35{stroke-dasharray:320 322;stroke-dashoffset:321;animation:AoKyQMCU_draw 2000ms linear 875ms forwards;}.AoKyQMCU_36{stroke-dasharray:162 164;stroke-dashoffset:163;animation:AoKyQMCU_draw 2000ms linear 900ms forwards;}.AoKyQMCU_37{stroke-dasharray:363 365;stroke-dashoffset:364;animation:AoKyQMCU_draw 2000ms linear 925ms forwards;}.AoKyQMCU_38{stroke-dasharray:363 365;stroke-dashoffset:364;animation:AoKyQMCU_draw 2000ms linear 950ms forwards;}.AoKyQMCU_39{stroke-dasharray:363 365;stroke-dashoffset:364;animation:AoKyQMCU_draw 2000ms linear 975ms forwards;}.AoKyQMCU_40{stroke-dasharray:363 365;stroke-dashoffset:364;animation:AoKyQMCU_draw 2000ms linear 1000ms forwards;}@keyframes AoKyQMCU_draw{100%{stroke-dashoffset:0;}}@keyframes AoKyQMCU_fade{0%{stroke-opacity:1;}94.44444444444444%{stroke-opacity:1;}100%{stroke-opacity:0;}}</style></svg>

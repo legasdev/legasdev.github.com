@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1558.004" height="598" viewBox="0 0 1558.004 598" style="">
+    <g transform="translate(-143 -6828)">
+        <g transform="translate(166 6828)">
+            <g transform="translate(47.5)">
+                <g fill="none" stroke="#600d0d" stroke-width="2">
+                    <path stroke="none" d="M0,75.5A75.5,75.5 0,1,1 151,75.5A75.5,75.5 0,1,1 0,75.5" style="stroke-dasharray:475 477;stroke-dashoffset:476;animation:mMwKiJKN_draw 2000ms linear 0ms forwards"/>
+                    <path fill="none" d="M1,75.5A74.5,74.5 0,1,1 150,75.5A74.5,74.5 0,1,1 1,75.5" style="stroke-dasharray:469 471;stroke-dashoffset:470;animation:mMwKiJKN_draw 2000ms linear 25ms forwards"/>
+                </g>
+                <path transform="translate(18 18)" fill="#fff" d="M0,57.5A57.5,57.5 0,1,1 115,57.5A57.5,57.5 0,1,1 0,57.5" style="stroke-dasharray:362 364;stroke-dashoffset:363;animation:mMwKiJKN_draw 2000ms linear 50ms forwards"/>
+                <g transform="translate(23 23)" fill="none" stroke="#dbb778" stroke-width="2">
+                    <path stroke="none" d="M0,52.5A52.5,52.5 0,1,1 105,52.5A52.5,52.5 0,1,1 0,52.5" style="stroke-dasharray:330 332;stroke-dashoffset:331;animation:mMwKiJKN_draw 2000ms linear 75ms forwards"/>
+                    <path fill="none" d="M1,52.5A51.5,51.5 0,1,1 104,52.5A51.5,51.5 0,1,1 1,52.5" style="stroke-dasharray:324 326;stroke-dashoffset:325;animation:mMwKiJKN_draw 2000ms linear 100ms forwards"/>
+                </g>
+            </g>
+            <text transform="translate(-23 166)" fill="#260c0c" font-size="20" font-family="Roboto-Bold, Roboto" font-weight="700">
+                <tspan x="37.091" y="19">1.</tspan><tspan y="19" xml:space="preserve" font-family="Roboto-Regular, Roboto" font-weight="400"> Оставить имя и свой</tspan><tspan font-family="Roboto-Regular, Roboto" font-weight="400"><tspan x="27.267" y="43">номер телефона в форме </tspan><tspan x="72.574" y="67">обратной связи</tspan></tspan>
+            </text>
+            <g transform="translate(95.095 48.176)">
+                <path d="M25.734,24.9h4.132a3.81,3.81,0,0,0,3.805-3.805V3.805A3.81,3.81,0,0,0,29.866,0H3.88A3.81,3.81,0,0,0,.075,3.805V21.093A3.81,3.81,0,0,0,3.88,24.9H14.115l7.118,6.189a2.7,2.7,0,0,0,1.775.672,2.735,2.735,0,0,0,1.136-.25,2.69,2.69,0,0,0,1.591-2.474Zm-3.262-1.631v4.575l-6.678-5.806a1.631,1.631,0,0,0-1.07-.4H3.88a.544.544,0,0,1-.544-.544V3.805a.544.544,0,0,1,.544-.544H29.866a.544.544,0,0,1,.544.544V21.093a.544.544,0,0,1-.544.544H24.1a1.631,1.631,0,0,0-1.631,1.631Z" fill="#600d0d" style="stroke-dasharray:217 219;stroke-dashoffset:218;animation:mMwKiJKN_draw 2000ms linear 125ms forwards"/>
+                <path d="M61.706,73.262h8.916a1.631,1.631,0,0,0,0-3.262H61.706a1.631,1.631,0,0,0,0,3.262Z" transform="translate(-53.476 -62.389)" fill="#600d0d" style="stroke-dasharray:29 31;stroke-dashoffset:30;animation:mMwKiJKN_draw 2000ms linear 150ms forwards"/>
+                <path d="M80.624,131.631A1.631,1.631,0,0,0,78.993,130H61.706a1.631,1.631,0,0,0,0,3.262H78.993A1.631,1.631,0,0,0,80.624,131.631Z" transform="translate(-53.476 -115.866)" fill="#600d0d" style="stroke-dasharray:45 47;stroke-dashoffset:46;animation:mMwKiJKN_draw 2000ms linear 175ms forwards"/>
+                <path d="M262.18,251.847l-.845-7.145a11.154,11.154,0,0,0-8.139-9.446,7.974,7.974,0,1,0-12.281-.045A11.154,11.154,0,0,0,232.6,244.7l-.845,7.145a1.631,1.631,0,0,0,1.62,1.823h27.182a1.631,1.631,0,0,0,1.619-1.823ZM247.074,225.44a4.713,4.713,0,1,1-4.713,4.713A4.718,4.718,0,0,1,247.074,225.44Zm-11.86,24.969.63-5.322a7.887,7.887,0,0,1,7.83-6.958h6.591a7.887,7.887,0,0,1,7.83,6.958l.63,5.322Z" transform="translate(-206.484 -198.021)" fill="#600d0d" style="stroke-dasharray:204 206;stroke-dashoffset:205;animation:mMwKiJKN_draw 2000ms linear 200ms forwards"/>
+            </g>
+        </g>
+        <g transform="translate(724.459 6828)">
+            <g transform="translate(70.917)">
+                <g fill="none" stroke="#600d0d" stroke-width="2">
+                    <path stroke="none" d="M0,75.5A75.5,75.5 0,1,1 151,75.5A75.5,75.5 0,1,1 0,75.5" style="stroke-dasharray:475 477;stroke-dashoffset:476;animation:mMwKiJKN_draw 2000ms linear 225ms forwards"/>
+                    <path fill="none" d="M1,75.5A74.5,74.5 0,1,1 150,75.5A74.5,74.5 0,1,1 1,75.5" style="stroke-dasharray:469 471;stroke-dashoffset:470;animation:mMwKiJKN_draw 2000ms linear 250ms forwards"/>
+                </g>
+                <path transform="translate(18 18)" fill="#fff" d="M0,57.5A57.5,57.5 0,1,1 115,57.5A57.5,57.5 0,1,1 0,57.5" style="stroke-dasharray:362 364;stroke-dashoffset:363;animation:mMwKiJKN_draw 2000ms linear 275ms forwards"/>
+                <g transform="translate(23 23)" fill="none" stroke="#dbb778" stroke-width="2">
+                    <path stroke="none" d="M0,52.5A52.5,52.5 0,1,1 105,52.5A52.5,52.5 0,1,1 0,52.5" style="stroke-dasharray:330 332;stroke-dashoffset:331;animation:mMwKiJKN_draw 2000ms linear 300ms forwards"/>
+                    <path fill="none" d="M1,52.5A51.5,51.5 0,1,1 104,52.5A51.5,51.5 0,1,1 1,52.5" style="stroke-dasharray:324 326;stroke-dashoffset:325;animation:mMwKiJKN_draw 2000ms linear 325ms forwards"/>
+                </g>
+            </g>
+            <text transform="translate(-0.459 166)" fill="#260c0c" font-size="20" font-family="Roboto-Bold, Roboto" font-weight="700">
+                <tspan x="46.676" y="19">2.</tspan><tspan y="19" xml:space="preserve" font-family="Roboto-Regular, Roboto" font-weight="400"> Дождаться звонка</tspan><tspan x="3.697" y="43" font-family="Roboto-Regular, Roboto" font-weight="400">менеджера и обсудить детали</tspan>
+            </text>
+            <g transform="translate(119.041 47.5)">
+                <path d="M53.526,43.506a16.884,16.884,0,0,0-5.787-6.115l-9.166-5.75a13.631,13.631,0,0,0,.969-1.436h.66a5.983,5.983,0,0,0,5.976-5.976v-7.5a5.985,5.985,0,0,0-5.062-5.906,13.582,13.582,0,0,0-26.882,2.755V23.36a13.513,13.513,0,0,0,2.824,8.281l-9.166,5.75A16.841,16.841,0,0,0,0,51.658V54a1.63,1.63,0,0,0,1.63,1.63H54A1.63,1.63,0,0,0,55.63,54V51.658A16.883,16.883,0,0,0,53.526,43.506Zm-15.389-29.6H35.886a7.094,7.094,0,0,1-5.114-2.192L29,9.85a1.63,1.63,0,0,0-1.177-.506h0a1.63,1.63,0,0,0-1.176.5L24.859,11.7a7.1,7.1,0,0,1-5.1,2.173h-2.27v-.293a10.322,10.322,0,0,1,20.644,0ZM19.762,17.134a10.371,10.371,0,0,0,7.448-3.176l.6-.625.6.631a10.369,10.369,0,0,0,7.475,3.2h2.251V23.36a10.272,10.272,0,0,1-.643,3.586H30.1a1.63,1.63,0,1,0,0,3.26h5.437A10.317,10.317,0,0,1,17.493,23.36V17.134Zm8.053,19.808a13.5,13.5,0,0,0,7.021-1.96,7.062,7.062,0,0,1-14.043,0A13.5,13.5,0,0,0,27.815,36.942Zm15.1-20.209v7.5a2.721,2.721,0,0,1-1.974,2.612A13.552,13.552,0,0,0,41.4,23.36V14.294A2.719,2.719,0,0,1,42.918,16.732ZM52.37,52.37H3.26v-.713a13.507,13.507,0,0,1,6.364-11.5l7.915-4.965a10.322,10.322,0,0,0,20.553,0l7.915,4.965a13.507,13.507,0,0,1,6.364,11.5Z" fill="#600d0d" style="stroke-dasharray:533 535;stroke-dashoffset:534;animation:mMwKiJKN_draw 2000ms linear 350ms forwards"/>
+                <path d="M333.061,422H322.9a1.9,1.9,0,0,0,0,3.809h10.156a1.9,1.9,0,0,0,0-3.809Z" transform="translate(-287.73 -377.796)" fill="#600d0d" style="stroke-dasharray:33 35;stroke-dashoffset:34;animation:mMwKiJKN_draw 2000ms linear 375ms forwards"/>
+            </g>
+        </g>
+        <g transform="translate(1305.172 6828)">
+            <g transform="translate(70.5)">
+                <g fill="none" stroke="#600d0d" stroke-width="2">
+                    <path stroke="none" d="M0,75.5A75.5,75.5 0,1,1 151,75.5A75.5,75.5 0,1,1 0,75.5" style="stroke-dasharray:475 477;stroke-dashoffset:476;animation:mMwKiJKN_draw 2000ms linear 400ms forwards"/>
+                    <path fill="none" d="M1,75.5A74.5,74.5 0,1,1 150,75.5A74.5,74.5 0,1,1 1,75.5" style="stroke-dasharray:469 471;stroke-dashoffset:470;animation:mMwKiJKN_draw 2000ms linear 425ms forwards"/>
+                </g>
+                <path transform="translate(18 18)" fill="#fff" d="M0,57.5A57.5,57.5 0,1,1 115,57.5A57.5,57.5 0,1,1 0,57.5" style="stroke-dasharray:362 364;stroke-dashoffset:363;animation:mMwKiJKN_draw 2000ms linear 450ms forwards"/>
+                <g transform="translate(23 23)" fill="none" stroke="#dbb778" stroke-width="2">
+                    <path stroke="none" d="M0,52.5A52.5,52.5 0,1,1 105,52.5A52.5,52.5 0,1,1 0,52.5" style="stroke-dasharray:330 332;stroke-dashoffset:331;animation:mMwKiJKN_draw 2000ms linear 475ms forwards"/>
+                    <path fill="none" d="M1,52.5A51.5,51.5 0,1,1 104,52.5A51.5,51.5 0,1,1 1,52.5" style="stroke-dasharray:324 326;stroke-dashoffset:325;animation:mMwKiJKN_draw 2000ms linear 500ms forwards"/>
+                </g>
+            </g>
+            <text transform="translate(-0.172 166)" fill="#260c0c" font-size="20" font-family="Roboto-Bold, Roboto" font-weight="700">
+                <tspan x="19.708" y="19">3.</tspan><tspan y="19" xml:space="preserve" font-family="Roboto-Regular, Roboto" font-weight="400"> Получить демоверсию и</tspan><tspan x="25.084" y="43" font-family="Roboto-Regular, Roboto" font-weight="400">инструкцию по установке</tspan>
+            </text>
+            <path d="M53.641,19.928,31.273,1.365a5.912,5.912,0,0,0-7.546,0L1.359,19.928A3.749,3.749,0,0,0,0,22.821V49.1A5.915,5.915,0,0,0,5.908,55H49.092A5.915,5.915,0,0,0,55,49.1V22.821a3.749,3.749,0,0,0-1.359-2.893ZM51.777,49.1a2.671,2.671,0,0,1-.165.927L35.224,38.792,51.777,25.055Zm-48.555,0V25.055L19.776,38.792,3.388,50.022a2.672,2.672,0,0,1-.165-.927Zm42-22.791L29.169,39.629a2.616,2.616,0,0,1-3.339,0L9.775,26.3V24.176a.538.538,0,0,1,.537-.537H44.687a.538.538,0,0,1,.537.537ZM22.354,40.931l1.418,1.177a5.84,5.84,0,0,0,7.455,0l1.418-1.177,15.832,10.85H6.522ZM25.785,3.845a2.687,2.687,0,0,1,3.43,0L50.752,21.718,48.411,23.66a3.765,3.765,0,0,0-3.724-3.244H10.312A3.765,3.765,0,0,0,6.589,23.66L4.248,21.718Z" transform="translate(118.828 44.996)" fill="#600d0d" style="stroke-dasharray:609 611;stroke-dashoffset:610;animation:mMwKiJKN_draw 2000ms linear 525ms forwards"/>
+        </g>
+        <g transform="translate(511 413)">
+            <g transform="translate(-19.5 -145)">
+                <g transform="translate(-120.955 31.045)">
+                    <g transform="translate(753.955 6886.955)" fill="none" stroke="#600d0d" stroke-width="2">
+                        <path stroke="none" d="M0,75.5A75.5,75.5 0,1,1 151,75.5A75.5,75.5 0,1,1 0,75.5" style="stroke-dasharray:475 477;stroke-dashoffset:476;animation:mMwKiJKN_draw 2000ms linear 550ms forwards"/>
+                        <path fill="none" d="M1,75.5A74.5,74.5 0,1,1 150,75.5A74.5,74.5 0,1,1 1,75.5" style="stroke-dasharray:469 471;stroke-dashoffset:470;animation:mMwKiJKN_draw 2000ms linear 575ms forwards"/>
+                    </g>
+                    <path transform="translate(771.955 6904.955)" fill="#fff" d="M0,57.5A57.5,57.5 0,1,1 115,57.5A57.5,57.5 0,1,1 0,57.5" style="stroke-dasharray:362 364;stroke-dashoffset:363;animation:mMwKiJKN_draw 2000ms linear 600ms forwards"/>
+                    <g transform="translate(776.955 6909.955)" fill="none" stroke="#dbb778" stroke-width="2">
+                        <path stroke="none" d="M0,52.5A52.5,52.5 0,1,1 105,52.5A52.5,52.5 0,1,1 0,52.5" style="stroke-dasharray:330 332;stroke-dashoffset:331;animation:mMwKiJKN_draw 2000ms linear 625ms forwards"/>
+                        <path fill="none" d="M1,52.5A51.5,51.5 0,1,1 104,52.5A51.5,51.5 0,1,1 1,52.5" style="stroke-dasharray:324 326;stroke-dashoffset:325;animation:mMwKiJKN_draw 2000ms linear 650ms forwards"/>
+                    </g>
+                </g>
+            </g>
+            <text transform="translate(543 6939)" fill="#260c0c" font-size="20" font-family="Roboto-Bold, Roboto" font-weight="700">
+                <tspan x="16.734" y="19">4.</tspan><tspan y="19" xml:space="preserve" font-family="Roboto-Regular, Roboto" font-weight="400"> Установить в своем зале </tspan><tspan x="54.259" y="43" font-family="Roboto-Regular, Roboto" font-weight="400">систему и получить</tspan><tspan font-family="Roboto-Regular, Roboto" font-weight="400"><tspan x="69.366" y="67">30 000 кредитов</tspan></tspan>
+            </text>
+            <g transform="translate(661.752 6798.493)">
+                <path d="M51.24,25.174H3.76A3.764,3.764,0,0,0,0,28.934V59.012a3.764,3.764,0,0,0,3.76,3.76H19.631v4.307L6.56,71.632a1.611,1.611,0,0,0,1.06,3.043L25.2,68.551a7.01,7.01,0,0,1,4.594,0L47.38,74.675a1.611,1.611,0,0,0,1.06-3.043L35.369,67.079V62.772H51.24A3.764,3.764,0,0,0,55,59.012V28.934a3.764,3.764,0,0,0-3.76-3.76ZM32.146,65.956l-1.289-.449a10.245,10.245,0,0,0-6.714,0l-1.289.449V62.772h9.292Zm19.631-6.945a.538.538,0,0,1-.537.537H3.76a.538.538,0,0,1-.537-.537V28.934A.538.538,0,0,1,3.76,28.4H51.24a.538.538,0,0,1,.537.537Z" fill="#600d0d" style="stroke-dasharray:436 438;stroke-dashoffset:437;animation:mMwKiJKN_draw 2000ms linear 675ms forwards"/>
+                <path d="M58.125,85.054l2.919-2.919a1.245,1.245,0,1,0-1.761-1.761l-2.919,2.919a1.245,1.245,0,1,0,1.761,1.761Z" transform="translate(-51.351 -50.285)" fill="#600d0d" style="stroke-dasharray:17 19;stroke-dashoffset:18;animation:mMwKiJKN_draw 2000ms linear 700ms forwards"/>
+                <path d="M75.651,92.038l-7.623,7.623a1.245,1.245,0,1,0,1.761,1.761L77.411,93.8a1.245,1.245,0,0,0-1.761-1.761Z" transform="translate(-62.047 -60.98)" fill="#600d0d" style="stroke-dasharray:30 32;stroke-dashoffset:31;animation:mMwKiJKN_draw 2000ms linear 725ms forwards"/>
+            </g>
+        </g>
+        <g transform="translate(-154 413)">
+            <g transform="translate(-19.5 -145)">
+                <g transform="translate(-120.955 31.045)">
+                    <g transform="translate(753.955 6886.955)" fill="none" stroke="#600d0d" stroke-width="2">
+                        <path stroke="none" d="M0,75.5A75.5,75.5 0,1,1 151,75.5A75.5,75.5 0,1,1 0,75.5" style="stroke-dasharray:475 477;stroke-dashoffset:476;animation:mMwKiJKN_draw 2000ms linear 750ms forwards"/>
+                        <path fill="none" d="M1,75.5A74.5,74.5 0,1,1 150,75.5A74.5,74.5 0,1,1 1,75.5" style="stroke-dasharray:469 471;stroke-dashoffset:470;animation:mMwKiJKN_draw 2000ms linear 775ms forwards"/>
+                    </g>
+                    <path transform="translate(771.955 6904.955)" fill="#fff" d="M0,57.5A57.5,57.5 0,1,1 115,57.5A57.5,57.5 0,1,1 0,57.5" style="stroke-dasharray:362 364;stroke-dashoffset:363;animation:mMwKiJKN_draw 2000ms linear 800ms forwards"/>
+                    <g transform="translate(776.955 6909.955)" fill="none" stroke="#dbb778" stroke-width="2">
+                        <path stroke="none" d="M0,52.5A52.5,52.5 0,1,1 105,52.5A52.5,52.5 0,1,1 0,52.5" style="stroke-dasharray:330 332;stroke-dashoffset:331;animation:mMwKiJKN_draw 2000ms linear 825ms forwards"/>
+                        <path fill="none" d="M1,52.5A51.5,51.5 0,1,1 104,52.5A51.5,51.5 0,1,1 1,52.5" style="stroke-dasharray:324 326;stroke-dashoffset:325;animation:mMwKiJKN_draw 2000ms linear 850ms forwards"/>
+                    </g>
+                </g>
+            </g>
+            <text transform="translate(533 6939)" fill="#260c0c" font-size="20" font-family="Roboto-Bold, Roboto" font-weight="700">
+                <tspan x="28.524" y="19">5.</tspan><tspan y="19" xml:space="preserve" font-family="Roboto-Regular, Roboto" font-weight="400"> Начать зарабатывать по</tspan><tspan x="32.147" y="43" font-family="Roboto-Regular, Roboto" font-weight="400">установленному проценту</tspan><tspan x="99.027" y="67" font-family="Roboto-Regular, Roboto" font-weight="400">отдачи зала</tspan>
+            </text>
+            <g transform="translate(660.394 6820.258)">
+                <path d="M50.871,0H6.225A5.371,5.371,0,0,0,.86,5.365V43.1a5.371,5.371,0,0,0,5.365,5.365H14.5v4.382a2.716,2.716,0,0,0,4.1,2.336l11.348-6.718H50.871A5.371,5.371,0,0,0,56.236,43.1V5.365A5.371,5.371,0,0,0,50.871,0Zm2.107,43.1a2.11,2.11,0,0,1-2.107,2.107H29.5a1.629,1.629,0,0,0-.83.227L17.754,51.9V46.838a1.629,1.629,0,0,0-1.629-1.629h-9.9A2.11,2.11,0,0,1,4.117,43.1V5.365A2.11,2.11,0,0,1,6.225,3.257H50.871a2.11,2.11,0,0,1,2.107,2.107Z" transform="translate(0)" fill="#600d0d" style="stroke-dasharray:393 395;stroke-dashoffset:394;animation:mMwKiJKN_draw 2000ms linear 875ms forwards"/>
+                <path d="M136.692,79.4h-4.657V74.945a5.979,5.979,0,0,0-5.972-5.972h-1.737a2.718,2.718,0,0,0-2.715,2.715v5.486a.543.543,0,0,1-.076.276l-2.9,4.9a.545.545,0,0,1-.467.266h-3.1a3.8,3.8,0,0,0-3.8,3.8v7.818a3.8,3.8,0,0,0,3.8,3.8h3.626a.547.547,0,0,1,.323.107l3.191,2.366a3.826,3.826,0,0,0,2.264.748h10.487a5.962,5.962,0,0,0,5.882-4.942l1.736-9.916a5.972,5.972,0,0,0-5.883-7ZM134.956,98H124.469a.547.547,0,0,1-.323-.107l-3.191-2.366a3.825,3.825,0,0,0-2.264-.748h-3.626a.544.544,0,0,1-.543-.543V86.418a.544.544,0,0,1,.543-.543h3.1a3.816,3.816,0,0,0,3.271-1.866l2.9-4.9a3.8,3.8,0,0,0,.53-1.935V72.23h1.194a2.718,2.718,0,0,1,2.715,2.714v6.08a1.629,1.629,0,0,0,1.629,1.629h6.285a2.714,2.714,0,0,1,2.674,3.183l-1.736,9.916A2.71,2.71,0,0,1,134.956,98Z" transform="translate(-98.417 -61.484)" fill="#600d0d" style="stroke-dasharray:199 201;stroke-dashoffset:200;animation:mMwKiJKN_draw 2000ms linear 900ms forwards"/>
+            </g>
+        </g>
+        <path transform="translate(364.5 6904)" fill="none" stroke="#600d0d" stroke-width="2" d="M0,0L431,0" style="stroke-dasharray:431 433;stroke-dashoffset:432;animation:mMwKiJKN_draw 2000ms linear 925ms forwards"/>
+        <path transform="translate(945.5 6904)" fill="none" stroke="#600d0d" stroke-width="2" d="M0,0L431,0" style="stroke-dasharray:431 433;stroke-dashoffset:432;animation:mMwKiJKN_draw 2000ms linear 950ms forwards"/>
+        <path transform="translate(610.5 7261.5)" fill="none" stroke="#600d0d" stroke-width="2" d="M515,0L0,0" style="stroke-dasharray:515 517;stroke-dashoffset:516;animation:mMwKiJKN_draw 2000ms linear 975ms forwards"/>
+        <path d="M4026.188,6904.853h159.331s14.485,2.423,14.485,14.484-.173,326.5-.173,326.5,1.418,16.083-16.083,16.083H3774.831" transform="translate(-2500)" fill="none" stroke="#600d0d" stroke-width="2" style="stroke-dasharray:944 946;stroke-dashoffset:945;animation:mMwKiJKN_draw 2000ms linear 1000ms forwards"/>
+    </g>
+    <style data-made-with="vivus-instant">
+        @keyframes mMwKiJKN_draw{to{stroke-dashoffset:0}}@keyframes mMwKiJKN_fade{0%,94.44444444444444%{stroke-opacity:1}to{stroke-opacity:0}}
+    </style>
+</svg>
