@@ -1250,7 +1250,7 @@ table.table tfoot td {
   align-items: center;
   width: 100%;
 }
-.aside > * + * {
+.aside > div > * + * {
   margin-top: 40px;
 }
 @media screen and (max-width: 1270px) {
@@ -1267,10 +1267,17 @@ table.table tfoot td {
     background-color: var(--backgroundColor);
     width: 100vw;
     height: 100vh;
-    padding: 25px 16px 250px;
+    padding: 25px 16px;
     z-index: 40;
     overflow-y: auto;
   }
+}
+.aside__wrapper {
+  overflow-x: hidden;
+  overflow-y: visible;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
 }
 .aside__block {
   display: -webkit-box;
@@ -1305,19 +1312,6 @@ table.table tfoot td {
   text-decoration: none;
   cursor: pointer;
 }
-.aside__link:before,
-.aside__link_more:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background-color: var(--fontColor);
-  left: 0;
-  bottom: 0;
-  opacity: 0;
-  transform: scaleX(0);
-  transition: opacity 0.2s, transform 0.2s;
-}
 .aside__link.more,
 .aside__link_more.more {
   margin: 10px 0;
@@ -1341,10 +1335,6 @@ table.table tfoot td {
   opacity: 1;
   transform: scaleX(1);
 }
-.aside__link.more {
-  position: relative;
-  width: 100%;
-}
 .aside__more {
   display: flex;
   flex-direction: column;
@@ -1354,16 +1344,16 @@ table.table tfoot td {
   transition: max-height 0.5s;
   overflow: hidden;
 }
-.aside_li {
+.aside__link.more {
   position: relative;
-  margin-top: 5px;
+  width: 100%;
 }
-.aside_li > div {
+.aside__link.more > div {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  right: 0px;
+  right: -18px;
   top: 0;
   margin-top: 10px;
   width: 12px;
@@ -1371,7 +1361,7 @@ table.table tfoot td {
   transform: translateY(-50%) rotate(0);
   transition: transform 0.5s;
 }
-.aside_li > div > i {
+.aside__link.more > div > i {
   position: absolute;
   width: 100%;
   height: 2px;
@@ -1379,26 +1369,27 @@ table.table tfoot td {
   background-color: var(--fontHColor);
   transition: background-color 0.5s;
 }
-.aside_li > div > i:last-child {
+.aside__link.more > div > i:last-child {
   transform: rotate(90deg);
 }
-.aside_li.open > div {
+.aside_li {
+  position: relative;
+  margin-top: 5px;
+}
+.aside_li.open > .aside__link.more > div {
   transform: translateY(-50%) rotate(45deg);
 }
-.aside_li.open > div > i {
+.aside_li.open > .aside__link.more > div > i {
   background-color: var(--faqBorderRedColor);
 }
 .aside_li > .aside_ul__inner {
   margin-top: 5px;
 }
-.aside_li > .aside_ul__inner > li:before {
-  display: none;
-}
 .aside__skaz {
   width: 100%;
   text-align: center;
 }
-.aside__skaz > li:before {
+.aside__skaz li:before {
   display: none;
 }
 ul {
