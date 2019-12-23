@@ -1266,8 +1266,8 @@ table.table tfoot td {
     top: 128px;
     background-color: var(--backgroundColor);
     width: 100vw;
-    height: calc(100vh - 108px);
-    padding: 25px 16px 80px;
+    height: 100vh;
+    padding: 25px 16px 250px;
     z-index: 40;
     overflow-y: auto;
   }
@@ -1341,28 +1341,9 @@ table.table tfoot td {
   opacity: 1;
   transform: scaleX(1);
 }
-.aside__link_more > div {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  right: -25px;
-  top: 50%;
-  width: 12px;
-  height: 12px;
-  transform: translateY(-50%) rotate(0);
-  transition: transform 0.5s;
-}
-.aside__link_more > div > i {
-  position: absolute;
+.aside__link.more {
+  position: relative;
   width: 100%;
-  height: 2px;
-  border-radius: 2px;
-  background-color: var(--fontHColor);
-  transition: background-color 0.5s;
-}
-.aside__link_more > div > i:last-child {
-  transform: rotate(90deg);
 }
 .aside__more {
   display: flex;
@@ -1372,6 +1353,53 @@ table.table tfoot td {
   will-change: max-height;
   transition: max-height 0.5s;
   overflow: hidden;
+}
+.aside_li {
+  position: relative;
+  margin-top: 5px;
+}
+.aside_li > div {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0px;
+  top: 0;
+  margin-top: 10px;
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50%) rotate(0);
+  transition: transform 0.5s;
+}
+.aside_li > div > i {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--fontHColor);
+  transition: background-color 0.5s;
+}
+.aside_li > div > i:last-child {
+  transform: rotate(90deg);
+}
+.aside_li.open > div {
+  transform: translateY(-50%) rotate(45deg);
+}
+.aside_li.open > div > i {
+  background-color: var(--faqBorderRedColor);
+}
+.aside_li > .aside_ul__inner {
+  margin-top: 5px;
+}
+.aside_li > .aside_ul__inner > li:before {
+  display: none;
+}
+.aside__skaz {
+  width: 100%;
+  text-align: center;
+}
+.aside__skaz > li:before {
+  display: none;
 }
 ul {
   list-style: none;

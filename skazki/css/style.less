@@ -1316,8 +1316,8 @@ table.table tfoot td {
             left: 0; top: 128px;
             background-color: var(--backgroundColor);
             width: 100vw;
-            height: ~'calc(100vh - 108px)';
-            padding: 25px 16px 80px;
+            height: 100vh;
+            padding: 25px 16px 250px;
             z-index: 40;
             overflow-y: auto;
         }
@@ -1397,27 +1397,11 @@ table.table tfoot td {
     }
 }
 
-.aside__link_more > div {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: -25px; top: 50%;
-    width: 12px; height: 12px;
-    transform: translateY(-50%) rotate(0);
-    transition: transform .5s;
+.aside__link.more {
+    position: relative;
+    width: 100%;
 
-    & > i {
-        position: absolute;
-        width: 100%; height: 2px;
-        border-radius: 2px;
-        background-color: var(--fontHColor);
-        transition: background-color .5s;
-
-        &:last-child {
-            transform: rotate(90deg);
-        }
-    }
+    
 }
 
 .aside__more {
@@ -1429,6 +1413,61 @@ table.table tfoot td {
     transition: max-height .5s;
     overflow: hidden;
 }
+
+.aside_li {
+    position: relative;
+    margin-top: 5px;
+
+    & > div {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0px; top: 0;
+        margin-top: 10px;
+        width: 12px; height: 12px; 
+        transform: translateY(-50%) rotate(0);
+        transition: transform .5s;
+
+        & > i {
+            position: absolute;
+            width: 100%; height: 2px;
+            border-radius: 2px;
+            background-color: var(--fontHColor);
+            transition: background-color .5s;
+
+            &:last-child {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &.open > div {
+        transform: translateY(-50%) rotate(45deg);
+
+        & > i {
+            background-color: var(--faqBorderRedColor);
+        }
+    }
+
+    & > .aside_ul__inner {
+        margin-top: 5px;
+        
+        & > li:before {
+            display: none;
+        }
+    }
+}
+
+.aside__skaz {
+    width: 100%;
+    text-align: center;
+
+    & > li:before {
+        display: none;
+    }
+}
+
 
 // Список
 ul {
