@@ -1,9 +1,38 @@
-"use strict";
-
 ;
 
 (function () {
   'use strict';
+
+  window.onload = () => {
+    // Открытие подменю
+
+    var asideMore = Array.from(document.getElementsByClassName('aside__link_more'));
+    asideMore && asideMore.forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        var arr = Array.from(e.currentTarget.classList);
+        var obj = e.currentTarget.parentElement.getElementsByClassName('aside__more')[0];
+
+        if (arr.includes('open')) {
+          e.currentTarget.classList.remove('open');
+        } else {
+          e.currentTarget.classList.add('open');
+        }
+      });
+    }); // Открытие подменю в списках раскрасок
+
+    var colorAside = Array.from(document.getElementsByClassName('aside_li'));
+    colorAside && colorAside.forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        var arr = Array.from(e.currentTarget.classList);
+
+        if (arr.includes('open')) {
+          e.currentTarget.classList.remove('open');
+        } else {
+          e.currentTarget.classList.add('open');
+        }
+      });
+    }); 
+  };
 
   var questions = document.querySelectorAll('.faq__question');
   questions && questions.forEach(function (item) {
@@ -52,28 +81,7 @@
         behavior: 'smooth'
       });
     });
-  }); // Открытие подменю
-
-  var asideMore = document.querySelectorAll('.aside__link_more.more');
-  asideMore && asideMore.forEach(function (item) {
-    item.addEventListener('click', function (e) {
-      // Установка max-height у подменю
-      var asideMoreHeight = document.querySelectorAll('.aside__more');
-      asideMoreHeight && asideMoreHeight.forEach(function (item) {
-        item.dataset.height = item.scrollHeight;
-      });
-      var arr = Array.from(e.currentTarget.classList);
-      var obj = e.currentTarget.parentElement.querySelector('.aside__more');
-
-      if (arr.includes('open')) {
-        e.currentTarget.classList.remove('open');
-        obj.style.maxHeight = '0px';
-      } else {
-        e.currentTarget.classList.add('open');
-        obj.style.maxHeight = "".concat(obj.dataset.height, "px");
-      }
-    });
-  }); // Кнопка открытие доп раскрасок
+  }); // Кнопка открытие всех раскрасок
 
   var btnMore = document.querySelector('.coloring__showmore');
   btnMore && btnMore.addEventListener('click', function () {
@@ -90,28 +98,6 @@
   elems && elems.forEach(function (item) {
     item.addEventListener('click', function (e) {
       document.querySelector('.rating_block__num').innerHTML = "".concat(e.currentTarget.value, "/5");
-    });
-  }); // Открытие подменю в списках раскрасок
-
-  var colorAside = document.querySelectorAll('.aside_li');
-  colorAside && colorAside.forEach(function (item) {
-    item.addEventListener('click', function (e) {
-      console.log(e.currentTarget.classList[0]); // Установка max-height у подменю
-
-      var colorAsideInner = document.querySelectorAll('.aside_ul__inner');
-      colorAsideInner && colorAsideInner.forEach(function (item) {
-        item.dataset.height = item.scrollHeight;
-      });
-      var arr = Array.from(e.currentTarget.classList);
-      var obj = e.currentTarget.querySelector('.aside_ul__inner');
-
-      if (arr.includes('open')) {
-        e.currentTarget.classList.remove('open');
-        obj.style.maxHeight = '0px';
-      } else {
-        e.currentTarget.classList.add('open');
-        obj.style.maxHeight = "".concat(obj.dataset.height, "px");
-      }
     });
   });
 })();

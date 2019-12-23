@@ -1316,7 +1316,7 @@ table.table tfoot td {
             left: 0; top: 128px;
             background-color: var(--backgroundColor);
             width: 100vw;
-            height: ~'calc(100vh - 128px)';
+            height: ~'calc(100vh - 108px)';
             padding: 25px 16px 80px;
             z-index: 40;
             overflow-y: auto;
@@ -1385,7 +1385,7 @@ table.table tfoot td {
             }
 
             & + .aside__more {
-                max-height: 350px;
+                max-height: 200px;
             }
         }
     }
@@ -1485,6 +1485,10 @@ ul {
             top: 0.5rem; left: -15px;
         }
     }
+}
+
+.aside_li.open > .aside_ul__inner {
+    max-height: 200px;
 }
 
 ol {

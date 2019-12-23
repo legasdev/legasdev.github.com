@@ -62,28 +62,49 @@
 
     
     // Открытие подменю
-    const asideMore = document.querySelectorAll('.aside__link_more.more');
+    const asideMore = document.getElementsByClassName('.aside__link_more.more');
 
     asideMore && asideMore.forEach(item => {
         item.addEventListener('click', e => {
             // Установка max-height у подменю
-            const asideMoreHeight = document.querySelectorAll('.aside__more');
-            asideMoreHeight && asideMoreHeight.forEach(item => {
-                item.dataset.height = item.scrollHeight;
-            });
+            // const asideMoreHeight = document.getElementsByClassName('.aside__more');
+            // asideMoreHeight && asideMoreHeight.forEach(item => {
+            //     item.dataset.height = item.scrollHeight;
+            // });
             const arr = Array.from(e.currentTarget.classList);
-            const obj = e.currentTarget.parentElement.querySelector('.aside__more');
+            const obj = e.currentTarget.parentElement.getElementsByClassName('.aside__more')[0];
             if (arr.includes('open')) {
                 e.currentTarget.classList.remove('open');
-                obj.style.maxHeight = '0px';
+                // obj.style.maxHeight = '0px';
             } else {
                 e.currentTarget.classList.add('open');
-                obj.style.maxHeight = `${obj.dataset.height}px`;
+                // obj.style.maxHeight = `${obj.dataset.height}px`;
             }
         });
     });
 
-    // Кнопка открытие доп раскрасок
+    // Открытие подменю в списках раскрасок
+    const colorAside = document.getElementsByClassName('.aside_li');
+    colorAside && colorAside.forEach(item => {
+        item.addEventListener('click', e => {
+            // Установка max-height у подменю
+            // const colorAsideInner = document.getElementsByClassName('.aside_ul__inner');
+            // colorAsideInner && colorAsideInner.forEach(item => {
+            //     item.dataset.height = item.scrollHeight;
+            // });
+            const arr = Array.from(e.currentTarget.classList);
+            const obj = e.currentTarget.getElementsByClassName('.aside_ul__inner')[0];
+            if (arr.includes('open')) {
+                e.currentTarget.classList.remove('open');
+                // obj.style.maxHeight = '0px';
+            } else {
+                e.currentTarget.classList.add('open');
+                // obj.style.maxHeight = `${obj.dataset.height}px`;
+            }
+        });
+    });
+
+    // Кнопка открытие всех раскрасок
     const btnMore = document.querySelector('.coloring__showmore');
     btnMore && btnMore.addEventListener('click', () => {
         document.querySelectorAll('.coloring__wrapper').forEach(item => {
@@ -104,24 +125,4 @@
         });
     });
 
-    // Открытие подменю в списках раскрасок
-    const colorAside = document.querySelectorAll('.aside_li');
-    colorAside && colorAside.forEach(item => {
-        item.addEventListener('click', e => {
-            // Установка max-height у подменю
-            const colorAsideInner = document.querySelectorAll('.aside_ul__inner');
-            colorAsideInner && colorAsideInner.forEach(item => {
-                item.dataset.height = item.scrollHeight;
-            });
-            const arr = Array.from(e.currentTarget.classList);
-            const obj = e.currentTarget.querySelector('.aside_ul__inner');
-            if (arr.includes('open')) {
-                e.currentTarget.classList.remove('open');
-                obj.style.maxHeight = '0px';
-            } else {
-                e.currentTarget.classList.add('open');
-                obj.style.maxHeight = `${obj.dataset.height}px`;
-            }
-        });
-    });
 })();
