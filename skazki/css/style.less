@@ -364,12 +364,13 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
     position: fixed;
     left: 0; top: 90px;
-    background-color: var(--backgroundColor);
+    background-color: #ffe68f;
     width: 100vw;
     box-shadow: 0 0 6px var(--shadow);
     text-align: center;
     padding: 10px 0;
     z-index: 50;
+    border-bottom: 2px solid var(--fontHColor);
 
     .adaptive(@MEDIUM_SCREEN; {
         display: block;
@@ -428,11 +429,9 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 536px 1fr;
     grid-template-rows: 70px repeat(3, 1fr);
     row-gap: 32px;
-    column-gap: 150px;
     justify-items: center;
 
     .adaptive(@MAIN_SCREEN; {
-        column-gap: 50px;
         grid-template-columns: 430px 1fr;
     });
 
@@ -469,6 +468,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 48px;
     grid-column: ~'1 / 2';
     grid-row: ~'1 / 2';
+    text-align: center;
 
     .adaptive(@MAIN_SCREEN; {
         font-size: 43px;
@@ -614,6 +614,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: ~'2 / 3';
     grid-row: ~'1 / 2';
     font-size: 48px;
+    text-align: center;
 
     .adaptive(@MEDIUM_SCREEN; {
         grid-column: ~'1 / 2';
@@ -636,6 +637,7 @@ h1, h2, h3, h4, h5, h6 {
 .main__desk {
     grid-column: ~'2 / 3';
     grid-row: ~'2 / 3';
+    margin-left: 150px;
 
     & > p {
 
@@ -647,10 +649,15 @@ h1, h2, h3, h4, h5, h6 {
             margin-top: 1rem;
         }
     }
+    
+    .adaptive(@MAIN_SCREEN; {
+        margin-left: 50px;
+    });
 
     .adaptive(@MEDIUM_SCREEN; {
         grid-column: ~'1 / 2';
         grid-row: ~'2 / 3';
+        margin-left: 0;
     });
 }
 
@@ -662,6 +669,11 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    margin-left: 150px;
+
+    .adaptive(@MAIN_SCREEN; {
+        margin-left: 50px;
+    });
 
     .adaptive(@BIG_SCREEN; {
         justify-content: space-around;
@@ -670,6 +682,7 @@ h1, h2, h3, h4, h5, h6 {
     .adaptive(@MEDIUM_SCREEN; {
         grid-column: ~'1 / 2';
         grid-row: ~'5 / 6';
+        margin-left: 0;
     });
 }
 
@@ -1215,6 +1228,11 @@ table.table tfoot td {
     margin: 0 5px;
     transition: transform .2s;
 
+    & > img {
+        width: 36px;
+        height: 36px;
+    }
+
     &:hover {
         transform: scale(1.1);
     }
@@ -1291,6 +1309,8 @@ table.table tfoot td {
         display: none;
 
         &.active {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             position: fixed;
             left: 0; top: 128px;
@@ -1305,13 +1325,21 @@ table.table tfoot td {
 }
 
 .aside__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     background-color: var(--backgroundColor);
     border: 1px solid var(--borderColor);
-    box-shadow: 0 0 12px var(--shadow);
+    -webkit-box-shadow: 0 0 12px var(--shadow);
+            box-shadow: 0 0 12px var(--shadow);
     border-radius: 5px;
     padding: 25px 15px;
 }
@@ -1604,13 +1632,9 @@ ol {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     margin-top: 25px;
-
-    .adaptive(@TABLET_SCREEN; {
-        justify-content: space-around;
-    });
 }
 
 .theme_wrapper {
@@ -1641,14 +1665,15 @@ ol {
         height: 354px;
         width: 450px;
         z-index: 1;
-        transform: translate(-45px, -50px);
+        transform: translate(-85px, -50px);
         box-shadow: 0 0 12px rgba(0,0,0,.32);
 
-        .adaptive(@BIG_SCREEN; {
+        .adaptive(@MAIN_SCREEN; {
             height: 554px;
             width: initial;
             transform: translate(0, -50px);
         });
+
 
         &:before {
             opacity: 1;
@@ -1770,7 +1795,6 @@ ol {
 .text__title {
     display: grid;
     grid-template-columns: 244px auto;
-    column-gap: 25px;
     width: 100%;
     margin-bottom: 50px;
 
@@ -1812,8 +1836,12 @@ ol {
     display: flex;
     flex-direction: column;
 
+    & > .first_screen__title {
+        margin-left: 25px;
+    }
+
     & > p {
-        margin-top: 30px;
+        margin: 30px 0 0 25px;
     }
 }
 

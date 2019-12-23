@@ -108,7 +108,6 @@
     const colorAside = document.querySelectorAll('.aside_li');
     colorAside && colorAside.forEach(item => {
         item.addEventListener('click', e => {
-            console.log(e.currentTarget.classList[0]);
             // Установка max-height у подменю
             const colorAsideInner = document.querySelectorAll('.aside_ul__inner');
             colorAsideInner && colorAsideInner.forEach(item => {
