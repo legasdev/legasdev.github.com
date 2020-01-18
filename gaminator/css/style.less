@@ -47,6 +47,7 @@ textarea {
     --btnShadowColor: rgba(232, 21, 100, .74);
 
     --horShadow: rgba(232, 21, 100, .42);
+    --horDoubleShadow: rgba(232, 21, 222, 0.42);
 
     --inputBorder: #CBCBCB;
     --inputLabel: #8F8F8F;
@@ -376,7 +377,7 @@ textarea {
         background: transparent;
         pointer-events: none;
         
-        animation: anim_border 4s linear infinite;
+        animation: formShadow 4s linear infinite;
     }
 
     .adaptive(@MAIN_SCREEN; {
@@ -401,6 +402,21 @@ textarea {
         width: 100%;
         padding: 10px;
     });
+}
+
+@keyframes formShadow {
+    0% {
+        box-shadow: 0 0 15px var(--horShadow),
+                    inset 0 0 15px var(--horShadow);
+    }
+    50% {
+        box-shadow: 0 0 35px var(--horDoubleShadow),
+                    inset 0 0 35px var(--horDoubleShadow);
+    }
+    100% {
+        box-shadow: 0 0 15px var(--horShadow),
+                    inset 0 0 15px var(--horShadow);
+    }
 }
 
 .form__double {
