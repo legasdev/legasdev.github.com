@@ -1,0 +1,246 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="188" height="1690.5" viewBox="0 0 188 1690.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #8c3ee6;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        fill: #2b2b2b;
+      }
+
+      .cls-3 {
+        font-size: 113px;
+        font-family: Montserrat-Bold, Montserrat;
+        font-weight: 700;
+        opacity: 0.28;
+      }
+
+      .cls-4 {
+        font-size: 38px;
+      }
+
+      .cls-4, .cls-5 {
+        font-family: Montserrat-Regular, Montserrat;
+      }
+
+      .cls-5 {
+        font-size: 16px;
+      }
+
+      .cls-6 {
+        fill: #c03ee6;
+      }
+
+      .cls-7 {
+        fill: #e63e77;
+      }
+
+      .cls-8 {
+        fill: #e6b43e;
+      }
+
+      .cls-9 {
+        fill: #e6813e;
+      }
+
+      .cls-10 {
+        fill: none;
+        stroke: #c93a23;
+        stroke-linecap: round;
+        stroke-width: 3px;
+      }
+
+      .cls-11 {
+        filter: url(#Ellipse_3-5);
+      }
+
+      .cls-12 {
+        filter: url(#Ellipse_1-5);
+      }
+
+      .cls-13 {
+        filter: url(#Ellipse_3-4);
+      }
+
+      .cls-14 {
+        filter: url(#Ellipse_1-4);
+      }
+
+      .cls-15 {
+        filter: url(#Ellipse_3-3);
+      }
+
+      .cls-16 {
+        filter: url(#Ellipse_1-3);
+      }
+
+      .cls-17 {
+        filter: url(#Ellipse_3-2);
+      }
+
+      .cls-18 {
+        filter: url(#Ellipse_1-2);
+      }
+
+      .cls-19 {
+        filter: url(#Ellipse_3);
+      }
+
+      .cls-20 {
+        filter: url(#Ellipse_1);
+      }
+    </style>
+    <filter id="Ellipse_1" x="8" y="0" width="171" height="171" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_3" x="20" y="12" width="147" height="147" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_1-2" x="6" y="362" width="171" height="171" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_3-2" x="18" y="374" width="147" height="147" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_1-3" x="6" y="737" width="171" height="171" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_3-3" x="18" y="749" width="147" height="147" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-6"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_1-4" x="6" y="1095.5" width="171" height="171" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-7"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-7"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_3-4" x="18" y="1107.5" width="147" height="147" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-8"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-8"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_1-5" x="6" y="1452.5" width="171" height="171" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-9"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-9"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_3-5" x="18" y="1464.5" width="147" height="147" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-10"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-10"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1" data-name="Group 1" transform="translate(-140 -1197.5)">
+    <g id="Step" transform="translate(-264 -0.5)">
+      <g class="cls-20" transform="matrix(1, 0, 0, 1, 404, 1198)">
+        <circle id="Ellipse_1-6" data-name="Ellipse 1" class="cls-1" cx="76.5" cy="76.5" r="76.5" transform="translate(17 9)"/>
+      </g>
+      <g class="cls-19" transform="matrix(1, 0, 0, 1, 404, 1198)">
+        <circle id="Ellipse_3-6" data-name="Ellipse 3" class="cls-2" cx="64.5" cy="64.5" r="64.5" transform="translate(29 21)"/>
+      </g>
+      <text id="_1" data-name="1" class="cls-3" transform="translate(500 1325)"><tspan x="-22.148" y="0">1</tspan></text>
+      <text id="шаг" class="cls-4" transform="translate(500 1311)"><tspan x="-37.753" y="0">шаг</tspan></text>
+      <text id="Оставляем_заявку_на_сайте" data-name="Оставляем заявку на сайте" class="cls-5" transform="translate(404 1385)"><tspan x="6.512" y="15">Оставляем заявку на </tspan><tspan x="70.792" y="34">сайте</tspan></text>
+    </g>
+    <g id="Step-2" data-name="Step" transform="translate(-266 361.5)">
+      <g class="cls-18" transform="matrix(1, 0, 0, 1, 406, 836)">
+        <circle id="Ellipse_1-7" data-name="Ellipse 1" class="cls-6" cx="76.5" cy="76.5" r="76.5" transform="translate(15 371)"/>
+      </g>
+      <g class="cls-17" transform="matrix(1, 0, 0, 1, 406, 836)">
+        <circle id="Ellipse_3-7" data-name="Ellipse 3" class="cls-2" cx="64.5" cy="64.5" r="64.5" transform="translate(27 383)"/>
+      </g>
+      <text id="_2" data-name="2" class="cls-3" transform="translate(500 1325)"><tspan x="-33.335" y="0">2</tspan></text>
+      <text id="шаг-2" data-name="шаг" class="cls-4" transform="translate(500 1311)"><tspan x="-37.753" y="0">шаг</tspan></text>
+      <text id="Менеджер_перезванивает_и_обсуждает_все_детали" data-name="Менеджер перезванивает и обсуждает все детали" class="cls-5" transform="translate(406 1378)"><tspan x="49" y="15">Менеджер </tspan><tspan x="22.976" y="34">перезванивает и </tspan><tspan x="2.544" y="53">обсуждает все детали</tspan></text>
+    </g>
+    <g id="Step-3" data-name="Step" transform="translate(-266 736.5)">
+      <g class="cls-16" transform="matrix(1, 0, 0, 1, 406, 461)">
+        <circle id="Ellipse_1-8" data-name="Ellipse 1" class="cls-7" cx="76.5" cy="76.5" r="76.5" transform="translate(15 746)"/>
+      </g>
+      <g class="cls-15" transform="matrix(1, 0, 0, 1, 406, 461)">
+        <circle id="Ellipse_3-8" data-name="Ellipse 3" class="cls-2" cx="64.5" cy="64.5" r="64.5" transform="translate(27 758)"/>
+      </g>
+      <text id="_3" data-name="3" class="cls-3" transform="translate(500 1325)"><tspan x="-33.448" y="0">3</tspan></text>
+      <text id="шаг-3" data-name="шаг" class="cls-4" transform="translate(500 1311)"><tspan x="-37.753" y="0">шаг</tspan></text>
+      <text id="Получаем_ссылку_на_демоверсию" data-name="Получаем ссылку на демоверсию" class="cls-5" transform="translate(406 1378)"><tspan x="8.696" y="15">Получаем ссылку на </tspan><tspan x="40.216" y="34">демоверсию</tspan></text>
+    </g>
+    <g id="Step-4" data-name="Step" transform="translate(-266 1095)">
+      <g class="cls-14" transform="matrix(1, 0, 0, 1, 406, 102.5)">
+        <circle id="Ellipse_1-9" data-name="Ellipse 1" class="cls-8" cx="76.5" cy="76.5" r="76.5" transform="translate(15 1104.5)"/>
+      </g>
+      <g class="cls-13" transform="matrix(1, 0, 0, 1, 406, 102.5)">
+        <circle id="Ellipse_3-9" data-name="Ellipse 3" class="cls-2" cx="64.5" cy="64.5" r="64.5" transform="translate(27 1116.5)"/>
+      </g>
+      <text id="_4" data-name="4" class="cls-3" transform="translate(500 1325)"><tspan x="-38.929" y="0">4</tspan></text>
+      <text id="шаг-4" data-name="шаг" class="cls-4" transform="translate(500 1311)"><tspan x="-37.753" y="0">шаг</tspan></text>
+      <text id="Далее_идет_создание_зала_и_его_настройка" data-name="Далее идет создание зала и его настройка" class="cls-5" transform="translate(406 1378)"><tspan x="5.112" y="15">Далее идет создание </tspan><tspan x="6.328" y="34">зала и его настройка</tspan></text>
+    </g>
+    <g id="Step-5" data-name="Step" transform="translate(-266 1452)">
+      <g class="cls-12" transform="matrix(1, 0, 0, 1, 406, -254.5)">
+        <circle id="Ellipse_1-10" data-name="Ellipse 1" class="cls-9" cx="76.5" cy="76.5" r="76.5" transform="translate(15 1461.5)"/>
+      </g>
+      <g class="cls-11" transform="matrix(1, 0, 0, 1, 406, -254.5)">
+        <circle id="Ellipse_3-10" data-name="Ellipse 3" class="cls-2" cx="64.5" cy="64.5" r="64.5" transform="translate(27 1473.5)"/>
+      </g>
+      <text id="_5" data-name="5" class="cls-3" transform="translate(500 1325)"><tspan x="-33.618" y="0">5</tspan></text>
+      <text id="шаг-5" data-name="шаг" class="cls-4" transform="translate(500 1311)"><tspan x="-37.753" y="0">шаг</tspan></text>
+      <text id="Работа_и_получение_прибыли" data-name="Работа и получение прибыли" class="cls-5" transform="translate(406 1378)"><tspan x="9.872" y="15">Работа и получение </tspan><tspan x="55.504" y="34">прибыли</tspan></text>
+    </g>
+    <g id="Arrow" transform="translate(1518.258 1031.742) rotate(90)">
+      <line id="Line_6" data-name="Line 6" class="cls-10" x2="118.517" transform="translate(404.5 1284.5)"/>
+      <line id="Line_7" data-name="Line 7" class="cls-10" x2="7" y2="7" transform="translate(516.017 1277.5)"/>
+      <line id="Line_8" data-name="Line 8" class="cls-10" y1="7" x2="7" transform="translate(516.017 1284.5)"/>
+    </g>
+    <g id="Arrow-2" data-name="Arrow" transform="translate(1518.258 1406.742) rotate(90)">
+      <line id="Line_6-2" data-name="Line 6" class="cls-10" x2="118.517" transform="translate(404.5 1284.5)"/>
+      <line id="Line_7-2" data-name="Line 7" class="cls-10" x2="7" y2="7" transform="translate(516.017 1277.5)"/>
+      <line id="Line_8-2" data-name="Line 8" class="cls-10" y1="7" x2="7" transform="translate(516.017 1284.5)"/>
+    </g>
+    <g id="Arrow-3" data-name="Arrow" transform="translate(1518.258 1764.742) rotate(90)">
+      <line id="Line_6-3" data-name="Line 6" class="cls-10" x2="118.517" transform="translate(404.5 1284.5)"/>
+      <line id="Line_7-3" data-name="Line 7" class="cls-10" x2="7" y2="7" transform="translate(516.017 1277.5)"/>
+      <line id="Line_8-3" data-name="Line 8" class="cls-10" y1="7" x2="7" transform="translate(516.017 1284.5)"/>
+    </g>
+    <g id="Arrow-4" data-name="Arrow" transform="translate(1518.242 2121.742) rotate(90)">
+      <line id="Line_6-4" data-name="Line 6" class="cls-10" x2="118.517" transform="translate(404.5 1284.5)"/>
+      <line id="Line_7-4" data-name="Line 7" class="cls-10" x2="7" y2="7" transform="translate(516.017 1277.5)"/>
+      <line id="Line_8-4" data-name="Line 8" class="cls-10" y1="7" x2="7" transform="translate(516.017 1284.5)"/>
+    </g>
+  </g>
+</svg>

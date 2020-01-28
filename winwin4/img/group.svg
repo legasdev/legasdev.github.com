@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1419" height="238.5" viewBox="0 0 1419 238.5">
+  <defs>
+    <filter id="Ellipse_1" x="8" y="0" width="171" height="171" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_3" x="20" y="12" width="147" height="147" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_1-2" x="313" y="0" width="171" height="171" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_3-2" x="325" y="12" width="147" height="147" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_1-3" x="621" y="0" width="171" height="171" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_3-3" x="633" y="12" width="147" height="147" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-6"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_1-4" x="929" y="0.5" width="171" height="171" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-7"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-7"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_3-4" x="941" y="12.5" width="147" height="147" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-8"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-8"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_1-5" x="1237" y="0.5" width="171" height="171" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-9"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-9"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_3-5" x="1249" y="12.5" width="147" height="147" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-10"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-10"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1" data-name="Group 1" transform="translate(-140 -1197.5)">
+    <g id="Step" transform="translate(-264 -0.5)">
+      <g transform="matrix(1, 0, 0, 1, 404, 1198)" filter="url(#Ellipse_1)">
+        <circle id="Ellipse_1-6" data-name="Ellipse 1" cx="76.5" cy="76.5" r="76.5" transform="translate(17 9)" fill="#8c3ee6"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 404, 1198)" filter="url(#Ellipse_3)">
+        <circle id="Ellipse_3-6" data-name="Ellipse 3" cx="64.5" cy="64.5" r="64.5" transform="translate(29 21)" fill="#fff"/>
+      </g>
+      <text id="_1" data-name="1" transform="translate(500 1325)" fill="#2b2b2b" font-size="113" font-family="Montserrat-Bold, Montserrat" font-weight="700" opacity="0.28"><tspan x="-22.148" y="0">1</tspan></text>
+      <text id="шаг" transform="translate(500 1311)" fill="#2b2b2b" font-size="38" font-family="Montserrat-Regular, Montserrat"><tspan x="-37.753" y="0">шаг</tspan></text>
+      <text id="Оставляем_заявку_на_сайте" data-name="Оставляем заявку на сайте" transform="translate(404 1385)" fill="#2b2b2b" font-size="16" font-family="Montserrat-Regular, Montserrat"><tspan x="6.512" y="15">Оставляем заявку на </tspan><tspan x="70.792" y="34">сайте</tspan></text>
+    </g>
+    <g id="Step-2" data-name="Step" transform="translate(41 -0.5)">
+      <g transform="matrix(1, 0, 0, 1, 99, 1198)" filter="url(#Ellipse_1-2)">
+        <circle id="Ellipse_1-7" data-name="Ellipse 1" cx="76.5" cy="76.5" r="76.5" transform="translate(322 9)" fill="#c03ee6"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 99, 1198)" filter="url(#Ellipse_3-2)">
+        <circle id="Ellipse_3-7" data-name="Ellipse 3" cx="64.5" cy="64.5" r="64.5" transform="translate(334 21)" fill="#fff"/>
+      </g>
+      <text id="_2" data-name="2" transform="translate(500 1325)" fill="#2b2b2b" font-size="113" font-family="Montserrat-Bold, Montserrat" font-weight="700" opacity="0.28"><tspan x="-33.335" y="0">2</tspan></text>
+      <text id="шаг-2" data-name="шаг" transform="translate(500 1311)" fill="#2b2b2b" font-size="38" font-family="Montserrat-Regular, Montserrat"><tspan x="-37.753" y="0">шаг</tspan></text>
+      <text id="Менеджер_перезванивает_и_обсуждает_все_детали" data-name="Менеджер перезванивает и обсуждает все детали" transform="translate(406 1378)" fill="#2b2b2b" font-size="16" font-family="Montserrat-Regular, Montserrat"><tspan x="49" y="15">Менеджер </tspan><tspan x="22.976" y="34">перезванивает и </tspan><tspan x="2.544" y="53">обсуждает все детали</tspan></text>
+    </g>
+    <g id="Step-3" data-name="Step" transform="translate(349 -0.5)">
+      <g transform="matrix(1, 0, 0, 1, -209, 1198)" filter="url(#Ellipse_1-3)">
+        <circle id="Ellipse_1-8" data-name="Ellipse 1" cx="76.5" cy="76.5" r="76.5" transform="translate(630 9)" fill="#e63e77"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -209, 1198)" filter="url(#Ellipse_3-3)">
+        <circle id="Ellipse_3-8" data-name="Ellipse 3" cx="64.5" cy="64.5" r="64.5" transform="translate(642 21)" fill="#fff"/>
+      </g>
+      <text id="_3" data-name="3" transform="translate(500 1325)" fill="#2b2b2b" font-size="113" font-family="Montserrat-Bold, Montserrat" font-weight="700" opacity="0.28"><tspan x="-33.448" y="0">3</tspan></text>
+      <text id="шаг-3" data-name="шаг" transform="translate(500 1311)" fill="#2b2b2b" font-size="38" font-family="Montserrat-Regular, Montserrat"><tspan x="-37.753" y="0">шаг</tspan></text>
+      <text id="Получаем_ссылку_на_демоверсию" data-name="Получаем ссылку на демоверсию" transform="translate(406 1378)" fill="#2b2b2b" font-size="16" font-family="Montserrat-Regular, Montserrat"><tspan x="8.696" y="15">Получаем ссылку на </tspan><tspan x="40.216" y="34">демоверсию</tspan></text>
+    </g>
+    <g id="Step-4" data-name="Step" transform="translate(657)">
+      <g transform="matrix(1, 0, 0, 1, -517, 1197.5)" filter="url(#Ellipse_1-4)">
+        <circle id="Ellipse_1-9" data-name="Ellipse 1" cx="76.5" cy="76.5" r="76.5" transform="translate(938 9.5)" fill="#e6b43e"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -517, 1197.5)" filter="url(#Ellipse_3-4)">
+        <circle id="Ellipse_3-9" data-name="Ellipse 3" cx="64.5" cy="64.5" r="64.5" transform="translate(950 21.5)" fill="#fff"/>
+      </g>
+      <text id="_4" data-name="4" transform="translate(500 1325)" fill="#2b2b2b" font-size="113" font-family="Montserrat-Bold, Montserrat" font-weight="700" opacity="0.28"><tspan x="-38.929" y="0">4</tspan></text>
+      <text id="шаг-4" data-name="шаг" transform="translate(500 1311)" fill="#2b2b2b" font-size="38" font-family="Montserrat-Regular, Montserrat"><tspan x="-37.753" y="0">шаг</tspan></text>
+      <text id="Далее_идет_создание_зала_и_его_настройка" data-name="Далее идет создание зала и его настройка" transform="translate(406 1378)" fill="#2b2b2b" font-size="16" font-family="Montserrat-Regular, Montserrat"><tspan x="5.112" y="15">Далее идет создание </tspan><tspan x="6.328" y="34">зала и его настройка</tspan></text>
+    </g>
+    <g id="Step-5" data-name="Step" transform="translate(965)">
+      <g transform="matrix(1, 0, 0, 1, -825, 1197.5)" filter="url(#Ellipse_1-5)">
+        <circle id="Ellipse_1-10" data-name="Ellipse 1" cx="76.5" cy="76.5" r="76.5" transform="translate(1246 9.5)" fill="#e6813e"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -825, 1197.5)" filter="url(#Ellipse_3-5)">
+        <circle id="Ellipse_3-10" data-name="Ellipse 3" cx="64.5" cy="64.5" r="64.5" transform="translate(1258 21.5)" fill="#fff"/>
+      </g>
+      <text id="_5" data-name="5" transform="translate(500 1325)" fill="#2b2b2b" font-size="113" font-family="Montserrat-Bold, Montserrat" font-weight="700" opacity="0.28"><tspan x="-33.618" y="0">5</tspan></text>
+      <text id="шаг-5" data-name="шаг" transform="translate(500 1311)" fill="#2b2b2b" font-size="38" font-family="Montserrat-Regular, Montserrat"><tspan x="-37.753" y="0">шаг</tspan></text>
+      <text id="Работа_и_получение_прибыли" data-name="Работа и получение прибыли" transform="translate(406 1378)" fill="#2b2b2b" font-size="16" font-family="Montserrat-Regular, Montserrat"><tspan x="9.872" y="15">Работа и получение </tspan><tspan x="55.504" y="34">прибыли</tspan></text>
+    </g>
+    <g id="Arrow" transform="translate(-76)">
+      <line id="Line_6" data-name="Line 6" x2="118.517" transform="translate(404.5 1284.5)" fill="none" stroke="#c93a23" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_7" data-name="Line 7" x2="7" y2="7" transform="translate(516.017 1277.5)" fill="none" stroke="#c93a23" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_8" data-name="Line 8" y1="7" x2="7" transform="translate(516.017 1284.5)" fill="none" stroke="#c93a23" stroke-linecap="round" stroke-width="3"/>
+    </g>
+    <g id="Arrow-2" data-name="Arrow" transform="translate(231)">
+      <line id="Line_6-2" data-name="Line 6" x2="118.517" transform="translate(404.5 1284.5)" fill="none" stroke="#c93a23" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_7-2" data-name="Line 7" x2="7" y2="7" transform="translate(516.017 1277.5)" fill="none" stroke="#c93a23" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_8-2" data-name="Line 8" y1="7" x2="7" transform="translate(516.017 1284.5)" fill="none" stroke="#c93a23" stroke-linecap="round" stroke-width="3"/>
+    </g>
+    <g id="Arrow-3" data-name="Arrow" transform="translate(539)">
+      <line id="Line_6-3" data-name="Line 6" x2="118.517" transform="translate(404.5 1284.5)" fill="none" stroke="#c93a23" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_7-3" data-name="Line 7" x2="7" y2="7" transform="translate(516.017 1277.5)" fill="none" stroke="#c93a23" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_8-3" data-name="Line 8" y1="7" x2="7" transform="translate(516.017 1284.5)" fill="none" stroke="#c93a23" stroke-linecap="round" stroke-width="3"/>
+    </g>
+    <g id="Arrow-4" data-name="Arrow" transform="translate(846.983)">
+      <line id="Line_6-4" data-name="Line 6" x2="118.517" transform="translate(404.5 1284.5)" fill="none" stroke="#c93a23" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_7-4" data-name="Line 7" x2="7" y2="7" transform="translate(516.017 1277.5)" fill="none" stroke="#c93a23" stroke-linecap="round" stroke-width="3"/>
+      <line id="Line_8-4" data-name="Line 8" y1="7" x2="7" transform="translate(516.017 1284.5)" fill="none" stroke="#c93a23" stroke-linecap="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>
