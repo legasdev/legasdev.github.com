@@ -513,6 +513,7 @@ h3 {
 .form__input + label {
   position: absolute;
   top: 0;
+  left: 0;
   color: #fff;
   pointer-events: none;
   width: 100%;
