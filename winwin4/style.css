@@ -81,8 +81,7 @@ textarea {
   --minMiddleScreen: 270px;
   position: relative;
   overflow-x: hidden;
-  background-color: var(--backgroundColor);
-  background-image: url('../img/bg.png');
+  background-image: url('img/bg.png');
   color: var(--fontColor);
   scroll-behavior: smooth;
   width: 100%;
