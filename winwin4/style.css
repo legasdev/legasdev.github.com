@@ -338,14 +338,14 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('img/background_first.png');
+  background-image: url('img/background_first.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
 }
 .full_block--bg {
-  background-image: url('img/bg_plus.png');
+  background-image: url('img/bg_plus.jpg');
   margin-top: 0;
   padding-bottom: 25px;
 }
